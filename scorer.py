@@ -76,61 +76,102 @@ def _going_numeric(going: Optional[str]) -> Optional[float]:
     return scale.get(going)
 
 
+def _market_probs_fair(all_runners: list[dict]) -> dict[int, float]:
+    """Return de-margined win probabilities for runners with valid decimal odds."""
+    implied = []
+    for idx, r in enumerate(all_runners):
+        odds = r.get("odds_decimal")
+        if odds and odds > 1.0:
+            implied.append((idx, 1.0 / odds))
+
+    total = sum(p for _, p in implied)
+    if total <= 0:
+        return {}
+
+    return {idx: p / total for idx, p in implied}
+
+
 # ---------------------------------------------------------------------------
 # Component scorers (each returns 0-100 or None if no data)
 # ---------------------------------------------------------------------------
 
-def score_market(runner: dict, field_size: int) -> tuple[Optional[float], str]:
+def score_market(runner: dict, all_runners: list, race_meta: dict) -> tuple[Optional[float], str]:
     """
-    Market signal: convert decimal odds to implied probability,
-    normalize across field to a 0-100 score.
-    Shorter odds -> higher score.
+    Market signal: de-margined win probability from the betting market.
+
+    We normalise implied probabilities within the race to remove bookmaker
+    overround. This produces a stable 0-100 signal that doesn't saturate
+    favourites.
     """
     odds = runner.get("odds_decimal")
     if not odds or odds <= 1.0:
         return None, "No odds available"
 
-    implied_prob = 1.0 / odds
-    # Score: scale implied probability. A 1.5 fav (~67%) -> ~95; a 50/1 (~2%) -> ~5
-    # Use log transform for better spread
-    raw = implied_prob * 100
-    # Clamp and scale so short-priced horses score highly
-    score = min(100.0, max(1.0, raw * 1.4))
+    # Cache fair probs per race
+    probs = race_meta.get("_market_probs_fair")
+    if probs is None:
+        probs = _market_probs_fair(all_runners)
+        race_meta["_market_probs_fair"] = probs
 
-    reason = f"Odds {odds:.1f} (implied {implied_prob*100:.1f}%)"
+    try:
+        idx = all_runners.index(runner)
+    except ValueError:
+        return None, "Could not locate runner in field for market normalisation"
+
+    p = probs.get(idx)
+    if p is None:
+        return None, "Odds present but fair probability could not be computed"
+
+    score = 100.0 * p
+    reason = f"Odds {odds:.2f}; fair win prob {p*100:.1f}% (race-normalised)"
     return round(score, 1), reason
 
 
-def score_rating(runner: dict, all_runners: list) -> tuple[Optional[float], str]:
+def score_rating(runner: dict, all_runners: list, race_meta: dict) -> tuple[Optional[float], str]:
     """
     Official rating / weight-adjusted proxy.
-    Highest OR in field -> 100; scale others relative.
-    If no OR, use weight as proxy (heavier = higher rated in handicaps).
+
+    - If OR differentiates the field, use it (0..100 within-race).
+    - If OR is missing, use weight *only if it appears informative*.
+      In many non-handicaps most runners carry identical weights, and using
+      weight then adds noise.
     """
     or_val = runner.get("official_rating")
     weight_lbs = _weight_to_lbs(runner.get("weight"))
 
-    # Collect ORs/weights from all runners
-    all_ors = [r.get("official_rating") for r in all_runners if r.get("official_rating")]
-    all_wts = [_weight_to_lbs(r.get("weight")) for r in all_runners if _weight_to_lbs(r.get("weight"))]
+    all_ors = [r.get("official_rating") for r in all_runners if r.get("official_rating") is not None]
+    all_wts = [_weight_to_lbs(r.get("weight")) for r in all_runners if _weight_to_lbs(r.get("weight")) is not None]
 
-    if or_val and all_ors:
+    # OR-based rating
+    if or_val is not None and all_ors:
         max_or = max(all_ors)
         min_or = min(all_ors)
-        spread = max_or - min_or if max_or != min_or else 1
-        score = 50 + 50 * (or_val - min_or) / spread
+        if max_or == min_or:
+            return None, f"OR {or_val} (no spread in field; rating not informative)"
+        spread = max_or - min_or
+        score = 100.0 * (or_val - min_or) / spread
         reason = f"OR {or_val} (field range {min_or}-{max_or})"
         return round(score, 1), reason
 
-    if weight_lbs and all_wts:
+    # Weight proxy (guarded)
+    if weight_lbs is not None and all_wts:
+        # Only use weight as a proxy in handicaps.
+        # In level-weight races (maidens/novices/conditions) it is usually noise.
+        race_name = (race_meta.get("race_name") or "").lower()
+        if "handicap" not in race_name:
+            return None, "Non-handicap: skipping weight proxy"
+
         max_wt = max(all_wts)
         min_wt = min(all_wts)
-        spread = max_wt - min_wt if max_wt != min_wt else 1
-        score = 50 + 50 * (weight_lbs - min_wt) / spread
-        reason = f"Weight {runner.get('weight')} as rating proxy (field {min_wt}-{max_wt} lbs)"
+        if max_wt == min_wt:
+            return None, f"Weight {runner.get('weight')} (no spread in field; proxy not informative)"
+
+        spread = max_wt - min_wt
+        score = 100.0 * (weight_lbs - min_wt) / spread
+        reason = f"Weight {runner.get('weight')} as handicap proxy (field {min_wt}-{max_wt} lbs)"
         return round(score, 1), reason
 
-    return None, "No official rating or weight data"
+    return None, "No informative rating/weight data"
 
 
 def score_form(runner: dict) -> tuple[Optional[float], str]:
@@ -179,7 +220,9 @@ def score_form(runner: dict) -> tuple[Optional[float], str]:
 def score_suitability(runner: dict, race_meta: dict) -> tuple[Optional[float], str]:
     """
     Suitability: compare today's distance/going/course with recent form.
-    Bonus for proven track/distance/going.
+
+    Uses smooth similarity rather than brittle "match within 1f" rules.
+    Starts from neutral 50.
     """
     form = runner.get("recent_form", [])
     if not form:
@@ -189,64 +232,64 @@ def score_suitability(runner: dict, race_meta: dict) -> tuple[Optional[float], s
     today_going = _going_numeric(race_meta.get("going"))
     today_track = (race_meta.get("track") or "").lower()
 
-    if not today_dist and not today_going:
+    if today_dist is None and today_going is None and not today_track:
         return None, "No race conditions to compare against"
 
-    score = 50.0  # Base: neutral
-    reasons = []
+    score = 50.0
+    reasons: list[str] = []
 
-    dist_matches = 0
-    going_matches = 0
+    # Recency-weighted similarity aggregates
+    w_sum = 0.0
+    dist_sim_sum = 0.0
+    going_sim_sum = 0.0
+
     course_matches = 0
-    form_count = 0
+    course_count = 0
 
-    for run in form:
+    for i, run in enumerate(form):
         if not isinstance(run, dict):
             continue
-        form_count += 1
 
-        # Distance comparison
+        w = 1.0 / (1 + i * 0.3)
+        w_sum += w
+
+        # Distance similarity (0..1)
         run_dist = _normalize_distance(run.get("distance"))
-        if today_dist and run_dist:
+        if today_dist is not None and run_dist is not None:
             diff = abs(today_dist - run_dist)
-            if diff <= 1:  # within 1 furlong
-                dist_matches += 1
+            dist_sim_sum += w * math.exp(-diff / 2.5)  # k=2.5f
 
-        # Going comparison
+        # Going similarity (0..1)
         run_going = _going_numeric(run.get("going"))
         if today_going is not None and run_going is not None:
             diff = abs(today_going - run_going)
-            if diff <= 1:
-                going_matches += 1
+            going_sim_sum += w * math.exp(-diff / 1.0)
 
-        # Course
-        run_track = (run.get("track") or "").lower()
-        if today_track and run_track and today_track in run_track:
-            course_matches += 1
+        # Course match
+        if today_track:
+            course_count += 1
+            run_track = (run.get("track") or "").lower()
+            if run_track and today_track in run_track:
+                course_matches += 1
 
-    if form_count == 0:
+    if w_sum <= 0:
         return None, "No form entries to compare"
 
-    # Distance suitability (up to +20)
-    if today_dist:
-        dist_pct = dist_matches / form_count
-        score += dist_pct * 20
-        if dist_matches > 0:
-            reasons.append(f"{dist_matches}/{form_count} runs at similar distance")
+    if today_dist is not None:
+        dist_sim = dist_sim_sum / w_sum
+        score += dist_sim * 20
+        reasons.append(f"Distance similarity {dist_sim:.2f}")
 
-    # Going suitability (up to +20)
     if today_going is not None:
-        going_pct = going_matches / form_count
-        score += going_pct * 20
-        if going_matches > 0:
-            reasons.append(f"{going_matches}/{form_count} runs on similar going")
+        going_sim = going_sim_sum / w_sum
+        score += going_sim * 20
+        reasons.append(f"Going similarity {going_sim:.2f}")
 
-    # Course suitability (up to +10)
-    if today_track:
-        course_pct = course_matches / form_count
+    if today_track and course_count:
+        course_pct = course_matches / course_count
         score += course_pct * 10
-        if course_matches > 0:
-            reasons.append(f"{course_matches}/{form_count} runs at {race_meta.get('track', 'this course')}")
+        if course_matches:
+            reasons.append(f"{course_matches}/{course_count} runs at {race_meta.get('track', 'this course')}")
 
     score = min(100.0, max(0.0, score))
     reason_str = "; ".join(reasons) if reasons else "Limited suitability data"
@@ -282,8 +325,8 @@ def score_connections(runner: dict) -> tuple[Optional[float], str]:
 # ---------------------------------------------------------------------------
 
 COMPONENT_FUNCS = {
-    "market":      lambda r, all_r, meta: score_market(r, meta.get("runners_count", 10)),
-    "rating":      lambda r, all_r, meta: score_rating(r, all_r),
+    "market":      lambda r, all_r, meta: score_market(r, all_r, meta),
+    "rating":      lambda r, all_r, meta: score_rating(r, all_r, meta),
     "form":        lambda r, all_r, meta: score_form(r),
     "suitability": lambda r, all_r, meta: score_suitability(r, meta),
     "connections": lambda r, all_r, meta: score_connections(r),
@@ -363,6 +406,10 @@ def score_runner(runner: dict, all_runners: list, race_meta: dict) -> dict:
 def compute_confidence(scored_runners: list, race_meta: dict) -> dict:
     """
     Determine confidence band for the ranking.
+
+    Prefer market-probability separation when odds are available, because total
+    score margins can be distorted by component scaling.
+
     Returns: {band: HIGH|MED|LOW, margin: float, reasons: [str]}
     """
     if len(scored_runners) < 2:
@@ -373,17 +420,47 @@ def compute_confidence(scored_runners: list, race_meta: dict) -> dict:
     second_score = sorted_by_score[1]["scoring"]["total_score"]
     margin = round(top_score - second_score, 1)
 
-    # Check data availability
     top_runner = sorted_by_score[0]
     has_odds = top_runner.get("odds_decimal") is not None
+
     components_present = sum(
         1 for c in top_runner["scoring"]["components"].values()
         if c["score"] is not None
     )
     total_components = len(DEFAULT_WEIGHTS)
 
-    reasons = []
+    reasons: list[str] = []
 
+    # Market gap (preferred when we have odds)
+    gap = None
+    if has_odds:
+        implied = []
+        for r in sorted_by_score:
+            odds = r.get("odds_decimal")
+            if odds and odds > 1.0:
+                implied.append(1.0 / odds)
+        total = sum(implied)
+        if total > 0:
+            p1 = (1.0 / sorted_by_score[0]["odds_decimal"]) / total
+            p2 = (1.0 / sorted_by_score[1]["odds_decimal"]) / total
+            gap = p1 - p2
+
+    if gap is not None:
+        reasons.append(f"Market prob gap {(gap*100):.1f} pts (race-normalised)")
+        reasons.append(f"{components_present}/{total_components} scoring components available")
+
+        if components_present >= 4 and gap >= 0.08:
+            band = "HIGH"
+        elif gap >= 0.04:
+            band = "MED"
+        else:
+            band = "LOW"
+
+        # Keep margin as secondary signal for explainability
+        reasons.append(f"Total-score margin {margin} pts")
+        return {"band": band, "margin": margin, "reasons": reasons}
+
+    # Fallback when no usable odds
     if has_odds and components_present >= 4 and margin >= 8:
         band = "HIGH"
         reasons.append(f"Margin of {margin} pts between 1st and 2nd")
