@@ -22,6 +22,14 @@
   var resultsEl      = document.getElementById("results");
   var runnersBody    = document.getElementById("runners-body");
 
+  var plSection     = document.getElementById("pl-section");
+  var getResultsBtn = document.getElementById("get-results-btn");
+  var plProgress    = document.getElementById("pl-progress");
+  var plBarFill     = document.getElementById("pl-bar-fill");
+  var plStatusEl    = document.getElementById("pl-status");
+  var plContent     = document.getElementById("pl-content");
+  var plBody        = document.getElementById("pl-body");
+
   var currentData   = null;
   var currentSort   = "score";
   var expandedRows  = new Set();
@@ -34,6 +42,7 @@
   courseSelect.addEventListener("change", onCourseChange);
   raceSelect.addEventListener("change", onRaceChange);
   importBtn.addEventListener("click", startImport);
+  getResultsBtn.addEventListener("click", getResults);
 
   document.querySelectorAll(".sort-btn").forEach(function (btn) {
     btn.addEventListener("click", function () {
@@ -223,7 +232,9 @@
       var raw = await resp.json();
       if (!raw.runners || !raw.runners.length) return null;
       // Score client-side
-      return window.RaceScorer.scoreRace(raw);
+      var scored = window.RaceScorer.scoreRace(raw);
+      scored._source_url = task.url; // keep for results lookup later
+      return scored;
     } catch (e) {
       return null;
     }
@@ -248,10 +259,17 @@
 
     if (!courseNames.length) {
       showImportSection();
+      plSection.classList.add("hidden");
       return;
     }
 
     importSection.classList.add("hidden");
+
+    // Show paper trading section if we have source URLs (imported data)
+    var hasUrls = todayRaces.some(function (r) { return r._source_url; });
+    if (hasUrls) {
+      plSection.classList.remove("hidden");
+    }
 
     var ph = document.createElement("option");
     ph.value = ""; ph.disabled = true; ph.selected = true;
@@ -577,4 +595,201 @@
   function renderDisclaimer(text) {
     document.getElementById("disclaimer").textContent = text;
   }
+
+  // =====================================================================
+  // Paper Trading -- Get Results & P/L
+  // =====================================================================
+
+  async function getResults() {
+    getResultsBtn.disabled = true;
+    getResultsBtn.textContent = "Fetching...";
+    plProgress.classList.remove("hidden");
+    plContent.classList.add("hidden");
+    plBarFill.style.width = "0%";
+    plStatusEl.textContent = "Fetching results...";
+    hideError();
+
+    // Build bet list: £1 on each race's top pick (rank 1)
+    var bets = [];
+    todayRaces.forEach(function (race) {
+      var pick = race.runners.find(function (r) { return r.rank === 1; });
+      if (!pick || !race._source_url) return;
+      bets.push({
+        race: race,
+        selection: pick,
+        sourceUrl: race._source_url,
+        result: null,
+      });
+    });
+
+    if (!bets.length) {
+      showError("No races with source data available for results lookup.");
+      getResultsBtn.disabled = false;
+      getResultsBtn.textContent = "Get Results";
+      plProgress.classList.add("hidden");
+      return;
+    }
+
+    // Fetch results with concurrency limit
+    var done = 0;
+    var total = bets.length;
+    var taskIdx = 0;
+
+    function next() {
+      if (taskIdx >= bets.length) return Promise.resolve();
+      var bet = bets[taskIdx++];
+      return fetchResult(bet).then(function () {
+        done++;
+        var pct = Math.round((done / total) * 100);
+        plBarFill.style.width = pct + "%";
+        plStatusEl.textContent = "Fetching " + done + "/" + total + "...";
+        return next();
+      });
+    }
+
+    var workers = [];
+    for (var w = 0; w < Math.min(CONCURRENCY, bets.length); w++) {
+      workers.push(next());
+    }
+    await Promise.all(workers);
+
+    plProgress.classList.add("hidden");
+    getResultsBtn.textContent = "Refresh Results";
+    getResultsBtn.disabled = false;
+
+    renderPL(bets);
+  }
+
+  async function fetchResult(bet) {
+    try {
+      var resp = await fetch(
+        "/.netlify/functions/fetch-result?url=" + encodeURIComponent(bet.sourceUrl)
+      );
+      if (resp.ok) bet.result = await resp.json();
+    } catch (e) {
+      bet.result = null;
+    }
+  }
+
+  function renderPL(bets) {
+    var settled = 0, winners = 0, totalStaked = 0, totalReturns = 0, pending = 0;
+    var rows = [];
+
+    bets.forEach(function (bet) {
+      var race = bet.race;
+      var sel = bet.selection;
+      var res = bet.result;
+
+      var row = {
+        track: race.meta.track,
+        time: race.meta.off_time || "?",
+        selection: sel.runner_name,
+        position: null,
+        sp: null,
+        spStr: "",
+        stake: 1,
+        returnAmt: 0,
+        pl: 0,
+        status: "pending",
+      };
+
+      if (!res || res.status !== "complete") {
+        pending++;
+        rows.push(row);
+        return;
+      }
+
+      settled++;
+      totalStaked += 1;
+
+      // Find our selection in the result runners
+      var match = res.runners.find(function (r) {
+        return r.runner_name === sel.runner_name;
+      });
+
+      if (match && match.is_nr) {
+        // Non-runner: stake refunded
+        row.status = "nr";
+        row.position = "NR";
+        row.returnAmt = 1;
+        row.pl = 0;
+        totalReturns += 1;
+        settled--;  // don't count NR in settled
+        rows.push(row);
+        return;
+      }
+
+      row.position = match ? match.position : null;
+      row.sp = match ? match.sp_decimal : null;
+      row.spStr = match ? match.sp_string : "";
+
+      if (row.position === 1 && row.sp) {
+        // Winner: return = £1 × SP (includes stake)
+        row.returnAmt = row.sp;
+        row.pl = row.sp - 1;
+        row.status = "won";
+        winners++;
+      } else {
+        row.returnAmt = 0;
+        row.pl = -1;
+        row.status = row.position != null ? "lost" : "pending";
+        if (row.status === "pending") {
+          settled--;
+          totalStaked -= 1;
+        }
+      }
+
+      totalReturns += row.returnAmt;
+      rows.push(row);
+    });
+
+    var profit = totalReturns - totalStaked;
+    var strike = settled > 0 ? ((winners / settled) * 100).toFixed(0) : "0";
+    var roi = totalStaked > 0 ? ((profit / totalStaked) * 100).toFixed(1) : "0.0";
+
+    // Summary
+    setText("pl-settled", settled + (pending > 0 ? " (" + pending + " pending)" : ""));
+    setText("pl-winners", String(winners));
+    setText("pl-strike", strike + "%");
+    setText("pl-staked", "\u00a3" + totalStaked.toFixed(2));
+    setText("pl-returns", "\u00a3" + totalReturns.toFixed(2));
+
+    var profitEl = document.getElementById("pl-profit");
+    profitEl.textContent = (profit >= 0 ? "+" : "") + "\u00a3" + profit.toFixed(2);
+    profitEl.className = "pl-stat-value " + (profit > 0 ? "pl-positive" : profit < 0 ? "pl-negative" : "");
+
+    setText("pl-roi", roi + "%");
+
+    // Per-race table
+    // Sort by time
+    rows.sort(function (a, b) { return (a.track + a.time).localeCompare(b.track + b.time); });
+
+    plBody.innerHTML = "";
+    rows.forEach(function (row) {
+      var tr = document.createElement("tr");
+      tr.className = "pl-row-" + row.status;
+
+      var posStr = row.position != null ? String(row.position) : "\u2014";
+      var spStr = row.sp ? row.sp.toFixed(2) : (row.spStr || "\u2014");
+      var plStr = row.status === "pending" ? "\u2014" :
+                  row.status === "nr" ? "void" :
+                  (row.pl >= 0 ? "+" : "") + "\u00a3" + row.pl.toFixed(2);
+      var retStr = row.status === "pending" ? "\u2014" : "\u00a3" + row.returnAmt.toFixed(2);
+
+      tr.innerHTML =
+        "<td>" + esc(row.track) + "</td>" +
+        "<td>" + esc(row.time) + "</td>" +
+        "<td>" + esc(row.selection) + "</td>" +
+        "<td>" + posStr + "</td>" +
+        "<td>" + spStr + "</td>" +
+        "<td>\u00a31.00</td>" +
+        "<td>" + retStr + "</td>" +
+        "<td class='pl-cell-pl'>" + plStr + "</td>";
+
+      plBody.appendChild(tr);
+    });
+
+    plContent.classList.remove("hidden");
+  }
 })();
+

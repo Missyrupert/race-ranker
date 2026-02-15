@@ -43,6 +43,46 @@
       </div>
     </section>
 
+    <!-- Paper Trading -->
+    <section id="pl-section" class="pl-section hidden">
+      <div class="pl-header">
+        <h2>Paper Trading &mdash; £1 Each Selection</h2>
+        <button id="get-results-btn" class="get-results-btn">Get Results</button>
+      </div>
+      <div id="pl-progress" class="import-progress hidden">
+        <div class="import-progress-bar"><div id="pl-bar-fill" class="import-bar-fill"></div></div>
+        <span id="pl-status">Fetching results...</span>
+      </div>
+      <div id="pl-content" class="hidden">
+        <div class="pl-summary">
+          <div class="pl-stat"><span class="pl-stat-label">Settled</span><span class="pl-stat-value" id="pl-settled">0</span></div>
+          <div class="pl-stat"><span class="pl-stat-label">Winners</span><span class="pl-stat-value" id="pl-winners">0</span></div>
+          <div class="pl-stat"><span class="pl-stat-label">Strike Rate</span><span class="pl-stat-value" id="pl-strike">0%</span></div>
+          <div class="pl-stat"><span class="pl-stat-label">Staked</span><span class="pl-stat-value" id="pl-staked">&pound;0</span></div>
+          <div class="pl-stat"><span class="pl-stat-label">Returns</span><span class="pl-stat-value" id="pl-returns">&pound;0</span></div>
+          <div class="pl-stat pl-stat-profit"><span class="pl-stat-label">P/L</span><span class="pl-stat-value" id="pl-profit">&pound;0</span></div>
+          <div class="pl-stat"><span class="pl-stat-label">ROI</span><span class="pl-stat-value" id="pl-roi">0%</span></div>
+        </div>
+        <div class="table-wrap">
+          <table class="pl-table">
+            <thead>
+              <tr>
+                <th>Track</th>
+                <th>Time</th>
+                <th>Selection</th>
+                <th>Pos</th>
+                <th>SP</th>
+                <th>Stake</th>
+                <th>Return</th>
+                <th>P/L</th>
+              </tr>
+            </thead>
+            <tbody id="pl-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
     <!-- Loading -->
     <div id="loading" class="loading hidden">
       <div class="spinner"></div>

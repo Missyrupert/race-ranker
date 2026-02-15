@@ -678,6 +678,156 @@ main {
   color: var(--text);
 }
 
+/* --- Paper Trading P&L --- */
+
+.pl-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.pl-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.pl-header h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.get-results-btn {
+  background: linear-gradient(135deg, var(--green) 0%, #00b3ad 100%);
+  color: #0f1117;
+  border: none;
+  padding: 0.55rem 1.3rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.get-results-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.get-results-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.pl-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.pl-stat {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+}
+
+.pl-stat-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.pl-stat-value {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.pl-stat-profit {
+  border-color: var(--accent);
+}
+
+.pl-positive {
+  color: var(--green) !important;
+}
+
+.pl-negative {
+  color: var(--red) !important;
+}
+
+.pl-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.pl-table thead th {
+  background: var(--surface-2);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.73rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.55rem 0.5rem;
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--border);
+}
+
+.pl-table tbody tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.pl-table tbody td {
+  padding: 0.5rem 0.5rem;
+  color: var(--text);
+}
+
+.pl-row-won {
+  background: rgba(0, 206, 201, 0.06);
+}
+
+.pl-row-won td:nth-child(4),
+.pl-row-won .pl-cell-pl {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.pl-row-lost .pl-cell-pl {
+  color: var(--red);
+}
+
+.pl-row-pending td {
+  color: var(--text-muted);
+}
+
+.pl-row-nr td {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.pl-cell-pl {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
 /* --- Disclaimer --- */
 
 .disclaimer {
