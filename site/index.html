@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Race Ranker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>Race Ranker</h1>
+      <p class="tagline">Explainable horse race rankings from public data</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- Input section -->
+    <section class="input-section">
+      <div class="input-card">
+        <label for="race-input">Enter a race URL or "Track YYYY-MM-DD HH:MM"</label>
+        <div class="input-row">
+          <input
+            type="text"
+            id="race-input"
+            placeholder='e.g. https://example.com/racecards/14:30/ascot  or  "Ascot 2026-02-15 14:30"'
+            autocomplete="off"
+          >
+          <button id="rank-btn">Rank Race</button>
+        </div>
+        <p class="input-hint">
+          In local mode, this loads pre-built data from <code>data/latest.json</code>.
+          Run <code>python build.py --race "&lt;URL&gt;"</code> first to generate data.
+        </p>
+      </div>
+    </section>
+
+    <!-- Loading -->
+    <div id="loading" class="loading hidden">
+      <div class="spinner"></div>
+      <span>Loading race data...</span>
+    </div>
+
+    <!-- Error -->
+    <div id="error" class="error-banner hidden"></div>
+
+    <!-- Results -->
+    <section id="results" class="results hidden">
+      <!-- Race header -->
+      <div class="race-header">
+        <h2 id="race-title">—</h2>
+        <div class="race-meta-row">
+          <span class="meta-chip" id="meta-distance"></span>
+          <span class="meta-chip" id="meta-going"></span>
+          <span class="meta-chip" id="meta-class"></span>
+          <span class="meta-chip" id="meta-runners"></span>
+        </div>
+      </div>
+
+      <!-- Confidence -->
+      <div id="confidence-band" class="confidence-band">
+        <div class="conf-label">
+          Confidence: <strong id="conf-level">—</strong>
+          <span id="conf-margin" class="conf-margin"></span>
+        </div>
+        <ul id="conf-reasons" class="conf-reasons"></ul>
+      </div>
+
+      <!-- Picks -->
+      <div class="picks-row" id="picks-row">
+        <div class="pick-card top" id="pick-top">
+          <div class="pick-label">Most Likely</div>
+          <div class="pick-name" id="pick-top-name">—</div>
+          <div class="pick-score" id="pick-top-score">—</div>
+        </div>
+        <div class="pick-card backup" id="pick-b1">
+          <div class="pick-label">Backup 1</div>
+          <div class="pick-name" id="pick-b1-name">—</div>
+          <div class="pick-score" id="pick-b1-score">—</div>
+        </div>
+        <div class="pick-card backup" id="pick-b2">
+          <div class="pick-label">Backup 2</div>
+          <div class="pick-name" id="pick-b2-name">—</div>
+          <div class="pick-score" id="pick-b2-score">—</div>
+        </div>
+      </div>
+
+      <!-- Sort controls -->
+      <div class="sort-controls">
+        <span>Sort by:</span>
+        <button class="sort-btn active" data-sort="score">Score</button>
+        <button class="sort-btn" data-sort="odds">Odds</button>
+        <button class="sort-btn" data-sort="or">OR</button>
+        <button class="sort-btn" data-sort="form">Form</button>
+      </div>
+
+      <!-- Runners table -->
+      <div class="table-wrap">
+        <table id="runners-table">
+          <thead>
+            <tr>
+              <th class="col-rank">#</th>
+              <th class="col-name">Runner</th>
+              <th class="col-score">Score</th>
+              <th class="col-odds">Odds</th>
+              <th class="col-or">OR</th>
+              <th class="col-jockey">Jockey</th>
+              <th class="col-trainer">Trainer</th>
+              <th class="col-form">Form</th>
+              <th class="col-expand"></th>
+            </tr>
+          </thead>
+          <tbody id="runners-body">
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Disclaimer -->
+      <div class="disclaimer" id="disclaimer"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Race Ranker &mdash; Personal use only. Not financial advice. Respect site ToS.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
