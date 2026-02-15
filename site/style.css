@@ -143,6 +143,69 @@ main {
   padding: 0.4rem;
 }
 
+/* --- Import section --- */
+
+.import-section {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.import-msg {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 0.7rem;
+}
+
+.import-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent) 0%, #5a4bd1 100%);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.8rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.import-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.import-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.import-progress {
+  margin-top: 0.8rem;
+}
+
+.import-progress-bar {
+  width: 100%;
+  height: 6px;
+  background: var(--surface-2);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 0.4rem;
+}
+
+.import-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--green) 100%);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.import-progress span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
 .input-hint {
   margin-top: 0.6rem;
   font-size: 0.78rem;

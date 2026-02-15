@@ -3,155 +3,306 @@
  *
  * Loads scored race JSON, renders interactive table with expandable
  * component breakdowns and sortable columns.
+ * Supports live import via Netlify Functions + client-side scoring.
  */
 
 (function () {
   "use strict";
 
   // --- DOM refs ---
-  const courseSelect = document.getElementById("course-select");
-  const raceSelect  = document.getElementById("race-select");
-  const noRacesMsg  = document.getElementById("no-races-msg");
-  const loadingEl   = document.getElementById("loading");
-  const errorEl     = document.getElementById("error");
-  const resultsEl   = document.getElementById("results");
-  const runnersBody = document.getElementById("runners-body");
+  var courseSelect   = document.getElementById("course-select");
+  var raceSelect     = document.getElementById("race-select");
+  var importSection  = document.getElementById("import-section");
+  var importBtn      = document.getElementById("import-btn");
+  var importProgress = document.getElementById("import-progress");
+  var importBarFill  = document.getElementById("import-bar-fill");
+  var importStatus   = document.getElementById("import-status");
+  var loadingEl      = document.getElementById("loading");
+  var errorEl        = document.getElementById("error");
+  var resultsEl      = document.getElementById("results");
+  var runnersBody    = document.getElementById("runners-body");
 
-  let currentData = null;
-  let currentSort = "score";
-  let expandedRows = new Set();
-  let manifest = [];
-  let todayRaces = [];
+  var currentData   = null;
+  var currentSort   = "score";
+  var expandedRows  = new Set();
+  var manifest      = [];
+  var todayRaces    = [];   // array of scored race objects for today
+  var CACHE_KEY     = "raceranker_cache";
+  var CONCURRENCY   = 3;
 
   // --- Init ---
   courseSelect.addEventListener("change", onCourseChange);
   raceSelect.addEventListener("change", onRaceChange);
+  importBtn.addEventListener("click", startImport);
 
-  // Sort buttons
-  document.querySelectorAll(".sort-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll(".sort-btn").forEach((b) => b.classList.remove("active"));
+  document.querySelectorAll(".sort-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      document.querySelectorAll(".sort-btn").forEach(function (b) { b.classList.remove("active"); });
       btn.classList.add("active");
       currentSort = btn.dataset.sort;
       renderRunners();
     });
   });
 
-  // Load manifest then populate dropdowns
-  loadManifest();
+  loadRaces();
 
-  // --- Functions ---
+  // --- Load flow ---
 
   function getToday() {
-    const d = new Date();
-    const yyyy = d.getFullYear();
-    const mm = String(d.getMonth() + 1).padStart(2, "0");
-    const dd = String(d.getDate()).padStart(2, "0");
-    return yyyy + "-" + mm + "-" + dd;
+    var d = new Date();
+    return d.getFullYear() + "-" +
+      String(d.getMonth() + 1).padStart(2, "0") + "-" +
+      String(d.getDate()).padStart(2, "0");
+  }
+
+  function loadRaces() {
+    // 1. Check localStorage cache for today
+    var cached = loadCache();
+    if (cached) {
+      todayRaces = cached;
+      populateCourses();
+      return;
+    }
+
+    // 2. Try static manifest.json
+    loadManifest();
+  }
+
+  function loadCache() {
+    try {
+      var raw = localStorage.getItem(CACHE_KEY);
+      if (!raw) return null;
+      var data = JSON.parse(raw);
+      if (data.date !== getToday() || !Array.isArray(data.races) || !data.races.length) return null;
+      return data.races;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function saveCache(races) {
+    try {
+      localStorage.setItem(CACHE_KEY, JSON.stringify({ date: getToday(), races: races }));
+    } catch (e) { /* quota exceeded -- ignore */ }
   }
 
   async function loadManifest() {
     try {
-      const resp = await fetch("data/manifest.json?" + Date.now());
-      if (!resp.ok) throw new Error("No manifest found");
+      var resp = await fetch("data/manifest.json?" + Date.now());
+      if (!resp.ok) throw new Error("No manifest");
       manifest = await resp.json();
     } catch (e) {
       manifest = [];
     }
+
+    var today = getToday();
+    var todayEntries = manifest.filter(function (r) { return r.date === today; });
+
+    if (todayEntries.length === 0) {
+      showImportSection();
+      return;
+    }
+
+    // Load all today's race files from static data
+    var races = [];
+    for (var i = 0; i < todayEntries.length; i++) {
+      try {
+        var r = await fetch("data/" + todayEntries[i].file);
+        if (r.ok) races.push(await r.json());
+      } catch (e) { /* skip */ }
+    }
+
+    if (!races.length) {
+      showImportSection();
+      return;
+    }
+
+    todayRaces = races;
     populateCourses();
   }
 
+  // --- Import flow ---
+
+  function showImportSection() {
+    importSection.classList.remove("hidden");
+    courseSelect.innerHTML = '<option value="" disabled selected>No races today</option>';
+    raceSelect.innerHTML = '<option value="" disabled selected>\u2014</option>';
+    raceSelect.disabled = true;
+  }
+
+  async function startImport() {
+    importBtn.disabled = true;
+    importBtn.textContent = "Importing...";
+    importProgress.classList.remove("hidden");
+    importBarFill.style.width = "0%";
+    importStatus.textContent = "Discovering meetings...";
+    hideError();
+
+    var today = getToday();
+
+    try {
+      // Step 1: Fetch meetings
+      var meetResp = await fetch("/.netlify/functions/fetch-meetings?date=" + today);
+      if (!meetResp.ok) {
+        var err = await meetResp.json().catch(function () { return {}; });
+        throw new Error(err.error || "Failed to fetch meetings (HTTP " + meetResp.status + ")");
+      }
+      var meetData = await meetResp.json();
+      var meetings = meetData.meetings || [];
+
+      if (!meetings.length) {
+        throw new Error("No UK/IRE meetings found for today. Racing may not be scheduled.");
+      }
+
+      // Build flat list of race tasks
+      var tasks = [];
+      meetings.forEach(function (m) {
+        m.races.forEach(function (r) {
+          tasks.push({ url: r.url, track: m.track, date: today, name: r.name });
+        });
+      });
+
+      var totalTasks = tasks.length;
+      importStatus.textContent = "Fetching 0/" + totalTasks + " races...";
+
+      // Step 2: Fetch races with concurrency limit
+      var scored = [];
+      var done = 0;
+      var taskIndex = 0;
+
+      function nextTask() {
+        if (taskIndex >= tasks.length) return Promise.resolve();
+        var task = tasks[taskIndex++];
+        return fetchAndScoreRace(task).then(function (result) {
+          done++;
+          var pct = Math.round((done / totalTasks) * 100);
+          importBarFill.style.width = pct + "%";
+          importStatus.textContent = "Fetching " + done + "/" + totalTasks + " races...";
+          if (result) scored.push(result);
+          return nextTask();
+        });
+      }
+
+      // Start CONCURRENCY workers
+      var workers = [];
+      for (var w = 0; w < Math.min(CONCURRENCY, tasks.length); w++) {
+        workers.push(nextTask());
+      }
+      await Promise.all(workers);
+
+      if (!scored.length) {
+        throw new Error("Could not fetch any races. Try again later.");
+      }
+
+      // Step 3: Save and display
+      saveCache(scored);
+      todayRaces = scored;
+      importStatus.textContent = "Done! " + scored.length + " races loaded.";
+      importBarFill.style.width = "100%";
+
+      setTimeout(function () {
+        importSection.classList.add("hidden");
+        populateCourses();
+      }, 600);
+
+    } catch (err) {
+      showError(err.message);
+      importBtn.disabled = false;
+      importBtn.textContent = "Import Today's Races";
+      importProgress.classList.add("hidden");
+    }
+  }
+
+  async function fetchAndScoreRace(task) {
+    try {
+      var params = "url=" + encodeURIComponent(task.url) +
+                   "&date=" + encodeURIComponent(task.date) +
+                   "&track=" + encodeURIComponent(task.track);
+      var resp = await fetch("/.netlify/functions/fetch-race?" + params);
+      if (!resp.ok) return null;
+      var raw = await resp.json();
+      if (!raw.runners || !raw.runners.length) return null;
+      // Score client-side
+      return window.RaceScorer.scoreRace(raw);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  // --- Dropdown population ---
+
   function populateCourses() {
-    const today = getToday();
-    todayRaces = manifest.filter((r) => r.date === today);
-    todayRaces.sort((a, b) => (a.off_time || "").localeCompare(b.off_time || ""));
+    // Build manifest-like entries from todayRaces for dropdown
+    var courses = {};
+    todayRaces.forEach(function (race) {
+      var track = race.meta.track;
+      if (!courses[track]) courses[track] = [];
+      courses[track].push(race);
+    });
+
+    var courseNames = Object.keys(courses).sort();
 
     courseSelect.innerHTML = "";
     raceSelect.innerHTML = "";
     raceSelect.disabled = true;
 
-    if (todayRaces.length === 0) {
-      noRacesMsg.classList.remove("hidden");
-      const ph = document.createElement("option");
-      ph.value = "";
-      ph.disabled = true;
-      ph.selected = true;
-      ph.textContent = "No races today";
-      courseSelect.appendChild(ph);
-
-      const ph2 = document.createElement("option");
-      ph2.value = "";
-      ph2.disabled = true;
-      ph2.selected = true;
-      ph2.textContent = "\u2014";
-      raceSelect.appendChild(ph2);
+    if (!courseNames.length) {
+      showImportSection();
       return;
     }
 
-    noRacesMsg.classList.add("hidden");
+    importSection.classList.add("hidden");
 
-    // Unique courses sorted alphabetically
-    const courses = [...new Set(todayRaces.map((r) => r.track))].sort();
-
-    const ph = document.createElement("option");
-    ph.value = "";
-    ph.disabled = true;
-    ph.selected = true;
-    ph.textContent = "Choose course (" + courses.length + ")";
+    var ph = document.createElement("option");
+    ph.value = ""; ph.disabled = true; ph.selected = true;
+    ph.textContent = "Choose course (" + courseNames.length + ")";
     courseSelect.appendChild(ph);
 
-    courses.forEach((course) => {
-      const count = todayRaces.filter((r) => r.track === course).length;
-      const opt = document.createElement("option");
-      opt.value = course;
-      opt.textContent = course + " (" + count + " races)";
+    courseNames.forEach(function (name) {
+      var opt = document.createElement("option");
+      opt.value = name;
+      opt.textContent = name + " (" + courses[name].length + " races)";
       courseSelect.appendChild(opt);
     });
 
-    const ph2 = document.createElement("option");
-    ph2.value = "";
-    ph2.disabled = true;
-    ph2.selected = true;
+    var ph2 = document.createElement("option");
+    ph2.value = ""; ph2.disabled = true; ph2.selected = true;
     ph2.textContent = "Pick a course first";
     raceSelect.appendChild(ph2);
 
-    // Auto-select if only one course
-    if (courses.length === 1) {
-      courseSelect.value = courses[0];
+    if (courseNames.length === 1) {
+      courseSelect.value = courseNames[0];
       onCourseChange();
     }
   }
 
   function onCourseChange() {
-    const course = courseSelect.value;
+    var course = courseSelect.value;
     if (!course) return;
 
-    const races = todayRaces
-      .filter((r) => r.track === course)
-      .sort((a, b) => (a.off_time || "").localeCompare(b.off_time || ""));
+    var races = todayRaces
+      .filter(function (r) { return r.meta.track === course; })
+      .sort(function (a, b) { return (a.meta.off_time || "").localeCompare(b.meta.off_time || ""); });
 
     raceSelect.innerHTML = "";
     raceSelect.disabled = false;
 
-    const ph = document.createElement("option");
-    ph.value = "";
-    ph.disabled = true;
-    ph.selected = true;
+    var ph = document.createElement("option");
+    ph.value = ""; ph.disabled = true; ph.selected = true;
     ph.textContent = "Choose race (" + races.length + ")";
     raceSelect.appendChild(ph);
 
-    races.forEach((race) => {
-      const opt = document.createElement("option");
-      opt.value = "data/" + race.file;
-      const parts = [race.off_time];
-      if (race.race_name) parts.push(race.race_name);
-      if (race.distance) parts.push(race.distance);
-      if (race.runners_count) parts.push(race.runners_count + " runners");
+    races.forEach(function (race, idx) {
+      var opt = document.createElement("option");
+      opt.value = idx + ":" + race.race_id;
+      var parts = [race.meta.off_time];
+      if (race.meta.race_name) parts.push(race.meta.race_name);
+      if (race.meta.distance)  parts.push(race.meta.distance);
+      if (race.meta.runners_count) parts.push(race.meta.runners_count + " runners");
       opt.textContent = parts.join(" \u2013 ");
       raceSelect.appendChild(opt);
     });
 
-    // Auto-select and load if only one race
     if (races.length === 1) {
       raceSelect.selectedIndex = 1;
       onRaceChange();
@@ -159,9 +310,29 @@
   }
 
   function onRaceChange() {
-    const val = raceSelect.value;
-    if (val) {
-      loadData(val);
+    var val = raceSelect.value;
+    if (!val) return;
+
+    var raceId = val.split(":").slice(1).join(":");
+    var course = courseSelect.value;
+
+    // Find the race in todayRaces
+    var race = todayRaces.find(function (r) { return r.race_id === raceId && r.meta.track === course; });
+
+    // Fallback: try loading from static file
+    if (!race) {
+      var entry = manifest.find(function (m) { return m.race_id === raceId; });
+      if (entry) {
+        loadData("data/" + entry.file);
+        return;
+      }
+    }
+
+    if (race) {
+      currentData = race;
+      expandedRows.clear();
+      hideError();
+      renderAll(race);
     }
   }
 
@@ -171,20 +342,20 @@
     hideResults();
 
     try {
-      const resp = await fetch(url);
-      if (!resp.ok) {
-        throw new Error("Could not load " + url + " (HTTP " + resp.status + ")");
-      }
-      const data = await resp.json();
+      var resp = await fetch(url);
+      if (!resp.ok) throw new Error("Could not load " + url + " (HTTP " + resp.status + ")");
+      var data = await resp.json();
       currentData = data;
       expandedRows.clear();
       renderAll(data);
     } catch (err) {
-      showError(err.message + ". Run the build script first to generate data.");
+      showError(err.message);
     } finally {
       showLoading(false);
     }
   }
+
+  // --- Rendering ---
 
   function renderAll(data) {
     renderMeta(data);
@@ -193,13 +364,12 @@
     renderRunners();
     renderDisclaimer(data.disclaimer || "");
     resultsEl.classList.remove("hidden");
+    showLoading(false);
   }
 
   function renderMeta(data) {
-    const m = data.meta || {};
-    const title = [m.race_name, m.track, m.off_time, m.date]
-      .filter(Boolean)
-      .join(" · ");
+    var m = data.meta || {};
+    var title = [m.race_name, m.track, m.off_time, m.date].filter(Boolean).join(" \u00b7 ");
     document.getElementById("race-title").textContent = title || "Race Rankings";
     setText("meta-distance", m.distance ? "Dist: " + m.distance : "");
     setText("meta-going", m.going ? "Going: " + formatGoing(m.going) : "");
@@ -208,166 +378,143 @@
   }
 
   function renderConfidence(conf) {
-    const levelEl = document.getElementById("conf-level");
-    const marginEl = document.getElementById("conf-margin");
-    const reasonsEl = document.getElementById("conf-reasons");
-
-    const band = (conf.band || "?").toUpperCase();
+    var levelEl   = document.getElementById("conf-level");
+    var marginEl  = document.getElementById("conf-margin");
+    var reasonsEl = document.getElementById("conf-reasons");
+    var band = (conf.band || "?").toUpperCase();
     levelEl.textContent = band;
     levelEl.className = "";
     if (band === "HIGH") levelEl.classList.add("conf-high");
     else if (band === "MED") levelEl.classList.add("conf-med");
     else levelEl.classList.add("conf-low");
-
     marginEl.textContent = conf.margin != null ? "(margin: " + conf.margin + " pts)" : "";
-
     reasonsEl.innerHTML = "";
-    (conf.reasons || []).forEach((r) => {
-      const li = document.createElement("li");
+    (conf.reasons || []).forEach(function (r) {
+      var li = document.createElement("li");
       li.textContent = r;
       reasonsEl.appendChild(li);
     });
   }
 
   function renderPicks(picks) {
-    const top = picks.top_pick || {};
-    const b1  = picks.backup_1 || {};
-    const b2  = picks.backup_2 || {};
-
-    setText("pick-top-name", top.runner_name || "—");
-    setText("pick-top-score", top.score != null ? top.score.toFixed(1) : "—");
-    setText("pick-b1-name", b1.runner_name || "—");
-    setText("pick-b1-score", b1.score != null ? b1.score.toFixed(1) : "—");
-    setText("pick-b2-name", b2.runner_name || "—");
-    setText("pick-b2-score", b2.score != null ? b2.score.toFixed(1) : "—");
+    var top = picks.top_pick || {};
+    var b1  = picks.backup_1 || {};
+    var b2  = picks.backup_2 || {};
+    setText("pick-top-name", top.runner_name || "\u2014");
+    setText("pick-top-score", top.score != null ? top.score.toFixed(1) : "\u2014");
+    setText("pick-b1-name", b1.runner_name || "\u2014");
+    setText("pick-b1-score", b1.score != null ? b1.score.toFixed(1) : "\u2014");
+    setText("pick-b2-name", b2.runner_name || "\u2014");
+    setText("pick-b2-score", b2.score != null ? b2.score.toFixed(1) : "\u2014");
   }
 
   function renderRunners() {
     if (!currentData) return;
-    const runners = sortRunners([...currentData.runners]);
+    var runners = sortRunners([].concat(currentData.runners));
     runnersBody.innerHTML = "";
 
-    runners.forEach((r, idx) => {
-      // Main row
-      const tr = document.createElement("tr");
+    runners.forEach(function (r) {
+      var tr = document.createElement("tr");
       tr.className = r.rank <= 3 ? "rank-" + r.rank : "";
       tr.innerHTML = buildMainRow(r);
       runnersBody.appendChild(tr);
 
-      // Expand button handler
-      const expandBtn = tr.querySelector(".expand-btn");
-      expandBtn.addEventListener("click", () => toggleExpand(r, tr, expandBtn));
+      var expandBtn = tr.querySelector(".expand-btn");
+      expandBtn.addEventListener("click", function () { toggleExpand(r, tr, expandBtn); });
 
-      // If previously expanded, show detail
       if (expandedRows.has(r.runner_name)) {
-        const detailTr = buildDetailRow(r);
+        var detailTr = buildDetailRow(r);
         runnersBody.appendChild(detailTr);
         expandBtn.classList.add("open");
-        expandBtn.textContent = "−";
+        expandBtn.textContent = "\u2212";
       }
     });
   }
 
   function buildMainRow(r) {
-    const scoreClass = r.total_score >= 70 ? "score-high" : r.total_score >= 45 ? "score-mid" : "score-low";
-    const oddsStr = r.odds_decimal ? r.odds_decimal.toFixed(1) : "—";
-    const orStr = r.official_rating != null ? r.official_rating : "—";
-    const formStr = buildFormString(r.recent_form || []);
-    const age = r.age ? r.age + "yo" : "";
-    const weight = r.weight || "";
-    const details = [age, weight].filter(Boolean).join(" · ");
+    var sc = r.total_score >= 70 ? "score-high" : r.total_score >= 45 ? "score-mid" : "score-low";
+    var oddsStr = r.odds_decimal ? r.odds_decimal.toFixed(1) : "\u2014";
+    var orStr   = r.official_rating != null ? r.official_rating : "\u2014";
+    var formStr = buildFormString(r.recent_form || []);
+    var age    = r.age ? r.age + "yo" : "";
+    var weight = r.weight || "";
+    var details = [age, weight].filter(Boolean).join(" \u00b7 ");
 
     return (
-      '<td class="col-rank"><span class="rank-badge">' + r.rank + "</span></td>" +
-      '<td class="col-name"><div class="runner-name">' + esc(r.runner_name) + "</div>" +
-      (details ? '<div class="runner-details">' + esc(details) + "</div>" : "") +
-      "</td>" +
-      '<td class="col-score"><span class="score-val ' + scoreClass + '">' + r.total_score.toFixed(1) + "</span></td>" +
-      '<td class="col-odds">' + oddsStr + "</td>" +
-      '<td class="col-or">' + orStr + "</td>" +
-      '<td class="col-jockey">' + esc(r.jockey || "—") + "</td>" +
-      '<td class="col-trainer">' + esc(r.trainer || "—") + "</td>" +
-      '<td class="col-form"><span class="form-string">' + formStr + "</span></td>" +
+      '<td class="col-rank"><span class="rank-badge">' + r.rank + '</span></td>' +
+      '<td class="col-name"><div class="runner-name">' + esc(r.runner_name) + '</div>' +
+      (details ? '<div class="runner-details">' + esc(details) + '</div>' : '') + '</td>' +
+      '<td class="col-score"><span class="score-val ' + sc + '">' + r.total_score.toFixed(1) + '</span></td>' +
+      '<td class="col-odds">' + oddsStr + '</td>' +
+      '<td class="col-or">' + orStr + '</td>' +
+      '<td class="col-jockey">' + esc(r.jockey || "\u2014") + '</td>' +
+      '<td class="col-trainer">' + esc(r.trainer || "\u2014") + '</td>' +
+      '<td class="col-form"><span class="form-string">' + formStr + '</span></td>' +
       '<td class="col-expand"><button class="expand-btn" title="Show breakdown">+</button></td>'
     );
   }
 
   function toggleExpand(runner, mainTr, btn) {
-    const name = runner.runner_name;
+    var name = runner.runner_name;
     if (expandedRows.has(name)) {
       expandedRows.delete(name);
       btn.classList.remove("open");
       btn.textContent = "+";
-      // Remove the next sibling detail row
-      const next = mainTr.nextElementSibling;
-      if (next && next.classList.contains("detail-row")) {
-        next.remove();
-      }
+      var next = mainTr.nextElementSibling;
+      if (next && next.classList.contains("detail-row")) next.remove();
     } else {
       expandedRows.add(name);
       btn.classList.add("open");
-      btn.textContent = "−";
-      const detailTr = buildDetailRow(runner);
-      mainTr.after(detailTr);
+      btn.textContent = "\u2212";
+      mainTr.after(buildDetailRow(runner));
     }
   }
 
   function buildDetailRow(runner) {
-    const tr = document.createElement("tr");
+    var tr = document.createElement("tr");
     tr.classList.add("detail-row");
-    const td = document.createElement("td");
+    var td = document.createElement("td");
     td.colSpan = 9;
-
-    const content = document.createElement("div");
+    var content = document.createElement("div");
     content.className = "detail-content";
 
-    // Components grid
-    const grid = document.createElement("div");
+    var grid = document.createElement("div");
     grid.className = "component-grid";
-
-    (runner.components || []).forEach((c) => {
-      const card = document.createElement("div");
+    (runner.components || []).forEach(function (c) {
+      var card = document.createElement("div");
       card.className = "comp-card";
-
-      const scoreVal = c.score != null ? c.score.toFixed(1) : "N/A";
-      const scoreClass = c.score != null ? (c.score >= 70 ? "score-high" : c.score >= 45 ? "score-mid" : "score-low") : "score-low";
-      const barWidth = c.score != null ? Math.min(100, Math.max(0, c.score)) : 0;
-      const weightPct = (c.weight * 100).toFixed(0);
-
+      var sv = c.score != null ? c.score.toFixed(1) : "N/A";
+      var cls = c.score != null ? (c.score >= 70 ? "score-high" : c.score >= 45 ? "score-mid" : "score-low") : "score-low";
+      var bw = c.score != null ? Math.min(100, Math.max(0, c.score)) : 0;
+      var wp = (c.weight * 100).toFixed(0);
       card.innerHTML =
-        '<div class="comp-header">' +
-        '<span class="comp-name">' + esc(c.name) + "</span>" +
-        '<span class="comp-score-val ' + scoreClass + '">' + scoreVal + "</span>" +
-        "</div>" +
-        '<div class="comp-bar"><div class="comp-bar-fill" style="width:' + barWidth + '%"></div></div>' +
-        '<div class="comp-reason">' + esc(c.reason) + "</div>" +
-        '<div class="comp-weight-tag">Weight: ' + weightPct + "%" + (c.weighted_score ? " → " + c.weighted_score.toFixed(1) + " pts" : "") + "</div>";
-
+        '<div class="comp-header"><span class="comp-name">' + esc(c.name) + '</span>' +
+        '<span class="comp-score-val ' + cls + '">' + sv + '</span></div>' +
+        '<div class="comp-bar"><div class="comp-bar-fill" style="width:' + bw + '%"></div></div>' +
+        '<div class="comp-reason">' + esc(c.reason) + '</div>' +
+        '<div class="comp-weight-tag">Weight: ' + wp + '%' + (c.weighted_score ? ' \u2192 ' + c.weighted_score.toFixed(1) + ' pts' : '') + '</div>';
       grid.appendChild(card);
     });
-
     content.appendChild(grid);
 
-    // Form history table
-    const form = runner.recent_form || [];
-    if (form.length > 0 && form.some((f) => f.date || f.track)) {
-      const fh = document.createElement("div");
+    var form = runner.recent_form || [];
+    if (form.length > 0 && form.some(function (f) { return f.date || f.track; })) {
+      var fh = document.createElement("div");
       fh.className = "form-history";
       fh.innerHTML = "<h4>Recent Form</h4>";
-      const tbl = document.createElement("table");
+      var tbl = document.createElement("table");
       tbl.className = "form-table";
-      tbl.innerHTML =
-        "<thead><tr><th>Pos</th><th>Date</th><th>Track</th><th>Dist</th><th>Going</th><th>Class</th></tr></thead>";
-      const tbody = document.createElement("tbody");
-      form.forEach((f) => {
-        const row = document.createElement("tr");
+      tbl.innerHTML = "<thead><tr><th>Pos</th><th>Date</th><th>Track</th><th>Dist</th><th>Going</th><th>Class</th></tr></thead>";
+      var tbody = document.createElement("tbody");
+      form.forEach(function (f) {
+        var row = document.createElement("tr");
         row.innerHTML =
-          "<td>" + (f.position != null ? f.position : "—") + "</td>" +
-          "<td>" + esc(f.date || "—") + "</td>" +
-          "<td>" + esc(f.track || "—") + "</td>" +
-          "<td>" + esc(f.distance || "—") + "</td>" +
-          "<td>" + formatGoing(f.going || "—") + "</td>" +
-          "<td>" + esc(f.race_class || "—") + "</td>";
+          "<td>" + (f.position != null ? f.position : "\u2014") + "</td>" +
+          "<td>" + esc(f.date || "\u2014") + "</td>" +
+          "<td>" + esc(f.track || "\u2014") + "</td>" +
+          "<td>" + esc(f.distance || "\u2014") + "</td>" +
+          "<td>" + formatGoing(f.going || "\u2014") + "</td>" +
+          "<td>" + esc(f.race_class || "\u2014") + "</td>";
         tbody.appendChild(row);
       });
       tbl.appendChild(tbody);
@@ -381,71 +528,51 @@
   }
 
   function sortRunners(runners) {
-    const sortFns = {
-      score: (a, b) => b.total_score - a.total_score,
-      odds: (a, b) => (a.odds_decimal || 999) - (b.odds_decimal || 999),
-      or: (a, b) => (b.official_rating || 0) - (a.official_rating || 0),
-      form: (a, b) => {
-        const aForm = avgForm(a.recent_form);
-        const bForm = avgForm(b.recent_form);
-        return aForm - bForm; // lower avg position = better
-      },
+    var fns = {
+      score: function (a, b) { return b.total_score - a.total_score; },
+      odds:  function (a, b) { return (a.odds_decimal || 999) - (b.odds_decimal || 999); },
+      or:    function (a, b) { return (b.official_rating || 0) - (a.official_rating || 0); },
+      form:  function (a, b) { return avgForm(a.recent_form) - avgForm(b.recent_form); },
     };
-    runners.sort(sortFns[currentSort] || sortFns.score);
+    runners.sort(fns[currentSort] || fns.score);
     return runners;
   }
 
   function avgForm(form) {
     if (!form || !form.length) return 99;
-    const positions = form.map((f) => f.position).filter((p) => p != null);
-    if (!positions.length) return 99;
-    return positions.reduce((a, b) => a + b, 0) / positions.length;
+    var p = form.map(function (f) { return f.position; }).filter(function (v) { return v != null; });
+    if (!p.length) return 99;
+    return p.reduce(function (a, b) { return a + b; }, 0) / p.length;
   }
 
   function buildFormString(form) {
-    if (!form || !form.length) return "—";
-    return form
-      .map((f) => (f.position != null ? f.position : "?"))
-      .join("-");
+    if (!form || !form.length) return "\u2014";
+    return form.map(function (f) { return f.position != null ? f.position : "?"; }).join("-");
   }
 
   function formatGoing(going) {
-    if (!going || going === "—") return going;
-    return going
-      .replace(/_/g, " ")
-      .replace(/\b\w/g, (c) => c.toUpperCase());
+    if (!going || going === "\u2014") return going;
+    return going.replace(/_/g, " ").replace(/\b\w/g, function (c) { return c.toUpperCase(); });
   }
 
   // --- Utility ---
 
   function setText(id, text) {
-    const el = document.getElementById(id);
+    var el = document.getElementById(id);
     if (el) el.textContent = text;
   }
 
   function esc(str) {
     if (!str) return "";
-    const div = document.createElement("div");
+    var div = document.createElement("div");
     div.textContent = str;
     return div.innerHTML;
   }
 
-  function showLoading(show) {
-    loadingEl.classList.toggle("hidden", !show);
-  }
-
-  function showError(msg) {
-    errorEl.textContent = msg;
-    errorEl.classList.remove("hidden");
-  }
-
-  function hideError() {
-    errorEl.classList.add("hidden");
-  }
-
-  function hideResults() {
-    resultsEl.classList.add("hidden");
-  }
+  function showLoading(show) { loadingEl.classList.toggle("hidden", !show); }
+  function showError(msg)    { errorEl.textContent = msg; errorEl.classList.remove("hidden"); }
+  function hideError()       { errorEl.classList.add("hidden"); }
+  function hideResults()     { resultsEl.classList.add("hidden"); }
 
   function renderDisclaimer(text) {
     document.getElementById("disclaimer").textContent = text;
