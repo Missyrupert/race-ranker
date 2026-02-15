@@ -183,10 +183,45 @@ def main():
     race_id_path = os.path.join(site_data_dir, f"{web_data['race_id']}.json")
     shutil.copy2(web_path, race_id_path)
 
+    # Rebuild manifest of all available race JSON files in site/data/
+    rebuild_manifest(site_data_dir)
+
     logger.info(f"{'='*60}")
     logger.info("BUILD COMPLETE")
     logger.info(f"Serve the site: python -m http.server 8000 --directory {args.site_dir}")
     logger.info(f"{'='*60}")
+
+
+def rebuild_manifest(site_data_dir):
+    """Scan site/data/ for race JSON files and write manifest.json."""
+    manifest = []
+    for fname in sorted(os.listdir(site_data_dir)):
+        if fname in ("latest.json", "manifest.json"):
+            continue
+        if not fname.endswith(".json"):
+            continue
+        fpath = os.path.join(site_data_dir, fname)
+        try:
+            with open(fpath, "r") as f:
+                data = json.load(f)
+            meta = data.get("meta", {})
+            manifest.append({
+                "race_id": data.get("race_id", fname.replace(".json", "")),
+                "file": fname,
+                "track": meta.get("track", ""),
+                "date": meta.get("date", ""),
+                "off_time": meta.get("off_time", ""),
+                "race_name": meta.get("race_name", ""),
+                "race_class": meta.get("race_class", ""),
+                "distance": meta.get("distance", ""),
+                "runners_count": meta.get("runners_count", 0),
+            })
+        except Exception as e:
+            logger.warning(f"Skipping {fname}: {e}")
+    manifest_path = os.path.join(site_data_dir, "manifest.json")
+    with open(manifest_path, "w") as f:
+        json.dump(manifest, f, indent=2)
+    logger.info(f"  -> {manifest_path} ({len(manifest)} race(s))")
 
 
 if __name__ == "__main__":

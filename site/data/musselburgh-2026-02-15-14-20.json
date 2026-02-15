@@ -1,0 +1,514 @@
+{
+  "race_id": "musselburgh-2026-02-15-14-20",
+  "meta": {
+    "track": "Musselburgh",
+    "date": "2026-02-15",
+    "off_time": "14:20",
+    "distance": "2m3f171y",
+    "going": "good",
+    "race_class": "4",
+    "race_name": "Virgin Bet A Good Bet Mares' Maiden Hurdle (GBB Race)",
+    "runners_count": 6
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "Roses All The Way",
+      "number": 3,
+      "draw": null,
+      "age": 7,
+      "weight": "11-5",
+      "official_rating": 109,
+      "jockey": "B S Hughes",
+      "trainer": "D McCain Jnr",
+      "odds_decimal": 1.44,
+      "total_score": 80.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 97.2,
+          "weight": 0.35,
+          "weighted_score": 34.02,
+          "reason": "Odds 1.4 (implied 69.4%)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.25,
+          "weighted_score": 25.0,
+          "reason": "OR 109 (field range 90-109)"
+        },
+        {
+          "name": "Form",
+          "score": 44.4,
+          "weight": 0.2,
+          "weighted_score": 8.88,
+          "reason": "Recent positions: 4/6/3/13/3 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 66.0,
+          "weight": 0.15,
+          "weighted_score": 9.9,
+          "reason": "2/5 runs at similar distance; 2/5 runs on similar going"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: B S Hughes, T: D McCain Jnr (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 4,
+          "date": "2026-01-24",
+          "distance": "1m7f168y",
+          "going": "soft",
+          "race_class": "4",
+          "track": "Uttoxeter"
+        },
+        {
+          "position": 6,
+          "date": "2025-12-20",
+          "distance": "2m2f191y",
+          "going": "good",
+          "race_class": "1",
+          "track": "Haydock"
+        },
+        {
+          "position": 3,
+          "date": "2025-11-13",
+          "distance": "2m3f188y",
+          "going": "soft",
+          "race_class": "4",
+          "track": "Sedgefield"
+        },
+        {
+          "position": 13,
+          "date": "2025-04-03",
+          "distance": "2m209y",
+          "going": "good",
+          "race_class": "1",
+          "track": "Aintree"
+        },
+        {
+          "position": 3,
+          "date": "2025-02-08",
+          "distance": "2m",
+          "going": "soft",
+          "race_class": "2",
+          "track": "Warwick"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "runner_name": "Siorai",
+      "number": 6,
+      "draw": null,
+      "age": 4,
+      "weight": "10-5",
+      "official_rating": null,
+      "jockey": "Paul O'Brien",
+      "trainer": "Harry Derham",
+      "odds_decimal": 3.75,
+      "total_score": 45.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 37.3,
+          "weight": 0.35,
+          "weighted_score": 13.05,
+          "reason": "Odds 3.8 (implied 26.7%)"
+        },
+        {
+          "name": "Rating",
+          "score": 50.0,
+          "weight": 0.25,
+          "weighted_score": 12.5,
+          "reason": "Weight 10-5 as rating proxy (field 145-159 lbs)"
+        },
+        {
+          "name": "Form",
+          "score": 46.4,
+          "weight": 0.2,
+          "weighted_score": 9.28,
+          "reason": "Recent positions: 6/4/3 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 56.7,
+          "weight": 0.15,
+          "weighted_score": 8.51,
+          "reason": "1/3 runs on similar going"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Paul O'Brien, T: Harry Derham (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 6,
+          "date": "2025-06-13",
+          "distance": "1m3f200y",
+          "going": "good",
+          "race_class": "",
+          "track": "Fairyhouse"
+        },
+        {
+          "position": 4,
+          "date": "2025-05-20",
+          "distance": "1m4f",
+          "going": "firm",
+          "race_class": "",
+          "track": "Cork"
+        },
+        {
+          "position": 3,
+          "date": "2025-05-06",
+          "distance": "1m2f90y",
+          "going": "firm",
+          "race_class": "",
+          "track": "Cork"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "runner_name": "Changemyluck",
+      "number": 1,
+      "draw": null,
+      "age": 6,
+      "weight": "11-5",
+      "official_rating": null,
+      "jockey": "Sean Quinlan",
+      "trainer": "W Coltherd",
+      "odds_decimal": 81.0,
+      "total_score": 38.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 1.7,
+          "weight": 0.35,
+          "weighted_score": 0.59,
+          "reason": "Odds 81.0 (implied 1.2%)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.25,
+          "weighted_score": 25.0,
+          "reason": "Weight 11-5 as rating proxy (field 145-159 lbs)"
+        },
+        {
+          "name": "Form",
+          "score": 0.0,
+          "weight": 0.2,
+          "weighted_score": 0.0,
+          "reason": "Recent positions: 8/8/8 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 70.0,
+          "weight": 0.15,
+          "weighted_score": 10.5,
+          "reason": "3/3 runs on similar going"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Sean Quinlan, T: W Coltherd (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 8,
+          "date": "2025-12-29",
+          "distance": "2m51y",
+          "going": "good",
+          "race_class": "4",
+          "track": "Kelso"
+        },
+        {
+          "position": 8,
+          "date": "2025-12-11",
+          "distance": "2m190y",
+          "going": "good",
+          "race_class": "5",
+          "track": "Newcastle"
+        },
+        {
+          "position": 8,
+          "date": "2025-11-10",
+          "distance": "2m1f33y",
+          "going": "good",
+          "race_class": "5",
+          "track": "Carlisle"
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "runner_name": "Tuppence",
+      "number": 4,
+      "draw": null,
+      "age": 6,
+      "weight": "11-5",
+      "official_rating": 98,
+      "jockey": "P W Wadge",
+      "trainer": "L Russell & M Scudamore",
+      "odds_decimal": 12.0,
+      "total_score": 37.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 11.7,
+          "weight": 0.35,
+          "weighted_score": 4.09,
+          "reason": "Odds 12.0 (implied 8.3%)"
+        },
+        {
+          "name": "Rating",
+          "score": 71.1,
+          "weight": 0.25,
+          "weighted_score": 17.77,
+          "reason": "OR 98 (field range 90-109)"
+        },
+        {
+          "name": "Form",
+          "score": 14.4,
+          "weight": 0.2,
+          "weighted_score": 2.88,
+          "reason": "Recent positions: 8/11/4 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 70.0,
+          "weight": 0.15,
+          "weighted_score": 10.5,
+          "reason": "3/3 runs on similar going"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: P W Wadge, T: L Russell & M Scudamore (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 8,
+          "date": "2025-02-13",
+          "distance": "2m190y",
+          "going": "good",
+          "race_class": "4",
+          "track": "Newcastle"
+        },
+        {
+          "position": 11,
+          "date": "2024-12-29",
+          "distance": "2m51y",
+          "going": "good",
+          "race_class": "4",
+          "track": "Kelso"
+        },
+        {
+          "position": 4,
+          "date": "2024-12-08",
+          "distance": "2m51y",
+          "going": "good",
+          "race_class": "3",
+          "track": "Kelso"
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "runner_name": "Georgie's Malt",
+      "number": 2,
+      "draw": null,
+      "age": 6,
+      "weight": "11-5",
+      "official_rating": 90,
+      "jockey": "Callum Bewley",
+      "trainer": "Ewan Whillans",
+      "odds_decimal": 13.0,
+      "total_score": 36.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 10.8,
+          "weight": 0.35,
+          "weighted_score": 3.78,
+          "reason": "Odds 13.0 (implied 7.7%)"
+        },
+        {
+          "name": "Rating",
+          "score": 50.0,
+          "weight": 0.25,
+          "weighted_score": 12.5,
+          "reason": "OR 90 (field range 90-109)"
+        },
+        {
+          "name": "Form",
+          "score": 30.3,
+          "weight": 0.2,
+          "weighted_score": 6.06,
+          "reason": "Recent positions: 8/5/4/4 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 80.0,
+          "weight": 0.15,
+          "weighted_score": 12.0,
+          "reason": "2/5 runs at similar distance; 5/5 runs on similar going; 1/5 runs at Musselburgh"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Callum Bewley, T: Ewan Whillans (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 8,
+          "date": "2025-11-28",
+          "distance": "1m7f124y",
+          "going": "good",
+          "race_class": "4",
+          "track": "Musselburgh"
+        },
+        {
+          "position": null,
+          "date": "2025-10-11",
+          "distance": "2m4f28y",
+          "going": "good",
+          "race_class": "4",
+          "track": "Hexham"
+        },
+        {
+          "position": 5,
+          "date": "2025-07-03",
+          "distance": "2m4f35y",
+          "going": "good",
+          "race_class": "4",
+          "track": "Perth"
+        },
+        {
+          "position": 4,
+          "date": "2025-06-03",
+          "distance": "1m7f182y",
+          "going": "good",
+          "race_class": "5",
+          "track": "Southwell"
+        },
+        {
+          "position": 4,
+          "date": "2025-05-10",
+          "distance": "2m48y",
+          "going": "good",
+          "race_class": "4",
+          "track": "Hexham"
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "runner_name": "Mischief Millie",
+      "number": 5,
+      "draw": null,
+      "age": 4,
+      "weight": "10-5",
+      "official_rating": null,
+      "jockey": "Craig Nichol",
+      "trainer": "Ewan Whillans",
+      "odds_decimal": 151.0,
+      "total_score": 27.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 1.0,
+          "weight": 0.35,
+          "weighted_score": 0.35,
+          "reason": "Odds 151.0 (implied 0.7%)"
+        },
+        {
+          "name": "Rating",
+          "score": 50.0,
+          "weight": 0.25,
+          "weighted_score": 12.5,
+          "reason": "Weight 10-5 as rating proxy (field 145-159 lbs)"
+        },
+        {
+          "name": "Form",
+          "score": 10.0,
+          "weight": 0.2,
+          "weighted_score": 2.0,
+          "reason": "Recent positions: 7 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 70.0,
+          "weight": 0.15,
+          "weighted_score": 10.5,
+          "reason": "1/1 runs on similar going"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Craig Nichol, T: Ewan Whillans (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 7,
+          "date": "2026-01-21",
+          "distance": "1m7f156y",
+          "going": "good",
+          "race_class": "5",
+          "track": "Catterick"
+        }
+      ]
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "Roses All The Way",
+      "rank": 1,
+      "score": 80.3
+    },
+    "backup_1": {
+      "runner_name": "Siorai",
+      "rank": 2,
+      "score": 45.8
+    },
+    "backup_2": {
+      "runner_name": "Changemyluck",
+      "rank": 3,
+      "score": 38.6
+    }
+  },
+  "confidence": {
+    "band": "HIGH",
+    "margin": 34.5,
+    "reasons": [
+      "Margin of 34.5 pts between 1st and 2nd",
+      "5/5 scoring components available",
+      "Odds data present"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only."
+}

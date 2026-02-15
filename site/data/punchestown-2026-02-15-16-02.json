@@ -1,0 +1,969 @@
+{
+  "race_id": "punchestown-2026-02-15-16-02",
+  "meta": {
+    "track": "Punchestown",
+    "date": "2026-02-15",
+    "off_time": "16:02",
+    "distance": "2m6f148y",
+    "going": "heavy",
+    "race_class": null,
+    "race_name": "David Trundley Artist At Punchestown Novice Handicap Hurdle",
+    "runners_count": 10
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "Kir",
+      "number": 5,
+      "draw": null,
+      "age": 6,
+      "weight": "11-8",
+      "official_rating": 115,
+      "jockey": "Darragh O'Keeffe",
+      "trainer": "H De Bromhead",
+      "odds_decimal": 5.0,
+      "total_score": 57.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 28.0,
+          "weight": 0.35,
+          "weighted_score": 9.8,
+          "reason": "Odds 5.0 (implied 20.0%)"
+        },
+        {
+          "name": "Rating",
+          "score": 92.3,
+          "weight": 0.25,
+          "weighted_score": 23.07,
+          "reason": "OR 115 (field range 93-119)"
+        },
+        {
+          "name": "Form",
+          "score": 61.0,
+          "weight": 0.2,
+          "weighted_score": 12.2,
+          "reason": "Recent positions: 3/1/4/8/4 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 66.7,
+          "weight": 0.15,
+          "weighted_score": 10.01,
+          "reason": "1/6 runs at similar distance; 4/6 runs on similar going"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Darragh O'Keeffe, T: H De Bromhead (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 3,
+          "date": "2025-12-28",
+          "distance": "3m",
+          "going": "soft",
+          "race_class": "",
+          "track": "Limerick"
+        },
+        {
+          "position": null,
+          "date": "2025-11-16",
+          "distance": "2m5f",
+          "going": "heavy",
+          "race_class": "",
+          "track": "Navan"
+        },
+        {
+          "position": 1,
+          "date": "2025-10-19",
+          "distance": "3m",
+          "going": "soft",
+          "race_class": "",
+          "track": "Limerick"
+        },
+        {
+          "position": 4,
+          "date": "2025-05-14",
+          "distance": "3m1f",
+          "going": "good",
+          "race_class": "",
+          "track": "Tipperary"
+        },
+        {
+          "position": 8,
+          "date": "2025-04-22",
+          "distance": "2m3f180y",
+          "going": "soft",
+          "race_class": "",
+          "track": "Fairyhouse"
+        },
+        {
+          "position": 4,
+          "date": "2025-01-21",
+          "distance": "2m1f33y",
+          "going": "good",
+          "race_class": "",
+          "track": "Down Royal"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "runner_name": "American Jukebox",
+      "number": 1,
+      "draw": null,
+      "age": 6,
+      "weight": "11-12",
+      "official_rating": 119,
+      "jockey": "Josh Williamson",
+      "trainer": "G Elliott",
+      "odds_decimal": 11.0,
+      "total_score": 53.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 12.7,
+          "weight": 0.35,
+          "weighted_score": 4.44,
+          "reason": "Odds 11.0 (implied 9.1%)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.25,
+          "weighted_score": 25.0,
+          "reason": "OR 119 (field range 93-119)"
+        },
+        {
+          "name": "Form",
+          "score": 56.1,
+          "weight": 0.2,
+          "weighted_score": 11.22,
+          "reason": "Recent positions: 4/1/7/6/2/4 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 68.3,
+          "weight": 0.15,
+          "weighted_score": 10.24,
+          "reason": "2/6 runs at similar distance; 3/6 runs on similar going; 1/6 runs at Punchestown"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Josh Williamson, T: G Elliott (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 4,
+          "date": "2026-01-18",
+          "distance": "2m6f",
+          "going": "good_to_soft",
+          "race_class": "",
+          "track": "Thurles"
+        },
+        {
+          "position": 1,
+          "date": "2026-01-01",
+          "distance": "2m5f120y",
+          "going": "soft",
+          "race_class": "",
+          "track": "Tramore"
+        },
+        {
+          "position": 7,
+          "date": "2025-12-11",
+          "distance": "2m3f",
+          "going": "soft",
+          "race_class": "",
+          "track": "Punchestown"
+        },
+        {
+          "position": 6,
+          "date": "2025-01-26",
+          "distance": "2m2f150y",
+          "going": "soft",
+          "race_class": "",
+          "track": "Naas"
+        },
+        {
+          "position": 2,
+          "date": "2024-12-27",
+          "distance": "2m4f",
+          "going": "good",
+          "race_class": "",
+          "track": "Leopardstown"
+        },
+        {
+          "position": 4,
+          "date": "2024-11-12",
+          "distance": "2m",
+          "going": "good",
+          "race_class": "",
+          "track": "Fairyhouse"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "runner_name": "Gorvitho",
+      "number": 4,
+      "draw": null,
+      "age": 7,
+      "weight": "11-8",
+      "official_rating": 115,
+      "jockey": "Paul Townend",
+      "trainer": "W P Mullins",
+      "odds_decimal": 6.5,
+      "total_score": 51.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 21.5,
+          "weight": 0.35,
+          "weighted_score": 7.52,
+          "reason": "Odds 6.5 (implied 15.4%)"
+        },
+        {
+          "name": "Rating",
+          "score": 92.3,
+          "weight": 0.25,
+          "weighted_score": 23.07,
+          "reason": "OR 115 (field range 93-119)"
+        },
+        {
+          "name": "Form",
+          "score": 44.0,
+          "weight": 0.2,
+          "weighted_score": 8.8,
+          "reason": "Recent positions: 5/12/3/2 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 65.0,
+          "weight": 0.15,
+          "weighted_score": 9.75,
+          "reason": "3/4 runs on similar going"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Paul Townend, T: W P Mullins (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 5,
+          "date": "2026-01-08",
+          "distance": "2m202y",
+          "going": "soft",
+          "race_class": "",
+          "track": "Clonmel"
+        },
+        {
+          "position": 12,
+          "date": "2025-07-03",
+          "distance": "2m4f90y",
+          "going": "good",
+          "race_class": "",
+          "track": "Tipperary"
+        },
+        {
+          "position": 3,
+          "date": "2024-11-22",
+          "distance": "2m4f90y",
+          "going": "soft",
+          "race_class": "",
+          "track": "Tipperary"
+        },
+        {
+          "position": 2,
+          "date": "2022-12-04",
+          "distance": "1m3f204y",
+          "going": "soft",
+          "race_class": "",
+          "track": "Craon"
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "runner_name": "West Of Bally",
+      "number": 6,
+      "draw": null,
+      "age": 6,
+      "weight": "11-7",
+      "official_rating": 114,
+      "jockey": "Calum Hogan",
+      "trainer": "E McNamara",
+      "odds_decimal": 11.0,
+      "total_score": 51.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 12.7,
+          "weight": 0.35,
+          "weighted_score": 4.44,
+          "reason": "Odds 11.0 (implied 9.1%)"
+        },
+        {
+          "name": "Rating",
+          "score": 90.4,
+          "weight": 0.25,
+          "weighted_score": 22.6,
+          "reason": "OR 114 (field range 93-119)"
+        },
+        {
+          "name": "Form",
+          "score": 60.7,
+          "weight": 0.2,
+          "weighted_score": 12.14,
+          "reason": "Recent positions: 3/1/5/7 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 65.0,
+          "weight": 0.15,
+          "weighted_score": 9.75,
+          "reason": "3/4 runs on similar going"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Calum Hogan, T: E McNamara (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 3,
+          "date": "2025-12-29",
+          "distance": "2m3f",
+          "going": "soft",
+          "race_class": "",
+          "track": "Limerick"
+        },
+        {
+          "position": 1,
+          "date": "2025-11-18",
+          "distance": "2m2f150y",
+          "going": "soft",
+          "race_class": "",
+          "track": "Limerick"
+        },
+        {
+          "position": 5,
+          "date": "2025-10-25",
+          "distance": "2m90y",
+          "going": "good",
+          "race_class": "",
+          "track": "Galway"
+        },
+        {
+          "position": 7,
+          "date": "2025-09-24",
+          "distance": "2m4f",
+          "going": "soft",
+          "race_class": "",
+          "track": "Listowel"
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "runner_name": "Chase The Moon",
+      "number": 3,
+      "draw": null,
+      "age": 5,
+      "weight": "11-8",
+      "official_rating": 115,
+      "jockey": "Tiernan Power Roche",
+      "trainer": "P J Rothwell",
+      "odds_decimal": 21.0,
+      "total_score": 49.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 6.7,
+          "weight": 0.35,
+          "weighted_score": 2.34,
+          "reason": "Odds 21.0 (implied 4.8%)"
+        },
+        {
+          "name": "Rating",
+          "score": 92.3,
+          "weight": 0.25,
+          "weighted_score": 23.07,
+          "reason": "OR 115 (field range 93-119)"
+        },
+        {
+          "name": "Form",
+          "score": 54.2,
+          "weight": 0.2,
+          "weighted_score": 10.84,
+          "reason": "Recent positions: 6/4/1 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 70.0,
+          "weight": 0.15,
+          "weighted_score": 10.5,
+          "reason": "3/3 runs on similar going"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Tiernan Power Roche, T: P J Rothwell (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 6,
+          "date": "2026-01-17",
+          "distance": "2m",
+          "going": "soft",
+          "race_class": "",
+          "track": "Navan"
+        },
+        {
+          "position": 4,
+          "date": "2025-11-29",
+          "distance": "2m4f110y",
+          "going": "soft",
+          "race_class": "",
+          "track": "Fairyhouse"
+        },
+        {
+          "position": 1,
+          "date": "2025-11-08",
+          "distance": "2m20y",
+          "going": "heavy",
+          "race_class": "",
+          "track": "Gowran Park"
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "runner_name": "Nettuno Italia",
+      "number": 8,
+      "draw": null,
+      "age": 6,
+      "weight": "10-5",
+      "official_rating": 98,
+      "jockey": "Danny Gilligan",
+      "trainer": "R O'Sullivan",
+      "odds_decimal": 6.0,
+      "total_score": 48.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 23.3,
+          "weight": 0.35,
+          "weighted_score": 8.15,
+          "reason": "Odds 6.0 (implied 16.7%)"
+        },
+        {
+          "name": "Rating",
+          "score": 59.6,
+          "weight": 0.25,
+          "weighted_score": 14.9,
+          "reason": "OR 98 (field range 93-119)"
+        },
+        {
+          "name": "Form",
+          "score": 58.0,
+          "weight": 0.2,
+          "weighted_score": 11.6,
+          "reason": "Recent positions: 1/5/5/4/5/5 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 76.7,
+          "weight": 0.15,
+          "weighted_score": 11.51,
+          "reason": "3/6 runs at similar distance; 4/6 runs on similar going; 2/6 runs at Punchestown"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Danny Gilligan, T: R O'Sullivan (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 1,
+          "date": "2026-01-26",
+          "distance": "2m7f",
+          "going": "heavy",
+          "race_class": "",
+          "track": "Punchestown"
+        },
+        {
+          "position": 5,
+          "date": "2026-01-12",
+          "distance": "2m6f",
+          "going": "soft",
+          "race_class": "",
+          "track": "Punchestown"
+        },
+        {
+          "position": 5,
+          "date": "2025-11-18",
+          "distance": "3m100y",
+          "going": "soft",
+          "race_class": "",
+          "track": "Limerick"
+        },
+        {
+          "position": 4,
+          "date": "2025-11-04",
+          "distance": "3m",
+          "going": "soft",
+          "race_class": "",
+          "track": "Fairyhouse"
+        },
+        {
+          "position": 5,
+          "date": "2025-09-29",
+          "distance": "2m4f53y",
+          "going": "good",
+          "race_class": "",
+          "track": "Roscommon"
+        },
+        {
+          "position": 5,
+          "date": "2025-04-03",
+          "distance": "2m7f180y",
+          "going": "good",
+          "race_class": "",
+          "track": "Naas"
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "runner_name": "Drop A Threat",
+      "number": 7,
+      "draw": null,
+      "age": 7,
+      "weight": "11-5",
+      "official_rating": 112,
+      "jockey": "Danny Mullins",
+      "trainer": "W P Mullins",
+      "odds_decimal": 8.0,
+      "total_score": 47.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 17.5,
+          "weight": 0.35,
+          "weighted_score": 6.12,
+          "reason": "Odds 8.0 (implied 12.5%)"
+        },
+        {
+          "name": "Rating",
+          "score": 86.5,
+          "weight": 0.25,
+          "weighted_score": 21.62,
+          "reason": "OR 112 (field range 93-119)"
+        },
+        {
+          "name": "Form",
+          "score": 31.2,
+          "weight": 0.2,
+          "weighted_score": 6.24,
+          "reason": "Recent positions: 4/5/8/7 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 70.0,
+          "weight": 0.15,
+          "weighted_score": 10.5,
+          "reason": "4/4 runs on similar going"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Danny Mullins, T: W P Mullins (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 4,
+          "date": "2026-01-08",
+          "distance": "2m202y",
+          "going": "soft",
+          "race_class": "",
+          "track": "Clonmel"
+        },
+        {
+          "position": 5,
+          "date": "2025-12-20",
+          "distance": "2m26y",
+          "going": "soft",
+          "race_class": "",
+          "track": "Thurles"
+        },
+        {
+          "position": 8,
+          "date": "2025-12-13",
+          "distance": "3m",
+          "going": "soft",
+          "race_class": "",
+          "track": "Fairyhouse"
+        },
+        {
+          "position": 7,
+          "date": "2025-01-01",
+          "distance": "2m110y",
+          "going": "soft",
+          "race_class": "",
+          "track": "Fairyhouse"
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "runner_name": "Live To Laugh",
+      "number": 9,
+      "draw": null,
+      "age": 7,
+      "weight": "10-1",
+      "official_rating": 94,
+      "jockey": "Ethan O'Sullivan",
+      "trainer": "Peter Fahey",
+      "odds_decimal": 15.0,
+      "total_score": 41.1,
+      "components": [
+        {
+          "name": "Market",
+          "score": 9.3,
+          "weight": 0.35,
+          "weighted_score": 3.25,
+          "reason": "Odds 15.0 (implied 6.7%)"
+        },
+        {
+          "name": "Rating",
+          "score": 51.9,
+          "weight": 0.25,
+          "weighted_score": 12.97,
+          "reason": "OR 94 (field range 93-119)"
+        },
+        {
+          "name": "Form",
+          "score": 62.0,
+          "weight": 0.2,
+          "weighted_score": 12.4,
+          "reason": "Recent positions: 3/6/3/3/2 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 66.7,
+          "weight": 0.15,
+          "weighted_score": 10.01,
+          "reason": "5/6 runs on similar going"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Ethan O'Sullivan, T: Peter Fahey (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": null,
+          "date": "2026-01-29",
+          "distance": "2m4f198y",
+          "going": "soft",
+          "race_class": "",
+          "track": "Thurles"
+        },
+        {
+          "position": 3,
+          "date": "2026-01-03",
+          "distance": "2m4f",
+          "going": "soft",
+          "race_class": "",
+          "track": "Cork"
+        },
+        {
+          "position": 6,
+          "date": "2025-11-20",
+          "distance": "2m4f",
+          "going": "soft",
+          "race_class": "",
+          "track": "Thurles"
+        },
+        {
+          "position": 3,
+          "date": "2025-11-04",
+          "distance": "2m4f110y",
+          "going": "soft",
+          "race_class": "",
+          "track": "Fairyhouse"
+        },
+        {
+          "position": 3,
+          "date": "2025-10-03",
+          "distance": "2m4f40y",
+          "going": "soft",
+          "race_class": "",
+          "track": "Gowran Park"
+        },
+        {
+          "position": 2,
+          "date": "2025-09-29",
+          "distance": "2m4f53y",
+          "going": "good",
+          "race_class": "",
+          "track": "Roscommon"
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "runner_name": "Sean Mc",
+      "number": 11,
+      "draw": null,
+      "age": 6,
+      "weight": "10-0",
+      "official_rating": 93,
+      "jockey": "Sean O'Keeffe",
+      "trainer": "P Nolan",
+      "odds_decimal": 7.0,
+      "total_score": 40.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 20.0,
+          "weight": 0.35,
+          "weighted_score": 7.0,
+          "reason": "Odds 7.0 (implied 14.3%)"
+        },
+        {
+          "name": "Rating",
+          "score": 50.0,
+          "weight": 0.25,
+          "weighted_score": 12.5,
+          "reason": "OR 93 (field range 93-119)"
+        },
+        {
+          "name": "Form",
+          "score": 39.8,
+          "weight": 0.2,
+          "weighted_score": 7.96,
+          "reason": "Recent positions: 2/2/8/11/9/19 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 68.3,
+          "weight": 0.15,
+          "weighted_score": 10.24,
+          "reason": "4/6 runs on similar going; 3/6 runs at Punchestown"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Sean O'Keeffe, T: P Nolan (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 2,
+          "date": "2026-01-12",
+          "distance": "2m3f73y",
+          "going": "soft",
+          "race_class": "",
+          "track": "Punchestown"
+        },
+        {
+          "position": 2,
+          "date": "2025-12-13",
+          "distance": "2m4f55y",
+          "going": "soft",
+          "race_class": "",
+          "track": "Fairyhouse"
+        },
+        {
+          "position": 8,
+          "date": "2025-11-13",
+          "distance": "2m4f164y",
+          "going": "heavy",
+          "race_class": "",
+          "track": "Punchestown"
+        },
+        {
+          "position": 11,
+          "date": "2025-04-03",
+          "distance": "2m",
+          "going": "good",
+          "race_class": "",
+          "track": "Naas"
+        },
+        {
+          "position": 9,
+          "date": "2025-03-03",
+          "distance": "2m4f",
+          "going": "good_to_soft",
+          "race_class": "",
+          "track": "Leopardstown"
+        },
+        {
+          "position": 19,
+          "date": "2025-02-03",
+          "distance": "2m44y",
+          "going": "heavy",
+          "race_class": "",
+          "track": "Punchestown"
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "runner_name": "Roc My Haarth",
+      "number": 10,
+      "draw": null,
+      "age": 7,
+      "weight": "10-1",
+      "official_rating": 94,
+      "jockey": "Liam Quinlan",
+      "trainer": "R Hackett",
+      "odds_decimal": 15.0,
+      "total_score": 35.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 9.3,
+          "weight": 0.35,
+          "weighted_score": 3.25,
+          "reason": "Odds 15.0 (implied 6.7%)"
+        },
+        {
+          "name": "Rating",
+          "score": 51.9,
+          "weight": 0.25,
+          "weighted_score": 12.97,
+          "reason": "OR 94 (field range 93-119)"
+        },
+        {
+          "name": "Form",
+          "score": 31.1,
+          "weight": 0.2,
+          "weighted_score": 6.22,
+          "reason": "Recent positions: 10/2/7/14/3 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 73.3,
+          "weight": 0.15,
+          "weighted_score": 10.99,
+          "reason": "3/6 runs at similar distance; 4/6 runs on similar going"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Liam Quinlan, T: R Hackett (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": null,
+          "date": "2026-02-05",
+          "distance": "2m6f195y",
+          "going": "soft",
+          "race_class": "",
+          "track": "Thurles"
+        },
+        {
+          "position": 10,
+          "date": "2025-12-28",
+          "distance": "3m",
+          "going": "soft",
+          "race_class": "",
+          "track": "Limerick"
+        },
+        {
+          "position": 2,
+          "date": "2025-11-18",
+          "distance": "3m100y",
+          "going": "soft",
+          "race_class": "",
+          "track": "Limerick"
+        },
+        {
+          "position": 7,
+          "date": "2025-10-02",
+          "distance": "2m6f170y",
+          "going": "good_to_soft",
+          "race_class": "",
+          "track": "Clonmel"
+        },
+        {
+          "position": 14,
+          "date": "2025-04-03",
+          "distance": "2m7f180y",
+          "going": "good",
+          "race_class": "",
+          "track": "Naas"
+        },
+        {
+          "position": 3,
+          "date": "2025-03-08",
+          "distance": "2m4f",
+          "going": "soft",
+          "race_class": "",
+          "track": "Gowran Park"
+        }
+      ]
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "Kir",
+      "rank": 1,
+      "score": 57.6
+    },
+    "backup_1": {
+      "runner_name": "American Jukebox",
+      "rank": 2,
+      "score": 53.4
+    },
+    "backup_2": {
+      "runner_name": "Gorvitho",
+      "rank": 3,
+      "score": 51.6
+    }
+  },
+  "confidence": {
+    "band": "MED",
+    "margin": 4.2,
+    "reasons": [
+      "Moderate margin of 4.2 pts",
+      "Odds data present"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only."
+}

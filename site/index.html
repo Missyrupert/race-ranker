@@ -15,22 +15,25 @@
   </header>
 
   <main>
-    <!-- Input section -->
+    <!-- Race selector -->
     <section class="input-section">
       <div class="input-card">
-        <label for="race-input">Enter a race URL or "Track YYYY-MM-DD HH:MM"</label>
-        <div class="input-row">
-          <input
-            type="text"
-            id="race-input"
-            placeholder='e.g. https://example.com/racecards/14:30/ascot  or  "Ascot 2026-02-15 14:30"'
-            autocomplete="off"
-          >
-          <button id="rank-btn">Rank Race</button>
+        <div class="selector-row">
+          <div class="selector-group">
+            <label for="course-select">Course</label>
+            <select id="course-select">
+              <option value="" disabled selected>Loading...</option>
+            </select>
+          </div>
+          <div class="selector-group selector-group-race">
+            <label for="race-select">Race</label>
+            <select id="race-select" disabled>
+              <option value="" disabled selected>Pick a course first</option>
+            </select>
+          </div>
         </div>
-        <p class="input-hint">
-          In local mode, this loads pre-built data from <code>data/latest.json</code>.
-          Run <code>python build.py --race "&lt;URL&gt;"</code> first to generate data.
+        <p id="no-races-msg" class="input-hint hidden">
+          No races found for today. Run <code>python fetch_today.py</code> to pull today's cards.
         </p>
       </div>
     </section>

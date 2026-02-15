@@ -1,0 +1,1146 @@
+{
+  "race_id": "newcastle-2026-02-15-13-42",
+  "meta": {
+    "track": "Newcastle",
+    "date": "2026-02-15",
+    "off_time": "13:42",
+    "distance": "1m2f42y",
+    "going": "standard",
+    "race_class": "6",
+    "race_name": "Midnite A Next Generation Betting App Handicap (Rider Restricted Race)",
+    "runners_count": 12
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "Highfield Comrade",
+      "number": 5,
+      "draw": 12,
+      "age": 4,
+      "weight": "9-5",
+      "official_rating": 51,
+      "jockey": "Ben Robinson",
+      "trainer": "J & S Quinn",
+      "odds_decimal": 3.25,
+      "total_score": 62.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 43.1,
+          "weight": 0.35,
+          "weighted_score": 15.08,
+          "reason": "Odds 3.2 (implied 30.8%)"
+        },
+        {
+          "name": "Rating",
+          "score": 80.0,
+          "weight": 0.25,
+          "weighted_score": 20.0,
+          "reason": "OR 51 (field range 45-55)"
+        },
+        {
+          "name": "Form",
+          "score": 69.4,
+          "weight": 0.2,
+          "weighted_score": 13.88,
+          "reason": "Recent positions: 3/1/4/5/3 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 70.0,
+          "weight": 0.15,
+          "weighted_score": 10.5,
+          "reason": "1/5 runs at similar distance; 4/5 runs on similar going"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Ben Robinson, T: J & S Quinn (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 3,
+          "date": "2026-01-16",
+          "distance": "1m4f51y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Wolverhampton"
+        },
+        {
+          "position": 1,
+          "date": "2026-01-06",
+          "distance": "1m3f23y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Southwell"
+        },
+        {
+          "position": 4,
+          "date": "2025-10-24",
+          "distance": "1m4f14y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Southwell"
+        },
+        {
+          "position": 5,
+          "date": "2025-08-27",
+          "distance": "1m5f192y",
+          "going": "good",
+          "race_class": "6",
+          "track": "Catterick"
+        },
+        {
+          "position": 3,
+          "date": "2025-08-15",
+          "distance": "1m4f8y",
+          "going": "firm",
+          "race_class": "6",
+          "track": "Thirsk"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "runner_name": "Showmedemoney",
+      "number": 3,
+      "draw": 3,
+      "age": 7,
+      "weight": "9-8",
+      "official_rating": 54,
+      "jockey": "Mohammed Tabti",
+      "trainer": "I Jardine",
+      "odds_decimal": 6.0,
+      "total_score": 53.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 23.3,
+          "weight": 0.35,
+          "weighted_score": 8.15,
+          "reason": "Odds 6.0 (implied 16.7%)"
+        },
+        {
+          "name": "Rating",
+          "score": 95.0,
+          "weight": 0.25,
+          "weighted_score": 23.75,
+          "reason": "OR 54 (field range 45-55)"
+        },
+        {
+          "name": "Form",
+          "score": 40.6,
+          "weight": 0.2,
+          "weighted_score": 8.12,
+          "reason": "Recent positions: 4/1/9/7/9 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 76.0,
+          "weight": 0.15,
+          "weighted_score": 11.4,
+          "reason": "5/5 runs on similar going; 3/5 runs at Newcastle"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Mohammed Tabti, T: I Jardine (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 4,
+          "date": "2026-01-06",
+          "distance": "1m13y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Southwell"
+        },
+        {
+          "position": 1,
+          "date": "2025-12-16",
+          "distance": "1m5y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 9,
+          "date": "2025-11-22",
+          "distance": "1m5y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 7,
+          "date": "2024-06-01",
+          "distance": "1m2y",
+          "going": "good",
+          "race_class": "6",
+          "track": "Musselburgh"
+        },
+        {
+          "position": 9,
+          "date": "2024-03-13",
+          "distance": "1m5y",
+          "going": "standard",
+          "race_class": "5",
+          "track": "Newcastle"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "runner_name": "Force Of Honour",
+      "number": 2,
+      "draw": 5,
+      "age": 4,
+      "weight": "9-8",
+      "official_rating": 54,
+      "jockey": "Barry McHugh",
+      "trainer": "I Furtado",
+      "odds_decimal": 13.0,
+      "total_score": 52.1,
+      "components": [
+        {
+          "name": "Market",
+          "score": 10.8,
+          "weight": 0.35,
+          "weighted_score": 3.78,
+          "reason": "Odds 13.0 (implied 7.7%)"
+        },
+        {
+          "name": "Rating",
+          "score": 95.0,
+          "weight": 0.25,
+          "weighted_score": 23.75,
+          "reason": "OR 54 (field range 45-55)"
+        },
+        {
+          "name": "Form",
+          "score": 51.9,
+          "weight": 0.2,
+          "weighted_score": 10.38,
+          "reason": "Recent positions: 5/10/3/1/2 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 78.0,
+          "weight": 0.15,
+          "weighted_score": 11.7,
+          "reason": "1/5 runs at similar distance; 5/5 runs on similar going; 2/5 runs at Newcastle"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Barry McHugh, T: I Furtado (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 5,
+          "date": "2026-02-05",
+          "distance": "1m13y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Southwell"
+        },
+        {
+          "position": 10,
+          "date": "2026-01-23",
+          "distance": "1m13y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Southwell"
+        },
+        {
+          "position": 3,
+          "date": "2024-10-03",
+          "distance": "1m2f42y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 1,
+          "date": "2024-09-25",
+          "distance": "7f219y",
+          "going": "good",
+          "race_class": "6",
+          "track": "Redcar"
+        },
+        {
+          "position": 2,
+          "date": "2024-09-10",
+          "distance": "1m5y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "runner_name": "Hijo De La Luna",
+      "number": 7,
+      "draw": 1,
+      "age": 6,
+      "weight": "9-3",
+      "official_rating": 49,
+      "jockey": "Aiden Brookes",
+      "trainer": "S G West",
+      "odds_decimal": 9.0,
+      "total_score": 49.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 15.6,
+          "weight": 0.35,
+          "weighted_score": 5.46,
+          "reason": "Odds 9.0 (implied 11.1%)"
+        },
+        {
+          "name": "Rating",
+          "score": 70.0,
+          "weight": 0.25,
+          "weighted_score": 17.5,
+          "reason": "OR 49 (field range 45-55)"
+        },
+        {
+          "name": "Form",
+          "score": 60.8,
+          "weight": 0.2,
+          "weighted_score": 12.16,
+          "reason": "Recent positions: 3/2/8/3 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 78.0,
+          "weight": 0.15,
+          "weighted_score": 11.7,
+          "reason": "3/5 runs at similar distance; 4/5 runs on similar going"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Aiden Brookes, T: S G West (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 3,
+          "date": "2026-01-31",
+          "distance": "1m2f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Lingfield"
+        },
+        {
+          "position": 2,
+          "date": "2026-01-06",
+          "distance": "1m3f23y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Southwell"
+        },
+        {
+          "position": null,
+          "date": "2025-06-20",
+          "distance": "2m4f139y",
+          "going": "good",
+          "race_class": "5",
+          "track": "Market Rasen"
+        },
+        {
+          "position": 8,
+          "date": "2025-06-10",
+          "distance": "1m1f104y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Wolverhampton"
+        },
+        {
+          "position": 3,
+          "date": "2025-05-12",
+          "distance": "1m7f182y",
+          "going": "firm",
+          "race_class": "4",
+          "track": "Southwell"
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "runner_name": "Oh So Cool",
+      "number": 6,
+      "draw": 10,
+      "age": 4,
+      "weight": "9-3",
+      "official_rating": 49,
+      "jockey": "Tom Kiely-Marshall",
+      "trainer": "R Menzies",
+      "odds_decimal": 4.5,
+      "total_score": 45.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 31.1,
+          "weight": 0.35,
+          "weighted_score": 10.88,
+          "reason": "Odds 4.5 (implied 22.2%)"
+        },
+        {
+          "name": "Rating",
+          "score": 70.0,
+          "weight": 0.25,
+          "weighted_score": 17.5,
+          "reason": "OR 49 (field range 45-55)"
+        },
+        {
+          "name": "Form",
+          "score": 25.6,
+          "weight": 0.2,
+          "weighted_score": 5.12,
+          "reason": "Recent positions: 6/5/7/6 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 66.0,
+          "weight": 0.15,
+          "weighted_score": 9.9,
+          "reason": "3/5 runs on similar going; 2/5 runs at Newcastle"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Tom Kiely-Marshall, T: R Menzies (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 6,
+          "date": "2026-02-04",
+          "distance": "1m5y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": null,
+          "date": "2025-10-28",
+          "distance": "5f212y",
+          "going": "good",
+          "race_class": "6",
+          "track": "Catterick"
+        },
+        {
+          "position": 5,
+          "date": "2025-10-09",
+          "distance": "7f50y",
+          "going": "heavy",
+          "race_class": "6",
+          "track": "Ayr"
+        },
+        {
+          "position": 7,
+          "date": "2025-09-19",
+          "distance": "1m5y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 6,
+          "date": "2025-08-20",
+          "distance": "6f195y",
+          "going": "firm",
+          "race_class": "6",
+          "track": "Carlisle"
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "runner_name": "Staffordshire",
+      "number": 4,
+      "draw": 8,
+      "age": 4,
+      "weight": "9-5",
+      "official_rating": 51,
+      "jockey": "Oliver Stammers",
+      "trainer": "J Candlish",
+      "odds_decimal": 8.0,
+      "total_score": 42.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 17.5,
+          "weight": 0.35,
+          "weighted_score": 6.12,
+          "reason": "Odds 8.0 (implied 12.5%)"
+        },
+        {
+          "name": "Rating",
+          "score": 80.0,
+          "weight": 0.25,
+          "weighted_score": 20.0,
+          "reason": "OR 51 (field range 45-55)"
+        },
+        {
+          "name": "Form",
+          "score": 14.5,
+          "weight": 0.2,
+          "weighted_score": 2.9,
+          "reason": "Recent positions: 7/11/4/8/7 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 74.0,
+          "weight": 0.15,
+          "weighted_score": 11.1,
+          "reason": "2/5 runs at similar distance; 4/5 runs on similar going"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Oliver Stammers, T: J Candlish (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 7,
+          "date": "2026-01-19",
+          "distance": "1m4f51y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Wolverhampton"
+        },
+        {
+          "position": 11,
+          "date": "2025-11-03",
+          "distance": "1m4f51y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Wolverhampton"
+        },
+        {
+          "position": 4,
+          "date": "2025-09-06",
+          "distance": "1m1f104y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Wolverhampton"
+        },
+        {
+          "position": 8,
+          "date": "2025-08-07",
+          "distance": "1m2f50y",
+          "going": "firm",
+          "race_class": "5",
+          "track": "Nottingham"
+        },
+        {
+          "position": 7,
+          "date": "2025-07-15",
+          "distance": "1m75y",
+          "going": "good",
+          "race_class": "6",
+          "track": "Nottingham"
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "runner_name": "Bavaria Iron",
+      "number": 1,
+      "draw": 4,
+      "age": 7,
+      "weight": "9-9",
+      "official_rating": 55,
+      "jockey": "Elle-May Croot",
+      "trainer": "I Furtado",
+      "odds_decimal": 23.0,
+      "total_score": 40.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 6.1,
+          "weight": 0.35,
+          "weighted_score": 2.13,
+          "reason": "Odds 23.0 (implied 4.3%)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.25,
+          "weighted_score": 25.0,
+          "reason": "OR 55 (field range 45-55)"
+        },
+        {
+          "name": "Form",
+          "score": 0.0,
+          "weight": 0.2,
+          "weighted_score": 0.0,
+          "reason": "Recent positions: 11/12/8/8/8 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 72.0,
+          "weight": 0.15,
+          "weighted_score": 10.8,
+          "reason": "2/5 runs at similar distance; 3/5 runs on similar going; 1/5 runs at Newcastle"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Elle-May Croot, T: I Furtado (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 11,
+          "date": "2026-01-24",
+          "distance": "1m2f42y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 12,
+          "date": "2026-01-04",
+          "distance": "7f14y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Southwell"
+        },
+        {
+          "position": 8,
+          "date": "2025-11-24",
+          "distance": "1m142y",
+          "going": "standard",
+          "race_class": "5",
+          "track": "Wolverhampton"
+        },
+        {
+          "position": 8,
+          "date": "2025-11-05",
+          "distance": "1m2y",
+          "going": "soft",
+          "race_class": "5",
+          "track": "Musselburgh"
+        },
+        {
+          "position": 8,
+          "date": "2025-10-20",
+          "distance": "1m2f5y",
+          "going": "soft",
+          "race_class": "4",
+          "track": "Pontefract"
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "runner_name": "Millbuie",
+      "number": 10,
+      "draw": 9,
+      "age": 5,
+      "weight": "9-0",
+      "official_rating": 45,
+      "jockey": "D C Costello",
+      "trainer": "Ewan Whillans",
+      "odds_decimal": 13.0,
+      "total_score": 36.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 10.8,
+          "weight": 0.35,
+          "weighted_score": 3.78,
+          "reason": "Odds 13.0 (implied 7.7%)"
+        },
+        {
+          "name": "Rating",
+          "score": 50.0,
+          "weight": 0.25,
+          "weighted_score": 12.5,
+          "reason": "OR 45 (field range 45-55)"
+        },
+        {
+          "name": "Form",
+          "score": 37.5,
+          "weight": 0.2,
+          "weighted_score": 7.5,
+          "reason": "Recent positions: 6/4/4/11/4 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 70.0,
+          "weight": 0.15,
+          "weighted_score": 10.5,
+          "reason": "4/5 runs on similar going; 2/5 runs at Newcastle"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: D C Costello, T: Ewan Whillans (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 6,
+          "date": "2026-01-22",
+          "distance": "1m4f98y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 4,
+          "date": "2025-10-09",
+          "distance": "1m5f26y",
+          "going": "heavy",
+          "race_class": "6",
+          "track": "Ayr"
+        },
+        {
+          "position": 4,
+          "date": "2025-09-29",
+          "distance": "1m4f15y",
+          "going": "good",
+          "race_class": "6",
+          "track": "Hamilton"
+        },
+        {
+          "position": 11,
+          "date": "2025-09-11",
+          "distance": "2m56y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 4,
+          "date": "2025-08-12",
+          "distance": "1m4f15y",
+          "going": "good",
+          "race_class": "6",
+          "track": "Hamilton"
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "runner_name": "Sweet Cicely",
+      "number": 8,
+      "draw": 6,
+      "age": 4,
+      "weight": "9-0",
+      "official_rating": 46,
+      "jockey": "Zak Wheatley",
+      "trainer": "M E Sowersby",
+      "odds_decimal": 34.0,
+      "total_score": 34.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 4.1,
+          "weight": 0.35,
+          "weighted_score": 1.43,
+          "reason": "Odds 34.0 (implied 2.9%)"
+        },
+        {
+          "name": "Rating",
+          "score": 55.0,
+          "weight": 0.25,
+          "weighted_score": 13.75,
+          "reason": "OR 46 (field range 45-55)"
+        },
+        {
+          "name": "Form",
+          "score": 29.2,
+          "weight": 0.2,
+          "weighted_score": 5.84,
+          "reason": "Recent positions: 9/5/4/4/7 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 74.0,
+          "weight": 0.15,
+          "weighted_score": 11.1,
+          "reason": "4/5 runs at similar distance; 2/5 runs on similar going"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Zak Wheatley, T: M E Sowersby (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 9,
+          "date": "2025-08-25",
+          "distance": "1m1f170y",
+          "going": "firm",
+          "race_class": "6",
+          "track": "Ripon"
+        },
+        {
+          "position": 5,
+          "date": "2025-07-29",
+          "distance": "1m1f170y",
+          "going": "good",
+          "race_class": "6",
+          "track": "Ripon"
+        },
+        {
+          "position": 4,
+          "date": "2025-07-07",
+          "distance": "1m4f10y",
+          "going": "firm",
+          "race_class": "6",
+          "track": "Ripon"
+        },
+        {
+          "position": 4,
+          "date": "2025-06-24",
+          "distance": "1m1f207y",
+          "going": "firm",
+          "race_class": "6",
+          "track": "Beverley"
+        },
+        {
+          "position": 7,
+          "date": "2025-05-29",
+          "distance": "1m1f",
+          "going": "good",
+          "race_class": "6",
+          "track": "Carlisle"
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "runner_name": "Masham Moor",
+      "number": 11,
+      "draw": 2,
+      "age": 9,
+      "weight": "9-0",
+      "official_rating": 45,
+      "jockey": "A Elliott",
+      "trainer": "S G West",
+      "odds_decimal": 26.0,
+      "total_score": 32.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 5.4,
+          "weight": 0.35,
+          "weighted_score": 1.89,
+          "reason": "Odds 26.0 (implied 3.8%)"
+        },
+        {
+          "name": "Rating",
+          "score": 50.0,
+          "weight": 0.25,
+          "weighted_score": 12.5,
+          "reason": "OR 45 (field range 45-55)"
+        },
+        {
+          "name": "Form",
+          "score": 21.7,
+          "weight": 0.2,
+          "weighted_score": 4.34,
+          "reason": "Recent positions: 6/7/6/9/4 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 72.0,
+          "weight": 0.15,
+          "weighted_score": 10.8,
+          "reason": "5/5 runs on similar going; 1/5 runs at Newcastle"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: A Elliott, T: S G West (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 6,
+          "date": "2026-02-10",
+          "distance": "1m5y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 7,
+          "date": "2026-01-17",
+          "distance": "1m13y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Southwell"
+        },
+        {
+          "position": 6,
+          "date": "2026-01-06",
+          "distance": "1m13y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Southwell"
+        },
+        {
+          "position": 9,
+          "date": "2025-11-20",
+          "distance": "1m13y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Southwell"
+        },
+        {
+          "position": 4,
+          "date": "2025-10-24",
+          "distance": "1m13y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Southwell"
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "runner_name": "Freak Encounter",
+      "number": 9,
+      "draw": 11,
+      "age": 4,
+      "weight": "9-0",
+      "official_rating": 45,
+      "jockey": "Greg Fairley",
+      "trainer": "D W Whillans",
+      "odds_decimal": 26.0,
+      "total_score": 31.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 5.4,
+          "weight": 0.35,
+          "weighted_score": 1.89,
+          "reason": "Odds 26.0 (implied 3.8%)"
+        },
+        {
+          "name": "Rating",
+          "score": 50.0,
+          "weight": 0.25,
+          "weighted_score": 12.5,
+          "reason": "OR 45 (field range 45-55)"
+        },
+        {
+          "name": "Form",
+          "score": 14.8,
+          "weight": 0.2,
+          "weighted_score": 2.96,
+          "reason": "Recent positions: 9/10/5/13/4 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 80.0,
+          "weight": 0.15,
+          "weighted_score": 12.0,
+          "reason": "5/5 runs on similar going; 5/5 runs at Newcastle"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Greg Fairley, T: D W Whillans (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 9,
+          "date": "2026-01-10",
+          "distance": "1m5y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 10,
+          "date": "2025-12-19",
+          "distance": "7f14y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 5,
+          "date": "2025-12-16",
+          "distance": "1m5y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 13,
+          "date": "2025-11-27",
+          "distance": "7f14y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 4,
+          "date": "2025-11-18",
+          "distance": "7f14y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "runner_name": "Rajawail",
+      "number": 12,
+      "draw": 7,
+      "age": 6,
+      "weight": "9-0",
+      "official_rating": 45,
+      "jockey": "Faye McManoman",
+      "trainer": "B Rothwell",
+      "odds_decimal": 201.0,
+      "total_score": 25.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 1.0,
+          "weight": 0.35,
+          "weighted_score": 0.35,
+          "reason": "Odds 201.0 (implied 0.5%)"
+        },
+        {
+          "name": "Rating",
+          "score": 50.0,
+          "weight": 0.25,
+          "weighted_score": 12.5,
+          "reason": "OR 45 (field range 45-55)"
+        },
+        {
+          "name": "Form",
+          "score": 8.6,
+          "weight": 0.2,
+          "weighted_score": 1.72,
+          "reason": "Recent positions: 12/6/8/7/7 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 58.0,
+          "weight": 0.15,
+          "weighted_score": 8.7,
+          "reason": "1/5 runs at similar distance; 1/5 runs on similar going"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Faye McManoman, T: B Rothwell (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 12,
+          "date": "2025-07-29",
+          "distance": "1m1f207y",
+          "going": "firm",
+          "race_class": "6",
+          "track": "Beverley"
+        },
+        {
+          "position": 6,
+          "date": "2025-07-17",
+          "distance": "6f6y",
+          "going": "good",
+          "race_class": "6",
+          "track": "Hamilton"
+        },
+        {
+          "position": 8,
+          "date": "2025-07-04",
+          "distance": "7f96y",
+          "going": "firm",
+          "race_class": "6",
+          "track": "Beverley"
+        },
+        {
+          "position": 7,
+          "date": "2025-06-20",
+          "distance": "5f",
+          "going": "firm",
+          "race_class": "5",
+          "track": "Redcar"
+        },
+        {
+          "position": 7,
+          "date": "2025-06-17",
+          "distance": "7f96y",
+          "going": "firm",
+          "race_class": "6",
+          "track": "Beverley"
+        }
+      ]
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "Highfield Comrade",
+      "rank": 1,
+      "score": 62.0
+    },
+    "backup_1": {
+      "runner_name": "Showmedemoney",
+      "rank": 2,
+      "score": 53.9
+    },
+    "backup_2": {
+      "runner_name": "Force Of Honour",
+      "rank": 3,
+      "score": 52.1
+    }
+  },
+  "confidence": {
+    "band": "HIGH",
+    "margin": 8.1,
+    "reasons": [
+      "Margin of 8.1 pts between 1st and 2nd",
+      "5/5 scoring components available",
+      "Odds data present"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only."
+}

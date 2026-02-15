@@ -1,0 +1,941 @@
+{
+  "race_id": "newcastle-2026-02-15-17-12",
+  "meta": {
+    "track": "Newcastle",
+    "date": "2026-02-15",
+    "off_time": "17:12",
+    "distance": "5f",
+    "going": "standard",
+    "race_class": "6",
+    "race_name": "Midnite Are Upping The Betting Game Handicap (Rider Restricted Race)",
+    "runners_count": 9
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "Em Jay Kay",
+      "number": 6,
+      "draw": 9,
+      "age": 7,
+      "weight": "9-5",
+      "official_rating": 61,
+      "jockey": "Connor Planas",
+      "trainer": "P S McEntee",
+      "odds_decimal": 2.75,
+      "total_score": 68.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 50.9,
+          "weight": 0.35,
+          "weighted_score": 17.81,
+          "reason": "Odds 2.8 (implied 36.4%)"
+        },
+        {
+          "name": "Rating",
+          "score": 90.0,
+          "weight": 0.25,
+          "weighted_score": 22.5,
+          "reason": "OR 61 (field range 45-65)"
+        },
+        {
+          "name": "Form",
+          "score": 59.1,
+          "weight": 0.2,
+          "weighted_score": 11.82,
+          "reason": "Recent positions: 1/3/8/3/7/3 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 93.3,
+          "weight": 0.15,
+          "weighted_score": 13.99,
+          "reason": "6/6 runs at similar distance; 6/6 runs on similar going; 2/6 runs at Newcastle"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Connor Planas, T: P S McEntee (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 1,
+          "date": "2026-01-17",
+          "distance": "6f1y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Lingfield"
+        },
+        {
+          "position": 3,
+          "date": "2026-01-13",
+          "distance": "5f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 8,
+          "date": "2025-12-27",
+          "distance": "6f20y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Wolverhampton"
+        },
+        {
+          "position": 3,
+          "date": "2025-12-22",
+          "distance": "5f21y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Wolverhampton"
+        },
+        {
+          "position": 7,
+          "date": "2025-11-29",
+          "distance": "6f20y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Wolverhampton"
+        },
+        {
+          "position": 3,
+          "date": "2025-11-26",
+          "distance": "6f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "runner_name": "Digital",
+      "number": 5,
+      "draw": 7,
+      "age": 8,
+      "weight": "9-6",
+      "official_rating": 62,
+      "jockey": "Taryn Langley",
+      "trainer": "Mrs R Carr",
+      "odds_decimal": 6.0,
+      "total_score": 63.1,
+      "components": [
+        {
+          "name": "Market",
+          "score": 23.3,
+          "weight": 0.35,
+          "weighted_score": 8.15,
+          "reason": "Odds 6.0 (implied 16.7%)"
+        },
+        {
+          "name": "Rating",
+          "score": 92.5,
+          "weight": 0.25,
+          "weighted_score": 23.12,
+          "reason": "OR 62 (field range 45-65)"
+        },
+        {
+          "name": "Form",
+          "score": 71.6,
+          "weight": 0.2,
+          "weighted_score": 14.32,
+          "reason": "Recent positions: 5/1/2/2/1/6 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 100.0,
+          "weight": 0.15,
+          "weighted_score": 15.0,
+          "reason": "6/6 runs at similar distance; 6/6 runs on similar going; 6/6 runs at Newcastle"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Taryn Langley, T: Mrs R Carr (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 5,
+          "date": "2026-02-06",
+          "distance": "5f",
+          "going": "standard",
+          "race_class": "5",
+          "track": "Newcastle"
+        },
+        {
+          "position": 1,
+          "date": "2026-01-20",
+          "distance": "5f",
+          "going": "standard",
+          "race_class": "5",
+          "track": "Newcastle"
+        },
+        {
+          "position": 2,
+          "date": "2026-01-13",
+          "distance": "5f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 2,
+          "date": "2026-01-01",
+          "distance": "5f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 1,
+          "date": "2025-12-19",
+          "distance": "5f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 6,
+          "date": "2025-12-09",
+          "distance": "5f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "runner_name": "Azucena",
+      "number": 7,
+      "draw": 5,
+      "age": 6,
+      "weight": "9-3",
+      "official_rating": 59,
+      "jockey": "Oliver Stammers",
+      "trainer": "S Hanlon",
+      "odds_decimal": 5.0,
+      "total_score": 60.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 28.0,
+          "weight": 0.35,
+          "weighted_score": 9.8,
+          "reason": "Odds 5.0 (implied 20.0%)"
+        },
+        {
+          "name": "Rating",
+          "score": 85.0,
+          "weight": 0.25,
+          "weighted_score": 21.25,
+          "reason": "OR 59 (field range 45-65)"
+        },
+        {
+          "name": "Form",
+          "score": 63.4,
+          "weight": 0.2,
+          "weighted_score": 12.68,
+          "reason": "Recent positions: 2/1/4/5/10/4 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 96.7,
+          "weight": 0.15,
+          "weighted_score": 14.5,
+          "reason": "6/6 runs at similar distance; 6/6 runs on similar going; 4/6 runs at Newcastle"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Oliver Stammers, T: S Hanlon (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 2,
+          "date": "2026-01-20",
+          "distance": "4f214y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Southwell"
+        },
+        {
+          "position": 1,
+          "date": "2026-01-13",
+          "distance": "5f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 4,
+          "date": "2025-12-19",
+          "distance": "5f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 5,
+          "date": "2025-11-27",
+          "distance": "5f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 10,
+          "date": "2025-11-03",
+          "distance": "5f21y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Wolverhampton"
+        },
+        {
+          "position": 4,
+          "date": "2025-10-27",
+          "distance": "5f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "runner_name": "Correspondence",
+      "number": 1,
+      "draw": 4,
+      "age": 4,
+      "weight": "9-9",
+      "official_rating": 65,
+      "jockey": "Tyrese Cameron",
+      "trainer": "A W Carroll",
+      "odds_decimal": 17.0,
+      "total_score": 52.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 8.2,
+          "weight": 0.35,
+          "weighted_score": 2.87,
+          "reason": "Odds 17.0 (implied 5.9%)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.25,
+          "weighted_score": 25.0,
+          "reason": "OR 65 (field range 45-65)"
+        },
+        {
+          "name": "Form",
+          "score": 47.8,
+          "weight": 0.2,
+          "weighted_score": 9.56,
+          "reason": "Recent positions: 2/8/10/4/2/3 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 81.7,
+          "weight": 0.15,
+          "weighted_score": 12.26,
+          "reason": "4/6 runs at similar distance; 5/6 runs on similar going; 1/6 runs at Newcastle"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Tyrese Cameron, T: A W Carroll (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 2,
+          "date": "2026-02-06",
+          "distance": "6f20y",
+          "going": "standard",
+          "race_class": "4",
+          "track": "Wolverhampton"
+        },
+        {
+          "position": 8,
+          "date": "2026-01-11",
+          "distance": "6f",
+          "going": "standard",
+          "race_class": "5",
+          "track": "Chelmsford City"
+        },
+        {
+          "position": 10,
+          "date": "2025-10-23",
+          "distance": "6f",
+          "going": "standard",
+          "race_class": "5",
+          "track": "Chelmsford City"
+        },
+        {
+          "position": 4,
+          "date": "2025-10-04",
+          "distance": "7f36y",
+          "going": "standard",
+          "race_class": "5",
+          "track": "Wolverhampton"
+        },
+        {
+          "position": 2,
+          "date": "2025-09-11",
+          "distance": "7f14y",
+          "going": "standard",
+          "race_class": "4",
+          "track": "Newcastle"
+        },
+        {
+          "position": 3,
+          "date": "2025-06-24",
+          "distance": "5f215y",
+          "going": "firm",
+          "race_class": "5",
+          "track": "Brighton"
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "runner_name": "Orbital Chime",
+      "number": 3,
+      "draw": 3,
+      "age": 6,
+      "weight": "9-8",
+      "official_rating": 64,
+      "jockey": "Greg Fairley",
+      "trainer": "K Scott",
+      "odds_decimal": 17.0,
+      "total_score": 49.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 8.2,
+          "weight": 0.35,
+          "weighted_score": 2.87,
+          "reason": "Odds 17.0 (implied 5.9%)"
+        },
+        {
+          "name": "Rating",
+          "score": 97.5,
+          "weight": 0.25,
+          "weighted_score": 24.38,
+          "reason": "OR 64 (field range 45-65)"
+        },
+        {
+          "name": "Form",
+          "score": 26.2,
+          "weight": 0.2,
+          "weighted_score": 5.24,
+          "reason": "Recent positions: 8/8/7/6/1/2 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 95.0,
+          "weight": 0.15,
+          "weighted_score": 14.25,
+          "reason": "6/6 runs at similar distance; 6/6 runs on similar going; 3/6 runs at Newcastle"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Greg Fairley, T: K Scott (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 8,
+          "date": "2026-01-24",
+          "distance": "6f",
+          "going": "standard",
+          "race_class": "4",
+          "track": "Newcastle"
+        },
+        {
+          "position": 8,
+          "date": "2025-12-28",
+          "distance": "6f16y",
+          "going": "standard",
+          "race_class": "5",
+          "track": "Southwell"
+        },
+        {
+          "position": 7,
+          "date": "2025-12-15",
+          "distance": "6f20y",
+          "going": "standard",
+          "race_class": "5",
+          "track": "Wolverhampton"
+        },
+        {
+          "position": 6,
+          "date": "2025-12-05",
+          "distance": "5f",
+          "going": "standard",
+          "race_class": "5",
+          "track": "Newcastle"
+        },
+        {
+          "position": 1,
+          "date": "2025-11-21",
+          "distance": "6f16y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Southwell"
+        },
+        {
+          "position": 2,
+          "date": "2025-11-07",
+          "distance": "5f",
+          "going": "standard",
+          "race_class": "5",
+          "track": "Newcastle"
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "runner_name": "La Rochette",
+      "number": 8,
+      "draw": 10,
+      "age": 5,
+      "weight": "9-1",
+      "official_rating": 57,
+      "jockey": "Barry McHugh",
+      "trainer": "Miss Tracy Waggott",
+      "odds_decimal": 9.0,
+      "total_score": 47.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 15.6,
+          "weight": 0.35,
+          "weighted_score": 5.46,
+          "reason": "Odds 9.0 (implied 11.1%)"
+        },
+        {
+          "name": "Rating",
+          "score": 80.0,
+          "weight": 0.25,
+          "weighted_score": 20.0,
+          "reason": "OR 57 (field range 45-65)"
+        },
+        {
+          "name": "Form",
+          "score": 29.9,
+          "weight": 0.2,
+          "weighted_score": 5.98,
+          "reason": "Recent positions: 4/3/12/9/10/7 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 91.7,
+          "weight": 0.15,
+          "weighted_score": 13.76,
+          "reason": "6/6 runs at similar distance; 5/6 runs on similar going; 3/6 runs at Newcastle"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Barry McHugh, T: Miss Tracy Waggott (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 4,
+          "date": "2026-01-13",
+          "distance": "5f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 3,
+          "date": "2026-01-01",
+          "distance": "5f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 12,
+          "date": "2025-12-19",
+          "distance": "6f",
+          "going": "standard",
+          "race_class": "5",
+          "track": "Newcastle"
+        },
+        {
+          "position": 9,
+          "date": "2025-09-24",
+          "distance": "5f",
+          "going": "good",
+          "race_class": "5",
+          "track": "Redcar"
+        },
+        {
+          "position": 10,
+          "date": "2025-09-01",
+          "distance": "6f195y",
+          "going": "good",
+          "race_class": "5",
+          "track": "Carlisle"
+        },
+        {
+          "position": 7,
+          "date": "2025-08-23",
+          "distance": "5f217y",
+          "going": "firm",
+          "race_class": "5",
+          "track": "Redcar"
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "runner_name": "Toomuchforme",
+      "number": 2,
+      "draw": 2,
+      "age": 4,
+      "weight": "9-8",
+      "official_rating": 64,
+      "jockey": "Alex Jary",
+      "trainer": "A Brittain",
+      "odds_decimal": 26.0,
+      "total_score": 43.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 5.4,
+          "weight": 0.35,
+          "weighted_score": 1.89,
+          "reason": "Odds 26.0 (implied 3.8%)"
+        },
+        {
+          "name": "Rating",
+          "score": 97.5,
+          "weight": 0.25,
+          "weighted_score": 24.38,
+          "reason": "OR 64 (field range 45-65)"
+        },
+        {
+          "name": "Form",
+          "score": 4.7,
+          "weight": 0.2,
+          "weighted_score": 0.94,
+          "reason": "Recent positions: 7/7/10/9/11/9 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 88.3,
+          "weight": 0.15,
+          "weighted_score": 13.24,
+          "reason": "5/6 runs at similar distance; 6/6 runs on similar going; 1/6 runs at Newcastle"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Alex Jary, T: A Brittain (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 7,
+          "date": "2026-01-23",
+          "distance": "6f16y",
+          "going": "standard",
+          "race_class": "5",
+          "track": "Southwell"
+        },
+        {
+          "position": 7,
+          "date": "2025-12-20",
+          "distance": "6f20y",
+          "going": "standard",
+          "race_class": "5",
+          "track": "Wolverhampton"
+        },
+        {
+          "position": 10,
+          "date": "2025-11-21",
+          "distance": "7f14y",
+          "going": "standard",
+          "race_class": "5",
+          "track": "Southwell"
+        },
+        {
+          "position": 9,
+          "date": "2025-11-03",
+          "distance": "6f16y",
+          "going": "standard",
+          "race_class": "4",
+          "track": "Southwell"
+        },
+        {
+          "position": 11,
+          "date": "2025-09-11",
+          "distance": "6f",
+          "going": "standard",
+          "race_class": "4",
+          "track": "Newcastle"
+        },
+        {
+          "position": 9,
+          "date": "2025-05-31",
+          "distance": "6f17y",
+          "going": "good",
+          "race_class": "4",
+          "track": "Chester"
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "runner_name": "Shatin Venture",
+      "number": 9,
+      "draw": 1,
+      "age": 5,
+      "weight": "8-4",
+      "official_rating": 45,
+      "jockey": "Amie Waugh",
+      "trainer": "Miss L A Perratt",
+      "odds_decimal": 13.0,
+      "total_score": 42.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 10.8,
+          "weight": 0.35,
+          "weighted_score": 3.78,
+          "reason": "Odds 13.0 (implied 7.7%)"
+        },
+        {
+          "name": "Rating",
+          "score": 50.0,
+          "weight": 0.25,
+          "weighted_score": 12.5,
+          "reason": "OR 45 (field range 45-65)"
+        },
+        {
+          "name": "Form",
+          "score": 45.4,
+          "weight": 0.2,
+          "weighted_score": 9.08,
+          "reason": "Recent positions: 4/10/3/3/3/7 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 98.3,
+          "weight": 0.15,
+          "weighted_score": 14.74,
+          "reason": "6/6 runs at similar distance; 6/6 runs on similar going; 5/6 runs at Newcastle"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Amie Waugh, T: Miss L A Perratt (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 4,
+          "date": "2026-01-16",
+          "distance": "5f21y",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Wolverhampton"
+        },
+        {
+          "position": 10,
+          "date": "2026-01-01",
+          "distance": "5f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 3,
+          "date": "2025-12-19",
+          "distance": "5f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 3,
+          "date": "2025-12-09",
+          "distance": "5f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 3,
+          "date": "2025-10-21",
+          "distance": "5f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 7,
+          "date": "2025-09-26",
+          "distance": "5f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "runner_name": "Nazca",
+      "number": 10,
+      "draw": 6,
+      "age": 7,
+      "weight": "8-4",
+      "official_rating": 45,
+      "jockey": "Rhys Elliott",
+      "trainer": "Miss L A Perratt",
+      "odds_decimal": 34.0,
+      "total_score": 31.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 4.1,
+          "weight": 0.35,
+          "weighted_score": 1.43,
+          "reason": "Odds 34.0 (implied 2.9%)"
+        },
+        {
+          "name": "Rating",
+          "score": 50.0,
+          "weight": 0.25,
+          "weighted_score": 12.5,
+          "reason": "OR 45 (field range 45-65)"
+        },
+        {
+          "name": "Form",
+          "score": 0.0,
+          "weight": 0.2,
+          "weighted_score": 0.0,
+          "reason": "Recent positions: 8/8/8/8/9/14 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 100.0,
+          "weight": 0.15,
+          "weighted_score": 15.0,
+          "reason": "6/6 runs at similar distance; 6/6 runs on similar going; 6/6 runs at Newcastle"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Rhys Elliott, T: Miss L A Perratt (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 8,
+          "date": "2026-02-10",
+          "distance": "6f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 8,
+          "date": "2026-01-01",
+          "distance": "6f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 8,
+          "date": "2025-12-09",
+          "distance": "6f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 8,
+          "date": "2025-11-26",
+          "distance": "6f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 9,
+          "date": "2025-11-18",
+          "distance": "6f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        },
+        {
+          "position": 14,
+          "date": "2025-11-06",
+          "distance": "6f",
+          "going": "standard",
+          "race_class": "6",
+          "track": "Newcastle"
+        }
+      ]
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "Em Jay Kay",
+      "rank": 1,
+      "score": 68.6
+    },
+    "backup_1": {
+      "runner_name": "Digital",
+      "rank": 2,
+      "score": 63.1
+    },
+    "backup_2": {
+      "runner_name": "Azucena",
+      "rank": 3,
+      "score": 60.7
+    }
+  },
+  "confidence": {
+    "band": "MED",
+    "margin": 5.5,
+    "reasons": [
+      "Moderate margin of 5.5 pts",
+      "Odds data present"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only."
+}

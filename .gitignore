@@ -8,7 +8,7 @@ env/
 data/raw/*.json
 data/scored/*.json
 data/web/*.json
-site/data/*.json
+# site/data/*.json is NOT ignored -- needed for Netlify static deploy
 *.egg-info/
 dist/
 build/

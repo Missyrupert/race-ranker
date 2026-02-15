@@ -1,0 +1,724 @@
+{
+  "race_id": "musselburgh-2026-02-15-16-20",
+  "meta": {
+    "track": "Musselburgh",
+    "date": "2026-02-15",
+    "off_time": "16:20",
+    "distance": "2m7f138y",
+    "going": "good",
+    "race_class": "4",
+    "race_name": "Famous Five Handicap Chase (GBB Race)",
+    "runners_count": 7
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "Jus De Citron",
+      "number": 3,
+      "draw": null,
+      "age": 7,
+      "weight": "11-11",
+      "official_rating": 117,
+      "jockey": "Paul O'Brien",
+      "trainer": "Harry Derham",
+      "odds_decimal": 3.25,
+      "total_score": 62.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 43.1,
+          "weight": 0.35,
+          "weighted_score": 15.08,
+          "reason": "Odds 3.2 (implied 30.8%)"
+        },
+        {
+          "name": "Rating",
+          "score": 90.9,
+          "weight": 0.25,
+          "weighted_score": 22.73,
+          "reason": "OR 117 (field range 99-121)"
+        },
+        {
+          "name": "Form",
+          "score": 59.6,
+          "weight": 0.2,
+          "weighted_score": 11.92,
+          "reason": "Recent positions: 3/7/3/1 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 70.0,
+          "weight": 0.15,
+          "weighted_score": 10.5,
+          "reason": "4/4 runs on similar going"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Paul O'Brien, T: Harry Derham (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 3,
+          "date": "2026-01-15",
+          "distance": "2m4f19y",
+          "going": "good",
+          "race_class": "4",
+          "track": "Newcastle"
+        },
+        {
+          "position": 7,
+          "date": "2025-12-26",
+          "distance": "2m5f",
+          "going": "good",
+          "race_class": "3",
+          "track": "Kempton"
+        },
+        {
+          "position": 3,
+          "date": "2025-02-07",
+          "distance": "2m5f",
+          "going": "good",
+          "race_class": "4",
+          "track": "Kempton"
+        },
+        {
+          "position": 1,
+          "date": "2024-12-29",
+          "distance": "2m3f88y",
+          "going": "good",
+          "race_class": "4",
+          "track": "Doncaster"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "runner_name": "Special Rate",
+      "number": 1,
+      "draw": null,
+      "age": 9,
+      "weight": "12-1",
+      "official_rating": 121,
+      "jockey": "B S Hughes",
+      "trainer": "H Burns",
+      "odds_decimal": 5.0,
+      "total_score": 62.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 28.0,
+          "weight": 0.35,
+          "weighted_score": 9.8,
+          "reason": "Odds 5.0 (implied 20.0%)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.25,
+          "weighted_score": 25.0,
+          "reason": "OR 121 (field range 99-121)"
+        },
+        {
+          "name": "Form",
+          "score": 65.4,
+          "weight": 0.2,
+          "weighted_score": 13.08,
+          "reason": "Recent positions: 3/2/6/3/4/2 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 80.0,
+          "weight": 0.15,
+          "weighted_score": 12.0,
+          "reason": "2/6 runs at similar distance; 6/6 runs on similar going; 2/6 runs at Musselburgh"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: B S Hughes, T: H Burns (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 3,
+          "date": "2026-01-31",
+          "distance": "2m7f138y",
+          "going": "good",
+          "race_class": "3",
+          "track": "Musselburgh"
+        },
+        {
+          "position": 2,
+          "date": "2025-12-22",
+          "distance": "2m7f138y",
+          "going": "good",
+          "race_class": "4",
+          "track": "Musselburgh"
+        },
+        {
+          "position": 6,
+          "date": "2025-06-29",
+          "distance": "2m5f34y",
+          "going": "good",
+          "race_class": "2",
+          "track": "Cartmel"
+        },
+        {
+          "position": 3,
+          "date": "2025-05-26",
+          "distance": "2m1f61y",
+          "going": "good",
+          "race_class": "3",
+          "track": "Cartmel"
+        },
+        {
+          "position": 4,
+          "date": "2025-04-19",
+          "distance": "2m3f210y",
+          "going": "good",
+          "race_class": "3",
+          "track": "Carlisle"
+        },
+        {
+          "position": 2,
+          "date": "2025-04-05",
+          "distance": "2m4f19y",
+          "going": "good",
+          "race_class": "3",
+          "track": "Newcastle"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "runner_name": "Bold Light",
+      "number": 2,
+      "draw": null,
+      "age": 9,
+      "weight": "12-0",
+      "official_rating": 120,
+      "jockey": "Alan Doyle",
+      "trainer": "L Russell & M Scudamore",
+      "odds_decimal": 7.0,
+      "total_score": 52.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 20.0,
+          "weight": 0.35,
+          "weighted_score": 7.0,
+          "reason": "Odds 7.0 (implied 14.3%)"
+        },
+        {
+          "name": "Rating",
+          "score": 97.7,
+          "weight": 0.25,
+          "weighted_score": 24.43,
+          "reason": "OR 120 (field range 99-121)"
+        },
+        {
+          "name": "Form",
+          "score": 42.6,
+          "weight": 0.2,
+          "weighted_score": 8.52,
+          "reason": "Recent positions: 4/8/4/6/5/1 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 70.0,
+          "weight": 0.15,
+          "weighted_score": 10.5,
+          "reason": "5/6 runs on similar going; 2/6 runs at Musselburgh"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Alan Doyle, T: L Russell & M Scudamore (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 4,
+          "date": "2026-02-01",
+          "distance": "2m4f68y",
+          "going": "good",
+          "race_class": "3",
+          "track": "Musselburgh"
+        },
+        {
+          "position": 8,
+          "date": "2026-01-01",
+          "distance": "2m3f171y",
+          "going": "good",
+          "race_class": "3",
+          "track": "Musselburgh"
+        },
+        {
+          "position": 4,
+          "date": "2025-11-29",
+          "distance": "2m3f88y",
+          "going": "soft",
+          "race_class": "3",
+          "track": "Doncaster"
+        },
+        {
+          "position": 6,
+          "date": "2025-10-26",
+          "distance": "2m4f",
+          "going": "good",
+          "race_class": "2",
+          "track": "Aintree"
+        },
+        {
+          "position": 5,
+          "date": "2025-04-24",
+          "distance": "2m4f35y",
+          "going": "good",
+          "race_class": "3",
+          "track": "Perth"
+        },
+        {
+          "position": 1,
+          "date": "2025-03-01",
+          "distance": "2m4f189y",
+          "going": "good",
+          "race_class": "2",
+          "track": "Kelso"
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "runner_name": "Jet Legs",
+      "number": 4,
+      "draw": null,
+      "age": 9,
+      "weight": "11-7",
+      "official_rating": 113,
+      "jockey": "Ryan Mania",
+      "trainer": "M Todhunter",
+      "odds_decimal": 8.0,
+      "total_score": 49.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 17.5,
+          "weight": 0.35,
+          "weighted_score": 6.12,
+          "reason": "Odds 8.0 (implied 12.5%)"
+        },
+        {
+          "name": "Rating",
+          "score": 81.8,
+          "weight": 0.25,
+          "weighted_score": 20.45,
+          "reason": "OR 113 (field range 99-121)"
+        },
+        {
+          "name": "Form",
+          "score": 49.3,
+          "weight": 0.2,
+          "weighted_score": 9.86,
+          "reason": "Recent positions: 6/6/3/3/1/5 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 73.3,
+          "weight": 0.15,
+          "weighted_score": 10.99,
+          "reason": "2/6 runs at similar distance; 5/6 runs on similar going"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Ryan Mania, T: M Todhunter (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 6,
+          "date": "2025-12-11",
+          "distance": "2m4f19y",
+          "going": "good",
+          "race_class": "4",
+          "track": "Newcastle"
+        },
+        {
+          "position": 6,
+          "date": "2025-11-02",
+          "distance": "3m2f19y",
+          "going": "good",
+          "race_class": "3",
+          "track": "Carlisle"
+        },
+        {
+          "position": 3,
+          "date": "2025-10-16",
+          "distance": "3m110y",
+          "going": "good",
+          "race_class": "3",
+          "track": "Carlisle"
+        },
+        {
+          "position": 3,
+          "date": "2025-04-19",
+          "distance": "2m3f210y",
+          "going": "good",
+          "race_class": "3",
+          "track": "Carlisle"
+        },
+        {
+          "position": 1,
+          "date": "2025-03-25",
+          "distance": "2m4f15y",
+          "going": "good",
+          "race_class": "4",
+          "track": "Hexham"
+        },
+        {
+          "position": 5,
+          "date": "2025-01-28",
+          "distance": "2m7f91y",
+          "going": "soft",
+          "race_class": "3",
+          "track": "Newcastle"
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "runner_name": "Inis Oirr",
+      "number": 6,
+      "draw": null,
+      "age": 9,
+      "weight": "11-4",
+      "official_rating": 110,
+      "jockey": "D R Fox",
+      "trainer": "L Russell & M Scudamore",
+      "odds_decimal": 6.5,
+      "total_score": 48.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 21.5,
+          "weight": 0.35,
+          "weighted_score": 7.52,
+          "reason": "Odds 6.5 (implied 15.4%)"
+        },
+        {
+          "name": "Rating",
+          "score": 75.0,
+          "weight": 0.25,
+          "weighted_score": 18.75,
+          "reason": "OR 110 (field range 99-121)"
+        },
+        {
+          "name": "Form",
+          "score": 32.8,
+          "weight": 0.2,
+          "weighted_score": 6.56,
+          "reason": "Recent positions: 5/7/5/8/2 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 86.7,
+          "weight": 0.15,
+          "weighted_score": 13.01,
+          "reason": "4/6 runs at similar distance; 6/6 runs on similar going; 2/6 runs at Musselburgh"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: D R Fox, T: L Russell & M Scudamore (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 5,
+          "date": "2026-02-01",
+          "distance": "3m7f76y",
+          "going": "good",
+          "race_class": "2",
+          "track": "Musselburgh"
+        },
+        {
+          "position": 7,
+          "date": "2026-01-17",
+          "distance": "3m58y",
+          "going": "good",
+          "race_class": "3",
+          "track": "Haydock"
+        },
+        {
+          "position": 5,
+          "date": "2025-12-30",
+          "distance": "3m58y",
+          "going": "good",
+          "race_class": "4",
+          "track": "Haydock"
+        },
+        {
+          "position": null,
+          "date": "2025-12-22",
+          "distance": "2m7f138y",
+          "going": "good",
+          "race_class": "4",
+          "track": "Musselburgh"
+        },
+        {
+          "position": 8,
+          "date": "2025-11-02",
+          "distance": "3m2f19y",
+          "going": "good",
+          "race_class": "3",
+          "track": "Carlisle"
+        },
+        {
+          "position": 2,
+          "date": "2025-10-16",
+          "distance": "3m110y",
+          "going": "good",
+          "race_class": "3",
+          "track": "Carlisle"
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "runner_name": "Finn Lough",
+      "number": 5,
+      "draw": null,
+      "age": 7,
+      "weight": "11-4",
+      "official_rating": 110,
+      "jockey": "Craig Nichol",
+      "trainer": "O Greenall & J Guerriero",
+      "odds_decimal": 13.0,
+      "total_score": 44.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 10.8,
+          "weight": 0.35,
+          "weighted_score": 3.78,
+          "reason": "Odds 13.0 (implied 7.7%)"
+        },
+        {
+          "name": "Rating",
+          "score": 75.0,
+          "weight": 0.25,
+          "weighted_score": 18.75,
+          "reason": "OR 110 (field range 99-121)"
+        },
+        {
+          "name": "Form",
+          "score": 36.8,
+          "weight": 0.2,
+          "weighted_score": 7.36,
+          "reason": "Recent positions: 7/5/7/2/2 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 83.3,
+          "weight": 0.15,
+          "weighted_score": 12.49,
+          "reason": "4/6 runs at similar distance; 6/6 runs on similar going"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Craig Nichol, T: O Greenall & J Guerriero (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 7,
+          "date": "2025-12-26",
+          "distance": "3m3f123y",
+          "going": "good",
+          "race_class": "3",
+          "track": "Market Rasen"
+        },
+        {
+          "position": 5,
+          "date": "2025-11-29",
+          "distance": "3m5f190y",
+          "going": "good",
+          "race_class": "3",
+          "track": "Newcastle"
+        },
+        {
+          "position": 7,
+          "date": "2025-11-01",
+          "distance": "3m45y",
+          "going": "good",
+          "race_class": "4",
+          "track": "Wetherby"
+        },
+        {
+          "position": null,
+          "date": "2025-10-02",
+          "distance": "3m60y",
+          "going": "good",
+          "race_class": "4",
+          "track": "Southwell"
+        },
+        {
+          "position": 2,
+          "date": "2025-05-16",
+          "distance": "3m210y",
+          "going": "good",
+          "race_class": "2",
+          "track": "Aintree"
+        },
+        {
+          "position": 2,
+          "date": "2025-04-08",
+          "distance": "3m110y",
+          "going": "good",
+          "race_class": "4",
+          "track": "Carlisle"
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "runner_name": "Bridge Court",
+      "number": 7,
+      "draw": null,
+      "age": 7,
+      "weight": "10-7",
+      "official_rating": 99,
+      "jockey": "Callum Bewley",
+      "trainer": "A M Thomson",
+      "odds_decimal": 7.0,
+      "total_score": 44.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 20.0,
+          "weight": 0.35,
+          "weighted_score": 7.0,
+          "reason": "Odds 7.0 (implied 14.3%)"
+        },
+        {
+          "name": "Rating",
+          "score": 50.0,
+          "weight": 0.25,
+          "weighted_score": 12.5,
+          "reason": "OR 99 (field range 99-121)"
+        },
+        {
+          "name": "Form",
+          "score": 58.8,
+          "weight": 0.2,
+          "weighted_score": 11.76,
+          "reason": "Recent positions: 5/2/2/6 (recency-weighted avg)"
+        },
+        {
+          "name": "Suitability",
+          "score": 70.0,
+          "weight": 0.15,
+          "weighted_score": 10.5,
+          "reason": "6/6 runs on similar going"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.05,
+          "weighted_score": 2.5,
+          "reason": "Connections: J: Callum Bewley, T: A M Thomson (no win-rate stats available; neutral score)"
+        }
+      ],
+      "recent_form": [
+        {
+          "position": 5,
+          "date": "2026-01-17",
+          "distance": "2m3f203y",
+          "going": "good",
+          "race_class": "4",
+          "track": "Haydock"
+        },
+        {
+          "position": 2,
+          "date": "2025-12-28",
+          "distance": "2m3f51y",
+          "going": "good",
+          "race_class": "5",
+          "track": "Catterick"
+        },
+        {
+          "position": 2,
+          "date": "2025-12-16",
+          "distance": "2m3f51y",
+          "going": "good",
+          "race_class": "5",
+          "track": "Catterick"
+        },
+        {
+          "position": 6,
+          "date": "2025-11-08",
+          "distance": "2m4f189y",
+          "going": "good",
+          "race_class": "5",
+          "track": "Kelso"
+        },
+        {
+          "position": null,
+          "date": "2025-03-25",
+          "distance": "2m4f28y",
+          "going": "good",
+          "race_class": "5",
+          "track": "Hexham"
+        },
+        {
+          "position": null,
+          "date": "2024-12-26",
+          "distance": "2m3f154y",
+          "going": "good",
+          "race_class": "4",
+          "track": "Wetherby"
+        }
+      ]
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "Jus De Citron",
+      "rank": 1,
+      "score": 62.7
+    },
+    "backup_1": {
+      "runner_name": "Special Rate",
+      "rank": 2,
+      "score": 62.4
+    },
+    "backup_2": {
+      "runner_name": "Bold Light",
+      "rank": 3,
+      "score": 52.9
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 0.3,
+    "reasons": [
+      "Narrow margin of 0.3 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only."
+}

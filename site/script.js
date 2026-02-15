@@ -9,8 +9,9 @@
   "use strict";
 
   // --- DOM refs ---
-  const raceInput   = document.getElementById("race-input");
-  const rankBtn     = document.getElementById("rank-btn");
+  const courseSelect = document.getElementById("course-select");
+  const raceSelect  = document.getElementById("race-select");
+  const noRacesMsg  = document.getElementById("no-races-msg");
   const loadingEl   = document.getElementById("loading");
   const errorEl     = document.getElementById("error");
   const resultsEl   = document.getElementById("results");
@@ -19,12 +20,12 @@
   let currentData = null;
   let currentSort = "score";
   let expandedRows = new Set();
+  let manifest = [];
+  let todayRaces = [];
 
   // --- Init ---
-  rankBtn.addEventListener("click", onRank);
-  raceInput.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") onRank();
-  });
+  courseSelect.addEventListener("change", onCourseChange);
+  raceSelect.addEventListener("change", onRaceChange);
 
   // Sort buttons
   document.querySelectorAll(".sort-btn").forEach((btn) => {
@@ -36,29 +37,132 @@
     });
   });
 
-  // Auto-load latest.json on page load
-  loadData("data/latest.json");
+  // Load manifest then populate dropdowns
+  loadManifest();
 
   // --- Functions ---
 
-  function onRank() {
-    const val = raceInput.value.trim();
-    if (!val) {
-      loadData("data/latest.json");
+  function getToday() {
+    const d = new Date();
+    const yyyy = d.getFullYear();
+    const mm = String(d.getMonth() + 1).padStart(2, "0");
+    const dd = String(d.getDate()).padStart(2, "0");
+    return yyyy + "-" + mm + "-" + dd;
+  }
+
+  async function loadManifest() {
+    try {
+      const resp = await fetch("data/manifest.json?" + Date.now());
+      if (!resp.ok) throw new Error("No manifest found");
+      manifest = await resp.json();
+    } catch (e) {
+      manifest = [];
+    }
+    populateCourses();
+  }
+
+  function populateCourses() {
+    const today = getToday();
+    todayRaces = manifest.filter((r) => r.date === today);
+    todayRaces.sort((a, b) => (a.off_time || "").localeCompare(b.off_time || ""));
+
+    courseSelect.innerHTML = "";
+    raceSelect.innerHTML = "";
+    raceSelect.disabled = true;
+
+    if (todayRaces.length === 0) {
+      noRacesMsg.classList.remove("hidden");
+      const ph = document.createElement("option");
+      ph.value = "";
+      ph.disabled = true;
+      ph.selected = true;
+      ph.textContent = "No races today";
+      courseSelect.appendChild(ph);
+
+      const ph2 = document.createElement("option");
+      ph2.value = "";
+      ph2.disabled = true;
+      ph2.selected = true;
+      ph2.textContent = "\u2014";
+      raceSelect.appendChild(ph2);
       return;
     }
-    // In static mode, we can only load pre-built JSON.
-    // If user enters something, try to load it as a file path or show help.
-    if (val.startsWith("http") || val.includes("/")) {
-      showError(
-        "Live fetching requires the Python backend. " +
-        'Run: python build.py --race "' + val + '" then reload this page.'
-      );
-      return;
+
+    noRacesMsg.classList.add("hidden");
+
+    // Unique courses sorted alphabetically
+    const courses = [...new Set(todayRaces.map((r) => r.track))].sort();
+
+    const ph = document.createElement("option");
+    ph.value = "";
+    ph.disabled = true;
+    ph.selected = true;
+    ph.textContent = "Choose course (" + courses.length + ")";
+    courseSelect.appendChild(ph);
+
+    courses.forEach((course) => {
+      const count = todayRaces.filter((r) => r.track === course).length;
+      const opt = document.createElement("option");
+      opt.value = course;
+      opt.textContent = course + " (" + count + " races)";
+      courseSelect.appendChild(opt);
+    });
+
+    const ph2 = document.createElement("option");
+    ph2.value = "";
+    ph2.disabled = true;
+    ph2.selected = true;
+    ph2.textContent = "Pick a course first";
+    raceSelect.appendChild(ph2);
+
+    // Auto-select if only one course
+    if (courses.length === 1) {
+      courseSelect.value = courses[0];
+      onCourseChange();
     }
-    // Try to load by race ID
-    const raceId = val.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-    loadData("data/" + raceId + ".json");
+  }
+
+  function onCourseChange() {
+    const course = courseSelect.value;
+    if (!course) return;
+
+    const races = todayRaces
+      .filter((r) => r.track === course)
+      .sort((a, b) => (a.off_time || "").localeCompare(b.off_time || ""));
+
+    raceSelect.innerHTML = "";
+    raceSelect.disabled = false;
+
+    const ph = document.createElement("option");
+    ph.value = "";
+    ph.disabled = true;
+    ph.selected = true;
+    ph.textContent = "Choose race (" + races.length + ")";
+    raceSelect.appendChild(ph);
+
+    races.forEach((race) => {
+      const opt = document.createElement("option");
+      opt.value = "data/" + race.file;
+      const parts = [race.off_time];
+      if (race.race_name) parts.push(race.race_name);
+      if (race.distance) parts.push(race.distance);
+      if (race.runners_count) parts.push(race.runners_count + " runners");
+      opt.textContent = parts.join(" \u2013 ");
+      raceSelect.appendChild(opt);
+    });
+
+    // Auto-select and load if only one race
+    if (races.length === 1) {
+      raceSelect.selectedIndex = 1;
+      onRaceChange();
+    }
+  }
+
+  function onRaceChange() {
+    const val = raceSelect.value;
+    if (val) {
+      loadData(val);
+    }
   }
 
   async function loadData(url) {
