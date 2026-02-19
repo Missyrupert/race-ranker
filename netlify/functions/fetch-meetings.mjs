@@ -63,8 +63,10 @@ export default async (req) => {
       return Response.json({ error: "Could not fetch Timeform racecards" }, { status: 502 });
     }
 
-    // Match: /horse-racing/racecards/exeter/2026-02-20/1720/13/7/slug
-    const raceRe = /href="(\/horse-racing\/racecards\/([^/]+)\/(\d{4}-\d{2}-\d{2})\/(\d{4})\/(\d+)\/(\d+)\/[^"]*)"/g;
+    // Match: racecards (future) or result (past) URLs
+    // racecards: /horse-racing/racecards/exeter/2026-02-20/1720/13/7/slug
+    // result:   /horse-racing/result/carlisle/2026-02-16/1635/7/8
+    const raceRe = /href="(\/horse-racing\/(?:racecards|result)\/([^/]+)\/(\d{4}-\d{2}-\d{2})\/(\d{4})\/(\d+)\/(\d+)(?:\/[^"]*)?)"/g;
     const byCourse = {};
     let m;
     while ((m = raceRe.exec(html)) !== null) {

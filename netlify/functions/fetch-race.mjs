@@ -68,16 +68,18 @@ function parseTimeformRacecard(html, track, date) {
   if (raceNameM) meta.race_name = raceNameM[1].replace(/Unlock[^|]*/i, "").trim();
 
   const runners = [];
-  const horseRe = /<a\s+href="(\/horse-racing\/horse\/form\/[^"]+)"[^>]*>([^<]+)<\/a>\s*\((\d{2,3})\)/g;
+  // Match both racecard (/horse/form/) and result (/horse-form/) pages
+  const horseRe = /<a\s+href="(\/horse-racing\/horse[-/]form\/[^"]+)"[^>]*>([^<]+)<\/a>(?:\s*\((\d{2,3})\))?/g;
   const seen = new Set();
   let m;
   while ((m = horseRe.exec(html)) !== null) {
-    const [, href, name, tfRating] = m;
+    const [, href, nameRaw, tfRating] = m;
+    const name = nameRaw.replace(/^\d+\.\s*/, "").trim();
     if (seen.has(href)) continue;
     seen.add(href);
 
     const runner = {
-      runner_name: name.trim(),
+      runner_name: name,
       number: null,
       draw: null,
       age: null,
@@ -87,7 +89,7 @@ function parseTimeformRacecard(html, track, date) {
       trainer: "",
       odds_decimal: null,
       recent_form: [],
-      rpr: parseInt(tfRating, 10),
+      rpr: tfRating ? parseInt(tfRating, 10) : null,
       ts: null,
       trainer_rtf: null,
       days_since_last_run: null,
@@ -100,7 +102,7 @@ function parseTimeformRacecard(html, track, date) {
     const blockEnd = html.indexOf("<a href=\"/horse-racing/horse/form/", blockStart + 1);
     const block = html.slice(blockStart, blockEnd > 0 ? blockEnd : blockStart + 8000);
 
-    const numM = block.match(new RegExp(`(\\d+)\\s+${name.replace(/[()]/g, "\\$&").slice(0, 20)}`));
+    const numM = nameRaw.match(/^(\d+)\.\s*/) || block.match(new RegExp(`(\\d+)\\s+${name.replace(/[()]/g, "\\$&").slice(0, 20).replace(/\s+/g, "\\s+")}`));
     if (numM) runner.number = parseInt(numM[1], 10);
 
     const oddsM = block.match(/\[(\d+)\/(\d+)\]/);
