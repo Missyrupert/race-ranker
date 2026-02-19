@@ -1,15 +1,22 @@
 #!/usr/bin/env python3
 """
-fetch_today.py -- Fetch today's UK & Ireland races from Sporting Life,
-score them, and make them available in the site dropdown.
+fetch_today.py -- Fetch today's UK & Ireland races, score them, and make
+them available in the site dropdown.
 
-v2: extracts RPR, TS, trainer_rtf, days_since_last_run, course_winner,
-    distance_winner, cd_winner from __NEXT_DATA__ JSON.
+Primary source: Timeform (free racecards).
+Fallback: Sporting Life (if --sporting-life or SL env).
+
+v2: extracts RPR/Timeform rating, TS, trainer_rtf, days_since_last_run,
+    course_winner, distance_winner, cd_winner.
 
 Usage:
-    python fetch_today.py                    # Fetch today's races
+    python fetch_today.py                    # Fetch from Timeform
     python fetch_today.py --date 2026-02-15  # Specific date
     python fetch_today.py --tracks newcastle musselburgh
+    python fetch_today.py --sporting-life    # Use Sporting Life instead
+    python fetch_today.py --proxy http://proxy:8080  # If SSL fails
+
+    RACERANKER_PROXY=http://... python fetch_today.py
 """
 
 import argparse
@@ -21,15 +28,14 @@ import shutil
 import sys
 from datetime import datetime
 
-import requests
 from bs4 import BeautifulSoup
-
 from fetcher import (
     RaceData, RaceMeta, Runner, FormLine,
     make_race_id, save_raw,
     _parse_odds, _parse_int, _clean, _normalize_distance, _normalize_going,
-    USER_AGENT, _rate_limit,
+    USER_AGENT, _rate_limit, fetch_html,
 )
+from timeform import fetch_meetings as fetch_meetings_timeform, parse_racecard as parse_racecard_timeform, _fetch_page as timeform_fetch
 from scorer import score_race, save_scored, build_web_payload, save_web
 from build import rebuild_manifest
 
@@ -75,19 +81,39 @@ def is_uk_ire_track(track_name):
 # HTTP helpers
 # ---------------------------------------------------------------------------
 
+
+# Optional proxy - set via --proxy or env RACERANKER_PROXY (e.g. http://proxy:port)
+_fetch_proxy = os.environ.get("RACERANKER_PROXY", "")
+
+
 def fetch_page(url, timeout=20):
+    """
+    Fetch page: try curl_cffi first (bypasses TLS fingerprint blocking),
+    then fetcher.fetch_html (requests + Playwright fallback).
+    If RACERANKER_PROXY is set, use that proxy for all requests.
+    """
     _rate_limit()
-    headers = {"User-Agent": USER_AGENT}
+    # curl_cffi: impersonates Chrome TLS fingerprint, often works when requests fails
     try:
-        resp = requests.get(url, headers=headers, timeout=timeout)
+        from curl_cffi import requests as curl_requests
+        resp = curl_requests.get(
+            url,
+            impersonate="chrome120",
+            timeout=timeout,
+            headers={"User-Agent": USER_AGENT},
+            proxy=_fetch_proxy or None,
+        )
         if resp.status_code == 200 and len(resp.text) > 500:
-            logger.info(f"Fetched {url} ({len(resp.text)} bytes)")
+            logger.info(f"Fetched {url} via curl_cffi ({len(resp.text)} bytes)")
             return resp.text
-        logger.warning(f"HTTP {resp.status_code}, {len(resp.text)} bytes for {url}")
-        return None
-    except requests.RequestException as e:
-        logger.error(f"Request failed for {url}: {e}")
-        return None
+        logger.warning(f"curl_cffi HTTP {resp.status_code}, {len(resp.text)} bytes for {url}")
+    except ImportError:
+        pass
+    except Exception as e:
+        logger.warning(f"curl_cffi failed: {e}")
+
+    # Fallback: fetcher's fetch_html (requests then Playwright)
+    return fetch_html(url, timeout)
 
 
 # ---------------------------------------------------------------------------
@@ -616,16 +642,29 @@ def parse_form_figures(form_str):
 # Main pipeline
 # ---------------------------------------------------------------------------
 
-def process_race(url, track, date_str, output_dir="data", site_dir="site"):
+def process_race_timeform(url, track, date_str, output_dir="data", site_dir="site"):
+    """Fetch and process a race from Timeform."""
+    html = timeform_fetch(url)
+    if not html:
+        return None
+    race_data = parse_racecard_timeform(html, track, date_str)
+    if not race_data or not race_data.runners:
+        return None
+    return _finish_process_race(race_data, output_dir, site_dir)
+
+
+def process_race_sporting_life(url, track, date_str, output_dir="data", site_dir="site"):
+    """Fetch and process a race from Sporting Life."""
     html = fetch_page(url)
     if not html:
         return None
-
     race_data = parse_racecard_page(html, track, date_str)
     if not race_data or not race_data.runners:
-        logger.warning(f"Could not parse racecard from {url}")
         return None
+    return _finish_process_race(race_data, output_dir, site_dir)
 
+
+def _finish_process_race(race_data, output_dir="data", site_dir="site"):
     logger.info(
         f"  Parsed: {race_data.meta.track} {race_data.meta.off_time} "
         f"- {race_data.meta.race_name} ({len(race_data.runners)} runners)"
@@ -668,7 +707,7 @@ def process_race(url, track, date_str, output_dir="data", site_dir="site"):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Fetch today's UK & Ireland races from Sporting Life",
+        description="Fetch today's UK & Ireland races (Timeform default, --sporting-life for SL)",
     )
     parser.add_argument(
         "--date", type=str,
@@ -681,8 +720,19 @@ def main():
     )
     parser.add_argument("--output-dir", type=str, default="data")
     parser.add_argument("--site-dir",   type=str, default="site")
+    parser.add_argument("--sporting-life", action="store_true",
+        help="Use Sporting Life instead of Timeform (SL often blocked)",
+    )
+    parser.add_argument("--proxy", type=str, default="",
+        help="HTTP proxy for requests (e.g. http://proxy:8080)",
+    )
     parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args()
+
+    global _fetch_proxy
+    if args.proxy:
+        _fetch_proxy = args.proxy
+        logger.info("Using proxy for Sporting Life requests")
 
     if args.verbose:
         logging.getLogger().setLevel(logging.DEBUG)
@@ -707,17 +757,31 @@ def main():
     if stale:
         logger.info(f"Cleaned {stale} stale race file(s)")
 
-    logger.info("Step 1: Fetching meetings from Sporting Life...")
-    meetings = fetch_meetings(date_str)
+    use_timeform = not args.sporting_life
+    if use_timeform:
+        logger.info("Step 1: Fetching meetings from Timeform...")
+        meetings = fetch_meetings_timeform(date_str)
+        process_race_fn = process_race_timeform
+    else:
+        logger.info("Step 1: Fetching meetings from Sporting Life...")
+        meetings = fetch_meetings(date_str)
+        process_race_fn = process_race_sporting_life
+
     if not meetings:
         logger.error("No UK/IRE meetings found.")
         sys.exit(1)
 
     if args.tracks:
-        filter_set = {t.lower() for t in args.tracks}
+        filter_set = set()
+        for t in args.tracks:
+            v = t.lower().strip()
+            filter_set.add(v)
+            filter_set.add(v.replace(" ", "-"))
         meetings = [
             m for m in meetings
-            if m["track"].lower() in filter_set or m["track_slug"] in filter_set
+            if m["track"].lower() in filter_set
+            or m["track"].lower().replace(" ", "-") in filter_set
+            or m["track_slug"] in filter_set
         ]
 
     total_races = sum(len(m["races"]) for m in meetings)
@@ -735,7 +799,7 @@ def main():
         for race_info in meeting["races"]:
             url = race_info["url"]
             logger.info(f"  Fetching: {url}")
-            result = process_race(url, track, date_str, args.output_dir, args.site_dir)
+            result = process_race_fn(url, track, date_str, args.output_dir, args.site_dir)
             if result:
                 processed += 1
             else:

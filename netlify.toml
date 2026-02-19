@@ -3,6 +3,12 @@
 
 [functions]
   directory = "netlify/functions"
+  node_bundler = "esbuild"
+  # fetch-race: external HTTP calls to Sporting Life; 10s free tier max
+  [functions."fetch-race"]
+    timeout = 10
+  [functions."fetch-meetings"]
+    timeout = 10
 
 [[headers]]
   for = "/*"
