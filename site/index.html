@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Race Ranker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,10 +22,16 @@
     <section class="input-section">
       <div class="input-card">
         <div class="selector-row">
+          <div class="selector-group selector-group-date">
+            <label for="date-select">Date</label>
+            <select id="date-select">
+              <option value="" disabled selected>Select date</option>
+            </select>
+          </div>
           <div class="selector-group">
             <label for="course-select">Course</label>
-            <select id="course-select">
-              <option value="" disabled selected>Loading...</option>
+            <select id="course-select" disabled>
+              <option value="" disabled selected>Pick a date first</option>
             </select>
           </div>
           <div class="selector-group selector-group-race">
@@ -33,8 +42,8 @@
           </div>
         </div>
         <div id="import-section" class="import-section hidden">
-          <p class="import-msg">No races loaded for today.</p>
-          <button id="import-btn" class="import-btn">Import Today's Races</button>
+          <p class="import-msg">No races loaded for this date.</p>
+          <button id="import-btn" class="import-btn">Import Races</button>
           <div id="import-progress" class="import-progress hidden">
             <div class="import-progress-bar"><div id="import-bar-fill" class="import-bar-fill"></div></div>
             <span id="import-status">Starting...</span>
@@ -46,40 +55,59 @@
     <!-- Paper Trading -->
     <section id="pl-section" class="pl-section hidden">
       <div class="pl-header">
-        <h2>Paper Trading &mdash; £1 Each Selection</h2>
-        <button id="get-results-btn" class="get-results-btn">Get Results</button>
+        <div class="pl-header-left">
+          <h2>Paper Trading &mdash; &pound;1 per race</h2>
+          <p class="pl-subtitle">Top selection from every race &mdash; stress testing before the real stuff.</p>
+        </div>
+        <div class="pl-header-right">
+          <div class="pl-view-tabs">
+            <button class="pl-tab active" data-view="day">Day</button>
+            <button class="pl-tab" data-view="meeting">Meeting</button>
+            <button class="pl-tab" data-view="all">All Races</button>
+          </div>
+          <button id="get-results-btn" class="get-results-btn">Get Results</button>
+        </div>
       </div>
       <div id="pl-progress" class="import-progress hidden">
         <div class="import-progress-bar"><div id="pl-bar-fill" class="import-bar-fill"></div></div>
         <span id="pl-status">Fetching results...</span>
       </div>
       <div id="pl-content" class="hidden">
-        <div class="pl-summary">
-          <div class="pl-stat"><span class="pl-stat-label">Settled</span><span class="pl-stat-value" id="pl-settled">0</span></div>
-          <div class="pl-stat"><span class="pl-stat-label">Winners</span><span class="pl-stat-value" id="pl-winners">0</span></div>
-          <div class="pl-stat"><span class="pl-stat-label">Strike Rate</span><span class="pl-stat-value" id="pl-strike">0%</span></div>
-          <div class="pl-stat"><span class="pl-stat-label">Staked</span><span class="pl-stat-value" id="pl-staked">&pound;0</span></div>
-          <div class="pl-stat"><span class="pl-stat-label">Returns</span><span class="pl-stat-value" id="pl-returns">&pound;0</span></div>
-          <div class="pl-stat pl-stat-profit"><span class="pl-stat-label">P/L</span><span class="pl-stat-value" id="pl-profit">&pound;0</span></div>
-          <div class="pl-stat"><span class="pl-stat-label">ROI</span><span class="pl-stat-value" id="pl-roi">0%</span></div>
+
+        <!-- Day summary view (default) -->
+        <div id="view-day" class="pl-view">
+          <div class="pl-summary" id="pl-summary-day"></div>
+          <p class="pl-view-hint">Switch to <strong>Meeting</strong> or <strong>All Races</strong> for a breakdown.</p>
         </div>
-        <div class="table-wrap">
-          <table class="pl-table">
-            <thead>
-              <tr>
-                <th>Track</th>
-                <th>Time</th>
-                <th>Selection</th>
-                <th>Pos</th>
-                <th>SP</th>
-                <th>Stake</th>
-                <th>Return</th>
-                <th>P/L</th>
-              </tr>
-            </thead>
-            <tbody id="pl-body"></tbody>
-          </table>
+
+        <!-- Meeting breakdown view -->
+        <div id="view-meeting" class="pl-view hidden">
+          <div id="pl-meetings-container"></div>
         </div>
+
+        <!-- All races view -->
+        <div id="view-all" class="pl-view hidden">
+          <div class="pl-summary" id="pl-summary-all"></div>
+          <div class="table-wrap">
+            <table class="pl-table">
+              <thead>
+                <tr>
+                  <th>Track</th>
+                  <th>Time</th>
+                  <th>Selection</th>
+                  <th>Result</th>
+                  <th>Pos</th>
+                  <th>SP</th>
+                  <th>Stake</th>
+                  <th>Return</th>
+                  <th>P/L</th>
+                </tr>
+              </thead>
+              <tbody id="pl-body"></tbody>
+            </table>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -96,7 +124,7 @@
     <section id="results" class="results hidden">
       <!-- Race header -->
       <div class="race-header">
-        <h2 id="race-title">—</h2>
+        <h2 id="race-title">&mdash;</h2>
         <div class="race-meta-row">
           <span class="meta-chip" id="meta-distance"></span>
           <span class="meta-chip" id="meta-going"></span>
@@ -108,28 +136,34 @@
       <!-- Confidence -->
       <div id="confidence-band" class="confidence-band">
         <div class="conf-label">
-          Confidence: <strong id="conf-level">—</strong>
+          Confidence: <strong id="conf-level">&mdash;</strong>
           <span id="conf-margin" class="conf-margin"></span>
         </div>
         <ul id="conf-reasons" class="conf-reasons"></ul>
       </div>
 
-      <!-- Picks -->
-      <div class="picks-row" id="picks-row">
-        <div class="pick-card top" id="pick-top">
-          <div class="pick-label">Most Likely</div>
-          <div class="pick-name" id="pick-top-name">—</div>
-          <div class="pick-score" id="pick-top-score">—</div>
+      <!-- Top Pick Hero -->
+      <div class="top-pick-hero hidden" id="top-pick-hero">
+        <div class="hero-eyebrow">Top Selection</div>
+        <div class="hero-name" id="hero-name">&mdash;</div>
+        <div class="hero-score-wrap">
+          <span class="hero-score" id="hero-score">&mdash;</span>
+          <span class="hero-score-label">score</span>
         </div>
+        <div class="hero-meta" id="hero-meta"></div>
+      </div>
+
+      <!-- Backups row -->
+      <div class="picks-row" id="picks-row">
         <div class="pick-card backup" id="pick-b1">
           <div class="pick-label">Backup 1</div>
-          <div class="pick-name" id="pick-b1-name">—</div>
-          <div class="pick-score" id="pick-b1-score">—</div>
+          <div class="pick-name" id="pick-b1-name">&mdash;</div>
+          <div class="pick-score" id="pick-b1-score">&mdash;</div>
         </div>
         <div class="pick-card backup" id="pick-b2">
           <div class="pick-label">Backup 2</div>
-          <div class="pick-name" id="pick-b2-name">—</div>
-          <div class="pick-score" id="pick-b2-score">—</div>
+          <div class="pick-name" id="pick-b2-name">&mdash;</div>
+          <div class="pick-score" id="pick-b2-score">&mdash;</div>
         </div>
       </div>
 
@@ -151,15 +185,16 @@
               <th class="col-name">Runner</th>
               <th class="col-score">Score</th>
               <th class="col-odds">Odds</th>
-              <th class="col-or">OR</th>
+              <th class="col-rating" title="RPR / Top Speed / OR (best available)">Rating</th>
+              <th class="col-days" title="Days since last run">Days</th>
+              <th class="col-last-sp" title="Last race SP">L/R SP</th>
               <th class="col-jockey">Jockey</th>
               <th class="col-trainer">Trainer</th>
               <th class="col-form">Form</th>
               <th class="col-expand"></th>
             </tr>
           </thead>
-          <tbody id="runners-body">
-          </tbody>
+          <tbody id="runners-body"></tbody>
         </table>
       </div>
 

@@ -3,10 +3,13 @@
 fetch_today.py -- Fetch today's UK & Ireland races from Sporting Life,
 score them, and make them available in the site dropdown.
 
+v2: extracts RPR, TS, trainer_rtf, days_since_last_run, course_winner,
+    distance_winner, cd_winner from __NEXT_DATA__ JSON.
+
 Usage:
     python fetch_today.py                    # Fetch today's races
     python fetch_today.py --date 2026-02-15  # Specific date
-    python fetch_today.py --tracks newcastle musselburgh punchestown
+    python fetch_today.py --tracks newcastle musselburgh
 """
 
 import argparse
@@ -14,8 +17,8 @@ import json
 import logging
 import os
 import re
+import shutil
 import sys
-import time
 from datetime import datetime
 
 import requests
@@ -38,7 +41,7 @@ logging.basicConfig(
 logger = logging.getLogger("race-ranker.fetch-today")
 
 # ---------------------------------------------------------------------------
-# UK & Ireland track names (lowercase)
+# UK & Ireland track list
 # ---------------------------------------------------------------------------
 
 UK_IRE_TRACKS = {
@@ -69,11 +72,10 @@ def is_uk_ire_track(track_name):
 
 
 # ---------------------------------------------------------------------------
-# Fetch helpers
+# HTTP helpers
 # ---------------------------------------------------------------------------
 
 def fetch_page(url, timeout=20):
-    """Fetch a page with rate limiting and return HTML text."""
     _rate_limit()
     headers = {"User-Agent": USER_AGENT}
     try:
@@ -89,16 +91,14 @@ def fetch_page(url, timeout=20):
 
 
 # ---------------------------------------------------------------------------
-# Index page parser -- extract meetings and race URLs
+# Meeting discovery
 # ---------------------------------------------------------------------------
 
 def fetch_meetings(date_str):
     """
     Fetch meetings and race IDs from Sporting Life's __NEXT_DATA__ JSON.
-    Uses any racecard page for the given date to discover all meetings.
-    Returns list of dicts: {track, track_slug, races: [{url, race_id_sl, name, ...}]}
+    Returns list of dicts: {track, track_slug, races: [{url, race_id_sl, ...}]}
     """
-    # First, fetch the racecards index to find one valid racecard URL
     index_url = f"https://www.sportinglife.com/racing/racecards/{date_str}"
     html = fetch_page(index_url)
     if not html:
@@ -106,15 +106,13 @@ def fetch_meetings(date_str):
         return []
 
     soup = BeautifulSoup(html, "lxml")
-
-    # Find any racecard link to load a page with __NEXT_DATA__
     rc_link = soup.find("a", href=re.compile(r"/racecard/\d+"))
     if rc_link:
         card_url = f"https://www.sportinglife.com{rc_link['href']}"
         logger.info(f"Using racecard page for meeting discovery: {card_url}")
         card_html = fetch_page(card_url)
     else:
-        card_html = html  # Try the index page itself
+        card_html = html
 
     if not card_html:
         logger.error("Could not fetch a racecard page for meeting discovery")
@@ -154,19 +152,16 @@ def fetch_meetings(date_str):
             race_id = str(r.get("race_summary_reference", {}).get("id", ""))
             name = r.get("name", "")
             slug = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
-
-            # Build racecard URL
             url = (
                 f"https://www.sportinglife.com/racing/racecards/"
                 f"{date_str}/{track_slug}/racecard/{race_id}/{slug}"
             )
-
             race_list.append({
                 "url": url,
                 "race_id_sl": race_id,
                 "slug": slug,
                 "name": name,
-                "off_time": None,  # Will be parsed from racecard page
+                "off_time": None,
             })
 
         if race_list:
@@ -180,18 +175,16 @@ def fetch_meetings(date_str):
 
 
 # ---------------------------------------------------------------------------
-# Individual racecard parser
+# Racecard parser
 # ---------------------------------------------------------------------------
 
 def parse_racecard_page(html, track, date_str):
     """
-    Parse a Sporting Life individual racecard page using __NEXT_DATA__ JSON.
-    Falls back to HTML scraping if JSON is unavailable.
-    Returns a RaceData object or None.
+    Parse a Sporting Life racecard page.
+    Primary: __NEXT_DATA__ JSON (rich data).
+    Fallback: HTML scraping.
     """
     soup = BeautifulSoup(html, "lxml")
-
-    # Try __NEXT_DATA__ first (much richer data)
     next_data_el = soup.find("script", id="__NEXT_DATA__")
     if next_data_el and next_data_el.string:
         try:
@@ -202,24 +195,35 @@ def parse_racecard_page(html, track, date_str):
         except (json.JSONDecodeError, KeyError) as e:
             logger.warning(f"__NEXT_DATA__ parsing failed: {e}, falling back to HTML")
 
-    # Fallback: parse from visible HTML
     return parse_from_html(soup, track, date_str)
 
 
 def parse_from_next_data(data, track, date_str):
-    """Parse race data from Sporting Life's __NEXT_DATA__ JSON."""
+    """
+    Parse race data from Sporting Life's __NEXT_DATA__ JSON.
+
+    v2 additions extracted from ride/horse JSON:
+    - rpr: ride.rpr or ride.horse.rpr (Racing Post Rating)
+    - ts:  ride.ts or ride.horse.ts   (Top Speed)
+    - trainer_rtf: ride.trainer.runs_to_form or .rtf or .form_percentage
+    - days_since_last_run: derived from previous_results[0].date vs date_str
+    - course_winner: horse.course_winner / horse.course flag
+    - distance_winner: horse.distance_winner / horse.distance flag
+    - cd_winner: horse.cd_winner / horse.cd flag
+
+    SL's JSON structure uses various key names across versions; we try
+    multiple candidate keys for each field so the extractor degrades
+    gracefully rather than crashing.
+    """
     props = data.get("props", {}).get("pageProps", {})
     race = props.get("race", {})
-
     if not race:
         return None
 
-    # --- Race metadata ---
     summary = race.get("race_summary", {})
     meta = RaceMeta(track=track, date=date_str)
-
     meta.race_name = summary.get("name", "")
-    # Off time - field is "time" in the JSON (format: "HH:MM")
+
     off_time = summary.get("time", "") or summary.get("start_time_scheduled", "")
     if off_time:
         time_m = re.match(r"(\d{1,2}:\d{2})", off_time)
@@ -232,7 +236,12 @@ def parse_from_next_data(data, track, date_str):
     if race_class:
         meta.race_class = race_class
 
-    # --- Parse runners from rides ---
+    # Prize / surface (bonus meta for UI)
+    meta_extra = {
+        "prize": summary.get("prize") or summary.get("prize_money"),
+        "surface": summary.get("surface") or summary.get("going_type"),
+    }
+
     rides = race.get("rides", [])
     runners = []
 
@@ -250,57 +259,155 @@ def parse_from_next_data(data, track, date_str):
             continue
 
         runner = Runner(runner_name=name)
-
-        # Basic info
-        runner.number = ride.get("cloth_number")
-        runner.draw = ride.get("draw_number")
-        runner.age = horse.get("age")
-        runner.weight = ride.get("handicap")  # e.g., "11-7"
+        runner.number  = ride.get("cloth_number")
+        runner.draw    = ride.get("draw_number")
+        runner.age     = horse.get("age")
+        runner.weight  = ride.get("handicap")
         runner.official_rating = ride.get("official_rating")
 
-        # Jockey & trainer (clean names from the JSON)
+        # Jockey
         jockey = ride.get("jockey", {})
-        if isinstance(jockey, dict):
-            runner.jockey = jockey.get("name", "")
-        elif isinstance(jockey, str):
-            runner.jockey = jockey
+        runner.jockey = jockey.get("name", "") if isinstance(jockey, dict) else str(jockey or "")
 
+        # Trainer
         trainer = ride.get("trainer", {})
         if isinstance(trainer, dict):
             runner.trainer = trainer.get("name", "")
-        elif isinstance(trainer, str):
-            runner.trainer = trainer
+            # RTF: try multiple candidate key names
+            rtf_raw = (
+                trainer.get("runs_to_form")
+                or trainer.get("rtf")
+                or trainer.get("form_percentage")
+                or trainer.get("rtf_percent")
+                or trainer.get("percent")
+            )
+            if rtf_raw is not None:
+                try:
+                    runner.trainer_rtf = round(float(str(rtf_raw).replace("%", "").strip()), 1)
+                except (ValueError, TypeError):
+                    runner.trainer_rtf = None
+        else:
+            runner.trainer = str(trainer or "")
 
-        # Odds from betting data
+        # Odds
         betting = ride.get("betting", {})
         if isinstance(betting, dict):
             current_odds = betting.get("current_odds", "")
             if current_odds:
                 runner.odds_decimal = _parse_odds(current_odds)
 
-        # Recent form from previous_results (detailed)
-        # IMPORTANT: filter out any entry from today's date -- those are
-        # results of races we are trying to predict, not historical form.
+        # ── v2: RPR, TS ─────────────────────────────────────────────────
+        # Try ride-level first (most current), then horse-level
+        rpr_raw = (
+            ride.get("rpr")
+            or ride.get("racing_post_rating")
+            or horse.get("rpr")
+            or horse.get("racing_post_rating")
+        )
+        if rpr_raw is not None:
+            try:
+                runner.rpr = int(rpr_raw)
+            except (ValueError, TypeError):
+                pass
+
+        ts_raw = (
+            ride.get("ts")
+            or ride.get("top_speed")
+            or horse.get("ts")
+            or horse.get("top_speed")
+        )
+        if ts_raw is not None:
+            try:
+                runner.ts = int(ts_raw)
+            except (ValueError, TypeError):
+                pass
+
+        # ── v2: C/D/CD winner badges ─────────────────────────────────────
+        # SL uses flags like: horse.course_and_distance, horse.course, horse.distance
+        # Also seen as: ride.form_figures.{cd, c, d} or horse.flags list
+        flags = horse.get("flags") or horse.get("form_flags") or []
+        flag_set = {str(f).upper() for f in flags} if isinstance(flags, list) else set()
+
+        # CD
+        runner.cd_winner = bool(
+            horse.get("course_and_distance")
+            or horse.get("cd")
+            or horse.get("cd_winner")
+            or "CD" in flag_set
+        ) or None  # None if key absent (not False)
+
+        # Course only
+        runner.course_winner = bool(
+            horse.get("course")
+            or horse.get("course_winner")
+            or "C" in flag_set
+        ) or None
+
+        # Distance only
+        runner.distance_winner = bool(
+            horse.get("distance")
+            or horse.get("distance_winner")
+            or "D" in flag_set
+        ) or None
+
+        # If the JSON had these keys and they were all falsy → set to False
+        # (so scorer knows "no" vs "data unavailable")
+        cd_keys_present = any(
+            k in horse for k in ("course_and_distance", "cd", "course", "distance", "flags", "form_flags")
+        )
+        if cd_keys_present:
+            runner.cd_winner       = runner.cd_winner or False
+            runner.course_winner   = runner.course_winner or False
+            runner.distance_winner = runner.distance_winner or False
+        else:
+            # No keys at all: leave as None so scorer skips the component
+            runner.cd_winner = runner.course_winner = runner.distance_winner = None
+
+        # ── Recent form & days since last run ────────────────────────────
         prev_results = horse.get("previous_results", [])
         if prev_results:
             runner.recent_form = []
-            for pr in prev_results:
+            for idx, pr in enumerate(prev_results):
                 if not isinstance(pr, dict):
                     continue
                 pr_date = pr.get("date", "")
                 if pr_date == date_str:
-                    continue  # skip today's results
+                    continue  # exclude today's results
                 if len(runner.recent_form) >= 6:
                     break
+
+                sp_raw = (
+                    pr.get("starting_price")
+                    or pr.get("sp")
+                    or (pr.get("betting") or {}).get("starting_price")
+                    or (pr.get("betting") or {}).get("sp")
+                    or ""
+                )
+                sp_decimal = _parse_odds(str(sp_raw)) if sp_raw else None
+
                 form_line = {
-                    "position": pr.get("position"),
-                    "date": pr_date,
-                    "distance": _normalize_distance(pr.get("distance", "")),
-                    "going": _normalize_going(pr.get("going", "")),
+                    "position":   pr.get("position"),
+                    "date":       pr_date,
+                    "distance":   _normalize_distance(pr.get("distance", "")),
+                    "going":      _normalize_going(pr.get("going", "")),
                     "race_class": pr.get("race_class", ""),
-                    "track": pr.get("course_name", ""),
+                    "track":      pr.get("course_name", ""),
+                    "sp_decimal": sp_decimal,
+                    "sp_string":  str(sp_raw).strip() if sp_raw else None,
                 }
                 runner.recent_form.append(form_line)
+
+                # Days since last run: derive from first (most recent) form entry
+                if idx == 0 and pr_date:
+                    try:
+                        last_run_date = datetime.strptime(pr_date, "%Y-%m-%d").date()
+                        today = datetime.strptime(date_str, "%Y-%m-%d").date()
+                        diff = (today - last_run_date).days
+                        if diff >= 0:
+                            runner.days_since_last_run = diff
+                    except (ValueError, TypeError):
+                        pass
+
         else:
             # Fall back to form summary string
             form_summary = horse.get("formsummary", {})
@@ -315,9 +422,63 @@ def parse_from_next_data(data, track, date_str):
         return None
 
     meta.runners_count = len(runners)
+    # Attach bonus meta
+    if meta_extra.get("prize"):
+        meta.prize = meta_extra["prize"]
+    if meta_extra.get("surface"):
+        meta.surface = meta_extra["surface"]
+
     race_id = make_race_id(meta)
     return RaceData(meta=meta, runners=runners, race_id=race_id)
 
+
+# ---------------------------------------------------------------------------
+# Runner dataclass extension
+# Monkey-patch new fields onto Runner since fetcher.py is upstream
+# ---------------------------------------------------------------------------
+
+def _extend_runner(runner: Runner):
+    """Add v2 fields to a Runner instance if not already present."""
+    for attr, default in [
+        ("rpr", None), ("ts", None),
+        ("trainer_rtf", None), ("days_since_last_run", None),
+        ("course_winner", None), ("distance_winner", None), ("cd_winner", None),
+    ]:
+        if not hasattr(runner, attr):
+            setattr(runner, attr, default)
+    return runner
+
+
+# Patch to_dict to include new fields
+_orig_to_dict = Runner.to_dict
+
+def _patched_to_dict(self):
+    d = _orig_to_dict(self)
+    for attr in ("rpr", "ts", "trainer_rtf", "days_since_last_run",
+                 "course_winner", "distance_winner", "cd_winner",
+                 "prize", "surface"):
+        if hasattr(self, attr):
+            d[attr] = getattr(self, attr)
+    return d
+
+Runner.to_dict = _patched_to_dict
+
+# Patch RaceMeta similarly
+_orig_meta_to_dict = RaceMeta.to_dict
+
+def _patched_meta_to_dict(self):
+    d = _orig_meta_to_dict(self)
+    for attr in ("prize", "surface"):
+        if hasattr(self, attr):
+            d[attr] = getattr(self, attr)
+    return d
+
+RaceMeta.to_dict = _patched_meta_to_dict
+
+
+# ---------------------------------------------------------------------------
+# HTML fallback parser (unchanged from v1)
+# ---------------------------------------------------------------------------
 
 def parse_from_html(soup, track, date_str):
     """Fallback HTML parser for when __NEXT_DATA__ isn't available."""
@@ -356,7 +517,6 @@ def parse_from_html(soup, track, date_str):
 
 
 def parse_runners_from_html(soup):
-    """Parse runners from HTML as a fallback."""
     runners = []
     horse_links = soup.find_all("a", href=re.compile(r"/racing/profiles/horse/\d+"))
     seen_ids = set()
@@ -373,6 +533,7 @@ def parse_runners_from_html(soup):
             continue
 
         runner = Runner(runner_name=name)
+        _extend_runner(runner)
 
         container = link
         for _ in range(8):
@@ -406,6 +567,25 @@ def parse_runners_from_html(soup):
         if or_m:
             runner.official_rating = int(or_m.group(1))
 
+        # HTML fallback: try to extract RPR and TS from text
+        rpr_m = re.search(r"\bRPR[:\s]*(\d+)\b", block_text, re.IGNORECASE)
+        if rpr_m:
+            runner.rpr = int(rpr_m.group(1))
+
+        ts_m = re.search(r"\bTS[:\s]*(\d+)\b", block_text, re.IGNORECASE)
+        if ts_m:
+            runner.ts = int(ts_m.group(1))
+
+        # C/D badges from HTML spans/images
+        cd_m = re.search(r"\bCD\b", block_text)
+        c_m  = re.search(r"\bC\b", block_text)
+        d_m  = re.search(r"\bD\b", block_text)
+        # Only set if at least one badge found in the block
+        if cd_m or c_m or d_m:
+            runner.cd_winner       = bool(cd_m)
+            runner.course_winner   = bool(c_m) and not bool(cd_m)
+            runner.distance_winner = bool(d_m) and not bool(cd_m)
+
         form_m = re.search(r"Form:\s*([A-Z0-9/\-PFU]+)", block_text, re.IGNORECASE)
         if form_m:
             runner.recent_form = parse_form_figures(form_m.group(1))
@@ -417,7 +597,6 @@ def parse_runners_from_html(soup):
 
 
 def parse_form_figures(form_str):
-    """Parse a compact form string like '12341-2' or '56-46' into FormLine dicts."""
     lines = []
     chars = re.findall(r"[\dPFUR]", form_str.upper())
     for ch in chars[-6:]:
@@ -426,8 +605,10 @@ def parse_form_figures(form_str):
             pos = int(ch)
             if pos == 0:
                 pos = 10
-        lines.append({"position": pos, "date": None, "distance": None,
-                       "going": None, "race_class": None, "track": None})
+        lines.append({
+            "position": pos, "date": None, "distance": None,
+            "going": None, "race_class": None, "track": None,
+        })
     return lines
 
 
@@ -436,7 +617,6 @@ def parse_form_figures(form_str):
 # ---------------------------------------------------------------------------
 
 def process_race(url, track, date_str, output_dir="data", site_dir="site"):
-    """Fetch, parse, score, and save a single race."""
     html = fetch_page(url)
     if not html:
         return None
@@ -451,26 +631,33 @@ def process_race(url, track, date_str, output_dir="data", site_dir="site"):
         f"- {race_data.meta.race_name} ({len(race_data.runners)} runners)"
     )
 
-    # Save raw
-    raw_dir = os.path.join(output_dir, "raw")
-    raw_dict = race_data.to_dict()
-    raw_path = save_raw(race_data, raw_dir)
+    # Log new field availability
+    n_rpr   = sum(1 for r in race_data.runners if getattr(r, "rpr", None) is not None)
+    n_ts    = sum(1 for r in race_data.runners if getattr(r, "ts", None) is not None)
+    n_rtf   = sum(1 for r in race_data.runners if getattr(r, "trainer_rtf", None) is not None)
+    n_days  = sum(1 for r in race_data.runners if getattr(r, "days_since_last_run", None) is not None)
+    n_cd    = sum(1 for r in race_data.runners if getattr(r, "cd_winner", None) is not None)
+    logger.info(
+        f"    New fields: RPR={n_rpr}, TS={n_ts}, RTF={n_rtf}, "
+        f"DaysLastRun={n_days}, CD_badges={n_cd} / {len(race_data.runners)} runners"
+    )
 
-    # Score
-    scored_data = score_race(raw_dict)
-    scored_dir = os.path.join(output_dir, "scored")
+    raw_dir  = os.path.join(output_dir, "raw")
+    raw_dict = race_data.to_dict()
+    save_raw(race_data, raw_dir)
+
+    scored_data  = score_race(raw_dict)
+    scored_dir   = os.path.join(output_dir, "scored")
     save_scored(scored_data, scored_dir)
 
-    # Build web payload
     web_data = build_web_payload(scored_data)
-    web_dir = os.path.join(output_dir, "web")
+    web_dir  = os.path.join(output_dir, "web")
     save_web(web_data, web_dir)
 
-    # Copy to site/data/
     site_data_dir = os.path.join(site_dir, "data")
     os.makedirs(site_data_dir, exist_ok=True)
 
-    race_id = web_data["race_id"]
+    race_id   = web_data["race_id"]
     site_path = os.path.join(site_data_dir, f"{race_id}.json")
     with open(site_path, "w") as f:
         json.dump(web_data, f, indent=2)
@@ -490,20 +677,11 @@ def main():
     )
     parser.add_argument(
         "--tracks", nargs="*",
-        help="Only fetch specific tracks (e.g., newcastle musselburgh punchestown)",
+        help="Only fetch specific tracks",
     )
-    parser.add_argument(
-        "--output-dir", type=str, default="data",
-        help="Base output directory (default: data)",
-    )
-    parser.add_argument(
-        "--site-dir", type=str, default="site",
-        help="Static site directory (default: site)",
-    )
-    parser.add_argument(
-        "-v", "--verbose", action="store_true",
-        help="Enable debug logging",
-    )
+    parser.add_argument("--output-dir", type=str, default="data")
+    parser.add_argument("--site-dir",   type=str, default="site")
+    parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args()
 
     if args.verbose:
@@ -511,13 +689,14 @@ def main():
 
     date_str = args.date
     logger.info(f"{'='*60}")
-    logger.info(f"FETCH TODAY'S RACES")
+    logger.info(f"FETCH TODAY'S RACES (v2)")
     logger.info(f"Date: {date_str}")
     logger.info(f"{'='*60}")
 
-    # Step 0: Clean stale race data from site/data so only today's races appear
     site_data_dir = os.path.join(args.site_dir, "data")
     os.makedirs(site_data_dir, exist_ok=True)
+
+    # Clean stale files
     stale = 0
     for fname in os.listdir(site_data_dir):
         if fname in ("manifest.json", "latest.json"):
@@ -526,28 +705,26 @@ def main():
             os.remove(os.path.join(site_data_dir, fname))
             stale += 1
     if stale:
-        logger.info(f"Cleaned {stale} stale race file(s) from {site_data_dir}")
+        logger.info(f"Cleaned {stale} stale race file(s)")
 
-    # Step 1: Fetch meeting list
     logger.info("Step 1: Fetching meetings from Sporting Life...")
     meetings = fetch_meetings(date_str)
-
     if not meetings:
-        logger.error("No UK/IRE meetings found. Check the date or try again.")
+        logger.error("No UK/IRE meetings found.")
         sys.exit(1)
 
-    # Filter by tracks if specified
     if args.tracks:
         filter_set = {t.lower() for t in args.tracks}
-        meetings = [m for m in meetings if m["track"].lower() in filter_set
-                     or m["track_slug"] in filter_set]
+        meetings = [
+            m for m in meetings
+            if m["track"].lower() in filter_set or m["track_slug"] in filter_set
+        ]
 
     total_races = sum(len(m["races"]) for m in meetings)
     logger.info(f"Found {len(meetings)} UK/IRE meeting(s), {total_races} race(s):")
     for m in meetings:
         logger.info(f"  {m['track']}: {len(m['races'])} races")
 
-    # Step 2: Fetch and process each race
     logger.info(f"\nStep 2: Fetching individual racecards...")
     processed = 0
     failed = 0
@@ -555,21 +732,16 @@ def main():
     for meeting in meetings:
         track = meeting["track"]
         logger.info(f"\n--- {track} ---")
-
         for race_info in meeting["races"]:
             url = race_info["url"]
             logger.info(f"  Fetching: {url}")
-
             result = process_race(url, track, date_str, args.output_dir, args.site_dir)
             if result:
                 processed += 1
             else:
                 failed += 1
 
-    # Step 3: Set latest.json to the first race
-    site_data_dir = os.path.join(args.site_dir, "data")
     if processed > 0:
-        # Find the first race file for today
         race_files = sorted([
             f for f in os.listdir(site_data_dir)
             if f.endswith(".json")
@@ -577,17 +749,13 @@ def main():
             and date_str.replace("-", "") in f.replace("-", "")
         ])
         if race_files:
-            import shutil
             first = os.path.join(site_data_dir, race_files[0])
-            latest = os.path.join(site_data_dir, "latest.json")
-            shutil.copy2(first, latest)
+            shutil.copy2(first, os.path.join(site_data_dir, "latest.json"))
             logger.info(f"Set latest.json -> {race_files[0]}")
 
-    # Step 4: Rebuild manifest
     logger.info("\nStep 3: Rebuilding manifest...")
     rebuild_manifest(site_data_dir)
 
-    # Summary
     logger.info(f"\n{'='*60}")
     logger.info(f"DONE: {processed} races processed, {failed} failed")
     logger.info(f"Serve: python -m http.server 8000 --directory {args.site_dir}")

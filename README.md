@@ -31,7 +31,8 @@ then multiplied by the component's weight and summed to give a total score.
 | Rating          | 25%    | Official rating (OR) or carried weight as proxy      |
 | Form            | 20%    | Recent finishing positions, weighted by recency       |
 | Suitability     | 15%    | Match to today's distance, going, and course         |
-| Connections     |  5%    | Jockey and trainer (neutral placeholder for now)     |
+| Connections     |  4%    | Jockey and trainer (neutral placeholder for now)     |
+| Market expectation |  1%  | Last-race favourite, beaten favourite (when SP available) |
 
 If a component has no data for a runner (e.g. no odds available), its weight
 is **redistributed proportionally** across the remaining components so

@@ -119,6 +119,9 @@ class FormLine:
     going: Optional[str] = None
     race_class: Optional[str] = None
     track: Optional[str] = None
+    # Market expectation (plug-in: when source provides SP for past runs)
+    sp_decimal: Optional[float] = None
+    sp_string: Optional[str] = None
 
 
 @dataclass

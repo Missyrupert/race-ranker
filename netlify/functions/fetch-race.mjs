@@ -100,6 +100,11 @@ export default async (req) => {
         if (!pr || typeof pr !== "object") continue;
         if ((pr.date || "") === date) continue;
         if (recentForm.length >= 6) break;
+        // SP/odds from previous_results (plug-in: use when available)
+        const prBetting = pr.betting || {};
+        const spRaw = pr.starting_price || pr.sp || prBetting.starting_price || prBetting.sp || "";
+        const spDecimal = spRaw ? parseOdds(String(spRaw)) : null;
+
         recentForm.push({
           position: pr.position ?? null,
           date: pr.date || "",
@@ -107,6 +112,8 @@ export default async (req) => {
           going: normGoing(pr.going || ""),
           race_class: pr.race_class || "",
           track: pr.course_name || "",
+          sp_decimal: spDecimal,
+          sp_string: spRaw ? String(spRaw).trim() : null,
         });
       }
 
