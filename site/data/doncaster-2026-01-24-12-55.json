@@ -1,0 +1,501 @@
+{
+  "race_id": "doncaster-2026-01-24-12-55",
+  "meta": {
+    "track": "Doncaster",
+    "date": "2026-01-24",
+    "off_time": "12:55",
+    "distance": "3m84y",
+    "going": "soft",
+    "race_class": null,
+    "race_name": "12:55 Saturday 24 January 2026",
+    "runners_count": 5,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "THE LAST CLOUD",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-0",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Brian Hughes",
+      "trainer": "Patrick Neville",
+      "odds_decimal": 1.33,
+      "total_score": 23.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 21.0,
+          "weight": 0.9091,
+          "weighted_score": 19.09,
+          "reason": "Odds 1.33; fair win prob 21.0% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Patrick Neville, J: Brian Hughes (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "COUNTRY CODE",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-0",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "James Bowen",
+      "trainer": "Ruth Jefferson",
+      "odds_decimal": 1.36,
+      "total_score": 23.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 20.6,
+          "weight": 0.9091,
+          "weighted_score": 18.73,
+          "reason": "Odds 1.36; fair win prob 20.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Ruth Jefferson, J: James Bowen (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "KICOUR LA",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-0",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Kielan Woods",
+      "trainer": "Ben Pauling",
+      "odds_decimal": 1.36,
+      "total_score": 23.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 20.6,
+          "weight": 0.9091,
+          "weighted_score": 18.73,
+          "reason": "Odds 1.36; fair win prob 20.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Ben Pauling, J: Kielan Woods (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "THE PRICE OF PEACE",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-0",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Jonathan Burke",
+      "trainer": "Rebecca Curtis",
+      "odds_decimal": 1.42,
+      "total_score": 22.5,
+      "components": [
+        {
+          "name": "Market",
+          "score": 19.7,
+          "weight": 0.9091,
+          "weighted_score": 17.91,
+          "reason": "Odds 1.42; fair win prob 19.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Rebecca Curtis, J: Jonathan Burke (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "THEDEVILUNO",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-0",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "S. F. O'Keeffe",
+      "trainer": "Paul Nolan, Ireland",
+      "odds_decimal": 1.54,
+      "total_score": 21.1,
+      "components": [
+        {
+          "name": "Market",
+          "score": 18.2,
+          "weight": 0.9091,
+          "weighted_score": 16.55,
+          "reason": "Odds 1.54; fair win prob 18.2% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Paul Nolan, Ireland, J: S. F. O'Keeffe (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "THE LAST CLOUD",
+      "rank": 1,
+      "score": 23.6
+    },
+    "backup_1": {
+      "runner_name": "COUNTRY CODE",
+      "rank": 2,
+      "score": 23.3
+    },
+    "backup_2": {
+      "runner_name": "KICOUR LA",
+      "rank": 3,
+      "score": 23.3
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 0.3,
+    "reasons": [
+      "Market prob gap 0.5 pts (race-normalised)",
+      "2/8 scoring components available",
+      "Total-score margin 0.3 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/doncaster/2026-01-24/1255/14/2",
+  "_date": "2026-01-24",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "THEDEVILUNO",
+        "position": 1,
+        "sp_decimal": 1.54,
+        "sp_string": "15/28",
+        "is_nr": false
+      },
+      {
+        "runner_name": "COUNTRY CODE",
+        "position": 2,
+        "sp_decimal": 1.36,
+        "sp_string": "9/25",
+        "is_nr": false
+      },
+      {
+        "runner_name": "THE LAST CLOUD",
+        "position": 3,
+        "sp_decimal": 1.33,
+        "sp_string": "18/54",
+        "is_nr": false
+      },
+      {
+        "runner_name": "KICOUR LA",
+        "position": 4,
+        "sp_decimal": 1.36,
+        "sp_string": "9/25",
+        "is_nr": false
+      },
+      {
+        "runner_name": "THE PRICE OF PEACE",
+        "position": 5,
+        "sp_decimal": 1.42,
+        "sp_string": "8/19",
+        "is_nr": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,501 @@
+{
+  "race_id": "fairyhouse-2026-01-15-12-58",
+  "meta": {
+    "track": "Fairyhouse",
+    "date": "2026-01-15",
+    "off_time": "12:58",
+    "distance": "2m4f",
+    "going": "heavy",
+    "race_class": null,
+    "race_name": "12:58 Thursday 15 January 2026",
+    "runners_count": 5,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "STICWITHTHEPROCESS",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-8",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "M. P. Walsh",
+      "trainer": "T. M. Walsh, Ireland",
+      "odds_decimal": 1.14,
+      "total_score": 25.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 22.8,
+          "weight": 0.9091,
+          "weighted_score": 20.73,
+          "reason": "Odds 1.14; fair win prob 22.8% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: T. M. Walsh, Ireland, J: M. P. Walsh (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "COYOTE SPIRIT",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-11",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "J. W. Kennedy",
+      "trainer": "Gordon Elliott, Ireland",
+      "odds_decimal": 1.26,
+      "total_score": 23.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 20.6,
+          "weight": 0.9091,
+          "weighted_score": 18.73,
+          "reason": "Odds 1.26; fair win prob 20.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Gordon Elliott, Ireland, J: J. W. Kennedy (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "WELLUKNOW",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-6",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "D. King",
+      "trainer": "Mark Molloy, Ireland",
+      "odds_decimal": 1.33,
+      "total_score": 22.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 19.5,
+          "weight": 0.9091,
+          "weighted_score": 17.73,
+          "reason": "Odds 1.33; fair win prob 19.5% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Mark Molloy, Ireland, J: D. King (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "NELSON MUNTZ",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-11",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "C. M. Quirke",
+      "trainer": "David Harry Kelly, Ireland",
+      "odds_decimal": 1.39,
+      "total_score": 21.5,
+      "components": [
+        {
+          "name": "Market",
+          "score": 18.7,
+          "weight": 0.9091,
+          "weighted_score": 17.0,
+          "reason": "Odds 1.39; fair win prob 18.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: David Harry Kelly, Ireland, J: C. M. Quirke (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "HERON'S BUTLER",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-9",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "L. A. McKenna(5)",
+      "trainer": "Dermot Anthony McLoughlin, Ireland",
+      "odds_decimal": 1.42,
+      "total_score": 21.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 18.3,
+          "weight": 0.9091,
+          "weighted_score": 16.64,
+          "reason": "Odds 1.42; fair win prob 18.3% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Dermot Anthony McLoughlin, Ireland, J: L. A. McKenna(5) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "STICWITHTHEPROCESS",
+      "rank": 1,
+      "score": 25.3
+    },
+    "backup_1": {
+      "runner_name": "COYOTE SPIRIT",
+      "rank": 2,
+      "score": 23.3
+    },
+    "backup_2": {
+      "runner_name": "WELLUKNOW",
+      "rank": 3,
+      "score": 22.3
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 2.0,
+    "reasons": [
+      "Market prob gap 2.2 pts (race-normalised)",
+      "2/8 scoring components available",
+      "Total-score margin 2.0 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/fairyhouse/2026-01-15/1258/208/3",
+  "_date": "2026-01-15",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "WELLUKNOW",
+        "position": 1,
+        "sp_decimal": 1.33,
+        "sp_string": "18/54",
+        "is_nr": false
+      },
+      {
+        "runner_name": "HERON'S BUTLER",
+        "position": 2,
+        "sp_decimal": 1.42,
+        "sp_string": "8/19",
+        "is_nr": false
+      },
+      {
+        "runner_name": "NELSON MUNTZ",
+        "position": 3,
+        "sp_decimal": 1.39,
+        "sp_string": "7/18",
+        "is_nr": false
+      },
+      {
+        "runner_name": "COYOTE SPIRIT",
+        "position": 4,
+        "sp_decimal": 1.26,
+        "sp_string": "11/43",
+        "is_nr": false
+      },
+      {
+        "runner_name": "STICWITHTHEPROCESS",
+        "position": 5,
+        "sp_decimal": 1.14,
+        "sp_string": "6/42",
+        "is_nr": false
+      }
+    ]
+  }
+}

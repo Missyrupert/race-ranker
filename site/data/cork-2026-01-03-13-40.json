@@ -1,0 +1,591 @@
+{
+  "race_id": "cork-2026-01-03-13-40",
+  "meta": {
+    "track": "Cork",
+    "date": "2026-01-03",
+    "off_time": "13:40",
+    "distance": "3m",
+    "going": "gd/sft",
+    "race_class": null,
+    "race_name": "13:40 Saturday 03 January 2026",
+    "runners_count": 6,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "FILLYOUREYE",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-12",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "P. Townend",
+      "trainer": "W. P. Mullins, Ireland",
+      "odds_decimal": 1.08,
+      "total_score": 22.1,
+      "components": [
+        {
+          "name": "Market",
+          "score": 19.3,
+          "weight": 0.9091,
+          "weighted_score": 17.55,
+          "reason": "Odds 1.08; fair win prob 19.3% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: W. P. Mullins, Ireland, J: P. Townend (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "REBEL BUDZ",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-12",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "D. J. O'Keeffe",
+      "trainer": "Paul O'Flynn, Ireland",
+      "odds_decimal": 1.22,
+      "total_score": 20.1,
+      "components": [
+        {
+          "name": "Market",
+          "score": 17.1,
+          "weight": 0.9091,
+          "weighted_score": 15.55,
+          "reason": "Odds 1.22; fair win prob 17.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Paul O'Flynn, Ireland, J: D. J. O'Keeffe (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "KASHCHEI",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-12",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Danny Gilligan",
+      "trainer": "Cian Michael Collins, Ireland",
+      "odds_decimal": 1.22,
+      "total_score": 20.1,
+      "components": [
+        {
+          "name": "Market",
+          "score": 17.1,
+          "weight": 0.9091,
+          "weighted_score": 15.55,
+          "reason": "Odds 1.22; fair win prob 17.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Cian Michael Collins, Ireland, J: Danny Gilligan (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "KASANOVA'S DREAM",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-12",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "J. W. Kennedy",
+      "trainer": "Gordon Elliott, Ireland",
+      "odds_decimal": 1.31,
+      "total_score": 19.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 15.9,
+          "weight": 0.9091,
+          "weighted_score": 14.45,
+          "reason": "Odds 1.31; fair win prob 15.9% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Gordon Elliott, Ireland, J: J. W. Kennedy (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "ASK THE BOOKIE",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "11-12",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Phillip Enright",
+      "trainer": "Gillian Scott, Ireland",
+      "odds_decimal": 1.33,
+      "total_score": 18.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 15.7,
+          "weight": 0.9091,
+          "weighted_score": 14.27,
+          "reason": "Odds 1.33; fair win prob 15.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Gillian Scott, Ireland, J: Phillip Enright (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 6,
+      "runner_name": "FRANKIE'S FREEBIE",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-12",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "H. E. Sexton(7)",
+      "trainer": "Adrian Sexton, Ireland",
+      "odds_decimal": 1.39,
+      "total_score": 18.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 15.0,
+          "weight": 0.9091,
+          "weighted_score": 13.64,
+          "reason": "Odds 1.39; fair win prob 15.0% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Adrian Sexton, Ireland, J: H. E. Sexton(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "FILLYOUREYE",
+      "rank": 1,
+      "score": 22.1
+    },
+    "backup_1": {
+      "runner_name": "REBEL BUDZ",
+      "rank": 2,
+      "score": 20.1
+    },
+    "backup_2": {
+      "runner_name": "KASHCHEI",
+      "rank": 3,
+      "score": 20.1
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 2.0,
+    "reasons": [
+      "Market prob gap 2.2 pts (race-normalised)",
+      "2/8 scoring components available",
+      "Total-score margin 2.0 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/cork/2026-01-03/1340/218/3",
+  "_date": "2026-01-03",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "REBEL BUDZ",
+        "position": 1,
+        "sp_decimal": 1.22,
+        "sp_string": "5/23",
+        "is_nr": false
+      },
+      {
+        "runner_name": "FRANKIE'S FREEBIE",
+        "position": 2,
+        "sp_decimal": 1.39,
+        "sp_string": "7/18",
+        "is_nr": false
+      },
+      {
+        "runner_name": "FILLYOUREYE",
+        "position": 3,
+        "sp_decimal": 1.08,
+        "sp_string": "5/61",
+        "is_nr": false
+      },
+      {
+        "runner_name": "KASANOVA'S DREAM",
+        "position": 4,
+        "sp_decimal": 1.31,
+        "sp_string": "5/16",
+        "is_nr": false
+      },
+      {
+        "runner_name": "ASK THE BOOKIE",
+        "position": 5,
+        "sp_decimal": 1.33,
+        "sp_string": "50/151",
+        "is_nr": false
+      },
+      {
+        "runner_name": "KASHCHEI",
+        "position": 6,
+        "sp_decimal": 1.22,
+        "sp_string": "28/129",
+        "is_nr": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,771 @@
+{
+  "race_id": "ayr-2026-01-13-15-48",
+  "meta": {
+    "track": "Ayr",
+    "date": "2026-01-13",
+    "off_time": "15:48",
+    "distance": "2m",
+    "going": "heavy",
+    "race_class": null,
+    "race_name": "15:48 Tuesday 13 January 2026",
+    "runners_count": 8,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "MCELHATTAN",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "11-4",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Theo Gillard",
+      "trainer": "Donald McCain",
+      "odds_decimal": 1.08,
+      "total_score": 16.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 13.6,
+          "weight": 0.9091,
+          "weighted_score": 12.36,
+          "reason": "Odds 1.08; fair win prob 13.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Donald McCain, J: Theo Gillard (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "MELBOURNE GHOST",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "11-4",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Sean Quinlan",
+      "trainer": "Donald Whillans",
+      "odds_decimal": 1.09,
+      "total_score": 16.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 13.5,
+          "weight": 0.9091,
+          "weighted_score": 12.27,
+          "reason": "Odds 1.09; fair win prob 13.5% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Donald Whillans, J: Sean Quinlan (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "BREWDOG",
+      "number": null,
+      "draw": null,
+      "age": 4,
+      "weight": "10-5",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Nathan Moscrop",
+      "trainer": "R. Mike Smith",
+      "odds_decimal": 1.11,
+      "total_score": 16.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 13.3,
+          "weight": 0.9091,
+          "weighted_score": 12.09,
+          "reason": "Odds 1.11; fair win prob 13.3% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: R. Mike Smith, J: Nathan Moscrop (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "COCONUT MAN",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "11-11",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Jack Power(5)",
+      "trainer": "Lucinda Russell & Michael Scudamore",
+      "odds_decimal": 1.12,
+      "total_score": 16.5,
+      "components": [
+        {
+          "name": "Market",
+          "score": 13.1,
+          "weight": 0.9091,
+          "weighted_score": 11.91,
+          "reason": "Odds 1.12; fair win prob 13.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Lucinda Russell & Michael Scudamore, J: Jack Power(5) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "DUBLINOFFICECALLIN",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "11-4",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Craig Nichol",
+      "trainer": "Ewan Whillans",
+      "odds_decimal": 1.12,
+      "total_score": 16.5,
+      "components": [
+        {
+          "name": "Market",
+          "score": 13.1,
+          "weight": 0.9091,
+          "weighted_score": 11.91,
+          "reason": "Odds 1.12; fair win prob 13.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Ewan Whillans, J: Craig Nichol (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 6,
+      "runner_name": "DIAMANT DORE",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "11-4",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Brian Hughes",
+      "trainer": "Adrian Keatley",
+      "odds_decimal": 1.26,
+      "total_score": 15.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 11.7,
+          "weight": 0.9091,
+          "weighted_score": 10.64,
+          "reason": "Odds 1.26; fair win prob 11.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Adrian Keatley, J: Brian Hughes (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 7,
+      "runner_name": "KINGSMAN MAIL",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-4",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Bruce Lynn",
+      "trainer": "N. W. Alexander",
+      "odds_decimal": 1.29,
+      "total_score": 14.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 11.4,
+          "weight": 0.9091,
+          "weighted_score": 10.36,
+          "reason": "Odds 1.29; fair win prob 11.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: N. W. Alexander, J: Bruce Lynn (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 8,
+      "runner_name": "OOR WISH",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "10-11",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Jamie Hamilton",
+      "trainer": "N. W. Alexander",
+      "odds_decimal": 1.44,
+      "total_score": 13.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 10.2,
+          "weight": 0.9091,
+          "weighted_score": 9.27,
+          "reason": "Odds 1.44; fair win prob 10.2% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: N. W. Alexander, J: Jamie Hamilton (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "MCELHATTAN",
+      "rank": 1,
+      "score": 16.9
+    },
+    "backup_1": {
+      "runner_name": "MELBOURNE GHOST",
+      "rank": 2,
+      "score": 16.8
+    },
+    "backup_2": {
+      "runner_name": "BREWDOG",
+      "rank": 3,
+      "score": 16.6
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 0.1,
+    "reasons": [
+      "Market prob gap 0.1 pts (race-normalised)",
+      "2/8 scoring components available",
+      "Total-score margin 0.1 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/ayr/2026-01-13/1548/2/7",
+  "_date": "2026-01-13",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "DIAMANT DORE",
+        "position": 1,
+        "sp_decimal": 1.26,
+        "sp_string": "11/43",
+        "is_nr": false
+      },
+      {
+        "runner_name": "COCONUT MAN",
+        "position": 2,
+        "sp_decimal": 1.12,
+        "sp_string": "5/42",
+        "is_nr": false
+      },
+      {
+        "runner_name": "KINGSMAN MAIL",
+        "position": 3,
+        "sp_decimal": 1.29,
+        "sp_string": "7/24",
+        "is_nr": false
+      },
+      {
+        "runner_name": "OOR WISH",
+        "position": 4,
+        "sp_decimal": 1.44,
+        "sp_string": "80/181",
+        "is_nr": false
+      },
+      {
+        "runner_name": "MCELHATTAN",
+        "position": 5,
+        "sp_decimal": 1.08,
+        "sp_string": "9/110",
+        "is_nr": false
+      },
+      {
+        "runner_name": "DUBLINOFFICECALLIN",
+        "position": 6,
+        "sp_decimal": 1.12,
+        "sp_string": "14/115",
+        "is_nr": false
+      },
+      {
+        "runner_name": "MELBOURNE GHOST",
+        "position": 7,
+        "sp_decimal": 1.09,
+        "sp_string": "10/111",
+        "is_nr": false
+      },
+      {
+        "runner_name": "BREWDOG",
+        "position": 8,
+        "sp_decimal": 1.11,
+        "sp_string": "125/1126",
+        "is_nr": false
+      }
+    ]
+  }
+}

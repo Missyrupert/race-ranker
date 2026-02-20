@@ -1,0 +1,321 @@
+{
+  "race_id": "doncaster-2026-01-23-13-15",
+  "meta": {
+    "track": "Doncaster",
+    "date": "2026-01-23",
+    "off_time": "13:15",
+    "distance": "2m3f31y",
+    "going": "soft",
+    "race_class": null,
+    "race_name": "13:15 Friday 23 January 2026",
+    "runners_count": 3,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "ONE BIG BANG",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-8",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Alex Chadwick(3)",
+      "trainer": "James Owen",
+      "odds_decimal": 1.08,
+      "total_score": 40.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 39.0,
+          "weight": 0.9091,
+          "weighted_score": 35.45,
+          "reason": "Odds 1.08; fair win prob 39.0% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: James Owen, J: Alex Chadwick(3) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "WESTERN KNIGHT",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-8",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Brendan Powell",
+      "trainer": "Joe Tizzard",
+      "odds_decimal": 1.22,
+      "total_score": 35.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 34.5,
+          "weight": 0.9091,
+          "weighted_score": 31.36,
+          "reason": "Odds 1.22; fair win prob 34.5% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Joe Tizzard, J: Brendan Powell (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "KAP OUEST",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-2",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Bryan Carver",
+      "trainer": "Harry Fry",
+      "odds_decimal": 1.59,
+      "total_score": 28.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 26.5,
+          "weight": 0.9091,
+          "weighted_score": 24.09,
+          "reason": "Odds 1.59; fair win prob 26.5% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Harry Fry, J: Bryan Carver (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "ONE BIG BANG",
+      "rank": 1,
+      "score": 40.0
+    },
+    "backup_1": {
+      "runner_name": "WESTERN KNIGHT",
+      "rank": 2,
+      "score": 35.9
+    },
+    "backup_2": {
+      "runner_name": "KAP OUEST",
+      "rank": 3,
+      "score": 28.6
+    }
+  },
+  "confidence": {
+    "band": "MED",
+    "margin": 4.1,
+    "reasons": [
+      "Market prob gap 4.5 pts (race-normalised)",
+      "2/8 scoring components available",
+      "Total-score margin 4.1 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/doncaster/2026-01-23/1315/14/2",
+  "_date": "2026-01-23",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "WESTERN KNIGHT",
+        "position": 1,
+        "sp_decimal": 1.22,
+        "sp_string": "5/23",
+        "is_nr": false
+      },
+      {
+        "runner_name": "KAP OUEST",
+        "position": 2,
+        "sp_decimal": 1.59,
+        "sp_string": "17/29",
+        "is_nr": false
+      },
+      {
+        "runner_name": "ONE BIG BANG",
+        "position": 3,
+        "sp_decimal": 1.08,
+        "sp_string": "1/12",
+        "is_nr": false
+      }
+    ]
+  }
+}

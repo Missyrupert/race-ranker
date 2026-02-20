@@ -1,0 +1,771 @@
+{
+  "race_id": "fairyhouse-2026-01-15-14-08",
+  "meta": {
+    "track": "Fairyhouse",
+    "date": "2026-01-15",
+    "off_time": "14:08",
+    "distance": "2m4f",
+    "going": "heavy",
+    "race_class": null,
+    "race_name": "14:08 Thursday 15 January 2026",
+    "runners_count": 8,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "NOEMIE DE LA VIS",
+      "number": null,
+      "draw": null,
+      "age": 4,
+      "weight": "10-6",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "P. Townend",
+      "trainer": "W. P. Mullins, Ireland",
+      "odds_decimal": 1.06,
+      "total_score": 17.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 14.5,
+          "weight": 0.9091,
+          "weighted_score": 13.18,
+          "reason": "Odds 1.06; fair win prob 14.5% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: W. P. Mullins, Ireland, J: P. Townend (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "LUCY JORDAN",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-7",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Jordan Colin Gainford",
+      "trainer": "Cian Michael Collins, Ireland",
+      "odds_decimal": 1.09,
+      "total_score": 17.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 14.1,
+          "weight": 0.9091,
+          "weighted_score": 12.82,
+          "reason": "Odds 1.09; fair win prob 14.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Cian Michael Collins, Ireland, J: Jordan Colin Gainford (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "SOLDIERSTOWN",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-7",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "D. J. O'Keeffe",
+      "trainer": "P. Buchanan",
+      "odds_decimal": 1.22,
+      "total_score": 16.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 12.6,
+          "weight": 0.9091,
+          "weighted_score": 11.45,
+          "reason": "Odds 1.22; fair win prob 12.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: P. Buchanan, J: D. J. O'Keeffe (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "TWO SECONDS",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-7",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Kevin Healy(7)",
+      "trainer": "Declan Queally, Ireland",
+      "odds_decimal": 1.22,
+      "total_score": 16.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 12.6,
+          "weight": 0.9091,
+          "weighted_score": 11.45,
+          "reason": "Odds 1.22; fair win prob 12.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Declan Queally, Ireland, J: Kevin Healy(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "MISS KINGSTON",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "11-7",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "P. J. Cody(7)",
+      "trainer": "P. F. McEnery, Ireland",
+      "odds_decimal": 1.25,
+      "total_score": 15.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 12.3,
+          "weight": 0.9091,
+          "weighted_score": 11.18,
+          "reason": "Odds 1.25; fair win prob 12.3% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: P. F. McEnery, Ireland, J: P. J. Cody(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 6,
+      "runner_name": "CHAMPAGNE VENTURE",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-7",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Danny Gilligan",
+      "trainer": "D. Broad, Ireland",
+      "odds_decimal": 1.31,
+      "total_score": 15.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 11.7,
+          "weight": 0.9091,
+          "weighted_score": 10.64,
+          "reason": "Odds 1.31; fair win prob 11.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: D. Broad, Ireland, J: Danny Gilligan (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 7,
+      "runner_name": "DEE'S LADY",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-7",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Keith Donoghue",
+      "trainer": "J. P. Dempsey, Ireland",
+      "odds_decimal": 1.35,
+      "total_score": 14.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 11.4,
+          "weight": 0.9091,
+          "weighted_score": 10.36,
+          "reason": "Odds 1.35; fair win prob 11.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: J. P. Dempsey, Ireland, J: Keith Donoghue (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 8,
+      "runner_name": "ISDISTHEONE",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-7",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "J. P. Shinnick(3)",
+      "trainer": "Robert Murphy, Ireland",
+      "odds_decimal": 1.4,
+      "total_score": 14.5,
+      "components": [
+        {
+          "name": "Market",
+          "score": 11.0,
+          "weight": 0.9091,
+          "weighted_score": 10.0,
+          "reason": "Odds 1.40; fair win prob 11.0% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Robert Murphy, Ireland, J: J. P. Shinnick(3) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "NOEMIE DE LA VIS",
+      "rank": 1,
+      "score": 17.7
+    },
+    "backup_1": {
+      "runner_name": "LUCY JORDAN",
+      "rank": 2,
+      "score": 17.4
+    },
+    "backup_2": {
+      "runner_name": "SOLDIERSTOWN",
+      "rank": 3,
+      "score": 16.0
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 0.3,
+    "reasons": [
+      "Market prob gap 0.4 pts (race-normalised)",
+      "2/8 scoring components available",
+      "Total-score margin 0.3 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/fairyhouse/2026-01-15/1408/208/5",
+  "_date": "2026-01-15",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "SOLDIERSTOWN",
+        "position": 1,
+        "sp_decimal": 1.22,
+        "sp_string": "28/129",
+        "is_nr": false
+      },
+      {
+        "runner_name": "NOEMIE DE LA VIS",
+        "position": 2,
+        "sp_decimal": 1.06,
+        "sp_string": "4/71",
+        "is_nr": false
+      },
+      {
+        "runner_name": "CHAMPAGNE VENTURE",
+        "position": 3,
+        "sp_decimal": 1.31,
+        "sp_string": "5/16",
+        "is_nr": false
+      },
+      {
+        "runner_name": "MISS KINGSTON",
+        "position": 4,
+        "sp_decimal": 1.25,
+        "sp_string": "33/134",
+        "is_nr": false
+      },
+      {
+        "runner_name": "TWO SECONDS",
+        "position": 5,
+        "sp_decimal": 1.22,
+        "sp_string": "28/129",
+        "is_nr": false
+      },
+      {
+        "runner_name": "ISDISTHEONE",
+        "position": 6,
+        "sp_decimal": 1.4,
+        "sp_string": "66/167",
+        "is_nr": false
+      },
+      {
+        "runner_name": "LUCY JORDAN",
+        "position": 7,
+        "sp_decimal": 1.09,
+        "sp_string": "100/1101",
+        "is_nr": false
+      },
+      {
+        "runner_name": "DEE'S LADY",
+        "position": 8,
+        "sp_decimal": 1.35,
+        "sp_string": "6/17",
+        "is_nr": false
+      }
+    ]
+  }
+}

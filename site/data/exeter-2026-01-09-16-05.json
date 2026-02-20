@@ -1,0 +1,951 @@
+{
+  "race_id": "exeter-2026-01-09-16-05",
+  "meta": {
+    "track": "Exeter",
+    "date": "2026-01-09",
+    "off_time": "16:05",
+    "distance": "2m161y",
+    "going": "soft",
+    "race_class": null,
+    "race_name": "16:05 Friday 09 January 2026",
+    "runners_count": 10,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "GOVERNORS ISLAND",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "11-2",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Bryan Carver",
+      "trainer": "Harry Fry",
+      "odds_decimal": 1.08,
+      "total_score": 14.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 11.2,
+          "weight": 0.9091,
+          "weighted_score": 10.18,
+          "reason": "Odds 1.08; fair win prob 11.2% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Harry Fry, J: Bryan Carver (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "BOLD STEP",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-2",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "James Bowen",
+      "trainer": "Nicky Henderson",
+      "odds_decimal": 1.09,
+      "total_score": 14.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 11.1,
+          "weight": 0.9091,
+          "weighted_score": 10.09,
+          "reason": "Odds 1.09; fair win prob 11.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Nicky Henderson, J: James Bowen (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "GOSPEL MOON",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "11-2",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "C. P. O'Shea(7)",
+      "trainer": "Susan Gardner",
+      "odds_decimal": 1.09,
+      "total_score": 14.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 11.1,
+          "weight": 0.9091,
+          "weighted_score": 10.09,
+          "reason": "Odds 1.09; fair win prob 11.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Susan Gardner, J: C. P. O'Shea(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "MORTAL COIL",
+      "number": null,
+      "draw": null,
+      "age": 4,
+      "weight": "10-3",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Joshua Bryan",
+      "trainer": "Tom Weston",
+      "odds_decimal": 1.15,
+      "total_score": 14.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 10.6,
+          "weight": 0.9091,
+          "weighted_score": 9.64,
+          "reason": "Odds 1.15; fair win prob 10.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Tom Weston, J: Joshua Bryan (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "I'M WIDE AWAKE",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-2",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Lucy Gardner",
+      "trainer": "Susan Gardner",
+      "odds_decimal": 1.15,
+      "total_score": 14.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 10.6,
+          "weight": 0.9091,
+          "weighted_score": 9.64,
+          "reason": "Odds 1.15; fair win prob 10.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Susan Gardner, J: Lucy Gardner (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 6,
+      "runner_name": "MALINAERO",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "11-2",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Isabel Williams",
+      "trainer": "Evan Williams",
+      "odds_decimal": 1.22,
+      "total_score": 13.5,
+      "components": [
+        {
+          "name": "Market",
+          "score": 9.9,
+          "weight": 0.9091,
+          "weighted_score": 9.0,
+          "reason": "Odds 1.22; fair win prob 9.9% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Evan Williams, J: Isabel Williams (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 7,
+      "runner_name": "BLACKSWAN D'OROUX",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "11-2",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Ben Jones",
+      "trainer": "Ben Pauling",
+      "odds_decimal": 1.22,
+      "total_score": 13.5,
+      "components": [
+        {
+          "name": "Market",
+          "score": 9.9,
+          "weight": 0.9091,
+          "weighted_score": 9.0,
+          "reason": "Odds 1.22; fair win prob 9.9% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Ben Pauling, J: Ben Jones (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 8,
+      "runner_name": "QUICKKICK",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "11-2",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Sean Houlihan",
+      "trainer": "Philip Hobbs & Johnson White",
+      "odds_decimal": 1.42,
+      "total_score": 12.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 8.5,
+          "weight": 0.9091,
+          "weighted_score": 7.73,
+          "reason": "Odds 1.42; fair win prob 8.5% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Philip Hobbs & Johnson White, J: Sean Houlihan (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 9,
+      "runner_name": "CRYSTAL ORCHARD",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "11-2",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Brendan Powell",
+      "trainer": "Joe Tizzard",
+      "odds_decimal": 1.42,
+      "total_score": 12.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 8.5,
+          "weight": 0.9091,
+          "weighted_score": 7.73,
+          "reason": "Odds 1.42; fair win prob 8.5% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Joe Tizzard, J: Brendan Powell (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 10,
+      "runner_name": "FOUNTAINS GALA",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "10-9",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "James Best",
+      "trainer": "Claire Hitch",
+      "odds_decimal": 1.44,
+      "total_score": 12.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 8.4,
+          "weight": 0.9091,
+          "weighted_score": 7.64,
+          "reason": "Odds 1.44; fair win prob 8.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Claire Hitch, J: James Best (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "GOVERNORS ISLAND",
+      "rank": 1,
+      "score": 14.7
+    },
+    "backup_1": {
+      "runner_name": "BOLD STEP",
+      "rank": 2,
+      "score": 14.6
+    },
+    "backup_2": {
+      "runner_name": "GOSPEL MOON",
+      "rank": 3,
+      "score": 14.6
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 0.1,
+    "reasons": [
+      "Market prob gap 0.1 pts (race-normalised)",
+      "2/8 scoring components available",
+      "Total-score margin 0.1 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/exeter/2026-01-09/1605/13/7",
+  "_date": "2026-01-09",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "MORTAL COIL",
+        "position": 1,
+        "sp_decimal": 1.15,
+        "sp_string": "18/119",
+        "is_nr": false
+      },
+      {
+        "runner_name": "BOLD STEP",
+        "position": 2,
+        "sp_decimal": 1.09,
+        "sp_string": "10/111",
+        "is_nr": false
+      },
+      {
+        "runner_name": "I'M WIDE AWAKE",
+        "position": 3,
+        "sp_decimal": 1.15,
+        "sp_string": "2/13",
+        "is_nr": false
+      },
+      {
+        "runner_name": "QUICKKICK",
+        "position": 4,
+        "sp_decimal": 1.42,
+        "sp_string": "11/26",
+        "is_nr": false
+      },
+      {
+        "runner_name": "CRYSTAL ORCHARD",
+        "position": 5,
+        "sp_decimal": 1.42,
+        "sp_string": "8/19",
+        "is_nr": false
+      },
+      {
+        "runner_name": "MALINAERO",
+        "position": 6,
+        "sp_decimal": 1.22,
+        "sp_string": "28/129",
+        "is_nr": false
+      },
+      {
+        "runner_name": "GOVERNORS ISLAND",
+        "position": 7,
+        "sp_decimal": 1.08,
+        "sp_string": "9/110",
+        "is_nr": false
+      },
+      {
+        "runner_name": "BLACKSWAN D'OROUX",
+        "position": 8,
+        "sp_decimal": 1.22,
+        "sp_string": "5/23",
+        "is_nr": false
+      },
+      {
+        "runner_name": "FOUNTAINS GALA",
+        "position": 9,
+        "sp_decimal": 1.44,
+        "sp_string": "80/181",
+        "is_nr": false
+      },
+      {
+        "runner_name": "GOSPEL MOON",
+        "position": 10,
+        "sp_decimal": 1.09,
+        "sp_string": "100/1101",
+        "is_nr": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,501 @@
+{
+  "race_id": "punchestown-2026-01-11-12-50",
+  "meta": {
+    "track": "Punchestown",
+    "date": "2026-01-11",
+    "off_time": "12:50",
+    "distance": "2m3f115y",
+    "going": "heavy",
+    "race_class": null,
+    "race_name": "12:50 Sunday 11 January 2026",
+    "runners_count": 5,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "PREDATORS GOLD",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-2",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "P. Townend",
+      "trainer": "W. P. Mullins, Ireland",
+      "odds_decimal": 1.07,
+      "total_score": 25.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 22.9,
+          "weight": 0.9091,
+          "weighted_score": 20.82,
+          "reason": "Odds 1.07; fair win prob 22.9% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: W. P. Mullins, Ireland, J: P. Townend (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "THE ENABLER",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-2",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Sam Ewing",
+      "trainer": "Gordon Elliott, Ireland",
+      "odds_decimal": 1.08,
+      "total_score": 25.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 22.7,
+          "weight": 0.9091,
+          "weighted_score": 20.64,
+          "reason": "Odds 1.08; fair win prob 22.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Gordon Elliott, Ireland, J: Sam Ewing (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "KAPPA JY PYKE",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-2",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "D. E. Mullins",
+      "trainer": "W. P. Mullins, Ireland",
+      "odds_decimal": 1.31,
+      "total_score": 21.5,
+      "components": [
+        {
+          "name": "Market",
+          "score": 18.7,
+          "weight": 0.9091,
+          "weighted_score": 17.0,
+          "reason": "Odds 1.31; fair win prob 18.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: W. P. Mullins, Ireland, J: D. E. Mullins (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "PURE STEEL",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-2",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "M. P. Walsh",
+      "trainer": "James Joseph Mangan, Ireland",
+      "odds_decimal": 1.35,
+      "total_score": 21.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 18.1,
+          "weight": 0.9091,
+          "weighted_score": 16.45,
+          "reason": "Odds 1.35; fair win prob 18.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: James Joseph Mangan, Ireland, J: M. P. Walsh (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "JACOB'S LADDER",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-2",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "J. W. Kennedy",
+      "trainer": "Gordon Elliott, Ireland",
+      "odds_decimal": 1.39,
+      "total_score": 20.5,
+      "components": [
+        {
+          "name": "Market",
+          "score": 17.6,
+          "weight": 0.9091,
+          "weighted_score": 16.0,
+          "reason": "Odds 1.39; fair win prob 17.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Gordon Elliott, Ireland, J: J. W. Kennedy (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "PREDATORS GOLD",
+      "rank": 1,
+      "score": 25.4
+    },
+    "backup_1": {
+      "runner_name": "THE ENABLER",
+      "rank": 2,
+      "score": 25.2
+    },
+    "backup_2": {
+      "runner_name": "KAPPA JY PYKE",
+      "rank": 3,
+      "score": 21.5
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 0.2,
+    "reasons": [
+      "Market prob gap 0.2 pts (race-normalised)",
+      "2/8 scoring components available",
+      "Total-score margin 0.2 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/punchestown/2026-01-11/1250/222/2",
+  "_date": "2026-01-11",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "KAPPA JY PYKE",
+        "position": 1,
+        "sp_decimal": 1.31,
+        "sp_string": "5/16",
+        "is_nr": false
+      },
+      {
+        "runner_name": "JACOB'S LADDER",
+        "position": 2,
+        "sp_decimal": 1.39,
+        "sp_string": "7/18",
+        "is_nr": false
+      },
+      {
+        "runner_name": "PREDATORS GOLD",
+        "position": 3,
+        "sp_decimal": 1.07,
+        "sp_string": "4/61",
+        "is_nr": false
+      },
+      {
+        "runner_name": "THE ENABLER",
+        "position": 4,
+        "sp_decimal": 1.08,
+        "sp_string": "9/110",
+        "is_nr": false
+      },
+      {
+        "runner_name": "PURE STEEL",
+        "position": 5,
+        "sp_decimal": 1.35,
+        "sp_string": "6/17",
+        "is_nr": false
+      }
+    ]
+  }
+}

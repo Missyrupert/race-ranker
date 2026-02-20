@@ -1,0 +1,771 @@
+{
+  "race_id": "musselburgh-2026-01-01-14-51",
+  "meta": {
+    "track": "Musselburgh",
+    "date": "2026-01-01",
+    "off_time": "14:51",
+    "distance": "2m7f180y",
+    "going": "gd/sft",
+    "race_class": null,
+    "race_name": "14:51 Thursday 01 January 2026",
+    "runners_count": 8,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "KOOL RAOUL",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "12-0",
+      "official_rating": 108,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Jack Power(5)",
+      "trainer": "Lucinda Russell & Michael Scudamore",
+      "odds_decimal": 1.08,
+      "total_score": 52.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 13.5,
+          "weight": 0.5172,
+          "weighted_score": 6.98,
+          "reason": "Odds 1.08; fair win prob 13.5% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 108 (field range 89\u2013108)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Lucinda Russell & Michael Scudamore, J: Jack Power(5) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "JENA D'OUDAIRIES",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "12-0",
+      "official_rating": 108,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Freddie Gingell",
+      "trainer": "Paul Nicholls",
+      "odds_decimal": 1.08,
+      "total_score": 52.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 13.5,
+          "weight": 0.5172,
+          "weighted_score": 6.98,
+          "reason": "Odds 1.08; fair win prob 13.5% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 108 (field range 89\u2013108)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Paul Nicholls, J: Freddie Gingell (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "WOLFSPEAR",
+      "number": null,
+      "draw": null,
+      "age": 10,
+      "weight": "12-0",
+      "official_rating": 108,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Callum Bewley",
+      "trainer": "Daragh Bourke",
+      "odds_decimal": 1.22,
+      "total_score": 51.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 11.9,
+          "weight": 0.5172,
+          "weighted_score": 6.16,
+          "reason": "Odds 1.22; fair win prob 11.9% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 108 (field range 89\u2013108)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Daragh Bourke, J: Callum Bewley (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "BIGLESISBACK",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-12",
+      "official_rating": 106,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Gregor Walkingshaw(10)",
+      "trainer": "Lucinda Russell & Michael Scudamore",
+      "odds_decimal": 1.17,
+      "total_score": 47.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 12.4,
+          "weight": 0.5172,
+          "weighted_score": 6.41,
+          "reason": "Odds 1.17; fair win prob 12.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 89.5,
+          "weight": 0.431,
+          "weighted_score": 38.58,
+          "reason": "OR 106 (field range 89\u2013108)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Lucinda Russell & Michael Scudamore, J: Gregor Walkingshaw(10) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "SNOWROCCO",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-10",
+      "official_rating": 104,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Ryan Mania",
+      "trainer": "Adam Nicol",
+      "odds_decimal": 1.26,
+      "total_score": 42.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 11.6,
+          "weight": 0.5172,
+          "weighted_score": 6.0,
+          "reason": "Odds 1.26; fair win prob 11.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 78.9,
+          "weight": 0.431,
+          "weighted_score": 34.01,
+          "reason": "OR 104 (field range 89\u2013108)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Adam Nicol, J: Ryan Mania (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 6,
+      "runner_name": "REMEMBERTHENAME",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-9",
+      "official_rating": 103,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Craig Nichol",
+      "trainer": "Sandy Thomson",
+      "odds_decimal": 1.35,
+      "total_score": 39.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 10.8,
+          "weight": 0.5172,
+          "weighted_score": 5.59,
+          "reason": "Odds 1.35; fair win prob 10.8% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 73.7,
+          "weight": 0.431,
+          "weighted_score": 31.77,
+          "reason": "OR 103 (field range 89\u2013108)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Sandy Thomson, J: Craig Nichol (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 7,
+      "runner_name": "ARTIC MANN",
+      "number": null,
+      "draw": null,
+      "age": 12,
+      "weight": "11-8",
+      "official_rating": 102,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Bruce Lynn",
+      "trainer": "N. W. Alexander",
+      "odds_decimal": 1.09,
+      "total_score": 39.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 13.4,
+          "weight": 0.5172,
+          "weighted_score": 6.93,
+          "reason": "Odds 1.09; fair win prob 13.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 68.4,
+          "weight": 0.431,
+          "weighted_score": 29.48,
+          "reason": "OR 102 (field range 89\u2013108)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: N. W. Alexander, J: Bruce Lynn (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 8,
+      "runner_name": "WEARELONGTERM",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "10-9",
+      "official_rating": 89,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Charlie Maggs(5)",
+      "trainer": "Dianne Sayer",
+      "odds_decimal": 1.12,
+      "total_score": 9.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 13.0,
+          "weight": 0.5172,
+          "weighted_score": 6.72,
+          "reason": "Odds 1.12; fair win prob 13.0% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 89 (field range 89\u2013108)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Dianne Sayer, J: Charlie Maggs(5) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "KOOL RAOUL",
+      "rank": 1,
+      "score": 52.7
+    },
+    "backup_1": {
+      "runner_name": "JENA D'OUDAIRIES",
+      "rank": 2,
+      "score": 52.7
+    },
+    "backup_2": {
+      "runner_name": "WOLFSPEAR",
+      "rank": 3,
+      "score": 51.8
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 0.0,
+    "reasons": [
+      "Market prob gap 0.0 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 0.0 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/musselburgh/2026-01-01/1451/15/5",
+  "_date": "2026-01-01",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "SNOWROCCO",
+        "position": 1,
+        "sp_decimal": 1.26,
+        "sp_string": "11/43",
+        "is_nr": false
+      },
+      {
+        "runner_name": "BIGLESISBACK",
+        "position": 2,
+        "sp_decimal": 1.17,
+        "sp_string": "7/42",
+        "is_nr": false
+      },
+      {
+        "runner_name": "WEARELONGTERM",
+        "position": 3,
+        "sp_decimal": 1.12,
+        "sp_string": "14/115",
+        "is_nr": false
+      },
+      {
+        "runner_name": "WOLFSPEAR",
+        "position": 4,
+        "sp_decimal": 1.22,
+        "sp_string": "28/129",
+        "is_nr": false
+      },
+      {
+        "runner_name": "KOOL RAOUL",
+        "position": 5,
+        "sp_decimal": 1.08,
+        "sp_string": "9/110",
+        "is_nr": false
+      },
+      {
+        "runner_name": "JENA D'OUDAIRIES",
+        "position": 6,
+        "sp_decimal": 1.08,
+        "sp_string": "9/110",
+        "is_nr": false
+      },
+      {
+        "runner_name": "REMEMBERTHENAME",
+        "position": 7,
+        "sp_decimal": 1.35,
+        "sp_string": "6/17",
+        "is_nr": false
+      },
+      {
+        "runner_name": "ARTIC MANN",
+        "position": 8,
+        "sp_decimal": 1.09,
+        "sp_string": "10/111",
+        "is_nr": false
+      }
+    ]
+  }
+}

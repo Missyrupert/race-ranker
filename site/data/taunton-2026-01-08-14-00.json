@@ -1,0 +1,681 @@
+{
+  "race_id": "taunton-2026-01-08-14-00",
+  "meta": {
+    "track": "Taunton",
+    "date": "2026-01-08",
+    "off_time": "14:00",
+    "distance": "2m104y",
+    "going": "soft",
+    "race_class": null,
+    "race_name": "14:00 Thursday 08 January 2026",
+    "runners_count": 7,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "CREST OF STARS",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "11-8",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Sam Twiston-Davies",
+      "trainer": "Anthony Honeyball",
+      "odds_decimal": 1.08,
+      "total_score": 18.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 15.7,
+          "weight": 0.9091,
+          "weighted_score": 14.27,
+          "reason": "Odds 1.08; fair win prob 15.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Anthony Honeyball, J: Sam Twiston-Davies (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "LYDEARD GIRL",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "11-1",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Ben Godfrey",
+      "trainer": "Kayley Woollacott",
+      "odds_decimal": 1.08,
+      "total_score": 18.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 15.7,
+          "weight": 0.9091,
+          "weighted_score": 14.27,
+          "reason": "Odds 1.08; fair win prob 15.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Kayley Woollacott, J: Ben Godfrey (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "DINO MOON",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "11-8",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Conor Ring",
+      "trainer": "Evan Williams",
+      "odds_decimal": 1.13,
+      "total_score": 18.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 15.0,
+          "weight": 0.9091,
+          "weighted_score": 13.64,
+          "reason": "Odds 1.13; fair win prob 15.0% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Evan Williams, J: Conor Ring (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "EXPLODE",
+      "number": null,
+      "draw": null,
+      "age": 4,
+      "weight": "10-9",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Harry Cobden",
+      "trainer": "Faye Bramley",
+      "odds_decimal": 1.16,
+      "total_score": 17.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 14.6,
+          "weight": 0.9091,
+          "weighted_score": 13.27,
+          "reason": "Odds 1.16; fair win prob 14.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Faye Bramley, J: Harry Cobden (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "MARHABA MILLION",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "11-8",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Harry Kimber",
+      "trainer": "Syd Hosie",
+      "odds_decimal": 1.17,
+      "total_score": 17.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 14.5,
+          "weight": 0.9091,
+          "weighted_score": 13.18,
+          "reason": "Odds 1.17; fair win prob 14.5% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Syd Hosie, J: Harry Kimber (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 6,
+      "runner_name": "MONSUN CLIMATE",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "11-8",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Ciaran Gethings",
+      "trainer": "Alastair Ralph",
+      "odds_decimal": 1.31,
+      "total_score": 16.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 12.9,
+          "weight": 0.9091,
+          "weighted_score": 11.73,
+          "reason": "Odds 1.31; fair win prob 12.9% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Alastair Ralph, J: Ciaran Gethings (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 7,
+      "runner_name": "ANTHRACITE",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "11-8",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Bradley Harris(3)",
+      "trainer": "Neil Mulholland",
+      "odds_decimal": 1.44,
+      "total_score": 15.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 11.7,
+          "weight": 0.9091,
+          "weighted_score": 10.64,
+          "reason": "Odds 1.44; fair win prob 11.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Neil Mulholland, J: Bradley Harris(3) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "CREST OF STARS",
+      "rank": 1,
+      "score": 18.8
+    },
+    "backup_1": {
+      "runner_name": "LYDEARD GIRL",
+      "rank": 2,
+      "score": 18.8
+    },
+    "backup_2": {
+      "runner_name": "DINO MOON",
+      "rank": 3,
+      "score": 18.2
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 0.0,
+    "reasons": [
+      "Market prob gap 0.0 pts (race-normalised)",
+      "2/8 scoring components available",
+      "Total-score margin 0.0 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/taunton/2026-01-08/1400/49/3",
+  "_date": "2026-01-08",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "CREST OF STARS",
+        "position": 1,
+        "sp_decimal": 1.08,
+        "sp_string": "1/12",
+        "is_nr": false
+      },
+      {
+        "runner_name": "EXPLODE",
+        "position": 2,
+        "sp_decimal": 1.16,
+        "sp_string": "13/82",
+        "is_nr": false
+      },
+      {
+        "runner_name": "MONSUN CLIMATE",
+        "position": 3,
+        "sp_decimal": 1.31,
+        "sp_string": "5/16",
+        "is_nr": false
+      },
+      {
+        "runner_name": "LYDEARD GIRL",
+        "position": 4,
+        "sp_decimal": 1.08,
+        "sp_string": "9/110",
+        "is_nr": false
+      },
+      {
+        "runner_name": "MARHABA MILLION",
+        "position": 5,
+        "sp_decimal": 1.17,
+        "sp_string": "200/1201",
+        "is_nr": false
+      },
+      {
+        "runner_name": "ANTHRACITE",
+        "position": 6,
+        "sp_decimal": 1.44,
+        "sp_string": "80/181",
+        "is_nr": false
+      },
+      {
+        "runner_name": "DINO MOON",
+        "position": 7,
+        "sp_decimal": 1.13,
+        "sp_string": "150/1151",
+        "is_nr": false
+      }
+    ]
+  }
+}

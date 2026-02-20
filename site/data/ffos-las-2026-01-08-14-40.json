@@ -1,0 +1,591 @@
+{
+  "race_id": "ffos-las-2026-01-08-14-40",
+  "meta": {
+    "track": "Ffos Las",
+    "date": "2026-01-08",
+    "off_time": "14:40",
+    "distance": "2m7f177y",
+    "going": "heavy",
+    "race_class": null,
+    "race_name": "14:40 Thursday 08 January 2026",
+    "runners_count": 6,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "HUNTER LEGEND",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "12-0",
+      "official_rating": 127,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Charlie Deutsch",
+      "trainer": "Venetia Williams",
+      "odds_decimal": 1.29,
+      "total_score": 54.1,
+      "components": [
+        {
+          "name": "Market",
+          "score": 16.3,
+          "weight": 0.5172,
+          "weighted_score": 8.43,
+          "reason": "Odds 1.29; fair win prob 16.3% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 127 (field range 104\u2013127)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Venetia Williams, J: Charlie Deutsch (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "ITSEEMSLIKEIT",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-7",
+      "official_rating": 120,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Jack Tudor",
+      "trainer": "David Pipe",
+      "odds_decimal": 1.22,
+      "total_score": 41.5,
+      "components": [
+        {
+          "name": "Market",
+          "score": 17.2,
+          "weight": 0.5172,
+          "weighted_score": 8.9,
+          "reason": "Odds 1.22; fair win prob 17.2% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 69.6,
+          "weight": 0.431,
+          "weighted_score": 30.0,
+          "reason": "OR 120 (field range 104\u2013127)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: David Pipe, J: Jack Tudor (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "HURRICANE HIGHWAY",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-4",
+      "official_rating": 117,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Sean Bowen",
+      "trainer": "Evan Williams",
+      "odds_decimal": 1.36,
+      "total_score": 35.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 15.5,
+          "weight": 0.5172,
+          "weighted_score": 8.02,
+          "reason": "Odds 1.36; fair win prob 15.5% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 56.5,
+          "weight": 0.431,
+          "weighted_score": 24.35,
+          "reason": "OR 117 (field range 104\u2013127)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Evan Williams, J: Sean Bowen (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "KARUMA GREY",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-1",
+      "official_rating": 114,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Liam Harrison",
+      "trainer": "Debra Hamer",
+      "odds_decimal": 1.25,
+      "total_score": 30.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 16.8,
+          "weight": 0.5172,
+          "weighted_score": 8.69,
+          "reason": "Odds 1.25; fair win prob 16.8% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 43.5,
+          "weight": 0.431,
+          "weighted_score": 18.75,
+          "reason": "OR 114 (field range 104\u2013127)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Debra Hamer, J: Liam Harrison (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "ASTRONOMIC VIEW",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "10-10",
+      "official_rating": 109,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Sean Houlihan",
+      "trainer": "Susan Gardner",
+      "odds_decimal": 1.09,
+      "total_score": 21.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 19.3,
+          "weight": 0.5172,
+          "weighted_score": 9.98,
+          "reason": "Odds 1.09; fair win prob 19.3% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 21.7,
+          "weight": 0.431,
+          "weighted_score": 9.35,
+          "reason": "OR 109 (field range 104\u2013127)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Susan Gardner, J: Sean Houlihan (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 6,
+      "runner_name": "STELLAR STREAM",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "10-2 (9-12)",
+      "official_rating": 104,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Callum Pritchard(3)",
+      "trainer": "Kayley Woollacott",
+      "odds_decimal": 1.42,
+      "total_score": 10.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 14.8,
+          "weight": 0.5172,
+          "weighted_score": 7.66,
+          "reason": "Odds 1.42; fair win prob 14.8% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 104 (field range 104\u2013127)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Kayley Woollacott, J: Callum Pritchard(3) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "HUNTER LEGEND",
+      "rank": 1,
+      "score": 54.1
+    },
+    "backup_1": {
+      "runner_name": "ITSEEMSLIKEIT",
+      "rank": 2,
+      "score": 41.5
+    },
+    "backup_2": {
+      "runner_name": "HURRICANE HIGHWAY",
+      "rank": 3,
+      "score": 35.0
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 12.6,
+    "reasons": [
+      "Market prob gap -0.9 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 12.6 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/ffos-las/2026-01-08/1440/50/5",
+  "_date": "2026-01-08",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "ITSEEMSLIKEIT",
+        "position": 1,
+        "sp_decimal": 1.22,
+        "sp_string": "5/23",
+        "is_nr": false
+      },
+      {
+        "runner_name": "KARUMA GREY",
+        "position": 2,
+        "sp_decimal": 1.25,
+        "sp_string": "33/134",
+        "is_nr": false
+      },
+      {
+        "runner_name": "HUNTER LEGEND",
+        "position": 3,
+        "sp_decimal": 1.29,
+        "sp_string": "10/34",
+        "is_nr": false
+      },
+      {
+        "runner_name": "ASTRONOMIC VIEW",
+        "position": 4,
+        "sp_decimal": 1.09,
+        "sp_string": "10/111",
+        "is_nr": false
+      },
+      {
+        "runner_name": "HURRICANE HIGHWAY",
+        "position": 5,
+        "sp_decimal": 1.36,
+        "sp_string": "9/25",
+        "is_nr": false
+      },
+      {
+        "runner_name": "STELLAR STREAM",
+        "position": 6,
+        "sp_decimal": 1.42,
+        "sp_string": "11/26",
+        "is_nr": false
+      }
+    ]
+  }
+}

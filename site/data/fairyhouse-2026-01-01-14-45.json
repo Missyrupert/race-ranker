@@ -1,0 +1,226 @@
+{
+  "race_id": "fairyhouse-2026-01-01-14-45",
+  "meta": {
+    "track": "Fairyhouse",
+    "date": "2026-01-01",
+    "off_time": "14:45",
+    "distance": "2m5f175y",
+    "going": "gd/sft",
+    "race_class": null,
+    "race_name": "14:45 Thursday 01 January 2026",
+    "runners_count": 2,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "DINOBLUE",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "11-3",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "M. P. Walsh",
+      "trainer": "W. P. Mullins, Ireland",
+      "odds_decimal": 1.02,
+      "total_score": 58.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 59.2,
+          "weight": 0.9091,
+          "weighted_score": 53.82,
+          "reason": "Odds 1.02; fair win prob 59.2% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: W. P. Mullins, Ireland, J: M. P. Walsh (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "SHECOULDBEANYTHING",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "11-1",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "J. W. Kennedy",
+      "trainer": "Gordon Elliott, Ireland",
+      "odds_decimal": 1.48,
+      "total_score": 41.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 40.8,
+          "weight": 0.9091,
+          "weighted_score": 37.09,
+          "reason": "Odds 1.48; fair win prob 40.8% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Gordon Elliott, Ireland, J: J. W. Kennedy (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "DINOBLUE",
+      "rank": 1,
+      "score": 58.4
+    },
+    "backup_1": {
+      "runner_name": "SHECOULDBEANYTHING",
+      "rank": 2,
+      "score": 41.6
+    }
+  },
+  "confidence": {
+    "band": "MED",
+    "margin": 16.8,
+    "reasons": [
+      "Market prob gap 18.4 pts (race-normalised)",
+      "2/8 scoring components available",
+      "Total-score margin 16.8 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/fairyhouse/2026-01-01/1445/208/5",
+  "_date": "2026-01-01",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "DINOBLUE",
+        "position": 1,
+        "sp_decimal": 1.02,
+        "sp_string": "1/41",
+        "is_nr": false
+      },
+      {
+        "runner_name": "SHECOULDBEANYTHING",
+        "position": 2,
+        "sp_decimal": 1.48,
+        "sp_string": "13/27",
+        "is_nr": false
+      }
+    ]
+  }
+}

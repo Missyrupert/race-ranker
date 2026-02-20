@@ -1,0 +1,591 @@
+{
+  "race_id": "clonmel-2026-01-08-12-50",
+  "meta": {
+    "track": "Clonmel",
+    "date": "2026-01-08",
+    "off_time": "12:50",
+    "distance": "2m4f63y",
+    "going": "heavy",
+    "race_class": null,
+    "race_name": "12:50 Thursday 08 January 2026",
+    "runners_count": 6,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "I WALKED THE LINE",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "11-8",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Mr P. W. Mullins",
+      "trainer": "W. P. Mullins, Ireland",
+      "odds_decimal": 1.08,
+      "total_score": 21.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 18.5,
+          "weight": 0.9091,
+          "weighted_score": 16.82,
+          "reason": "Odds 1.08; fair win prob 18.5% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: W. P. Mullins, Ireland, J: Mr P. W. Mullins (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "STEP UP SON",
+      "number": null,
+      "draw": null,
+      "age": 10,
+      "weight": "12-0",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Mr F. P. Murphy(7)",
+      "trainer": "David K. Walsh, Ireland",
+      "odds_decimal": 1.09,
+      "total_score": 21.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 18.3,
+          "weight": 0.9091,
+          "weighted_score": 16.64,
+          "reason": "Odds 1.09; fair win prob 18.3% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: David K. Walsh, Ireland, J: Mr F. P. Murphy(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "MAGIC SADLER",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "12-0",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Ms E. C. Costello(7)",
+      "trainer": "P. M. J. Doyle, Ireland",
+      "odds_decimal": 1.18,
+      "total_score": 19.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 16.9,
+          "weight": 0.9091,
+          "weighted_score": 15.36,
+          "reason": "Odds 1.18; fair win prob 16.9% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: P. M. J. Doyle, Ireland, J: Ms E. C. Costello(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "MISTER LOOLAH",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "12-0",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Mr A. Burke-Ott(7)",
+      "trainer": "Alexander Ott, Ireland",
+      "odds_decimal": 1.2,
+      "total_score": 19.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 16.7,
+          "weight": 0.9091,
+          "weighted_score": 15.18,
+          "reason": "Odds 1.20; fair win prob 16.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Alexander Ott, Ireland, J: Mr A. Burke-Ott(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "NIBBLES",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "12-0",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Mr Turlough O'Connor(7)",
+      "trainer": "Turlough O'Connor, Ireland",
+      "odds_decimal": 1.28,
+      "total_score": 18.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 15.6,
+          "weight": 0.9091,
+          "weighted_score": 14.18,
+          "reason": "Odds 1.28; fair win prob 15.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Turlough O'Connor, Ireland, J: Mr Turlough O'Connor(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 6,
+      "runner_name": "THE HAPPY HUNTSMAN",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "12-0",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Mr L. Burke-Ott(7)",
+      "trainer": "Alexander Ott, Ireland",
+      "odds_decimal": 1.44,
+      "total_score": 17.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 13.9,
+          "weight": 0.9091,
+          "weighted_score": 12.64,
+          "reason": "Odds 1.44; fair win prob 13.9% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Alexander Ott, Ireland, J: Mr L. Burke-Ott(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "I WALKED THE LINE",
+      "rank": 1,
+      "score": 21.4
+    },
+    "backup_1": {
+      "runner_name": "STEP UP SON",
+      "rank": 2,
+      "score": 21.2
+    },
+    "backup_2": {
+      "runner_name": "MAGIC SADLER",
+      "rank": 3,
+      "score": 19.9
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 0.2,
+    "reasons": [
+      "Market prob gap 0.2 pts (race-normalised)",
+      "2/8 scoring components available",
+      "Total-score margin 0.2 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/clonmel/2026-01-08/1250/203/2",
+  "_date": "2026-01-08",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "I WALKED THE LINE",
+        "position": 1,
+        "sp_decimal": 1.08,
+        "sp_string": "1/12",
+        "is_nr": false
+      },
+      {
+        "runner_name": "MAGIC SADLER",
+        "position": 2,
+        "sp_decimal": 1.18,
+        "sp_string": "15/82",
+        "is_nr": false
+      },
+      {
+        "runner_name": "STEP UP SON",
+        "position": 3,
+        "sp_decimal": 1.09,
+        "sp_string": "100/1101",
+        "is_nr": false
+      },
+      {
+        "runner_name": "THE HAPPY HUNTSMAN",
+        "position": 4,
+        "sp_decimal": 1.44,
+        "sp_string": "80/181",
+        "is_nr": false
+      },
+      {
+        "runner_name": "NIBBLES",
+        "position": 5,
+        "sp_decimal": 1.28,
+        "sp_string": "40/141",
+        "is_nr": false
+      },
+      {
+        "runner_name": "MISTER LOOLAH",
+        "position": 6,
+        "sp_decimal": 1.2,
+        "sp_string": "25/126",
+        "is_nr": false
+      }
+    ]
+  }
+}

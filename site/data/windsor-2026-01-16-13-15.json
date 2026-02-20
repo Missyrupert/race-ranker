@@ -1,0 +1,501 @@
+{
+  "race_id": "windsor-2026-01-16-13-15",
+  "meta": {
+    "track": "Windsor",
+    "date": "2026-01-16",
+    "off_time": "13:15",
+    "distance": "3m60y",
+    "going": "soft",
+    "race_class": null,
+    "race_name": "13:15 Friday 16 January 2026",
+    "runners_count": 5,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "GAMESTERS GUY",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-10",
+      "official_rating": 136,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Craig Nichol",
+      "trainer": "Oliver Greenall & Josh Guerriero",
+      "odds_decimal": 1.27,
+      "total_score": 56.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 20.0,
+          "weight": 0.5172,
+          "weighted_score": 10.34,
+          "reason": "Odds 1.27; fair win prob 20.0% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 136 (field range 127\u2013136)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Oliver Greenall & Josh Guerriero, J: Craig Nichol (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "SAINT DAVY",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "11-7",
+      "official_rating": 133,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Jonjo O'Neill Jr.",
+      "trainer": "Jonjo & A.J. O'Neill",
+      "odds_decimal": 1.27,
+      "total_score": 41.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 20.0,
+          "weight": 0.5172,
+          "weighted_score": 10.34,
+          "reason": "Odds 1.27; fair win prob 20.0% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 66.7,
+          "weight": 0.431,
+          "weighted_score": 28.75,
+          "reason": "OR 133 (field range 127\u2013136)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Jonjo & A.J. O'Neill, J: Jonjo O'Neill Jr. (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "GUARD THE MOON",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-7",
+      "official_rating": 133,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Sam Twiston-Davies",
+      "trainer": "Nigel & Willy Twiston-Davies",
+      "odds_decimal": 1.42,
+      "total_score": 40.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 17.9,
+          "weight": 0.5172,
+          "weighted_score": 9.26,
+          "reason": "Odds 1.42; fair win prob 17.9% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 66.7,
+          "weight": 0.431,
+          "weighted_score": 28.75,
+          "reason": "OR 133 (field range 127\u2013136)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Nigel & Willy Twiston-Davies, J: Sam Twiston-Davies (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "KING OF ANSWERS",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-5",
+      "official_rating": 131,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Derek Fox",
+      "trainer": "Lucinda Russell & Michael Scudamore",
+      "odds_decimal": 1.21,
+      "total_score": 32.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 21.0,
+          "weight": 0.5172,
+          "weighted_score": 10.86,
+          "reason": "Odds 1.21; fair win prob 21.0% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 44.4,
+          "weight": 0.431,
+          "weighted_score": 19.14,
+          "reason": "OR 131 (field range 127\u2013136)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Lucinda Russell & Michael Scudamore, J: Derek Fox (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "QUEENSBURY BOY",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-1",
+      "official_rating": 127,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "James Bowen",
+      "trainer": "Mickey Bowen",
+      "odds_decimal": 1.21,
+      "total_score": 13.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 21.0,
+          "weight": 0.5172,
+          "weighted_score": 10.86,
+          "reason": "Odds 1.21; fair win prob 21.0% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 127 (field range 127\u2013136)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Mickey Bowen, J: James Bowen (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "GAMESTERS GUY",
+      "rank": 1,
+      "score": 56.0
+    },
+    "backup_1": {
+      "runner_name": "SAINT DAVY",
+      "rank": 2,
+      "score": 41.7
+    },
+    "backup_2": {
+      "runner_name": "GUARD THE MOON",
+      "rank": 3,
+      "score": 40.6
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 14.3,
+    "reasons": [
+      "Market prob gap 0.0 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 14.3 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/windsor/2026-01-16/1315/57/2",
+  "_date": "2026-01-16",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "GUARD THE MOON",
+        "position": 1,
+        "sp_decimal": 1.42,
+        "sp_string": "11/26",
+        "is_nr": false
+      },
+      {
+        "runner_name": "QUEENSBURY BOY",
+        "position": 2,
+        "sp_decimal": 1.21,
+        "sp_string": "9/43",
+        "is_nr": false
+      },
+      {
+        "runner_name": "SAINT DAVY",
+        "position": 3,
+        "sp_decimal": 1.27,
+        "sp_string": "4/15",
+        "is_nr": false
+      },
+      {
+        "runner_name": "KING OF ANSWERS",
+        "position": 4,
+        "sp_decimal": 1.21,
+        "sp_string": "3/14",
+        "is_nr": false
+      },
+      {
+        "runner_name": "GAMESTERS GUY",
+        "position": 5,
+        "sp_decimal": 1.27,
+        "sp_string": "4/15",
+        "is_nr": false
+      }
+    ]
+  }
+}

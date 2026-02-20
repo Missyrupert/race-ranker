@@ -1,0 +1,591 @@
+{
+  "race_id": "thurles-2026-01-18-15-55",
+  "meta": {
+    "track": "Thurles",
+    "date": "2026-01-18",
+    "off_time": "15:55",
+    "distance": "3m184y",
+    "going": "gd/sft",
+    "race_class": null,
+    "race_name": "15:55 Sunday 18 January 2026",
+    "runners_count": 6,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "BARTLEMY BOY",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-11",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Mr Alan O'Sullivan(7)",
+      "trainer": "Michael Barry, Ireland",
+      "odds_decimal": 1.1,
+      "total_score": 20.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 18.0,
+          "weight": 0.9091,
+          "weighted_score": 16.36,
+          "reason": "Odds 1.10; fair win prob 18.0% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Michael Barry, Ireland, J: Mr Alan O'Sullivan(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "BOLD FURY",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-7",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Mr T. C. Kileff(7)",
+      "trainer": "W. R. Crawford, Ireland",
+      "odds_decimal": 1.11,
+      "total_score": 20.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 17.9,
+          "weight": 0.9091,
+          "weighted_score": 16.27,
+          "reason": "Odds 1.11; fair win prob 17.9% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: W. R. Crawford, Ireland, J: Mr T. C. Kileff(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "LAST ROUND",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-11",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Mr H. C. Swan",
+      "trainer": "Gordon Elliott, Ireland",
+      "odds_decimal": 1.15,
+      "total_score": 20.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 17.2,
+          "weight": 0.9091,
+          "weighted_score": 15.64,
+          "reason": "Odds 1.15; fair win prob 17.2% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Gordon Elliott, Ireland, J: Mr H. C. Swan (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "LIFETIME AMBITION",
+      "number": null,
+      "draw": null,
+      "age": 11,
+      "weight": "11-11",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Ms E. C. Costello(7)",
+      "trainer": "P. M. J. Doyle, Ireland",
+      "odds_decimal": 1.21,
+      "total_score": 19.5,
+      "components": [
+        {
+          "name": "Market",
+          "score": 16.4,
+          "weight": 0.9091,
+          "weighted_score": 14.91,
+          "reason": "Odds 1.21; fair win prob 16.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: P. M. J. Doyle, Ireland, J: Ms E. C. Costello(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "SOLITARY MAN",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "12-0",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Mr J. M. Halford(7)",
+      "trainer": "Enda Bolger, Ireland",
+      "odds_decimal": 1.29,
+      "total_score": 18.5,
+      "components": [
+        {
+          "name": "Market",
+          "score": 15.4,
+          "weight": 0.9091,
+          "weighted_score": 14.0,
+          "reason": "Odds 1.29; fair win prob 15.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Enda Bolger, Ireland, J: Mr J. M. Halford(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 6,
+      "runner_name": "PANDA BOY",
+      "number": null,
+      "draw": null,
+      "age": 10,
+      "weight": "11-7",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Mr Finian Maguire",
+      "trainer": "Martin Brassil, Ireland",
+      "odds_decimal": 1.31,
+      "total_score": 18.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 15.1,
+          "weight": 0.9091,
+          "weighted_score": 13.73,
+          "reason": "Odds 1.31; fair win prob 15.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Martin Brassil, Ireland, J: Mr Finian Maguire (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "BARTLEMY BOY",
+      "rank": 1,
+      "score": 20.9
+    },
+    "backup_1": {
+      "runner_name": "BOLD FURY",
+      "rank": 2,
+      "score": 20.8
+    },
+    "backup_2": {
+      "runner_name": "LAST ROUND",
+      "rank": 3,
+      "score": 20.2
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 0.1,
+    "reasons": [
+      "Market prob gap 0.2 pts (race-normalised)",
+      "2/8 scoring components available",
+      "Total-score margin 0.1 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/thurles/2026-01-18/1555/225/7",
+  "_date": "2026-01-18",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "PANDA BOY",
+        "position": 1,
+        "sp_decimal": 1.31,
+        "sp_string": "5/16",
+        "is_nr": false
+      },
+      {
+        "runner_name": "LIFETIME AMBITION",
+        "position": 2,
+        "sp_decimal": 1.21,
+        "sp_string": "3/14",
+        "is_nr": false
+      },
+      {
+        "runner_name": "LAST ROUND",
+        "position": 3,
+        "sp_decimal": 1.15,
+        "sp_string": "18/119",
+        "is_nr": false
+      },
+      {
+        "runner_name": "SOLITARY MAN",
+        "position": 4,
+        "sp_decimal": 1.29,
+        "sp_string": "10/34",
+        "is_nr": false
+      },
+      {
+        "runner_name": "BARTLEMY BOY",
+        "position": 5,
+        "sp_decimal": 1.1,
+        "sp_string": "11/112",
+        "is_nr": false
+      },
+      {
+        "runner_name": "BOLD FURY",
+        "position": 6,
+        "sp_decimal": 1.11,
+        "sp_string": "12/113",
+        "is_nr": false
+      }
+    ]
+  }
+}

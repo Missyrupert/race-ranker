@@ -1,0 +1,321 @@
+{
+  "race_id": "hereford-2026-01-12-13-00",
+  "meta": {
+    "track": "Hereford",
+    "date": "2026-01-12",
+    "off_time": "13:00",
+    "distance": "3m1f44y",
+    "going": "soft",
+    "race_class": null,
+    "race_name": "13:00 Monday 12 January 2026",
+    "runners_count": 3,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "ITHAKA",
+      "number": null,
+      "draw": null,
+      "age": 10,
+      "weight": "12-0",
+      "official_rating": 100,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Freddie Mitchell",
+      "trainer": "Ryan Potter",
+      "odds_decimal": 1.09,
+      "total_score": 65.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 37.4,
+          "weight": 0.5172,
+          "weighted_score": 19.34,
+          "reason": "Odds 1.09; fair win prob 37.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 100 (field range 90\u2013100)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Ryan Potter, J: Freddie Mitchell (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "JUST IN A BIT",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-4",
+      "official_rating": 90,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Shane Quinlan",
+      "trainer": "Mel Rowley",
+      "odds_decimal": 1.29,
+      "total_score": 18.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 31.6,
+          "weight": 0.5172,
+          "weighted_score": 16.34,
+          "reason": "Odds 1.29; fair win prob 31.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 90 (field range 90\u2013100)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Mel Rowley, J: Shane Quinlan (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "ILLOGICAL LOGIC",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-4",
+      "official_rating": 90,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Toby McCain-Mitchell",
+      "trainer": "Christian Williams",
+      "odds_decimal": 1.31,
+      "total_score": 18.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 31.1,
+          "weight": 0.5172,
+          "weighted_score": 16.09,
+          "reason": "Odds 1.31; fair win prob 31.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 90 (field range 90\u2013100)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Christian Williams, J: Toby McCain-Mitchell (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "ITHAKA",
+      "rank": 1,
+      "score": 65.0
+    },
+    "backup_1": {
+      "runner_name": "JUST IN A BIT",
+      "rank": 2,
+      "score": 18.9
+    },
+    "backup_2": {
+      "runner_name": "ILLOGICAL LOGIC",
+      "rank": 3,
+      "score": 18.7
+    }
+  },
+  "confidence": {
+    "band": "MED",
+    "margin": 46.1,
+    "reasons": [
+      "Market prob gap 5.8 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 46.1 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/hereford/2026-01-12/1300/23/1",
+  "_date": "2026-01-12",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "ITHAKA",
+        "position": 1,
+        "sp_decimal": 1.09,
+        "sp_string": "10/111",
+        "is_nr": false
+      },
+      {
+        "runner_name": "ILLOGICAL LOGIC",
+        "position": 2,
+        "sp_decimal": 1.31,
+        "sp_string": "5/16",
+        "is_nr": false
+      },
+      {
+        "runner_name": "JUST IN A BIT",
+        "position": 3,
+        "sp_decimal": 1.29,
+        "sp_string": "10/34",
+        "is_nr": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,501 @@
+{
+  "race_id": "ludlow-2026-01-15-12-32",
+  "meta": {
+    "track": "Ludlow",
+    "date": "2026-01-15",
+    "off_time": "12:32",
+    "distance": "2m7f171y",
+    "going": "soft",
+    "race_class": null,
+    "race_name": "12:32 Thursday 15 January 2026",
+    "runners_count": 5,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "HAUT FOLIN",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "11-10",
+      "official_rating": 95,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Murray Dodd(6)",
+      "trainer": "Venetia Williams",
+      "odds_decimal": 1.09,
+      "total_score": 55.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 22.4,
+          "weight": 0.5172,
+          "weighted_score": 11.59,
+          "reason": "Odds 1.09; fair win prob 22.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 94.7,
+          "weight": 0.431,
+          "weighted_score": 40.82,
+          "reason": "OR 95 (field range 77\u201396)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Venetia Williams, J: Murray Dodd(6) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "ANNIE EXPRESS",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-11",
+      "official_rating": 96,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Toby McCain-Mitchell",
+      "trainer": "Robbie Llewellyn",
+      "odds_decimal": 1.36,
+      "total_score": 54.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 17.9,
+          "weight": 0.5172,
+          "weighted_score": 9.26,
+          "reason": "Odds 1.36; fair win prob 17.9% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 96 (field range 77\u201396)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Robbie Llewellyn, J: Toby McCain-Mitchell (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "ANYTRIXWILLDO",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-10",
+      "official_rating": 95,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Benjamin Macey(6)",
+      "trainer": "Jonjo & A.J. O'Neill",
+      "odds_decimal": 1.29,
+      "total_score": 53.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 18.9,
+          "weight": 0.5172,
+          "weighted_score": 9.78,
+          "reason": "Odds 1.29; fair win prob 18.9% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 94.7,
+          "weight": 0.431,
+          "weighted_score": 40.82,
+          "reason": "OR 95 (field range 77\u201396)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Jonjo & A.J. O'Neill, J: Benjamin Macey(6) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "IMPERIAL PRIDE",
+      "number": null,
+      "draw": null,
+      "age": 10,
+      "weight": "10-8",
+      "official_rating": 79,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Isabelle Ryder(3)",
+      "trainer": "David Dennis",
+      "odds_decimal": 1.15,
+      "total_score": 18.1,
+      "components": [
+        {
+          "name": "Market",
+          "score": 21.2,
+          "weight": 0.5172,
+          "weighted_score": 10.97,
+          "reason": "Odds 1.15; fair win prob 21.2% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 10.5,
+          "weight": 0.431,
+          "weighted_score": 4.53,
+          "reason": "OR 79 (field range 77\u201396)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: David Dennis, J: Isabelle Ryder(3) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "EST ILLIC",
+      "number": null,
+      "draw": null,
+      "age": 12,
+      "weight": "10-6",
+      "official_rating": 77,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Shane Fenelon",
+      "trainer": "Sarah-Jayne Davies",
+      "odds_decimal": 1.25,
+      "total_score": 12.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 19.5,
+          "weight": 0.5172,
+          "weighted_score": 10.09,
+          "reason": "Odds 1.25; fair win prob 19.5% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 77 (field range 77\u201396)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Sarah-Jayne Davies, J: Shane Fenelon (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "HAUT FOLIN",
+      "rank": 1,
+      "score": 55.0
+    },
+    "backup_1": {
+      "runner_name": "ANNIE EXPRESS",
+      "rank": 2,
+      "score": 54.9
+    },
+    "backup_2": {
+      "runner_name": "ANYTRIXWILLDO",
+      "rank": 3,
+      "score": 53.2
+    }
+  },
+  "confidence": {
+    "band": "MED",
+    "margin": 0.1,
+    "reasons": [
+      "Market prob gap 4.4 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 0.1 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/ludlow/2026-01-15/1232/32/1",
+  "_date": "2026-01-15",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "ANNIE EXPRESS",
+        "position": 1,
+        "sp_decimal": 1.36,
+        "sp_string": "9/25",
+        "is_nr": false
+      },
+      {
+        "runner_name": "ANYTRIXWILLDO",
+        "position": 2,
+        "sp_decimal": 1.29,
+        "sp_string": "7/24",
+        "is_nr": false
+      },
+      {
+        "runner_name": "HAUT FOLIN",
+        "position": 3,
+        "sp_decimal": 1.09,
+        "sp_string": "10/111",
+        "is_nr": false
+      },
+      {
+        "runner_name": "IMPERIAL PRIDE",
+        "position": 4,
+        "sp_decimal": 1.15,
+        "sp_string": "18/119",
+        "is_nr": false
+      },
+      {
+        "runner_name": "EST ILLIC",
+        "position": 5,
+        "sp_decimal": 1.25,
+        "sp_string": "33/134",
+        "is_nr": false
+      }
+    ]
+  }
+}

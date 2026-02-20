@@ -1,0 +1,321 @@
+{
+  "race_id": "doncaster-2026-01-23-15-25",
+  "meta": {
+    "track": "Doncaster",
+    "date": "2026-01-23",
+    "off_time": "15:25",
+    "distance": "2m7f214y",
+    "going": "soft",
+    "race_class": null,
+    "race_name": "15:25 Friday 23 January 2026",
+    "runners_count": 3,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "KALHANDRION",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-12",
+      "official_rating": 108,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Charlie Maggs(5)",
+      "trainer": "Richard Hobson",
+      "odds_decimal": 1.12,
+      "total_score": 63.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 35.2,
+          "weight": 0.5172,
+          "weighted_score": 18.21,
+          "reason": "Odds 1.12; fair win prob 35.2% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 108 (field range 89\u2013108)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Richard Hobson, J: Charlie Maggs(5) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "THE LONG POINT",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-8",
+      "official_rating": 104,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Ben Jones",
+      "trainer": "Emma Lavelle",
+      "odds_decimal": 1.21,
+      "total_score": 53.5,
+      "components": [
+        {
+          "name": "Market",
+          "score": 32.6,
+          "weight": 0.5172,
+          "weighted_score": 16.86,
+          "reason": "Odds 1.21; fair win prob 32.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 78.9,
+          "weight": 0.431,
+          "weighted_score": 34.01,
+          "reason": "OR 104 (field range 89\u2013108)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Emma Lavelle, J: Ben Jones (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "JUKEBOX D'EDDY",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "10-7",
+      "official_rating": 89,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Brian Hughes",
+      "trainer": "Tom Gretton",
+      "odds_decimal": 1.22,
+      "total_score": 19.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 32.3,
+          "weight": 0.5172,
+          "weighted_score": 16.71,
+          "reason": "Odds 1.22; fair win prob 32.3% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 89 (field range 89\u2013108)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Tom Gretton, J: Brian Hughes (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "KALHANDRION",
+      "rank": 1,
+      "score": 63.9
+    },
+    "backup_1": {
+      "runner_name": "THE LONG POINT",
+      "rank": 2,
+      "score": 53.5
+    },
+    "backup_2": {
+      "runner_name": "JUKEBOX D'EDDY",
+      "rank": 3,
+      "score": 19.3
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 10.4,
+    "reasons": [
+      "Market prob gap 2.6 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 10.4 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/doncaster/2026-01-23/1525/14/6",
+  "_date": "2026-01-23",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "THE LONG POINT",
+        "position": 1,
+        "sp_decimal": 1.21,
+        "sp_string": "3/14",
+        "is_nr": false
+      },
+      {
+        "runner_name": "KALHANDRION",
+        "position": 2,
+        "sp_decimal": 1.12,
+        "sp_string": "6/52",
+        "is_nr": false
+      },
+      {
+        "runner_name": "JUKEBOX D'EDDY",
+        "position": 3,
+        "sp_decimal": 1.22,
+        "sp_string": "5/23",
+        "is_nr": false
+      }
+    ]
+  }
+}

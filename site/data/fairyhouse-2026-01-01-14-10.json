@@ -1,0 +1,1041 @@
+{
+  "race_id": "fairyhouse-2026-01-01-14-10",
+  "meta": {
+    "track": "Fairyhouse",
+    "date": "2026-01-01",
+    "off_time": "14:10",
+    "distance": "3m2f",
+    "going": "gd/sft",
+    "race_class": null,
+    "race_name": "14:10 Thursday 01 January 2026",
+    "runners_count": 11,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "THE MIRACLE MAN",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-12",
+      "official_rating": 107,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Keith Donoghue",
+      "trainer": "A. L. T. Moore, Ireland",
+      "odds_decimal": 1.35,
+      "total_score": 50.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 8.4,
+          "weight": 0.5172,
+          "weighted_score": 4.34,
+          "reason": "Odds 1.35; fair win prob 8.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 107 (field range 80\u2013107)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: A. L. T. Moore, Ireland, J: Keith Donoghue (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "WEST IS AWAKE",
+      "number": null,
+      "draw": null,
+      "age": 10,
+      "weight": "11-10",
+      "official_rating": 105,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "C. P. Millar(5)",
+      "trainer": "Edward Cawley, Ireland",
+      "odds_decimal": 1.25,
+      "total_score": 47.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 9.0,
+          "weight": 0.5172,
+          "weighted_score": 4.66,
+          "reason": "Odds 1.25; fair win prob 9.0% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 92.6,
+          "weight": 0.431,
+          "weighted_score": 39.91,
+          "reason": "OR 105 (field range 80\u2013107)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Edward Cawley, Ireland, J: C. P. Millar(5) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "JUKEBOX JOHNNY",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-10",
+      "official_rating": 105,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "M. P. O'Connor",
+      "trainer": "Henry de Bromhead, Ireland",
+      "odds_decimal": 1.39,
+      "total_score": 46.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 8.1,
+          "weight": 0.5172,
+          "weighted_score": 4.19,
+          "reason": "Odds 1.39; fair win prob 8.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 92.6,
+          "weight": 0.431,
+          "weighted_score": 39.91,
+          "reason": "OR 105 (field range 80\u2013107)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Henry de Bromhead, Ireland, J: M. P. O'Connor (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "SIGHTS UNSEEN",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-5",
+      "official_rating": 100,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "A. Balfe(7)",
+      "trainer": "Gavin Patrick Cromwell, Ireland",
+      "odds_decimal": 1.2,
+      "total_score": 39.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 9.4,
+          "weight": 0.5172,
+          "weighted_score": 4.86,
+          "reason": "Odds 1.20; fair win prob 9.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 74.1,
+          "weight": 0.431,
+          "weighted_score": 31.94,
+          "reason": "OR 100 (field range 80\u2013107)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Gavin Patrick Cromwell, Ireland, J: A. Balfe(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "MATTER OF OPINION",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-4",
+      "official_rating": 99,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Ms L. A. Byrne(7)",
+      "trainer": "William Harvey, Ireland",
+      "odds_decimal": 1.15,
+      "total_score": 38.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 9.8,
+          "weight": 0.5172,
+          "weighted_score": 5.07,
+          "reason": "Odds 1.15; fair win prob 9.8% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 70.4,
+          "weight": 0.431,
+          "weighted_score": 30.34,
+          "reason": "OR 99 (field range 80\u2013107)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: William Harvey, Ireland, J: Ms L. A. Byrne(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 6,
+      "runner_name": "BALLYGLASS BEAUTY",
+      "number": null,
+      "draw": null,
+      "age": 10,
+      "weight": "11-2",
+      "official_rating": 97,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Mr P. W. Gleeson(7)",
+      "trainer": "Liam P. Cusack, Ireland",
+      "odds_decimal": 1.15,
+      "total_score": 34.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 9.8,
+          "weight": 0.5172,
+          "weighted_score": 5.07,
+          "reason": "Odds 1.15; fair win prob 9.8% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 63.0,
+          "weight": 0.431,
+          "weighted_score": 27.16,
+          "reason": "OR 97 (field range 80\u2013107)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Liam P. Cusack, Ireland, J: Mr P. W. Gleeson(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 7,
+      "runner_name": "LOUGH NIGARA",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "10-12",
+      "official_rating": 93,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "R. A. Doyle",
+      "trainer": "Eoin Griffin, Ireland",
+      "odds_decimal": 1.31,
+      "total_score": 27.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 8.6,
+          "weight": 0.5172,
+          "weighted_score": 4.45,
+          "reason": "Odds 1.31; fair win prob 8.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 48.1,
+          "weight": 0.431,
+          "weighted_score": 20.73,
+          "reason": "OR 93 (field range 80\u2013107)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Eoin Griffin, Ireland, J: R. A. Doyle (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 8,
+      "runner_name": "GREAT BIRD",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "10-11",
+      "official_rating": 92,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "C. M. Hogan(7)",
+      "trainer": "Miss Elizabeth Doyle, Ireland",
+      "odds_decimal": 1.35,
+      "total_score": 26.1,
+      "components": [
+        {
+          "name": "Market",
+          "score": 8.4,
+          "weight": 0.5172,
+          "weighted_score": 4.34,
+          "reason": "Odds 1.35; fair win prob 8.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 44.4,
+          "weight": 0.431,
+          "weighted_score": 19.14,
+          "reason": "OR 92 (field range 80\u2013107)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Miss Elizabeth Doyle, Ireland, J: C. M. Hogan(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 9,
+      "runner_name": "A YEAR OLDER",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "10-2",
+      "official_rating": 83,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "D. King",
+      "trainer": "Karl Thornton, Ireland",
+      "odds_decimal": 1.28,
+      "total_score": 11.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 8.8,
+          "weight": 0.5172,
+          "weighted_score": 4.55,
+          "reason": "Odds 1.28; fair win prob 8.8% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 11.1,
+          "weight": 0.431,
+          "weighted_score": 4.78,
+          "reason": "OR 83 (field range 80\u2013107)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Karl Thornton, Ireland, J: D. King (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 10,
+      "runner_name": "MARINE RANGER",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "10-0",
+      "official_rating": 81,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "S. D. Torrens",
+      "trainer": "P. A. Fahy, Ireland",
+      "odds_decimal": 1.09,
+      "total_score": 9.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 10.4,
+          "weight": 0.5172,
+          "weighted_score": 5.38,
+          "reason": "Odds 1.09; fair win prob 10.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 3.7,
+          "weight": 0.431,
+          "weighted_score": 1.59,
+          "reason": "OR 81 (field range 80\u2013107)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: P. A. Fahy, Ireland, J: S. D. Torrens (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 11,
+      "runner_name": "HE FITZ IN",
+      "number": null,
+      "draw": null,
+      "age": 10,
+      "weight": "10-0",
+      "official_rating": 80,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "D. W. O'Connor(7)",
+      "trainer": "D. E. Fitzgerald, Ireland",
+      "odds_decimal": 1.22,
+      "total_score": 7.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 9.3,
+          "weight": 0.5172,
+          "weighted_score": 4.81,
+          "reason": "Odds 1.22; fair win prob 9.3% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 80 (field range 80\u2013107)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: D. E. Fitzgerald, Ireland, J: D. W. O'Connor(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "THE MIRACLE MAN",
+      "rank": 1,
+      "score": 50.0
+    },
+    "backup_1": {
+      "runner_name": "WEST IS AWAKE",
+      "rank": 2,
+      "score": 47.2
+    },
+    "backup_2": {
+      "runner_name": "JUKEBOX JOHNNY",
+      "rank": 3,
+      "score": 46.7
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 2.8,
+    "reasons": [
+      "Market prob gap -0.7 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 2.8 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/fairyhouse/2026-01-01/1410/208/4",
+  "_date": "2026-01-01",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "A YEAR OLDER",
+        "position": 1,
+        "sp_decimal": 1.28,
+        "sp_string": "40/141",
+        "is_nr": false
+      },
+      {
+        "runner_name": "WEST IS AWAKE",
+        "position": 2,
+        "sp_decimal": 1.25,
+        "sp_string": "33/134",
+        "is_nr": false
+      },
+      {
+        "runner_name": "LOUGH NIGARA",
+        "position": 3,
+        "sp_decimal": 1.31,
+        "sp_string": "5/16",
+        "is_nr": false
+      },
+      {
+        "runner_name": "THE MIRACLE MAN",
+        "position": 4,
+        "sp_decimal": 1.35,
+        "sp_string": "6/17",
+        "is_nr": false
+      },
+      {
+        "runner_name": "JUKEBOX JOHNNY",
+        "position": 5,
+        "sp_decimal": 1.39,
+        "sp_string": "7/18",
+        "is_nr": false
+      },
+      {
+        "runner_name": "HE FITZ IN",
+        "position": 6,
+        "sp_decimal": 1.22,
+        "sp_string": "28/129",
+        "is_nr": false
+      },
+      {
+        "runner_name": "MARINE RANGER",
+        "position": 7,
+        "sp_decimal": 1.09,
+        "sp_string": "10/111",
+        "is_nr": false
+      },
+      {
+        "runner_name": "BALLYGLASS BEAUTY",
+        "position": 8,
+        "sp_decimal": 1.15,
+        "sp_string": "18/119",
+        "is_nr": false
+      },
+      {
+        "runner_name": "MATTER OF OPINION",
+        "position": 9,
+        "sp_decimal": 1.15,
+        "sp_string": "18/119",
+        "is_nr": false
+      },
+      {
+        "runner_name": "SIGHTS UNSEEN",
+        "position": 10,
+        "sp_decimal": 1.2,
+        "sp_string": "25/126",
+        "is_nr": false
+      },
+      {
+        "runner_name": "GREAT BIRD",
+        "position": 11,
+        "sp_decimal": 1.35,
+        "sp_string": "6/17",
+        "is_nr": false
+      }
+    ]
+  }
+}

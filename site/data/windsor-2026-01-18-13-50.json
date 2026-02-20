@@ -1,0 +1,501 @@
+{
+  "race_id": "windsor-2026-01-18-13-50",
+  "meta": {
+    "track": "Windsor",
+    "date": "2026-01-18",
+    "off_time": "13:50",
+    "distance": "2m37y",
+    "going": "soft",
+    "race_class": null,
+    "race_name": "13:50 Sunday 18 January 2026",
+    "runners_count": 5,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "NELLS SON",
+      "number": null,
+      "draw": null,
+      "age": 11,
+      "weight": "12-0",
+      "official_rating": 141,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Danny McMenamin",
+      "trainer": "Nicky Richards",
+      "odds_decimal": 1.12,
+      "total_score": 56.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 21.0,
+          "weight": 0.5172,
+          "weighted_score": 10.86,
+          "reason": "Odds 1.12; fair win prob 21.0% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 141 (field range 120\u2013141)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Nicky Richards, J: Danny McMenamin (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "SANS BRUIT",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-8",
+      "official_rating": 135,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Jay Tidball(5)",
+      "trainer": "Paul Nicholls",
+      "odds_decimal": 1.1,
+      "total_score": 44.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 21.4,
+          "weight": 0.5172,
+          "weighted_score": 11.07,
+          "reason": "Odds 1.10; fair win prob 21.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 71.4,
+          "weight": 0.431,
+          "weighted_score": 30.78,
+          "reason": "OR 135 (field range 120\u2013141)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Paul Nicholls, J: Jay Tidball(5) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "HIGHLANDS LEGACY",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-0",
+      "official_rating": 127,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Jonjo O'Neill Jr.",
+      "trainer": "Jonjo & A.J. O'Neill",
+      "odds_decimal": 1.13,
+      "total_score": 27.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 20.9,
+          "weight": 0.5172,
+          "weighted_score": 10.81,
+          "reason": "Odds 1.13; fair win prob 20.9% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 33.3,
+          "weight": 0.431,
+          "weighted_score": 14.35,
+          "reason": "OR 127 (field range 120\u2013141)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Jonjo & A.J. O'Neill, J: Jonjo O'Neill Jr. (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "TORNEO",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "10-12",
+      "official_rating": 125,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Gavin Sheehan",
+      "trainer": "Jamie Snowden",
+      "odds_decimal": 1.29,
+      "total_score": 22.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 18.3,
+          "weight": 0.5172,
+          "weighted_score": 9.47,
+          "reason": "Odds 1.29; fair win prob 18.3% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 23.8,
+          "weight": 0.431,
+          "weighted_score": 10.26,
+          "reason": "OR 125 (field range 120\u2013141)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Jamie Snowden, J: Gavin Sheehan (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "DR T J ECKLEBURG",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "10-7",
+      "official_rating": 120,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Conor Ring",
+      "trainer": "Evan Williams",
+      "odds_decimal": 1.28,
+      "total_score": 12.1,
+      "components": [
+        {
+          "name": "Market",
+          "score": 18.4,
+          "weight": 0.5172,
+          "weighted_score": 9.52,
+          "reason": "Odds 1.28; fair win prob 18.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 120 (field range 120\u2013141)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Evan Williams, J: Conor Ring (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "NELLS SON",
+      "rank": 1,
+      "score": 56.6
+    },
+    "backup_1": {
+      "runner_name": "SANS BRUIT",
+      "rank": 2,
+      "score": 44.4
+    },
+    "backup_2": {
+      "runner_name": "HIGHLANDS LEGACY",
+      "rank": 3,
+      "score": 27.8
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 12.2,
+    "reasons": [
+      "Market prob gap -0.4 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 12.2 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/windsor/2026-01-18/1350/57/4",
+  "_date": "2026-01-18",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "HIGHLANDS LEGACY",
+        "position": 1,
+        "sp_decimal": 1.13,
+        "sp_string": "11/82",
+        "is_nr": false
+      },
+      {
+        "runner_name": "TORNEO",
+        "position": 2,
+        "sp_decimal": 1.29,
+        "sp_string": "10/34",
+        "is_nr": false
+      },
+      {
+        "runner_name": "DR T J ECKLEBURG",
+        "position": 3,
+        "sp_decimal": 1.28,
+        "sp_string": "40/141",
+        "is_nr": false
+      },
+      {
+        "runner_name": "SANS BRUIT",
+        "position": 4,
+        "sp_decimal": 1.1,
+        "sp_string": "11/112",
+        "is_nr": false
+      },
+      {
+        "runner_name": "NELLS SON",
+        "position": 5,
+        "sp_decimal": 1.12,
+        "sp_string": "14/115",
+        "is_nr": false
+      }
+    ]
+  }
+}

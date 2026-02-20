@@ -1,0 +1,681 @@
+{
+  "race_id": "ffos-las-2026-01-08-14-10",
+  "meta": {
+    "track": "Ffos Las",
+    "date": "2026-01-08",
+    "off_time": "14:10",
+    "distance": "2m4f",
+    "going": "heavy",
+    "race_class": null,
+    "race_name": "14:10 Thursday 08 January 2026",
+    "runners_count": 7,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "FRESH SPECULATION",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "12-1",
+      "official_rating": 111,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "David Bass",
+      "trainer": "Henry Daly",
+      "odds_decimal": 1.36,
+      "total_score": 52.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 13.6,
+          "weight": 0.5172,
+          "weighted_score": 7.03,
+          "reason": "Odds 1.36; fair win prob 13.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 111 (field range 95\u2013111)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Henry Daly, J: David Bass (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "THERE RUNS MARY",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-13",
+      "official_rating": 109,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Sean Bowen",
+      "trainer": "Olly Murphy",
+      "odds_decimal": 1.21,
+      "total_score": 48.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 15.3,
+          "weight": 0.5172,
+          "weighted_score": 7.91,
+          "reason": "Odds 1.21; fair win prob 15.3% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 87.5,
+          "weight": 0.431,
+          "weighted_score": 37.72,
+          "reason": "OR 109 (field range 95\u2013111)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Olly Murphy, J: Sean Bowen (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "AARON",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "11-13",
+      "official_rating": 109,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Sean Houlihan",
+      "trainer": "Robert Stephens",
+      "odds_decimal": 1.28,
+      "total_score": 47.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 14.5,
+          "weight": 0.5172,
+          "weighted_score": 7.5,
+          "reason": "Odds 1.28; fair win prob 14.5% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 87.5,
+          "weight": 0.431,
+          "weighted_score": 37.72,
+          "reason": "OR 109 (field range 95\u2013111)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Robert Stephens, J: Sean Houlihan (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "HOT GODDESS",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-11",
+      "official_rating": 107,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Harry Atkins(7)",
+      "trainer": "Martin Keighley",
+      "odds_decimal": 1.42,
+      "total_score": 41.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 13.1,
+          "weight": 0.5172,
+          "weighted_score": 6.78,
+          "reason": "Odds 1.42; fair win prob 13.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 75.0,
+          "weight": 0.431,
+          "weighted_score": 32.33,
+          "reason": "OR 107 (field range 95\u2013111)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Martin Keighley, J: Harry Atkins(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "OUR DYLAN",
+      "number": null,
+      "draw": null,
+      "age": 10,
+      "weight": "11-9",
+      "official_rating": 105,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "James Bowen",
+      "trainer": "Kayley Woollacott",
+      "odds_decimal": 1.11,
+      "total_score": 38.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 16.7,
+          "weight": 0.5172,
+          "weighted_score": 8.64,
+          "reason": "Odds 1.11; fair win prob 16.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 62.5,
+          "weight": 0.431,
+          "weighted_score": 26.94,
+          "reason": "OR 105 (field range 95\u2013111)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Kayley Woollacott, J: James Bowen (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 6,
+      "runner_name": "PACHACUTI",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "11-6",
+      "official_rating": 102,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Jack Tudor",
+      "trainer": "David Pipe",
+      "odds_decimal": 1.42,
+      "total_score": 28.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 13.1,
+          "weight": 0.5172,
+          "weighted_score": 6.78,
+          "reason": "Odds 1.42; fair win prob 13.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 43.8,
+          "weight": 0.431,
+          "weighted_score": 18.88,
+          "reason": "OR 102 (field range 95\u2013111)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: David Pipe, J: Jack Tudor (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 7,
+      "runner_name": "MUMBLES",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "10-13",
+      "official_rating": 95,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Ellis Collier(5)",
+      "trainer": "Evan Williams",
+      "odds_decimal": 1.36,
+      "total_score": 9.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 13.6,
+          "weight": 0.5172,
+          "weighted_score": 7.03,
+          "reason": "Odds 1.36; fair win prob 13.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 95 (field range 95\u2013111)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Evan Williams, J: Ellis Collier(5) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "FRESH SPECULATION",
+      "rank": 1,
+      "score": 52.7
+    },
+    "backup_1": {
+      "runner_name": "THERE RUNS MARY",
+      "rank": 2,
+      "score": 48.2
+    },
+    "backup_2": {
+      "runner_name": "AARON",
+      "rank": 3,
+      "score": 47.8
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 4.5,
+    "reasons": [
+      "Market prob gap -1.7 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 4.5 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/ffos-las/2026-01-08/1410/50/4",
+  "_date": "2026-01-08",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "FRESH SPECULATION",
+        "position": 1,
+        "sp_decimal": 1.36,
+        "sp_string": "9/25",
+        "is_nr": false
+      },
+      {
+        "runner_name": "PACHACUTI",
+        "position": 2,
+        "sp_decimal": 1.42,
+        "sp_string": "11/26",
+        "is_nr": false
+      },
+      {
+        "runner_name": "OUR DYLAN",
+        "position": 3,
+        "sp_decimal": 1.11,
+        "sp_string": "12/113",
+        "is_nr": false
+      },
+      {
+        "runner_name": "THERE RUNS MARY",
+        "position": 4,
+        "sp_decimal": 1.21,
+        "sp_string": "3/14",
+        "is_nr": false
+      },
+      {
+        "runner_name": "HOT GODDESS",
+        "position": 5,
+        "sp_decimal": 1.42,
+        "sp_string": "11/26",
+        "is_nr": false
+      },
+      {
+        "runner_name": "MUMBLES",
+        "position": 6,
+        "sp_decimal": 1.36,
+        "sp_string": "9/25",
+        "is_nr": false
+      },
+      {
+        "runner_name": "AARON",
+        "position": 7,
+        "sp_decimal": 1.28,
+        "sp_string": "40/141",
+        "is_nr": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,681 @@
+{
+  "race_id": "taunton-2026-01-17-14-43",
+  "meta": {
+    "track": "Taunton",
+    "date": "2026-01-17",
+    "off_time": "14:43",
+    "distance": "2m12y",
+    "going": "gd/sft",
+    "race_class": null,
+    "race_name": "14:43 Saturday 17 January 2026",
+    "runners_count": 7,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "HYPOTENUS",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "12-8",
+      "official_rating": 118,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Taylor Fisher",
+      "trainer": "Joe Tickle",
+      "odds_decimal": 1.26,
+      "total_score": 53.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 15.2,
+          "weight": 0.5172,
+          "weighted_score": 7.86,
+          "reason": "Odds 1.26; fair win prob 15.2% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 118 (field range 85\u2013118)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Joe Tickle, J: Taylor Fisher (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "JAIPALETEMPS",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "12-2",
+      "official_rating": 112,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Rian Corcoran(7)",
+      "trainer": "David Pipe",
+      "odds_decimal": 1.27,
+      "total_score": 45.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 15.0,
+          "weight": 0.5172,
+          "weighted_score": 7.76,
+          "reason": "Odds 1.27; fair win prob 15.0% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 81.8,
+          "weight": 0.431,
+          "weighted_score": 35.26,
+          "reason": "OR 112 (field range 85\u2013118)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: David Pipe, J: Rian Corcoran(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "JACK BLACK",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-11",
+      "official_rating": 107,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Charlie Todd",
+      "trainer": "Dan Skelton",
+      "odds_decimal": 1.54,
+      "total_score": 37.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 12.4,
+          "weight": 0.5172,
+          "weighted_score": 6.41,
+          "reason": "Odds 1.54; fair win prob 12.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 66.7,
+          "weight": 0.431,
+          "weighted_score": 28.75,
+          "reason": "OR 107 (field range 85\u2013118)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Dan Skelton, J: Charlie Todd (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "RAFFLES HERMES",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-11",
+      "official_rating": 107,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Harry Kimber",
+      "trainer": "Robert Walford",
+      "odds_decimal": 1.54,
+      "total_score": 37.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 12.4,
+          "weight": 0.5172,
+          "weighted_score": 6.41,
+          "reason": "Odds 1.54; fair win prob 12.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 66.7,
+          "weight": 0.431,
+          "weighted_score": 28.75,
+          "reason": "OR 107 (field range 85\u2013118)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Robert Walford, J: Harry Kimber (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "CUBAN COURT",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-6",
+      "official_rating": 102,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Jack Quinlan",
+      "trainer": "Neil King",
+      "odds_decimal": 1.42,
+      "total_score": 31.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 13.4,
+          "weight": 0.5172,
+          "weighted_score": 6.93,
+          "reason": "Odds 1.42; fair win prob 13.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 51.5,
+          "weight": 0.431,
+          "weighted_score": 22.2,
+          "reason": "OR 102 (field range 85\u2013118)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Neil King, J: Jack Quinlan (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 6,
+      "runner_name": "HOLY LEGEND",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "10-4",
+      "official_rating": 86,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "James Best",
+      "trainer": "Alexandra Dunn",
+      "odds_decimal": 1.14,
+      "total_score": 12.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 16.8,
+          "weight": 0.5172,
+          "weighted_score": 8.69,
+          "reason": "Odds 1.14; fair win prob 16.8% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 3.0,
+          "weight": 0.431,
+          "weighted_score": 1.29,
+          "reason": "OR 86 (field range 85\u2013118)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Alexandra Dunn, J: James Best (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 7,
+      "runner_name": "VALIRANN GOLD",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "10-3",
+      "official_rating": 85,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Sean Bowen",
+      "trainer": "Harriet Brown",
+      "odds_decimal": 1.29,
+      "total_score": 10.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 14.8,
+          "weight": 0.5172,
+          "weighted_score": 7.66,
+          "reason": "Odds 1.29; fair win prob 14.8% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 85 (field range 85\u2013118)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Harriet Brown, J: Sean Bowen (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "HYPOTENUS",
+      "rank": 1,
+      "score": 53.6
+    },
+    "backup_1": {
+      "runner_name": "JAIPALETEMPS",
+      "rank": 2,
+      "score": 45.6
+    },
+    "backup_2": {
+      "runner_name": "JACK BLACK",
+      "rank": 3,
+      "score": 37.8
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 8.0,
+    "reasons": [
+      "Market prob gap 0.1 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 8.0 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/taunton/2026-01-17/1443/49/4",
+  "_date": "2026-01-17",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "JAIPALETEMPS",
+        "position": 1,
+        "sp_decimal": 1.27,
+        "sp_string": "4/15",
+        "is_nr": false
+      },
+      {
+        "runner_name": "JACK BLACK",
+        "position": 2,
+        "sp_decimal": 1.54,
+        "sp_string": "15/28",
+        "is_nr": false
+      },
+      {
+        "runner_name": "HYPOTENUS",
+        "position": 3,
+        "sp_decimal": 1.26,
+        "sp_string": "11/43",
+        "is_nr": false
+      },
+      {
+        "runner_name": "RAFFLES HERMES",
+        "position": 4,
+        "sp_decimal": 1.54,
+        "sp_string": "15/28",
+        "is_nr": false
+      },
+      {
+        "runner_name": "VALIRANN GOLD",
+        "position": 5,
+        "sp_decimal": 1.29,
+        "sp_string": "7/24",
+        "is_nr": false
+      },
+      {
+        "runner_name": "CUBAN COURT",
+        "position": 6,
+        "sp_decimal": 1.42,
+        "sp_string": "11/26",
+        "is_nr": false
+      },
+      {
+        "runner_name": "HOLY LEGEND",
+        "position": 7,
+        "sp_decimal": 1.14,
+        "sp_string": "16/117",
+        "is_nr": false
+      }
+    ]
+  }
+}

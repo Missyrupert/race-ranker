@@ -1,0 +1,591 @@
+{
+  "race_id": "hereford-2026-01-12-14-30",
+  "meta": {
+    "track": "Hereford",
+    "date": "2026-01-12",
+    "off_time": "14:30",
+    "distance": "2m4f194y",
+    "going": "soft",
+    "race_class": null,
+    "race_name": "14:30 Monday 12 January 2026",
+    "runners_count": 6,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "SOLDIEROFTHESTORM",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-10",
+      "official_rating": 116,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Jonjo O'Neill Jr.",
+      "trainer": "Jonjo & A.J. O'Neill",
+      "odds_decimal": 1.35,
+      "total_score": 53.5,
+      "components": [
+        {
+          "name": "Market",
+          "score": 15.1,
+          "weight": 0.5172,
+          "weighted_score": 7.81,
+          "reason": "Odds 1.35; fair win prob 15.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 116 (field range 100\u2013116)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Jonjo & A.J. O'Neill, J: Jonjo O'Neill Jr. (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "RODNEY",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-8",
+      "official_rating": 114,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Charlie Deutsch",
+      "trainer": "Kerry Lee",
+      "odds_decimal": 1.21,
+      "total_score": 49.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 16.8,
+          "weight": 0.5172,
+          "weighted_score": 8.69,
+          "reason": "Odds 1.21; fair win prob 16.8% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 87.5,
+          "weight": 0.431,
+          "weighted_score": 37.72,
+          "reason": "OR 114 (field range 100\u2013116)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Kerry Lee, J: Charlie Deutsch (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "PEPE LE MOKO",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-6",
+      "official_rating": 112,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Ciaran Gethings",
+      "trainer": "Mrs Jane Williams",
+      "odds_decimal": 1.48,
+      "total_score": 42.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 13.7,
+          "weight": 0.5172,
+          "weighted_score": 7.09,
+          "reason": "Odds 1.48; fair win prob 13.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 75.0,
+          "weight": 0.431,
+          "weighted_score": 32.33,
+          "reason": "OR 112 (field range 100\u2013116)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Mrs Jane Williams, J: Ciaran Gethings (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "ZESTFUL HOPE",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "11-4",
+      "official_rating": 110,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "David Bass",
+      "trainer": "Charlie Longsdon",
+      "odds_decimal": 1.18,
+      "total_score": 38.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 17.2,
+          "weight": 0.5172,
+          "weighted_score": 8.9,
+          "reason": "Odds 1.18; fair win prob 17.2% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 62.5,
+          "weight": 0.431,
+          "weighted_score": 26.94,
+          "reason": "OR 110 (field range 100\u2013116)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Charlie Longsdon, J: David Bass (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "EDE'IFFS ROCK",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-1",
+      "official_rating": 107,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Harry Kimber",
+      "trainer": "Kathy Turner",
+      "odds_decimal": 1.1,
+      "total_score": 31.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 18.5,
+          "weight": 0.5172,
+          "weighted_score": 9.57,
+          "reason": "Odds 1.10; fair win prob 18.5% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 43.8,
+          "weight": 0.431,
+          "weighted_score": 18.88,
+          "reason": "OR 107 (field range 100\u2013116)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Kathy Turner, J: Harry Kimber (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 6,
+      "runner_name": "I AIN'T YOUR MATE",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "10-8",
+      "official_rating": 100,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Jack Tudor",
+      "trainer": "Christian Williams",
+      "odds_decimal": 1.09,
+      "total_score": 12.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 18.7,
+          "weight": 0.5172,
+          "weighted_score": 9.67,
+          "reason": "Odds 1.09; fair win prob 18.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 100 (field range 100\u2013116)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Christian Williams, J: Jack Tudor (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "SOLDIEROFTHESTORM",
+      "rank": 1,
+      "score": 53.5
+    },
+    "backup_1": {
+      "runner_name": "RODNEY",
+      "rank": 2,
+      "score": 49.0
+    },
+    "backup_2": {
+      "runner_name": "PEPE LE MOKO",
+      "rank": 3,
+      "score": 42.0
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 4.5,
+    "reasons": [
+      "Market prob gap -1.7 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 4.5 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/hereford/2026-01-12/1430/23/4",
+  "_date": "2026-01-12",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "RODNEY",
+        "position": 1,
+        "sp_decimal": 1.21,
+        "sp_string": "3/14",
+        "is_nr": false
+      },
+      {
+        "runner_name": "SOLDIEROFTHESTORM",
+        "position": 2,
+        "sp_decimal": 1.35,
+        "sp_string": "6/17",
+        "is_nr": false
+      },
+      {
+        "runner_name": "PEPE LE MOKO",
+        "position": 3,
+        "sp_decimal": 1.48,
+        "sp_string": "13/27",
+        "is_nr": false
+      },
+      {
+        "runner_name": "I AIN'T YOUR MATE",
+        "position": 4,
+        "sp_decimal": 1.09,
+        "sp_string": "10/111",
+        "is_nr": false
+      },
+      {
+        "runner_name": "EDE'IFFS ROCK",
+        "position": 5,
+        "sp_decimal": 1.1,
+        "sp_string": "11/112",
+        "is_nr": false
+      },
+      {
+        "runner_name": "ZESTFUL HOPE",
+        "position": 6,
+        "sp_decimal": 1.18,
+        "sp_string": "22/123",
+        "is_nr": false
+      }
+    ]
+  }
+}

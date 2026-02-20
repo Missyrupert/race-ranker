@@ -1,0 +1,681 @@
+{
+  "race_id": "musselburgh-2026-01-01-15-25",
+  "meta": {
+    "track": "Musselburgh",
+    "date": "2026-01-01",
+    "off_time": "15:25",
+    "distance": "1m7f124y",
+    "going": "gd/sft",
+    "race_class": null,
+    "race_name": "15:25 Thursday 01 January 2026",
+    "runners_count": 7,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "MR MCLOUGHLAN",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "12-0",
+      "official_rating": 123,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Freddie Gingell",
+      "trainer": "Jack Jones",
+      "odds_decimal": 1.31,
+      "total_score": 52.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 13.4,
+          "weight": 0.5172,
+          "weighted_score": 6.93,
+          "reason": "Odds 1.31; fair win prob 13.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 123 (field range 109\u2013123)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Jack Jones, J: Freddie Gingell (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "AFADIL",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-10",
+      "official_rating": 119,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Miss Olive Nicholls(5)",
+      "trainer": "Paul Nicholls",
+      "odds_decimal": 1.17,
+      "total_score": 41.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 15.1,
+          "weight": 0.5172,
+          "weighted_score": 7.81,
+          "reason": "Odds 1.17; fair win prob 15.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 71.4,
+          "weight": 0.431,
+          "weighted_score": 30.78,
+          "reason": "OR 119 (field range 109\u2013123)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Paul Nicholls, J: Miss Olive Nicholls(5) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "CITY OF DIAMONDS",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-8",
+      "official_rating": 117,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Brian Hughes",
+      "trainer": "Donald McCain",
+      "odds_decimal": 1.29,
+      "total_score": 34.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 13.7,
+          "weight": 0.5172,
+          "weighted_score": 7.09,
+          "reason": "Odds 1.29; fair win prob 13.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 57.1,
+          "weight": 0.431,
+          "weighted_score": 24.61,
+          "reason": "OR 117 (field range 109\u2013123)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Donald McCain, J: Brian Hughes (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "CHASE A FORTUNE",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-4",
+      "official_rating": 113,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Charlie Maggs(5)",
+      "trainer": "Chris Grant",
+      "odds_decimal": 1.12,
+      "total_score": 23.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 15.7,
+          "weight": 0.5172,
+          "weighted_score": 8.12,
+          "reason": "Odds 1.12; fair win prob 15.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 28.6,
+          "weight": 0.431,
+          "weighted_score": 12.33,
+          "reason": "OR 113 (field range 109\u2013123)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Chris Grant, J: Charlie Maggs(5) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "ADMIRALTY HOUSE",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-4",
+      "official_rating": 113,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Callum Bewley",
+      "trainer": "Sandy Thomson",
+      "odds_decimal": 1.12,
+      "total_score": 23.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 15.7,
+          "weight": 0.5172,
+          "weighted_score": 8.12,
+          "reason": "Odds 1.12; fair win prob 15.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 28.6,
+          "weight": 0.431,
+          "weighted_score": 12.33,
+          "reason": "OR 113 (field range 109\u2013123)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Sandy Thomson, J: Callum Bewley (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 6,
+      "runner_name": "RAVENSCRAIG CASTLE",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-0",
+      "official_rating": 109,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Sean Quinlan",
+      "trainer": "Iain Jardine",
+      "odds_decimal": 1.18,
+      "total_score": 10.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 14.9,
+          "weight": 0.5172,
+          "weighted_score": 7.71,
+          "reason": "Odds 1.18; fair win prob 14.9% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 109 (field range 109\u2013123)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Iain Jardine, J: Sean Quinlan (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 7,
+      "runner_name": "STAR OF GUITING",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "11-0",
+      "official_rating": 109,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Craig Nichol",
+      "trainer": "Ewan Whillans",
+      "odds_decimal": 1.54,
+      "total_score": 8.5,
+      "components": [
+        {
+          "name": "Market",
+          "score": 11.4,
+          "weight": 0.5172,
+          "weighted_score": 5.9,
+          "reason": "Odds 1.54; fair win prob 11.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 109 (field range 109\u2013123)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Ewan Whillans, J: Craig Nichol (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "MR MCLOUGHLAN",
+      "rank": 1,
+      "score": 52.6
+    },
+    "backup_1": {
+      "runner_name": "AFADIL",
+      "rank": 2,
+      "score": 41.2
+    },
+    "backup_2": {
+      "runner_name": "CITY OF DIAMONDS",
+      "rank": 3,
+      "score": 34.3
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 11.4,
+    "reasons": [
+      "Market prob gap -1.6 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 11.4 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/musselburgh/2026-01-01/1525/15/6",
+  "_date": "2026-01-01",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "STAR OF GUITING",
+        "position": 1,
+        "sp_decimal": 1.54,
+        "sp_string": "15/28",
+        "is_nr": false
+      },
+      {
+        "runner_name": "CHASE A FORTUNE",
+        "position": 2,
+        "sp_decimal": 1.12,
+        "sp_string": "14/115",
+        "is_nr": false
+      },
+      {
+        "runner_name": "RAVENSCRAIG CASTLE",
+        "position": 3,
+        "sp_decimal": 1.18,
+        "sp_string": "22/123",
+        "is_nr": false
+      },
+      {
+        "runner_name": "AFADIL",
+        "position": 4,
+        "sp_decimal": 1.17,
+        "sp_string": "7/42",
+        "is_nr": false
+      },
+      {
+        "runner_name": "ADMIRALTY HOUSE",
+        "position": 5,
+        "sp_decimal": 1.12,
+        "sp_string": "14/115",
+        "is_nr": false
+      },
+      {
+        "runner_name": "CITY OF DIAMONDS",
+        "position": 6,
+        "sp_decimal": 1.29,
+        "sp_string": "7/24",
+        "is_nr": false
+      },
+      {
+        "runner_name": "MR MCLOUGHLAN",
+        "position": 7,
+        "sp_decimal": 1.31,
+        "sp_string": "5/16",
+        "is_nr": false
+      }
+    ]
+  }
+}

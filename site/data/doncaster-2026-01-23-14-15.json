@@ -1,0 +1,411 @@
+{
+  "race_id": "doncaster-2026-01-23-14-15",
+  "meta": {
+    "track": "Doncaster",
+    "date": "2026-01-23",
+    "off_time": "14:15",
+    "distance": "2m3f88y",
+    "going": "soft",
+    "race_class": null,
+    "race_name": "14:15 Friday 23 January 2026",
+    "runners_count": 4,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "GUARD DUTY",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "11-13",
+      "official_rating": 139,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Ben Jones",
+      "trainer": "Emma Lavelle",
+      "odds_decimal": 1.05,
+      "total_score": 59.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 26.5,
+          "weight": 0.5172,
+          "weighted_score": 13.71,
+          "reason": "Odds 1.05; fair win prob 26.5% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 139 (field range 121\u2013139)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Emma Lavelle, J: Ben Jones (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "FINGAL'S HILL",
+      "number": null,
+      "draw": null,
+      "age": 10,
+      "weight": "11-8",
+      "official_rating": 134,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Callum Bewley",
+      "trainer": "Peter Atkinson",
+      "odds_decimal": 1.09,
+      "total_score": 46.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 25.6,
+          "weight": 0.5172,
+          "weighted_score": 13.24,
+          "reason": "Odds 1.09; fair win prob 25.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 72.2,
+          "weight": 0.431,
+          "weighted_score": 31.12,
+          "reason": "OR 134 (field range 121\u2013139)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Peter Atkinson, J: Callum Bewley (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "GLYNN BRAE",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-6",
+      "official_rating": 132,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Sam Twiston-Davies",
+      "trainer": "Nigel & Willy Twiston-Davies",
+      "odds_decimal": 1.22,
+      "total_score": 40.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 22.8,
+          "weight": 0.5172,
+          "weighted_score": 11.79,
+          "reason": "Odds 1.22; fair win prob 22.8% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 61.1,
+          "weight": 0.431,
+          "weighted_score": 26.34,
+          "reason": "OR 132 (field range 121\u2013139)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Nigel & Willy Twiston-Davies, J: Sam Twiston-Davies (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "GINGER MAIL",
+      "number": null,
+      "draw": null,
+      "age": 10,
+      "weight": "10-9",
+      "official_rating": 121,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Bruce Lynn",
+      "trainer": "N. W. Alexander",
+      "odds_decimal": 1.11,
+      "total_score": 15.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 25.1,
+          "weight": 0.5172,
+          "weighted_score": 12.98,
+          "reason": "Odds 1.11; fair win prob 25.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 121 (field range 121\u2013139)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: N. W. Alexander, J: Bruce Lynn (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "GUARD DUTY",
+      "rank": 1,
+      "score": 59.4
+    },
+    "backup_1": {
+      "runner_name": "FINGAL'S HILL",
+      "rank": 2,
+      "score": 46.9
+    },
+    "backup_2": {
+      "runner_name": "GLYNN BRAE",
+      "rank": 3,
+      "score": 40.7
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 12.5,
+    "reasons": [
+      "Market prob gap 1.0 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 12.5 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/doncaster/2026-01-23/1415/14/4",
+  "_date": "2026-01-23",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "GUARD DUTY",
+        "position": 1,
+        "sp_decimal": 1.05,
+        "sp_string": "8/151",
+        "is_nr": false
+      },
+      {
+        "runner_name": "FINGAL'S HILL",
+        "position": 2,
+        "sp_decimal": 1.09,
+        "sp_string": "10/111",
+        "is_nr": false
+      },
+      {
+        "runner_name": "GINGER MAIL",
+        "position": 3,
+        "sp_decimal": 1.11,
+        "sp_string": "12/113",
+        "is_nr": false
+      },
+      {
+        "runner_name": "GLYNN BRAE",
+        "position": 4,
+        "sp_decimal": 1.22,
+        "sp_string": "5/23",
+        "is_nr": false
+      }
+    ]
+  }
+}

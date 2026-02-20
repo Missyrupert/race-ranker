@@ -1,0 +1,411 @@
+{
+  "race_id": "taunton-2026-01-08-15-30",
+  "meta": {
+    "track": "Taunton",
+    "date": "2026-01-08",
+    "off_time": "15:30",
+    "distance": "2m5f150y",
+    "going": "gd/sft",
+    "race_class": null,
+    "race_name": "15:30 Thursday 08 January 2026",
+    "runners_count": 4,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "UNEXPECTED PARTY",
+      "number": null,
+      "draw": null,
+      "age": 11,
+      "weight": "12-6",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Miss Heidi Palin(3)",
+      "trainer": "Dan Skelton",
+      "odds_decimal": 1.11,
+      "total_score": 28.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 26.2,
+          "weight": 0.9091,
+          "weighted_score": 23.82,
+          "reason": "Odds 1.11; fair win prob 26.2% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Dan Skelton, J: Miss Heidi Palin(3) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "FAN DE BLUES",
+      "number": null,
+      "draw": null,
+      "age": 11,
+      "weight": "11-12",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Mr Daniel Williams(7)",
+      "trainer": "Miss Nikki Henton",
+      "odds_decimal": 1.18,
+      "total_score": 26.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 24.6,
+          "weight": 0.9091,
+          "weighted_score": 22.36,
+          "reason": "Odds 1.18; fair win prob 24.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Miss Nikki Henton, J: Mr Daniel Williams(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "DORSET DIAMOND",
+      "number": null,
+      "draw": null,
+      "age": 10,
+      "weight": "11-12",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Mr Henry Crow(5)",
+      "trainer": "Mrs Rachel Bartlett",
+      "odds_decimal": 1.18,
+      "total_score": 26.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 24.6,
+          "weight": 0.9091,
+          "weighted_score": 22.36,
+          "reason": "Odds 1.18; fair win prob 24.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Mrs Rachel Bartlett, J: Mr Henry Crow(5) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "GUY",
+      "number": null,
+      "draw": null,
+      "age": 11,
+      "weight": "12-6",
+      "official_rating": null,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Mr Samuel Scott(7)",
+      "trainer": "Mrs Mary Cookson",
+      "odds_decimal": 1.18,
+      "total_score": 26.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 24.6,
+          "weight": 0.9091,
+          "weighted_score": 22.36,
+          "reason": "Odds 1.18; fair win prob 24.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "Non-handicap: skipping weight proxy"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0909,
+          "weighted_score": 4.55,
+          "reason": "T: Mrs Mary Cookson, J: Mr Samuel Scott(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "UNEXPECTED PARTY",
+      "rank": 1,
+      "score": 28.4
+    },
+    "backup_1": {
+      "runner_name": "FAN DE BLUES",
+      "rank": 2,
+      "score": 26.9
+    },
+    "backup_2": {
+      "runner_name": "DORSET DIAMOND",
+      "rank": 3,
+      "score": 26.9
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 1.5,
+    "reasons": [
+      "Market prob gap 1.6 pts (race-normalised)",
+      "2/8 scoring components available",
+      "Total-score margin 1.5 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/taunton/2026-01-08/1530/49/6",
+  "_date": "2026-01-08",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "UNEXPECTED PARTY",
+        "position": 1,
+        "sp_decimal": 1.11,
+        "sp_string": "11/102",
+        "is_nr": false
+      },
+      {
+        "runner_name": "FAN DE BLUES",
+        "position": 2,
+        "sp_decimal": 1.18,
+        "sp_string": "22/123",
+        "is_nr": false
+      },
+      {
+        "runner_name": "DORSET DIAMOND",
+        "position": 3,
+        "sp_decimal": 1.18,
+        "sp_string": "22/123",
+        "is_nr": false
+      },
+      {
+        "runner_name": "GUY",
+        "position": 4,
+        "sp_decimal": 1.18,
+        "sp_string": "22/123",
+        "is_nr": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,1221 @@
+{
+  "race_id": "ayr-2026-01-02-14-00",
+  "meta": {
+    "track": "Ayr",
+    "date": "2026-01-02",
+    "off_time": "14:00",
+    "distance": "2m4f100y",
+    "going": "soft",
+    "race_class": null,
+    "race_name": "14:00 Friday 02 January 2026",
+    "runners_count": 13,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "EIRE STREET",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "12-0",
+      "official_rating": 100,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Joshua Thompson(7)",
+      "trainer": "Jackie Stephen",
+      "odds_decimal": 1.22,
+      "total_score": 49.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 7.9,
+          "weight": 0.5172,
+          "weighted_score": 4.09,
+          "reason": "Odds 1.22; fair win prob 7.9% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 100 (field range 76\u2013100)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Jackie Stephen, J: Joshua Thompson(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "FOREST BLAZE",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "12-0",
+      "official_rating": 100,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Jamie Hamilton",
+      "trainer": "Mark Walford",
+      "odds_decimal": 1.35,
+      "total_score": 49.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 7.1,
+          "weight": 0.5172,
+          "weighted_score": 3.67,
+          "reason": "Odds 1.35; fair win prob 7.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 100 (field range 76\u2013100)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Mark Walford, J: Jamie Hamilton (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "SHADOW CHASER",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-13",
+      "official_rating": 99,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Brian Hughes",
+      "trainer": "Sandy Thomson",
+      "odds_decimal": 1.36,
+      "total_score": 47.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 7.1,
+          "weight": 0.5172,
+          "weighted_score": 3.67,
+          "reason": "Odds 1.36; fair win prob 7.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 95.8,
+          "weight": 0.431,
+          "weighted_score": 41.29,
+          "reason": "OR 99 (field range 76\u2013100)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Sandy Thomson, J: Brian Hughes (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "RACEVIEW ROAD",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-11",
+      "official_rating": 97,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Jonathon Bewley",
+      "trainer": "George Bewley",
+      "odds_decimal": 1.22,
+      "total_score": 44.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 7.9,
+          "weight": 0.5172,
+          "weighted_score": 4.09,
+          "reason": "Odds 1.22; fair win prob 7.9% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 87.5,
+          "weight": 0.431,
+          "weighted_score": 37.72,
+          "reason": "OR 97 (field range 76\u2013100)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: George Bewley, J: Jonathon Bewley (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "BIG STORM BREWING",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-10",
+      "official_rating": 96,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Harry Reed",
+      "trainer": "Tristan Davidson",
+      "odds_decimal": 1.27,
+      "total_score": 42.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 7.6,
+          "weight": 0.5172,
+          "weighted_score": 3.93,
+          "reason": "Odds 1.27; fair win prob 7.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 83.3,
+          "weight": 0.431,
+          "weighted_score": 35.91,
+          "reason": "OR 96 (field range 76\u2013100)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Tristan Davidson, J: Harry Reed (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 6,
+      "runner_name": "BURNING IT UP",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-7",
+      "official_rating": 93,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Patrick Wadge",
+      "trainer": "N. W. Alexander",
+      "odds_decimal": 1.14,
+      "total_score": 37.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 8.4,
+          "weight": 0.5172,
+          "weighted_score": 4.34,
+          "reason": "Odds 1.14; fair win prob 8.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 70.8,
+          "weight": 0.431,
+          "weighted_score": 30.52,
+          "reason": "OR 93 (field range 76\u2013100)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: N. W. Alexander, J: Patrick Wadge (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 7,
+      "runner_name": "SO MANY ROADS",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "11-6",
+      "official_rating": 92,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Theo Gillard",
+      "trainer": "Donald Whillans",
+      "odds_decimal": 1.27,
+      "total_score": 35.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 7.6,
+          "weight": 0.5172,
+          "weighted_score": 3.93,
+          "reason": "Odds 1.27; fair win prob 7.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 66.7,
+          "weight": 0.431,
+          "weighted_score": 28.75,
+          "reason": "OR 92 (field range 76\u2013100)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Donald Whillans, J: Theo Gillard (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 8,
+      "runner_name": "THE COFFEY BOY",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-6",
+      "official_rating": 92,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Callum Bewley",
+      "trainer": "Ian Duncan",
+      "odds_decimal": 1.59,
+      "total_score": 34.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 6.0,
+          "weight": 0.5172,
+          "weighted_score": 3.1,
+          "reason": "Odds 1.59; fair win prob 6.0% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 66.7,
+          "weight": 0.431,
+          "weighted_score": 28.75,
+          "reason": "OR 92 (field range 76\u2013100)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Ian Duncan, J: Callum Bewley (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 9,
+      "runner_name": "CARRHILL",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-5",
+      "official_rating": 91,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Ross Chapman",
+      "trainer": "Chris Grant",
+      "odds_decimal": 1.22,
+      "total_score": 33.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 7.9,
+          "weight": 0.5172,
+          "weighted_score": 4.09,
+          "reason": "Odds 1.22; fair win prob 7.9% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 62.5,
+          "weight": 0.431,
+          "weighted_score": 26.94,
+          "reason": "OR 91 (field range 76\u2013100)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Chris Grant, J: Ross Chapman (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 10,
+      "runner_name": "EN AVANT",
+      "number": null,
+      "draw": null,
+      "age": 10,
+      "weight": "11-4",
+      "official_rating": 90,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "K. Brogan",
+      "trainer": "Hannah McMahon",
+      "odds_decimal": 1.11,
+      "total_score": 32.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 8.7,
+          "weight": 0.5172,
+          "weighted_score": 4.5,
+          "reason": "Odds 1.11; fair win prob 8.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 58.3,
+          "weight": 0.431,
+          "weighted_score": 25.13,
+          "reason": "OR 90 (field range 76\u2013100)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Hannah McMahon, J: K. Brogan (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 11,
+      "runner_name": "VELVET VULCAN",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "10-7",
+      "official_rating": 79,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Ben Smith(7)",
+      "trainer": "R. Mike Smith",
+      "odds_decimal": 1.2,
+      "total_score": 12.1,
+      "components": [
+        {
+          "name": "Market",
+          "score": 8.0,
+          "weight": 0.5172,
+          "weighted_score": 4.14,
+          "reason": "Odds 1.20; fair win prob 8.0% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 12.5,
+          "weight": 0.431,
+          "weighted_score": 5.39,
+          "reason": "OR 79 (field range 76\u2013100)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: R. Mike Smith, J: Ben Smith(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 12,
+      "runner_name": "LEWA HOUSE",
+      "number": null,
+      "draw": null,
+      "age": 10,
+      "weight": "10-5",
+      "official_rating": 77,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Sean Quinlan",
+      "trainer": "Catch Bissett",
+      "odds_decimal": 1.18,
+      "total_score": 8.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 8.2,
+          "weight": 0.5172,
+          "weighted_score": 4.24,
+          "reason": "Odds 1.18; fair win prob 8.2% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 4.2,
+          "weight": 0.431,
+          "weighted_score": 1.81,
+          "reason": "OR 77 (field range 76\u2013100)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Catch Bissett, J: Sean Quinlan (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 13,
+      "runner_name": "BREADALBANE LASS",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "10-4",
+      "official_rating": 76,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Benjamin Macey(7)",
+      "trainer": "R. Mike Smith",
+      "odds_decimal": 1.25,
+      "total_score": 6.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 7.7,
+          "weight": 0.5172,
+          "weighted_score": 3.98,
+          "reason": "Odds 1.25; fair win prob 7.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 76 (field range 76\u2013100)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: R. Mike Smith, J: Benjamin Macey(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "EIRE STREET",
+      "rank": 1,
+      "score": 49.8
+    },
+    "backup_1": {
+      "runner_name": "FOREST BLAZE",
+      "rank": 2,
+      "score": 49.4
+    },
+    "backup_2": {
+      "runner_name": "SHADOW CHASER",
+      "rank": 3,
+      "score": 47.6
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 0.4,
+    "reasons": [
+      "Market prob gap 0.8 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 0.4 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/ayr/2026-01-02/1400/2/4",
+  "_date": "2026-01-02",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "SO MANY ROADS",
+        "position": 1,
+        "sp_decimal": 1.27,
+        "sp_string": "4/15",
+        "is_nr": false
+      },
+      {
+        "runner_name": "VELVET VULCAN",
+        "position": 2,
+        "sp_decimal": 1.2,
+        "sp_string": "25/126",
+        "is_nr": false
+      },
+      {
+        "runner_name": "FOREST BLAZE",
+        "position": 3,
+        "sp_decimal": 1.35,
+        "sp_string": "6/17",
+        "is_nr": false
+      },
+      {
+        "runner_name": "RACEVIEW ROAD",
+        "position": 4,
+        "sp_decimal": 1.22,
+        "sp_string": "28/129",
+        "is_nr": false
+      },
+      {
+        "runner_name": "EIRE STREET",
+        "position": 5,
+        "sp_decimal": 1.22,
+        "sp_string": "28/129",
+        "is_nr": false
+      },
+      {
+        "runner_name": "BREADALBANE LASS",
+        "position": 6,
+        "sp_decimal": 1.25,
+        "sp_string": "33/134",
+        "is_nr": false
+      },
+      {
+        "runner_name": "SHADOW CHASER",
+        "position": 7,
+        "sp_decimal": 1.36,
+        "sp_string": "9/25",
+        "is_nr": false
+      },
+      {
+        "runner_name": "BURNING IT UP",
+        "position": 8,
+        "sp_decimal": 1.14,
+        "sp_string": "16/117",
+        "is_nr": false
+      },
+      {
+        "runner_name": "CARRHILL",
+        "position": 9,
+        "sp_decimal": 1.22,
+        "sp_string": "28/129",
+        "is_nr": false
+      },
+      {
+        "runner_name": "THE COFFEY BOY",
+        "position": 10,
+        "sp_decimal": 1.59,
+        "sp_string": "17/29",
+        "is_nr": false
+      },
+      {
+        "runner_name": "EN AVANT",
+        "position": 11,
+        "sp_decimal": 1.11,
+        "sp_string": "125/1126",
+        "is_nr": false
+      },
+      {
+        "runner_name": "BIG STORM BREWING",
+        "position": 12,
+        "sp_decimal": 1.27,
+        "sp_string": "4/15",
+        "is_nr": false
+      },
+      {
+        "runner_name": "LEWA HOUSE",
+        "position": 13,
+        "sp_decimal": 1.18,
+        "sp_string": "22/123",
+        "is_nr": false
+      }
+    ]
+  }
+}

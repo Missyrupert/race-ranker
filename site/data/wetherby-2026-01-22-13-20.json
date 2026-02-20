@@ -1,0 +1,591 @@
+{
+  "race_id": "wetherby-2026-01-22-13-20",
+  "meta": {
+    "track": "Wetherby",
+    "date": "2026-01-22",
+    "off_time": "13:20",
+    "distance": "2m3f85y",
+    "going": "heavy",
+    "race_class": null,
+    "race_name": "13:20 Thursday 22 January 2026",
+    "runners_count": 6,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "JOHNSON'S BLUE",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "12-0",
+      "official_rating": 127,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Jamie Hamilton",
+      "trainer": "Mark Walford",
+      "odds_decimal": 1.22,
+      "total_score": 54.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 16.7,
+          "weight": 0.5172,
+          "weighted_score": 8.64,
+          "reason": "Odds 1.22; fair win prob 16.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 127 (field range 115\u2013127)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Mark Walford, J: Jamie Hamilton (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "FINE CASTING",
+      "number": null,
+      "draw": null,
+      "age": 10,
+      "weight": "11-10",
+      "official_rating": 123,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Ben Jones",
+      "trainer": "Ben Pauling",
+      "odds_decimal": 1.39,
+      "total_score": 38.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 14.7,
+          "weight": 0.5172,
+          "weighted_score": 7.6,
+          "reason": "Odds 1.39; fair win prob 14.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 66.7,
+          "weight": 0.431,
+          "weighted_score": 28.75,
+          "reason": "OR 123 (field range 115\u2013127)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Ben Pauling, J: Ben Jones (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "WALK ON QUEST",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-9",
+      "official_rating": 122,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Derek Fox",
+      "trainer": "Lucinda Russell & Michael Scudamore",
+      "odds_decimal": 1.11,
+      "total_score": 37.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 18.4,
+          "weight": 0.5172,
+          "weighted_score": 9.52,
+          "reason": "Odds 1.11; fair win prob 18.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 58.3,
+          "weight": 0.431,
+          "weighted_score": 25.13,
+          "reason": "OR 122 (field range 115\u2013127)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Lucinda Russell & Michael Scudamore, J: Derek Fox (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "HELLO JUDGE",
+      "number": null,
+      "draw": null,
+      "age": 10,
+      "weight": "11-7",
+      "official_rating": 120,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Danny McMenamin",
+      "trainer": "Ann Hamilton",
+      "odds_decimal": 1.17,
+      "total_score": 29.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 17.4,
+          "weight": 0.5172,
+          "weighted_score": 9.0,
+          "reason": "Odds 1.17; fair win prob 17.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 41.7,
+          "weight": 0.431,
+          "weighted_score": 17.97,
+          "reason": "OR 120 (field range 115\u2013127)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Ann Hamilton, J: Danny McMenamin (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "GENOIS",
+      "number": null,
+      "draw": null,
+      "age": 10,
+      "weight": "11-7",
+      "official_rating": 120,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Benjamin Macey(7)",
+      "trainer": "Jonjo & A.J. O'Neill",
+      "odds_decimal": 1.36,
+      "total_score": 28.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 15.0,
+          "weight": 0.5172,
+          "weighted_score": 7.76,
+          "reason": "Odds 1.36; fair win prob 15.0% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 41.7,
+          "weight": 0.431,
+          "weighted_score": 17.97,
+          "reason": "OR 120 (field range 115\u2013127)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Jonjo & A.J. O'Neill, J: Benjamin Macey(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 6,
+      "runner_name": "GERYVILLE",
+      "number": null,
+      "draw": null,
+      "age": 10,
+      "weight": "11-2",
+      "official_rating": 115,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Brian Hughes",
+      "trainer": "Micky Hammond",
+      "odds_decimal": 1.15,
+      "total_score": 11.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 17.7,
+          "weight": 0.5172,
+          "weighted_score": 9.16,
+          "reason": "Odds 1.15; fair win prob 17.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 115 (field range 115\u2013127)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Micky Hammond, J: Brian Hughes (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "JOHNSON'S BLUE",
+      "rank": 1,
+      "score": 54.3
+    },
+    "backup_1": {
+      "runner_name": "FINE CASTING",
+      "rank": 2,
+      "score": 38.9
+    },
+    "backup_2": {
+      "runner_name": "WALK ON QUEST",
+      "rank": 3,
+      "score": 37.2
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 15.4,
+    "reasons": [
+      "Market prob gap 2.0 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 15.4 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/wetherby/2026-01-22/1320/55/3",
+  "_date": "2026-01-22",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "GERYVILLE",
+        "position": 1,
+        "sp_decimal": 1.15,
+        "sp_string": "18/119",
+        "is_nr": false
+      },
+      {
+        "runner_name": "GENOIS",
+        "position": 2,
+        "sp_decimal": 1.36,
+        "sp_string": "9/25",
+        "is_nr": false
+      },
+      {
+        "runner_name": "JOHNSON'S BLUE",
+        "position": 3,
+        "sp_decimal": 1.22,
+        "sp_string": "28/129",
+        "is_nr": false
+      },
+      {
+        "runner_name": "FINE CASTING",
+        "position": 4,
+        "sp_decimal": 1.39,
+        "sp_string": "7/18",
+        "is_nr": false
+      },
+      {
+        "runner_name": "HELLO JUDGE",
+        "position": 5,
+        "sp_decimal": 1.17,
+        "sp_string": "20/121",
+        "is_nr": false
+      },
+      {
+        "runner_name": "WALK ON QUEST",
+        "position": 6,
+        "sp_decimal": 1.11,
+        "sp_string": "12/113",
+        "is_nr": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,411 @@
+{
+  "race_id": "fakenham-2026-01-18-14-05",
+  "meta": {
+    "track": "Fakenham",
+    "date": "2026-01-18",
+    "off_time": "14:05",
+    "distance": "2m4f1y",
+    "going": "soft",
+    "race_class": null,
+    "race_name": "14:05 Sunday 18 January 2026",
+    "runners_count": 4,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "LOOKING AS YOU ARE",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-7",
+      "official_rating": 114,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Toby McCain-Mitchell(5)",
+      "trainer": "Alex Hales",
+      "odds_decimal": 1.42,
+      "total_score": 58.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 24.1,
+          "weight": 0.5172,
+          "weighted_score": 12.47,
+          "reason": "Odds 1.42; fair win prob 24.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 114 (field range 109\u2013114)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Alex Hales, J: Toby McCain-Mitchell(5) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "AUDACIOUS ANNIE",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-6",
+      "official_rating": 113,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Isabelle Ryder(7)",
+      "trainer": "Jamie Snowden",
+      "odds_decimal": 1.31,
+      "total_score": 50.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 26.2,
+          "weight": 0.5172,
+          "weighted_score": 13.55,
+          "reason": "Odds 1.31; fair win prob 26.2% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 80.0,
+          "weight": 0.431,
+          "weighted_score": 34.48,
+          "reason": "OR 113 (field range 109\u2013114)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Jamie Snowden, J: Isabelle Ryder(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "MISS CYNTHIA",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-6",
+      "official_rating": 113,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Tristan Durrell",
+      "trainer": "Dan Skelton",
+      "odds_decimal": 1.48,
+      "total_score": 49.1,
+      "components": [
+        {
+          "name": "Market",
+          "score": 23.2,
+          "weight": 0.5172,
+          "weighted_score": 12.0,
+          "reason": "Odds 1.48; fair win prob 23.2% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 80.0,
+          "weight": 0.431,
+          "weighted_score": 34.48,
+          "reason": "OR 113 (field range 109\u2013114)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Dan Skelton, J: Tristan Durrell (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "APPLES MOON",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-2",
+      "official_rating": 109,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Sean Houlihan",
+      "trainer": "Nicky Martin",
+      "odds_decimal": 1.29,
+      "total_score": 16.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 26.6,
+          "weight": 0.5172,
+          "weighted_score": 13.76,
+          "reason": "Odds 1.29; fair win prob 26.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 109 (field range 109\u2013114)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Nicky Martin, J: Sean Houlihan (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "LOOKING AS YOU ARE",
+      "rank": 1,
+      "score": 58.2
+    },
+    "backup_1": {
+      "runner_name": "AUDACIOUS ANNIE",
+      "rank": 2,
+      "score": 50.6
+    },
+    "backup_2": {
+      "runner_name": "MISS CYNTHIA",
+      "rank": 3,
+      "score": 49.1
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 7.6,
+    "reasons": [
+      "Market prob gap -2.0 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 7.6 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/fakenham/2026-01-18/1405/17/4",
+  "_date": "2026-01-18",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "MISS CYNTHIA",
+        "position": 1,
+        "sp_decimal": 1.48,
+        "sp_string": "13/27",
+        "is_nr": false
+      },
+      {
+        "runner_name": "LOOKING AS YOU ARE",
+        "position": 2,
+        "sp_decimal": 1.42,
+        "sp_string": "11/26",
+        "is_nr": false
+      },
+      {
+        "runner_name": "APPLES MOON",
+        "position": 3,
+        "sp_decimal": 1.29,
+        "sp_string": "7/24",
+        "is_nr": false
+      },
+      {
+        "runner_name": "AUDACIOUS ANNIE",
+        "position": 4,
+        "sp_decimal": 1.31,
+        "sp_string": "5/16",
+        "is_nr": false
+      }
+    ]
+  }
+}

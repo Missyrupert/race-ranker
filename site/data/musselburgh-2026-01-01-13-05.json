@@ -1,0 +1,411 @@
+{
+  "race_id": "musselburgh-2026-01-01-13-05",
+  "meta": {
+    "track": "Musselburgh",
+    "date": "2026-01-01",
+    "off_time": "13:05",
+    "distance": "2m4f68y",
+    "going": "gd/sft",
+    "race_class": null,
+    "race_name": "13:05 Thursday 01 January 2026",
+    "runners_count": 4,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "LORD DE VINCI",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-10",
+      "official_rating": 95,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Callum Bewley",
+      "trainer": "Daragh Bourke",
+      "odds_decimal": 1.39,
+      "total_score": 57.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 23.4,
+          "weight": 0.5172,
+          "weighted_score": 12.1,
+          "reason": "Odds 1.39; fair win prob 23.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 95 (field range 73\u201395)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Daragh Bourke, J: Callum Bewley (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "MARTY MCFLY",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-8",
+      "official_rating": 93,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Brian Hughes",
+      "trainer": "Sandy Thomson",
+      "odds_decimal": 1.22,
+      "total_score": 55.5,
+      "components": [
+        {
+          "name": "Market",
+          "score": 26.6,
+          "weight": 0.5172,
+          "weighted_score": 13.76,
+          "reason": "Odds 1.22; fair win prob 26.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 90.9,
+          "weight": 0.431,
+          "weighted_score": 39.18,
+          "reason": "OR 93 (field range 73\u201395)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Sandy Thomson, J: Brian Hughes (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "DIDNTGOTWENTY",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "10-2",
+      "official_rating": 73,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Sean Quinlan",
+      "trainer": "Martin Todhunter",
+      "odds_decimal": 1.29,
+      "total_score": 15.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 25.2,
+          "weight": 0.5172,
+          "weighted_score": 13.03,
+          "reason": "Odds 1.29; fair win prob 25.2% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 73 (field range 73\u201395)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Martin Todhunter, J: Sean Quinlan (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "PARISH STAR",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "10-2",
+      "official_rating": 73,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Charlie Maggs(5)",
+      "trainer": "Adam Nicol",
+      "odds_decimal": 1.31,
+      "total_score": 15.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 24.8,
+          "weight": 0.5172,
+          "weighted_score": 12.83,
+          "reason": "Odds 1.31; fair win prob 24.8% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 73 (field range 73\u201395)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Adam Nicol, J: Charlie Maggs(5) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "LORD DE VINCI",
+      "rank": 1,
+      "score": 57.8
+    },
+    "backup_1": {
+      "runner_name": "MARTY MCFLY",
+      "rank": 2,
+      "score": 55.5
+    },
+    "backup_2": {
+      "runner_name": "DIDNTGOTWENTY",
+      "rank": 3,
+      "score": 15.6
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 2.3,
+    "reasons": [
+      "Market prob gap -3.3 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 2.3 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/musselburgh/2026-01-01/1305/15/2",
+  "_date": "2026-01-01",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "MARTY MCFLY",
+        "position": 1,
+        "sp_decimal": 1.22,
+        "sp_string": "5/23",
+        "is_nr": false
+      },
+      {
+        "runner_name": "DIDNTGOTWENTY",
+        "position": 2,
+        "sp_decimal": 1.29,
+        "sp_string": "7/24",
+        "is_nr": false
+      },
+      {
+        "runner_name": "PARISH STAR",
+        "position": 3,
+        "sp_decimal": 1.31,
+        "sp_string": "5/16",
+        "is_nr": false
+      },
+      {
+        "runner_name": "LORD DE VINCI",
+        "position": 4,
+        "sp_decimal": 1.39,
+        "sp_string": "7/18",
+        "is_nr": false
+      }
+    ]
+  }
+}

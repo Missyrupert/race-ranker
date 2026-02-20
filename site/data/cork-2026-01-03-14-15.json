@@ -1,0 +1,591 @@
+{
+  "race_id": "cork-2026-01-03-14-15",
+  "meta": {
+    "track": "Cork",
+    "date": "2026-01-03",
+    "off_time": "14:15",
+    "distance": "2m4f",
+    "going": "gd/sft",
+    "race_class": null,
+    "race_name": "14:15 Saturday 03 January 2026",
+    "runners_count": 6,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "COUSIN KATE",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "11-8",
+      "official_rating": 113,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "E. Staples(7)",
+      "trainer": "Denis Hogan, Ireland",
+      "odds_decimal": 1.11,
+      "total_score": 55.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 18.0,
+          "weight": 0.5172,
+          "weighted_score": 9.31,
+          "reason": "Odds 1.11; fair win prob 18.0% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 113 (field range 93\u2013113)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Denis Hogan, Ireland, J: E. Staples(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "JUMPING SUSIE",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-7",
+      "official_rating": 112,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Alex Harvey",
+      "trainer": "John McConnell, Ireland",
+      "odds_decimal": 1.28,
+      "total_score": 51.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 15.6,
+          "weight": 0.5172,
+          "weighted_score": 8.07,
+          "reason": "Odds 1.28; fair win prob 15.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 95.0,
+          "weight": 0.431,
+          "weighted_score": 40.95,
+          "reason": "OR 112 (field range 93\u2013113)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: John McConnell, Ireland, J: Alex Harvey (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "KIMY",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-3",
+      "official_rating": 108,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "D. E. Mullins",
+      "trainer": "Thomas Mullins, Ireland",
+      "odds_decimal": 1.2,
+      "total_score": 43.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 16.7,
+          "weight": 0.5172,
+          "weighted_score": 8.64,
+          "reason": "Odds 1.20; fair win prob 16.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 75.0,
+          "weight": 0.431,
+          "weighted_score": 32.33,
+          "reason": "OR 108 (field range 93\u2013113)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Thomas Mullins, Ireland, J: D. E. Mullins (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "MISSUS BEETON",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-0",
+      "official_rating": 105,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "L. P. Dempsey",
+      "trainer": "J. P. Dempsey, Ireland",
+      "odds_decimal": 1.09,
+      "total_score": 38.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 18.4,
+          "weight": 0.5172,
+          "weighted_score": 9.52,
+          "reason": "Odds 1.09; fair win prob 18.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 60.0,
+          "weight": 0.431,
+          "weighted_score": 25.86,
+          "reason": "OR 105 (field range 93\u2013113)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: J. P. Dempsey, Ireland, J: L. P. Dempsey (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "CATCHABIRD",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "10-6",
+      "official_rating": 97,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "C. M. Quirke",
+      "trainer": "Sarah Joanna Connell, Ireland",
+      "odds_decimal": 1.21,
+      "total_score": 19.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 16.5,
+          "weight": 0.5172,
+          "weighted_score": 8.53,
+          "reason": "Odds 1.21; fair win prob 16.5% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 20.0,
+          "weight": 0.431,
+          "weighted_score": 8.62,
+          "reason": "OR 97 (field range 93\u2013113)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Sarah Joanna Connell, Ireland, J: C. M. Quirke (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 6,
+      "runner_name": "GRACE FARADAY",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "10-2",
+      "official_rating": 93,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "C. M. Hogan(7)",
+      "trainer": "Anthony McCann, Ireland",
+      "odds_decimal": 1.36,
+      "total_score": 10.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 14.7,
+          "weight": 0.5172,
+          "weighted_score": 7.6,
+          "reason": "Odds 1.36; fair win prob 14.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 93 (field range 93\u2013113)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Anthony McCann, Ireland, J: C. M. Hogan(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "COUSIN KATE",
+      "rank": 1,
+      "score": 55.0
+    },
+    "backup_1": {
+      "runner_name": "JUMPING SUSIE",
+      "rank": 2,
+      "score": 51.6
+    },
+    "backup_2": {
+      "runner_name": "KIMY",
+      "rank": 3,
+      "score": 43.6
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 3.4,
+    "reasons": [
+      "Market prob gap 2.4 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 3.4 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/cork/2026-01-03/1415/218/4",
+  "_date": "2026-01-03",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "COUSIN KATE",
+        "position": 1,
+        "sp_decimal": 1.11,
+        "sp_string": "11/102",
+        "is_nr": false
+      },
+      {
+        "runner_name": "CATCHABIRD",
+        "position": 2,
+        "sp_decimal": 1.21,
+        "sp_string": "3/14",
+        "is_nr": false
+      },
+      {
+        "runner_name": "KIMY",
+        "position": 3,
+        "sp_decimal": 1.2,
+        "sp_string": "25/126",
+        "is_nr": false
+      },
+      {
+        "runner_name": "MISSUS BEETON",
+        "position": 4,
+        "sp_decimal": 1.09,
+        "sp_string": "10/111",
+        "is_nr": false
+      },
+      {
+        "runner_name": "GRACE FARADAY",
+        "position": 5,
+        "sp_decimal": 1.36,
+        "sp_string": "9/25",
+        "is_nr": false
+      },
+      {
+        "runner_name": "JUMPING SUSIE",
+        "position": 6,
+        "sp_decimal": 1.28,
+        "sp_string": "40/141",
+        "is_nr": false
+      }
+    ]
+  }
+}

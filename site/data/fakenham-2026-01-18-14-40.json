@@ -1,0 +1,771 @@
+{
+  "race_id": "fakenham-2026-01-18-14-40",
+  "meta": {
+    "track": "Fakenham",
+    "date": "2026-01-18",
+    "off_time": "14:40",
+    "distance": "2m5f44y",
+    "going": "soft",
+    "race_class": null,
+    "race_name": "14:40 Sunday 18 January 2026",
+    "runners_count": 8,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "SAINTE DOCTOR",
+      "number": null,
+      "draw": null,
+      "age": 10,
+      "weight": "12-0",
+      "official_rating": 123,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Toby McCain-Mitchell(5)",
+      "trainer": "Neil Mulholland",
+      "odds_decimal": 1.21,
+      "total_score": 52.5,
+      "components": [
+        {
+          "name": "Market",
+          "score": 13.1,
+          "weight": 0.5172,
+          "weighted_score": 6.78,
+          "reason": "Odds 1.21; fair win prob 13.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 123 (field range 97\u2013123)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Neil Mulholland, J: Toby McCain-Mitchell(5) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "GAZETTE BOURGEOISE",
+      "number": null,
+      "draw": null,
+      "age": 10,
+      "weight": "11-1",
+      "official_rating": 110,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Harry Bannister",
+      "trainer": "Ben Case",
+      "odds_decimal": 1.31,
+      "total_score": 30.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 12.1,
+          "weight": 0.5172,
+          "weighted_score": 6.26,
+          "reason": "Odds 1.31; fair win prob 12.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 50.0,
+          "weight": 0.431,
+          "weighted_score": 21.55,
+          "reason": "OR 110 (field range 97\u2013123)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Ben Case, J: Harry Bannister (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "IT'S EASY",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-0",
+      "official_rating": 109,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Tristan Durrell",
+      "trainer": "Evan Williams",
+      "odds_decimal": 1.36,
+      "total_score": 28.5,
+      "components": [
+        {
+          "name": "Market",
+          "score": 11.6,
+          "weight": 0.5172,
+          "weighted_score": 6.0,
+          "reason": "Odds 1.36; fair win prob 11.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 46.2,
+          "weight": 0.431,
+          "weighted_score": 19.91,
+          "reason": "OR 109 (field range 97\u2013123)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Evan Williams, J: Tristan Durrell (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "JACKS TOUCH",
+      "number": null,
+      "draw": null,
+      "age": 11,
+      "weight": "10-8",
+      "official_rating": 103,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Tom Cannon",
+      "trainer": "Sarah Humphrey",
+      "odds_decimal": 1.15,
+      "total_score": 19.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 13.7,
+          "weight": 0.5172,
+          "weighted_score": 7.09,
+          "reason": "Odds 1.15; fair win prob 13.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 23.1,
+          "weight": 0.431,
+          "weighted_score": 9.96,
+          "reason": "OR 103 (field range 97\u2013123)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Sarah Humphrey, J: Tom Cannon (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "OVERABOTTLEOFRED",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "10-7",
+      "official_rating": 102,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Robert Dunne",
+      "trainer": "Tom Gretton",
+      "odds_decimal": 1.21,
+      "total_score": 17.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 13.1,
+          "weight": 0.5172,
+          "weighted_score": 6.78,
+          "reason": "Odds 1.21; fair win prob 13.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 19.2,
+          "weight": 0.431,
+          "weighted_score": 8.28,
+          "reason": "OR 102 (field range 97\u2013123)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Tom Gretton, J: Robert Dunne (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 6,
+      "runner_name": "MOVIDDY",
+      "number": null,
+      "draw": null,
+      "age": 10,
+      "weight": "10-6",
+      "official_rating": 101,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "J. Hogan",
+      "trainer": "Noel Williams",
+      "odds_decimal": 1.12,
+      "total_score": 16.5,
+      "components": [
+        {
+          "name": "Market",
+          "score": 14.1,
+          "weight": 0.5172,
+          "weighted_score": 7.29,
+          "reason": "Odds 1.12; fair win prob 14.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 15.4,
+          "weight": 0.431,
+          "weighted_score": 6.64,
+          "reason": "OR 101 (field range 97\u2013123)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Noel Williams, J: J. Hogan (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 7,
+      "runner_name": "BELLE MONTROSE",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "10-2 (9-10)",
+      "official_rating": 97,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "K. Brogan",
+      "trainer": "Samuel Drinkwater",
+      "odds_decimal": 1.28,
+      "total_score": 9.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 12.4,
+          "weight": 0.5172,
+          "weighted_score": 6.41,
+          "reason": "Odds 1.28; fair win prob 12.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 97 (field range 97\u2013123)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Samuel Drinkwater, J: K. Brogan (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 8,
+      "runner_name": "GATA BAN",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "10-2 (9-11)",
+      "official_rating": 97,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Harriet Tucker(7)",
+      "trainer": "Neil Mulholland",
+      "odds_decimal": 1.59,
+      "total_score": 7.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 9.9,
+          "weight": 0.5172,
+          "weighted_score": 5.12,
+          "reason": "Odds 1.59; fair win prob 9.9% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 97 (field range 97\u2013123)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Neil Mulholland, J: Harriet Tucker(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "SAINTE DOCTOR",
+      "rank": 1,
+      "score": 52.5
+    },
+    "backup_1": {
+      "runner_name": "GAZETTE BOURGEOISE",
+      "rank": 2,
+      "score": 30.4
+    },
+    "backup_2": {
+      "runner_name": "IT'S EASY",
+      "rank": 3,
+      "score": 28.5
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 22.1,
+    "reasons": [
+      "Market prob gap 1.0 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 22.1 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/fakenham/2026-01-18/1440/17/5",
+  "_date": "2026-01-18",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "BELLE MONTROSE",
+        "position": 1,
+        "sp_decimal": 1.28,
+        "sp_string": "40/141",
+        "is_nr": false
+      },
+      {
+        "runner_name": "SAINTE DOCTOR",
+        "position": 2,
+        "sp_decimal": 1.21,
+        "sp_string": "3/14",
+        "is_nr": false
+      },
+      {
+        "runner_name": "MOVIDDY",
+        "position": 3,
+        "sp_decimal": 1.12,
+        "sp_string": "14/115",
+        "is_nr": false
+      },
+      {
+        "runner_name": "OVERABOTTLEOFRED",
+        "position": 4,
+        "sp_decimal": 1.21,
+        "sp_string": "9/43",
+        "is_nr": false
+      },
+      {
+        "runner_name": "JACKS TOUCH",
+        "position": 5,
+        "sp_decimal": 1.15,
+        "sp_string": "18/119",
+        "is_nr": false
+      },
+      {
+        "runner_name": "GATA BAN",
+        "position": 6,
+        "sp_decimal": 1.59,
+        "sp_string": "17/29",
+        "is_nr": false
+      },
+      {
+        "runner_name": "IT'S EASY",
+        "position": 7,
+        "sp_decimal": 1.36,
+        "sp_string": "9/25",
+        "is_nr": false
+      },
+      {
+        "runner_name": "GAZETTE BOURGEOISE",
+        "position": 8,
+        "sp_decimal": 1.31,
+        "sp_string": "5/16",
+        "is_nr": false
+      }
+    ]
+  }
+}

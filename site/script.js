@@ -43,7 +43,7 @@
   // --- Date range setup ---
   // Dates from 16 Feb 2026 to today
   function buildDateRange() {
-    var start = new Date("2026-02-16");
+    var start = new Date("2026-01-01");
     var today = new Date();
     today.setHours(0,0,0,0);
     var dates = [];
@@ -827,6 +827,11 @@
   }
 
   async function fetchResult(bet) {
+    // Use embedded result from backfill if available
+    if (bet.race._result && bet.race._result.status) {
+      bet.result = bet.race._result;
+      return;
+    }
     try {
       var resp = await fetch(
         "/.netlify/functions/fetch-result?url=" + encodeURIComponent(bet.sourceUrl)

@@ -1,0 +1,411 @@
+{
+  "race_id": "leicester-2026-01-20-14-02",
+  "meta": {
+    "track": "Leicester",
+    "date": "2026-01-20",
+    "off_time": "14:02",
+    "distance": "2m6f151y",
+    "going": "soft",
+    "race_class": null,
+    "race_name": "14:02 Tuesday 20 January 2026",
+    "runners_count": 4,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "JIPCOT",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-12",
+      "official_rating": 125,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Kielan Woods",
+      "trainer": "Jonjo & A.J. O'Neill",
+      "odds_decimal": 1.21,
+      "total_score": 59.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 25.7,
+          "weight": 0.5172,
+          "weighted_score": 13.29,
+          "reason": "Odds 1.21; fair win prob 25.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 125 (field range 113\u2013125)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Jonjo & A.J. O'Neill, J: Kielan Woods (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "LANDEN CALLING",
+      "number": null,
+      "draw": null,
+      "age": 10,
+      "weight": "11-8",
+      "official_rating": 121,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Jonathan Burke",
+      "trainer": "Fergal O'Brien",
+      "odds_decimal": 1.25,
+      "total_score": 44.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 24.9,
+          "weight": 0.5172,
+          "weighted_score": 12.88,
+          "reason": "Odds 1.25; fair win prob 24.9% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 66.7,
+          "weight": 0.431,
+          "weighted_score": 28.75,
+          "reason": "OR 121 (field range 113\u2013125)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Fergal O'Brien, J: Jonathan Burke (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "HEEZTHEBOY",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "11-1",
+      "official_rating": 114,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "J. Hogan",
+      "trainer": "Gary Hanmer",
+      "odds_decimal": 1.21,
+      "total_score": 19.5,
+      "components": [
+        {
+          "name": "Market",
+          "score": 25.7,
+          "weight": 0.5172,
+          "weighted_score": 13.29,
+          "reason": "Odds 1.21; fair win prob 25.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 8.3,
+          "weight": 0.431,
+          "weighted_score": 3.58,
+          "reason": "OR 114 (field range 113\u2013125)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Gary Hanmer, J: J. Hogan (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "NO TACKLE",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "11-0",
+      "official_rating": 113,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Liam Harrison",
+      "trainer": "Robbie Llewellyn",
+      "odds_decimal": 1.31,
+      "total_score": 14.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 23.7,
+          "weight": 0.5172,
+          "weighted_score": 12.26,
+          "reason": "Odds 1.31; fair win prob 23.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 113 (field range 113\u2013125)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Robbie Llewellyn, J: Liam Harrison (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "JIPCOT",
+      "rank": 1,
+      "score": 59.0
+    },
+    "backup_1": {
+      "runner_name": "LANDEN CALLING",
+      "rank": 2,
+      "score": 44.2
+    },
+    "backup_2": {
+      "runner_name": "HEEZTHEBOY",
+      "rank": 3,
+      "score": 19.5
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 14.8,
+    "reasons": [
+      "Market prob gap 0.8 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 14.8 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/leicester/2026-01-20/1402/29/2",
+  "_date": "2026-01-20",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "JIPCOT",
+        "position": 1,
+        "sp_decimal": 1.21,
+        "sp_string": "3/14",
+        "is_nr": false
+      },
+      {
+        "runner_name": "NO TACKLE",
+        "position": 2,
+        "sp_decimal": 1.31,
+        "sp_string": "5/16",
+        "is_nr": false
+      },
+      {
+        "runner_name": "HEEZTHEBOY",
+        "position": 3,
+        "sp_decimal": 1.21,
+        "sp_string": "85/403",
+        "is_nr": false
+      },
+      {
+        "runner_name": "LANDEN CALLING",
+        "position": 4,
+        "sp_decimal": 1.25,
+        "sp_string": "33/134",
+        "is_nr": false
+      }
+    ]
+  }
+}

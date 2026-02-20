@@ -1,0 +1,501 @@
+{
+  "race_id": "warwick-2026-01-23-15-47",
+  "meta": {
+    "track": "Warwick",
+    "date": "2026-01-23",
+    "off_time": "15:47",
+    "distance": "3m1f100y",
+    "going": "soft",
+    "race_class": null,
+    "race_name": "15:47 Friday 23 January 2026",
+    "runners_count": 5,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "HE KNOWS BETTER",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "12-1",
+      "official_rating": 111,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "James Bowen",
+      "trainer": "Warren Greatrex",
+      "odds_decimal": 1.26,
+      "total_score": 56.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 20.4,
+          "weight": 0.5172,
+          "weighted_score": 10.55,
+          "reason": "Odds 1.26; fair win prob 20.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 111 (field range 84\u2013111)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Warren Greatrex, J: James Bowen (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "KALISTA LOVE",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-11",
+      "official_rating": 107,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Ben Poste",
+      "trainer": "Tom Symonds",
+      "odds_decimal": 1.27,
+      "total_score": 49.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 20.2,
+          "weight": 0.5172,
+          "weighted_score": 10.45,
+          "reason": "Odds 1.27; fair win prob 20.2% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 85.2,
+          "weight": 0.431,
+          "weighted_score": 36.72,
+          "reason": "OR 107 (field range 84\u2013111)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Tom Symonds, J: Ben Poste (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "HOUSE OF HABSBURG",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-0",
+      "official_rating": 96,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Jack Tudor",
+      "trainer": "Christian Williams",
+      "odds_decimal": 1.21,
+      "total_score": 32.7,
+      "components": [
+        {
+          "name": "Market",
+          "score": 21.2,
+          "weight": 0.5172,
+          "weighted_score": 10.97,
+          "reason": "Odds 1.21; fair win prob 21.2% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 44.4,
+          "weight": 0.431,
+          "weighted_score": 19.14,
+          "reason": "OR 96 (field range 84\u2013111)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Christian Williams, J: Jack Tudor (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "PESCATORIUS",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-0",
+      "official_rating": 96,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "James Best",
+      "trainer": "Rob Summers",
+      "odds_decimal": 1.44,
+      "total_score": 31.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 17.9,
+          "weight": 0.5172,
+          "weighted_score": 9.26,
+          "reason": "Odds 1.44; fair win prob 17.9% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 44.4,
+          "weight": 0.431,
+          "weighted_score": 19.14,
+          "reason": "OR 96 (field range 84\u2013111)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Rob Summers, J: James Best (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "YORGUNNABEPLUCKY",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "10-2",
+      "official_rating": 84,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Sean Bowen",
+      "trainer": "Evan Williams",
+      "odds_decimal": 1.27,
+      "total_score": 13.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 20.2,
+          "weight": 0.5172,
+          "weighted_score": 10.45,
+          "reason": "Odds 1.27; fair win prob 20.2% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 84 (field range 84\u2013111)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Evan Williams, J: Sean Bowen (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "HE KNOWS BETTER",
+      "rank": 1,
+      "score": 56.2
+    },
+    "backup_1": {
+      "runner_name": "KALISTA LOVE",
+      "rank": 2,
+      "score": 49.8
+    },
+    "backup_2": {
+      "runner_name": "HOUSE OF HABSBURG",
+      "rank": 3,
+      "score": 32.7
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 6.4,
+    "reasons": [
+      "Market prob gap 0.2 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 6.4 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/warwick/2026-01-23/1547/54/6",
+  "_date": "2026-01-23",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "HOUSE OF HABSBURG",
+        "position": 1,
+        "sp_decimal": 1.21,
+        "sp_string": "85/403",
+        "is_nr": false
+      },
+      {
+        "runner_name": "HE KNOWS BETTER",
+        "position": 2,
+        "sp_decimal": 1.26,
+        "sp_string": "11/43",
+        "is_nr": false
+      },
+      {
+        "runner_name": "KALISTA LOVE",
+        "position": 3,
+        "sp_decimal": 1.27,
+        "sp_string": "4/15",
+        "is_nr": false
+      },
+      {
+        "runner_name": "YORGUNNABEPLUCKY",
+        "position": 4,
+        "sp_decimal": 1.27,
+        "sp_string": "4/15",
+        "is_nr": false
+      },
+      {
+        "runner_name": "PESCATORIUS",
+        "position": 5,
+        "sp_decimal": 1.44,
+        "sp_string": "80/181",
+        "is_nr": false
+      }
+    ]
+  }
+}

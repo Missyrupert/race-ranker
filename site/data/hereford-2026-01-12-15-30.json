@@ -1,0 +1,681 @@
+{
+  "race_id": "hereford-2026-01-12-15-30",
+  "meta": {
+    "track": "Hereford",
+    "date": "2026-01-12",
+    "off_time": "15:30",
+    "distance": "2m3f147y",
+    "going": "soft",
+    "race_class": null,
+    "race_name": "15:30 Monday 12 January 2026",
+    "runners_count": 7,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "SWEET HONEY B",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "12-0",
+      "official_rating": 100,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Richard Patrick",
+      "trainer": "Clive Boultbee-Brooks",
+      "odds_decimal": 1.31,
+      "total_score": 53.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 14.6,
+          "weight": 0.5172,
+          "weighted_score": 7.55,
+          "reason": "Odds 1.31; fair win prob 14.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 100 (field range 75\u2013100)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Clive Boultbee-Brooks, J: Richard Patrick (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "GOWER SPIRIT",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-11",
+      "official_rating": 97,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Stan Sheppard",
+      "trainer": "Matt Sheppard",
+      "odds_decimal": 1.54,
+      "total_score": 46.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 12.4,
+          "weight": 0.5172,
+          "weighted_score": 6.41,
+          "reason": "Odds 1.54; fair win prob 12.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 88.0,
+          "weight": 0.431,
+          "weighted_score": 37.93,
+          "reason": "OR 97 (field range 75\u2013100)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Matt Sheppard, J: Stan Sheppard (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "JESSIE JUMP JET",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "11-2",
+      "official_rating": 88,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Robert Dunne",
+      "trainer": "Samuel Drinkwater",
+      "odds_decimal": 1.2,
+      "total_score": 33.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 16.0,
+          "weight": 0.5172,
+          "weighted_score": 8.28,
+          "reason": "Odds 1.20; fair win prob 16.0% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 52.0,
+          "weight": 0.431,
+          "weighted_score": 22.41,
+          "reason": "OR 88 (field range 75\u2013100)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Samuel Drinkwater, J: Robert Dunne (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "JAMAICAINE",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-0",
+      "official_rating": 86,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Conor O'Farrell",
+      "trainer": "Neil Mulholland",
+      "odds_decimal": 1.12,
+      "total_score": 30.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 17.1,
+          "weight": 0.5172,
+          "weighted_score": 8.84,
+          "reason": "Odds 1.12; fair win prob 17.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 44.0,
+          "weight": 0.431,
+          "weighted_score": 18.97,
+          "reason": "OR 86 (field range 75\u2013100)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Neil Mulholland, J: Conor O'Farrell (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "FAY CE QUE VOUDRAS",
+      "number": null,
+      "draw": null,
+      "age": 10,
+      "weight": "11-1",
+      "official_rating": 87,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Liam Harrison",
+      "trainer": "Kerry Lee",
+      "odds_decimal": 1.59,
+      "total_score": 29.5,
+      "components": [
+        {
+          "name": "Market",
+          "score": 12.0,
+          "weight": 0.5172,
+          "weighted_score": 6.21,
+          "reason": "Odds 1.59; fair win prob 12.0% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 48.0,
+          "weight": 0.431,
+          "weighted_score": 20.69,
+          "reason": "OR 87 (field range 75\u2013100)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Kerry Lee, J: Liam Harrison (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 6,
+      "runner_name": "TIME WAS",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "10-9",
+      "official_rating": 81,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Joe Williamson(3)",
+      "trainer": "Philip Kirby",
+      "odds_decimal": 1.42,
+      "total_score": 19.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 13.5,
+          "weight": 0.5172,
+          "weighted_score": 6.98,
+          "reason": "Odds 1.42; fair win prob 13.5% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 24.0,
+          "weight": 0.431,
+          "weighted_score": 10.34,
+          "reason": "OR 81 (field range 75\u2013100)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Philip Kirby, J: Joe Williamson(3) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 7,
+      "runner_name": "FORMEL PARK",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "10-3",
+      "official_rating": 75,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Conor Ring",
+      "trainer": "Evan Williams",
+      "odds_decimal": 1.33,
+      "total_score": 10.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 14.4,
+          "weight": 0.5172,
+          "weighted_score": 7.45,
+          "reason": "Odds 1.33; fair win prob 14.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 75 (field range 75\u2013100)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Evan Williams, J: Conor Ring (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "SWEET HONEY B",
+      "rank": 1,
+      "score": 53.2
+    },
+    "backup_1": {
+      "runner_name": "GOWER SPIRIT",
+      "rank": 2,
+      "score": 46.9
+    },
+    "backup_2": {
+      "runner_name": "JESSIE JUMP JET",
+      "rank": 3,
+      "score": 33.3
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 6.3,
+    "reasons": [
+      "Market prob gap 2.2 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 6.3 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/hereford/2026-01-12/1530/23/6",
+  "_date": "2026-01-12",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "JAMAICAINE",
+        "position": 1,
+        "sp_decimal": 1.12,
+        "sp_string": "5/42",
+        "is_nr": false
+      },
+      {
+        "runner_name": "GOWER SPIRIT",
+        "position": 2,
+        "sp_decimal": 1.54,
+        "sp_string": "15/28",
+        "is_nr": false
+      },
+      {
+        "runner_name": "JESSIE JUMP JET",
+        "position": 3,
+        "sp_decimal": 1.2,
+        "sp_string": "25/126",
+        "is_nr": false
+      },
+      {
+        "runner_name": "TIME WAS",
+        "position": 4,
+        "sp_decimal": 1.42,
+        "sp_string": "8/19",
+        "is_nr": false
+      },
+      {
+        "runner_name": "FAY CE QUE VOUDRAS",
+        "position": 5,
+        "sp_decimal": 1.59,
+        "sp_string": "17/29",
+        "is_nr": false
+      },
+      {
+        "runner_name": "SWEET HONEY B",
+        "position": 6,
+        "sp_decimal": 1.31,
+        "sp_string": "5/16",
+        "is_nr": false
+      },
+      {
+        "runner_name": "FORMEL PARK",
+        "position": 7,
+        "sp_decimal": 1.33,
+        "sp_string": "50/151",
+        "is_nr": false
+      }
+    ]
+  }
+}

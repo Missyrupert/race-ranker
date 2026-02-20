@@ -1,0 +1,411 @@
+{
+  "race_id": "taunton-2026-01-08-14-30",
+  "meta": {
+    "track": "Taunton",
+    "date": "2026-01-08",
+    "off_time": "14:30",
+    "distance": "2m12y",
+    "going": "gd/sft",
+    "race_class": null,
+    "race_name": "14:30 Thursday 08 January 2026",
+    "runners_count": 4,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "HYPOTENUS",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "12-2",
+      "official_rating": 112,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Taylor Fisher",
+      "trainer": "Joe Tickle",
+      "odds_decimal": 1.26,
+      "total_score": 58.1,
+      "components": [
+        {
+          "name": "Market",
+          "score": 23.9,
+          "weight": 0.5172,
+          "weighted_score": 12.36,
+          "reason": "Odds 1.26; fair win prob 23.9% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 112 (field range 91\u2013112)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Joe Tickle, J: Taylor Fisher (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "IRISH CHORUS",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-10",
+      "official_rating": 106,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Tom Bellamy",
+      "trainer": "Alan King",
+      "odds_decimal": 1.29,
+      "total_score": 45.5,
+      "components": [
+        {
+          "name": "Market",
+          "score": 23.4,
+          "weight": 0.5172,
+          "weighted_score": 12.1,
+          "reason": "Odds 1.29; fair win prob 23.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 71.4,
+          "weight": 0.431,
+          "weighted_score": 30.78,
+          "reason": "OR 106 (field range 91\u2013112)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Alan King, J: Tom Bellamy (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "JUGGERNAUT",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-7",
+      "official_rating": 103,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Sam Twiston-Davies",
+      "trainer": "Anthony Honeyball",
+      "odds_decimal": 1.12,
+      "total_score": 41.1,
+      "components": [
+        {
+          "name": "Market",
+          "score": 26.9,
+          "weight": 0.5172,
+          "weighted_score": 13.91,
+          "reason": "Odds 1.12; fair win prob 26.9% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 57.1,
+          "weight": 0.431,
+          "weighted_score": 24.61,
+          "reason": "OR 103 (field range 91\u2013112)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Anthony Honeyball, J: Sam Twiston-Davies (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "O'GRADY'S HILL",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "10-9",
+      "official_rating": 91,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "James Best",
+      "trainer": "Sarah-Jayne Davies",
+      "odds_decimal": 1.17,
+      "total_score": 15.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 25.8,
+          "weight": 0.5172,
+          "weighted_score": 13.34,
+          "reason": "Odds 1.17; fair win prob 25.8% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 91 (field range 91\u2013112)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Sarah-Jayne Davies, J: James Best (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "HYPOTENUS",
+      "rank": 1,
+      "score": 58.1
+    },
+    "backup_1": {
+      "runner_name": "IRISH CHORUS",
+      "rank": 2,
+      "score": 45.5
+    },
+    "backup_2": {
+      "runner_name": "JUGGERNAUT",
+      "rank": 3,
+      "score": 41.1
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 12.6,
+    "reasons": [
+      "Market prob gap 0.6 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 12.6 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/taunton/2026-01-08/1430/49/4",
+  "_date": "2026-01-08",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "HYPOTENUS",
+        "position": 1,
+        "sp_decimal": 1.26,
+        "sp_string": "11/43",
+        "is_nr": false
+      },
+      {
+        "runner_name": "IRISH CHORUS",
+        "position": 2,
+        "sp_decimal": 1.29,
+        "sp_string": "7/24",
+        "is_nr": false
+      },
+      {
+        "runner_name": "JUGGERNAUT",
+        "position": 3,
+        "sp_decimal": 1.12,
+        "sp_string": "6/52",
+        "is_nr": false
+      },
+      {
+        "runner_name": "O'GRADY'S HILL",
+        "position": 4,
+        "sp_decimal": 1.17,
+        "sp_string": "20/121",
+        "is_nr": false
+      }
+    ]
+  }
+}

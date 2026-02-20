@@ -1,0 +1,321 @@
+{
+  "race_id": "huntingdon-2026-01-22-14-05",
+  "meta": {
+    "track": "Huntingdon",
+    "date": "2026-01-22",
+    "off_time": "14:05",
+    "distance": "2m7f129y",
+    "going": "soft",
+    "race_class": null,
+    "race_name": "14:05 Thursday 22 January 2026",
+    "runners_count": 3,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "BATWOMEN",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "12-0",
+      "official_rating": 115,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Conor O'Farrell",
+      "trainer": "Neil Mulholland",
+      "odds_decimal": 1.05,
+      "total_score": 64.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 36.2,
+          "weight": 0.5172,
+          "weighted_score": 18.72,
+          "reason": "Odds 1.05; fair win prob 36.2% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 115 (field range 101\u2013115)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Neil Mulholland, J: Conor O'Farrell (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "FLOWING CADENZA",
+      "number": null,
+      "draw": null,
+      "age": 12,
+      "weight": "11-3",
+      "official_rating": 104,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Charlie Deutsch",
+      "trainer": "Venetia Williams",
+      "odds_decimal": 1.21,
+      "total_score": 28.1,
+      "components": [
+        {
+          "name": "Market",
+          "score": 31.4,
+          "weight": 0.5172,
+          "weighted_score": 16.24,
+          "reason": "Odds 1.21; fair win prob 31.4% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 21.4,
+          "weight": 0.431,
+          "weighted_score": 9.22,
+          "reason": "OR 104 (field range 101\u2013115)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Venetia Williams, J: Charlie Deutsch (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "WHERE'S CATO",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-0",
+      "official_rating": 101,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Conor Ring",
+      "trainer": "Evan Williams",
+      "odds_decimal": 1.17,
+      "total_score": 19.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 32.5,
+          "weight": 0.5172,
+          "weighted_score": 16.81,
+          "reason": "Odds 1.17; fair win prob 32.5% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 101 (field range 101\u2013115)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Evan Williams, J: Conor Ring (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "BATWOMEN",
+      "rank": 1,
+      "score": 64.4
+    },
+    "backup_1": {
+      "runner_name": "FLOWING CADENZA",
+      "rank": 2,
+      "score": 28.1
+    },
+    "backup_2": {
+      "runner_name": "WHERE'S CATO",
+      "rank": 3,
+      "score": 19.4
+    }
+  },
+  "confidence": {
+    "band": "MED",
+    "margin": 36.3,
+    "reasons": [
+      "Market prob gap 4.8 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 36.3 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/huntingdon/2026-01-22/1405/25/4",
+  "_date": "2026-01-22",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "WHERE'S CATO",
+        "position": 1,
+        "sp_decimal": 1.17,
+        "sp_string": "20/121",
+        "is_nr": false
+      },
+      {
+        "runner_name": "FLOWING CADENZA",
+        "position": 2,
+        "sp_decimal": 1.21,
+        "sp_string": "3/14",
+        "is_nr": false
+      },
+      {
+        "runner_name": "BATWOMEN",
+        "position": 3,
+        "sp_decimal": 1.05,
+        "sp_string": "8/151",
+        "is_nr": false
+      }
+    ]
+  }
+}

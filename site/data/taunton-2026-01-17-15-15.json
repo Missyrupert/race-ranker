@@ -1,0 +1,501 @@
+{
+  "race_id": "taunton-2026-01-17-15-15",
+  "meta": {
+    "track": "Taunton",
+    "date": "2026-01-17",
+    "off_time": "15:15",
+    "distance": "2m3f1y",
+    "going": "soft",
+    "race_class": null,
+    "race_name": "15:15 Saturday 17 January 2026",
+    "runners_count": 5,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "BREWIN'UPASTORM",
+      "number": null,
+      "draw": null,
+      "age": 13,
+      "weight": "12-0",
+      "official_rating": 139,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Sean Bowen",
+      "trainer": "Olly Murphy",
+      "odds_decimal": 1.29,
+      "total_score": 55.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 19.1,
+          "weight": 0.5172,
+          "weighted_score": 9.88,
+          "reason": "Odds 1.29; fair win prob 19.1% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 139 (field range 120\u2013139)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Olly Murphy, J: Sean Bowen (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "AURIGNY MILL",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "11-12",
+      "official_rating": 137,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Harry Kimber",
+      "trainer": "Robert Walford",
+      "odds_decimal": 1.09,
+      "total_score": 52.9,
+      "components": [
+        {
+          "name": "Market",
+          "score": 22.6,
+          "weight": 0.5172,
+          "weighted_score": 11.69,
+          "reason": "Odds 1.09; fair win prob 22.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 89.5,
+          "weight": 0.431,
+          "weighted_score": 38.58,
+          "reason": "OR 137 (field range 120\u2013139)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Robert Walford, J: Harry Kimber (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "BOURBALI",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "11-1",
+      "official_rating": 126,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Rian Corcoran(7)",
+      "trainer": "Joe Tizzard",
+      "odds_decimal": 1.42,
+      "total_score": 25.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 17.3,
+          "weight": 0.5172,
+          "weighted_score": 8.95,
+          "reason": "Odds 1.42; fair win prob 17.3% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 31.6,
+          "weight": 0.431,
+          "weighted_score": 13.62,
+          "reason": "OR 126 (field range 120\u2013139)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Joe Tizzard, J: Rian Corcoran(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "WALK ON HIGH",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "10-12",
+      "official_rating": 123,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Conor O'Farrell",
+      "trainer": "Harry Fry",
+      "odds_decimal": 1.22,
+      "total_score": 19.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 20.2,
+          "weight": 0.5172,
+          "weighted_score": 10.45,
+          "reason": "Odds 1.22; fair win prob 20.2% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 15.8,
+          "weight": 0.431,
+          "weighted_score": 6.81,
+          "reason": "OR 123 (field range 120\u2013139)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Harry Fry, J: Conor O'Farrell (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "CELTIC ART",
+      "number": null,
+      "draw": null,
+      "age": 9,
+      "weight": "10-9",
+      "official_rating": 120,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Chad Bament(7)",
+      "trainer": "Jeremy Scott",
+      "odds_decimal": 1.18,
+      "total_score": 13.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 20.9,
+          "weight": 0.5172,
+          "weighted_score": 10.81,
+          "reason": "Odds 1.18; fair win prob 20.9% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 120 (field range 120\u2013139)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Jeremy Scott, J: Chad Bament(7) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "BREWIN'UPASTORM",
+      "rank": 1,
+      "score": 55.6
+    },
+    "backup_1": {
+      "runner_name": "AURIGNY MILL",
+      "rank": 2,
+      "score": 52.9
+    },
+    "backup_2": {
+      "runner_name": "BOURBALI",
+      "rank": 3,
+      "score": 25.2
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 2.7,
+    "reasons": [
+      "Market prob gap -3.5 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 2.7 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/taunton/2026-01-17/1515/49/5",
+  "_date": "2026-01-17",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "CELTIC ART",
+        "position": 1,
+        "sp_decimal": 1.18,
+        "sp_string": "15/82",
+        "is_nr": false
+      },
+      {
+        "runner_name": "BOURBALI",
+        "position": 2,
+        "sp_decimal": 1.42,
+        "sp_string": "11/26",
+        "is_nr": false
+      },
+      {
+        "runner_name": "AURIGNY MILL",
+        "position": 3,
+        "sp_decimal": 1.09,
+        "sp_string": "10/111",
+        "is_nr": false
+      },
+      {
+        "runner_name": "BREWIN'UPASTORM",
+        "position": 4,
+        "sp_decimal": 1.29,
+        "sp_string": "7/24",
+        "is_nr": false
+      },
+      {
+        "runner_name": "WALK ON HIGH",
+        "position": 5,
+        "sp_decimal": 1.22,
+        "sp_string": "5/23",
+        "is_nr": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,321 @@
+{
+  "race_id": "fakenham-2026-01-18-12-30",
+  "meta": {
+    "track": "Fakenham",
+    "date": "2026-01-18",
+    "off_time": "12:30",
+    "distance": "2m3y",
+    "going": "soft",
+    "race_class": null,
+    "race_name": "12:30 Sunday 18 January 2026",
+    "runners_count": 3,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "BELCAMO",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "11-12",
+      "official_rating": 95,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Toby McCain-Mitchell",
+      "trainer": "Alex Hales",
+      "odds_decimal": 1.08,
+      "total_score": 66.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 39.2,
+          "weight": 0.5172,
+          "weighted_score": 20.28,
+          "reason": "Odds 1.08; fair win prob 39.2% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 95 (field range 74\u201395)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Alex Hales, J: Toby McCain-Mitchell (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "LORD OF THE GLANCE",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "10-6",
+      "official_rating": 75,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Luke Scott",
+      "trainer": "Alex Hales",
+      "odds_decimal": 1.31,
+      "total_score": 21.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 32.3,
+          "weight": 0.5172,
+          "weighted_score": 16.71,
+          "reason": "Odds 1.31; fair win prob 32.3% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 4.8,
+          "weight": 0.431,
+          "weighted_score": 2.07,
+          "reason": "OR 75 (field range 74\u201395)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Alex Hales, J: Luke Scott (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "PATH OF STARS",
+      "number": null,
+      "draw": null,
+      "age": 5,
+      "weight": "10-5",
+      "official_rating": 74,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Ben Smith(3)",
+      "trainer": "Seamus Mullins",
+      "odds_decimal": 1.48,
+      "total_score": 17.4,
+      "components": [
+        {
+          "name": "Market",
+          "score": 28.6,
+          "weight": 0.5172,
+          "weighted_score": 14.79,
+          "reason": "Odds 1.48; fair win prob 28.6% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 74 (field range 74\u201395)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Seamus Mullins, J: Ben Smith(3) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "BELCAMO",
+      "rank": 1,
+      "score": 66.0
+    },
+    "backup_1": {
+      "runner_name": "LORD OF THE GLANCE",
+      "rank": 2,
+      "score": 21.4
+    },
+    "backup_2": {
+      "runner_name": "PATH OF STARS",
+      "rank": 3,
+      "score": 17.4
+    }
+  },
+  "confidence": {
+    "band": "MED",
+    "margin": 44.6,
+    "reasons": [
+      "Market prob gap 6.9 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 44.6 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/fakenham/2026-01-18/1230/17/1",
+  "_date": "2026-01-18",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "BELCAMO",
+        "position": 1,
+        "sp_decimal": 1.08,
+        "sp_string": "9/110",
+        "is_nr": false
+      },
+      {
+        "runner_name": "LORD OF THE GLANCE",
+        "position": 2,
+        "sp_decimal": 1.31,
+        "sp_string": "5/16",
+        "is_nr": false
+      },
+      {
+        "runner_name": "PATH OF STARS",
+        "position": 3,
+        "sp_decimal": 1.48,
+        "sp_string": "13/27",
+        "is_nr": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,591 @@
+{
+  "race_id": "wetherby-2026-01-22-15-05",
+  "meta": {
+    "track": "Wetherby",
+    "date": "2026-01-22",
+    "off_time": "15:05",
+    "distance": "3m26y",
+    "going": "heavy",
+    "race_class": null,
+    "race_name": "15:05 Thursday 22 January 2026",
+    "runners_count": 6,
+    "prize": null,
+    "surface": null
+  },
+  "runners": [
+    {
+      "rank": 1,
+      "runner_name": "ASA",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-13",
+      "official_rating": 98,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Joe Williamson(3)",
+      "trainer": "Philip Kirby",
+      "odds_decimal": 1.22,
+      "total_score": 54.3,
+      "components": [
+        {
+          "name": "Market",
+          "score": 16.7,
+          "weight": 0.5172,
+          "weighted_score": 8.64,
+          "reason": "Odds 1.22; fair win prob 16.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 100.0,
+          "weight": 0.431,
+          "weighted_score": 43.1,
+          "reason": "OR 98 (field range 73\u201398)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Philip Kirby, J: Joe Williamson(3) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 2,
+      "runner_name": "WEE ALKI",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-12",
+      "official_rating": 97,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Conor Rabbitt(3)",
+      "trainer": "Susan Corbett",
+      "odds_decimal": 1.09,
+      "total_score": 53.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 18.7,
+          "weight": 0.5172,
+          "weighted_score": 9.67,
+          "reason": "Odds 1.09; fair win prob 18.7% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 96.0,
+          "weight": 0.431,
+          "weighted_score": 41.38,
+          "reason": "OR 97 (field range 73\u201398)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Susan Corbett, J: Conor Rabbitt(3) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 3,
+      "runner_name": "LA HIGUERA",
+      "number": null,
+      "draw": null,
+      "age": 7,
+      "weight": "11-8",
+      "official_rating": 93,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "K. Brogan",
+      "trainer": "Toby Lawes",
+      "odds_decimal": 1.29,
+      "total_score": 45.2,
+      "components": [
+        {
+          "name": "Market",
+          "score": 15.8,
+          "weight": 0.5172,
+          "weighted_score": 8.17,
+          "reason": "Odds 1.29; fair win prob 15.8% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 80.0,
+          "weight": 0.431,
+          "weighted_score": 34.48,
+          "reason": "OR 93 (field range 73\u201398)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Toby Lawes, J: K. Brogan (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 4,
+      "runner_name": "BOLLIN MATILDA",
+      "number": null,
+      "draw": null,
+      "age": 8,
+      "weight": "11-4",
+      "official_rating": 89,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Theo Gillard",
+      "trainer": "Donald Whillans",
+      "odds_decimal": 1.42,
+      "total_score": 37.6,
+      "components": [
+        {
+          "name": "Market",
+          "score": 14.3,
+          "weight": 0.5172,
+          "weighted_score": 7.4,
+          "reason": "Odds 1.42; fair win prob 14.3% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 64.0,
+          "weight": 0.431,
+          "weighted_score": 27.59,
+          "reason": "OR 89 (field range 73\u201398)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Donald Whillans, J: Theo Gillard (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 5,
+      "runner_name": "MOVEONBUY",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "10-10",
+      "official_rating": 81,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "William Maggs(5)",
+      "trainer": "Andrew Crook",
+      "odds_decimal": 1.11,
+      "total_score": 25.8,
+      "components": [
+        {
+          "name": "Market",
+          "score": 18.3,
+          "weight": 0.5172,
+          "weighted_score": 9.47,
+          "reason": "Odds 1.11; fair win prob 18.3% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 32.0,
+          "weight": 0.431,
+          "weighted_score": 13.79,
+          "reason": "OR 81 (field range 73\u201398)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Andrew Crook, J: William Maggs(5) (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    },
+    {
+      "rank": 6,
+      "runner_name": "SMART BUCKS",
+      "number": null,
+      "draw": null,
+      "age": 6,
+      "weight": "10-2",
+      "official_rating": 73,
+      "rpr": null,
+      "ts": null,
+      "trainer_rtf": null,
+      "days_since_last_run": null,
+      "course_winner": null,
+      "distance_winner": null,
+      "cd_winner": null,
+      "jockey": "Danny McMenamin",
+      "trainer": "Philip Kirby",
+      "odds_decimal": 1.26,
+      "total_score": 11.0,
+      "components": [
+        {
+          "name": "Market",
+          "score": 16.2,
+          "weight": 0.5172,
+          "weighted_score": 8.38,
+          "reason": "Odds 1.26; fair win prob 16.2% (race-normalised)"
+        },
+        {
+          "name": "Rating",
+          "score": 0.0,
+          "weight": 0.431,
+          "weighted_score": 0.0,
+          "reason": "OR 73 (field range 73\u201398)"
+        },
+        {
+          "name": "Form",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No recent form data"
+        },
+        {
+          "name": "Suitability",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No form to assess suitability"
+        },
+        {
+          "name": "Freshness",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last run date available"
+        },
+        {
+          "name": "C/D Profile",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No C/D badge data available"
+        },
+        {
+          "name": "Connections",
+          "score": 50.0,
+          "weight": 0.0517,
+          "weighted_score": 2.59,
+          "reason": "T: Philip Kirby, J: Danny McMenamin (no RTF stats \u2014 neutral)"
+        },
+        {
+          "name": "Mkt Expectation",
+          "score": null,
+          "weight": 0,
+          "weighted_score": 0,
+          "reason": "No last race data"
+        }
+      ],
+      "recent_form": [],
+      "last_race_fav": false,
+      "last_race_beaten_fav": false,
+      "last_race_joint_fav": false,
+      "last_race_sp": null
+    }
+  ],
+  "picks": {
+    "top_pick": {
+      "runner_name": "ASA",
+      "rank": 1,
+      "score": 54.3
+    },
+    "backup_1": {
+      "runner_name": "WEE ALKI",
+      "rank": 2,
+      "score": 53.6
+    },
+    "backup_2": {
+      "runner_name": "LA HIGUERA",
+      "rank": 3,
+      "score": 45.2
+    }
+  },
+  "confidence": {
+    "band": "LOW",
+    "margin": 0.7,
+    "reasons": [
+      "Market prob gap -2.0 pts (race-normalised)",
+      "3/8 scoring components available",
+      "Total-score margin 0.7 pts"
+    ]
+  },
+  "disclaimer": "These rankings represent statistical analysis only. They are not predictions or guarantees. Horse racing outcomes are inherently uncertain. Use for personal research only.",
+  "_source_url": "https://www.timeform.com/horse-racing/result/wetherby/2026-01-22/1505/55/6",
+  "_date": "2026-01-22",
+  "_result": {
+    "status": "complete",
+    "runners": [
+      {
+        "runner_name": "LA HIGUERA",
+        "position": 1,
+        "sp_decimal": 1.29,
+        "sp_string": "10/34",
+        "is_nr": false
+      },
+      {
+        "runner_name": "MOVEONBUY",
+        "position": 2,
+        "sp_decimal": 1.11,
+        "sp_string": "12/113",
+        "is_nr": false
+      },
+      {
+        "runner_name": "ASA",
+        "position": 3,
+        "sp_decimal": 1.22,
+        "sp_string": "5/23",
+        "is_nr": false
+      },
+      {
+        "runner_name": "BOLLIN MATILDA",
+        "position": 4,
+        "sp_decimal": 1.42,
+        "sp_string": "11/26",
+        "is_nr": false
+      },
+      {
+        "runner_name": "WEE ALKI",
+        "position": 5,
+        "sp_decimal": 1.09,
+        "sp_string": "10/111",
+        "is_nr": false
+      },
+      {
+        "runner_name": "SMART BUCKS",
+        "position": 6,
+        "sp_decimal": 1.26,
+        "sp_string": "11/43",
+        "is_nr": false
+      }
+    ]
+  }
+}

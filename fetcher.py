@@ -58,8 +58,24 @@ def _rate_limit():
 # HTTP helpers
 # ---------------------------------------------------------------------------
 
+MAX_RETRIES = 5
+RETRY_STATUSES = {429, 500, 502, 503, 504}
+
+
+def _do_request(url: str, timeout: int, headers: dict) -> tuple[Optional[str], int]:
+    """Single HTTP GET. Returns (html_or_none, status_code). status 0 = network error."""
+    try:
+        resp = requests.get(url, headers=headers, timeout=timeout)
+        if resp.status_code == 200 and len(resp.text) > 500:
+            return resp.text, resp.status_code
+        return None, resp.status_code
+    except requests.RequestException as exc:
+        logger.debug(f"requests error: {exc}")
+        return None, 0
+
+
 def fetch_html(url: str, timeout: int = 20) -> Optional[str]:
-    """Try requests first, fall back to Playwright if blocked."""
+    """Try requests first (with retries), fall back to Playwright if blocked."""
     html = _fetch_requests(url, timeout)
     if html is not None:
         return html
@@ -68,18 +84,24 @@ def fetch_html(url: str, timeout: int = 20) -> Optional[str]:
 
 
 def _fetch_requests(url: str, timeout: int) -> Optional[str]:
-    _rate_limit()
+    """Fetch with retries and exponential backoff for 429/5xx and network errors."""
     headers = {"User-Agent": USER_AGENT}
-    try:
-        resp = requests.get(url, headers=headers, timeout=timeout)
-        if resp.status_code == 200 and len(resp.text) > 500:
-            logger.info(f"Fetched {url} via requests ({len(resp.text)} bytes)")
-            return resp.text
-        logger.warning(f"requests: status={resp.status_code}, len={len(resp.text)}")
-        return None
-    except requests.RequestException as exc:
-        logger.warning(f"requests error: {exc}")
-        return None
+    for attempt in range(MAX_RETRIES):
+        _rate_limit()
+        html, status = _do_request(url, timeout, headers)
+        if html:
+            logger.info(f"Fetched {url} via requests ({len(html)} bytes)")
+            return html
+        if status not in RETRY_STATUSES and status != 0:
+            logger.warning(f"requests: status={status}, not retrying")
+            return None
+        if attempt < MAX_RETRIES - 1:
+            backoff = min(60, (2**attempt) + random.uniform(0, 1))
+            logger.warning(
+                f"requests: status={status}, retry {attempt+1}/{MAX_RETRIES} in {backoff:.1f}s"
+            )
+            time.sleep(backoff)
+    return None
 
 
 def _fetch_playwright(url: str, timeout: int) -> Optional[str]:
@@ -88,23 +110,29 @@ def _fetch_playwright(url: str, timeout: int) -> Optional[str]:
     except ImportError:
         logger.error("Playwright not installed. pip install playwright && playwright install chromium")
         return None
-    try:
-        _rate_limit()
-        with sync_playwright() as pw:
-            browser = pw.chromium.launch(headless=True)
-            page = browser.new_page(user_agent=USER_AGENT)
-            page.goto(url, timeout=timeout * 1000, wait_until="domcontentloaded")
-            page.wait_for_timeout(3000)
-            html = page.content()
-            browser.close()
+    for attempt in range(MAX_RETRIES):
+        try:
+            _rate_limit()
+            with sync_playwright() as pw:
+                browser = pw.chromium.launch(headless=True)
+                page = browser.new_page(user_agent=USER_AGENT)
+                page.goto(url, timeout=timeout * 1000, wait_until="domcontentloaded")
+                page.wait_for_timeout(3000)
+                html = page.content()
+                browser.close()
             if len(html) > 500:
                 logger.info(f"Fetched {url} via Playwright ({len(html)} bytes)")
                 return html
             logger.warning(f"Playwright: page too small ({len(html)} bytes)")
+        except Exception as exc:
+            logger.warning(f"Playwright error (attempt {attempt+1}/{MAX_RETRIES}): {exc}")
+        if attempt < MAX_RETRIES - 1:
+            backoff = min(60, (2**attempt) + random.uniform(0, 1))
+            logger.warning(f"Playwright retry {attempt+1}/{MAX_RETRIES} in {backoff:.1f}s")
+            time.sleep(backoff)
+        else:
             return None
-    except Exception as exc:
-        logger.error(f"Playwright error: {exc}")
-        return None
+    return None
 
 
 # ---------------------------------------------------------------------------

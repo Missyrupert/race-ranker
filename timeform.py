@@ -6,7 +6,9 @@ Returns RaceData compatible with scorer: uses rpr field for Timeform rating.
 """
 
 import logging
+import random
 import re
+import time
 from datetime import datetime
 
 from bs4 import BeautifulSoup
@@ -14,29 +16,36 @@ from bs4 import BeautifulSoup
 from fetcher import (
     RaceData, RaceMeta, Runner,
     make_race_id, _parse_odds, _parse_int, _clean, _normalize_distance, _normalize_going,
-    fetch_html, _rate_limit,
+    fetch_html, _rate_limit, MAX_RETRIES, RETRY_STATUSES,
 )
 
 logger = logging.getLogger("race-ranker.timeform")
 
 
 def _fetch_page(url: str, timeout: int = 20) -> str | None:
-    """Fetch HTML; try curl_cffi first (better TLS), then requests."""
-    _rate_limit()
-    try:
-        from curl_cffi import requests as curl_requests
-        resp = curl_requests.get(
-            url,
-            impersonate="chrome120",
-            timeout=timeout,
-            headers={"User-Agent": USER_AGENT},
-        )
-        if resp.status_code == 200 and len(resp.text) > 500:
-            return resp.text
-    except ImportError:
-        pass
-    except Exception as e:
-        logger.debug("curl_cffi failed: %s", e)
+    """Fetch HTML; try curl_cffi first (better TLS) with retries, then requests fallback."""
+    for attempt in range(MAX_RETRIES):
+        try:
+            from curl_cffi import requests as curl_requests
+            _rate_limit()
+            resp = curl_requests.get(
+                url,
+                impersonate="chrome120",
+                timeout=timeout,
+                headers={"User-Agent": USER_AGENT},
+            )
+            if resp.status_code == 200 and len(resp.text) > 500:
+                return resp.text
+            if resp.status_code not in RETRY_STATUSES:
+                break
+        except ImportError:
+            break
+        except Exception as e:
+            logger.debug("curl_cffi attempt %s: %s", attempt + 1, e)
+        if attempt < MAX_RETRIES - 1:
+            backoff = min(60, (2**attempt) + random.uniform(0, 1))
+            logger.warning("curl_cffi retry %s/%s in %.1fs", attempt + 1, MAX_RETRIES, backoff)
+            time.sleep(backoff)
     return fetch_html(url, timeout)
 
 TIMEFORM_BASE = "https://www.timeform.com"
@@ -93,14 +102,19 @@ def fetch_meetings(date_str: str) -> list[dict]:
     soup = BeautifulSoup(html, "lxml")
     meetings = []
 
-    # Find links to racecards (exclude result, tips, etc.)
-    race_links = soup.find_all("a", href=re.compile(r"/horse-racing/racecards/[^/]+/\d{4}-\d{2}-\d{2}/\d{4}/\d+/\d+/"))
+    # Find links to racecards (future) or result (past) pages
+    race_links = soup.find_all(
+        "a",
+        href=re.compile(r"/horse-racing/(?:racecards|result)/[^/]+/\d{4}-\d{2}-\d{2}/\d{4}/\d+/\d+"),
+    )
 
-    # Group by course
     by_course: dict[str, list[dict]] = {}
     for a in race_links:
         href = a.get("href", "")
-        m = re.search(r"/racecards/([^/]+)/(\d{4}-\d{2}-\d{2})/(\d{4})/(\d+)/(\d+)/", href)
+        m = re.search(
+            r"/(?:racecards|result)/([^/]+)/(\d{4}-\d{2}-\d{2})/(\d{4})/(\d+)/(\d+)",
+            href,
+        )
         if not m:
             continue
         course_slug, date, time_str, meeting_id, race_num = m.groups()
