@@ -211,15 +211,45 @@ Sporting Life racecards
 ### Running
 
 ```bash
-# Fetch and score today's races
-python fetch_today.py
-
-# Fetch a specific date
-python fetch_today.py --date 2026-02-15
-
-# Serve the site
+# Serve the site (loads today's races automatically)
 python -m http.server 8000 --directory site
+
+# Timeform reconciliation backfill (complete race payloads for date range)
+python scripts/timeform_reconcile.py --start 2026-01-01 --end 2026-01-31
 ```
+
+### Today's Selections Feature (Autonomous)
+
+**How it works on Netlify:**
+
+The site automatically loads today's UK & Ireland racecards, scores them, and displays the top selections:
+
+1. homepage loads → calls `/.netlify/functions/today`
+2. function discovers today's races (Timeform)
+3. function fetches & parses each racecard
+4. function scores runners using embedded JS scoring engine
+5. function returns top picks + confidence bands
+6. site displays table of races with selections
+
+**No manual intervention required.** Everything runs in the browser via the Netlify function.
+
+**Caching:**
+
+- Function results cached in-memory for 10 minutes
+- HTTP cache headers: `max-age=300, stale-while-revalidate=600`
+- If running locally without Netlify, function is still available via `npm run dev` (requires Node.js dev setup)
+
+**Confidence Bands:**
+
+After scoring each race, a confidence band is assigned (HIGH, MED, LOW):
+
+| Band | Meaning |
+|------|---------|
+| **HIGH** | Strong margin (5+ pts), good rating data, market odds support |
+| **MED** | Moderate margin (4-5 pts) or mixed data availability |
+| **LOW** | Narrow margin (<4 pts) or sparse data, use with caution |
+
+Each band includes reasoning: "Market gap X%, Y components scored, margin Z pts"
 
 ---
 

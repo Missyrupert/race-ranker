@@ -4,11 +4,14 @@
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
-  # fetch-race: external HTTP calls to Sporting Life; 10s free tier max
+  # fetch-race: external HTTP calls to Timeform/Sporting Life; 10s timeout
   [functions."fetch-race"]
     timeout = 10
   [functions."fetch-meetings"]
     timeout = 10
+  # today: fetches all races for a date, scores them; 120s timeout
+  [functions."today"]
+    timeout = 120
 
 [[headers]]
   for = "/*"

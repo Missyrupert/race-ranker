@@ -1,105 +1,28 @@
 /**
  * Race Ranker -- Frontend Script
- * Supports date selection, historical imports, per-meeting P&L, day/meeting/all views.
+ * TODAY ONLY: loads site/data/today.json, no historical/YTD.
  */
 
 (function () {
   "use strict";
 
-  // --- DOM refs ---
-  var dateSelect     = document.getElementById("date-select");
   var courseSelect   = document.getElementById("course-select");
   var raceSelect     = document.getElementById("race-select");
-  var importSection  = document.getElementById("import-section");
-  var importBtn      = document.getElementById("import-btn");
-  var importProgress = document.getElementById("import-progress");
-  var importBarFill  = document.getElementById("import-bar-fill");
-  var importStatus   = document.getElementById("import-status");
   var loadingEl      = document.getElementById("loading");
   var errorEl        = document.getElementById("error");
   var resultsEl      = document.getElementById("results");
   var runnersBody    = document.getElementById("runners-body");
-
-  var plSection     = document.getElementById("pl-section");
-  var getResultsBtn = document.getElementById("get-results-btn");
-  var plProgress    = document.getElementById("pl-progress");
-  var plBarFill     = document.getElementById("pl-bar-fill");
-  var plStatusEl    = document.getElementById("pl-status");
-  var plContent     = document.getElementById("pl-content");
-  var plBody        = document.getElementById("pl-body");
-
-  var currentData   = null;
-  var currentSort   = "score";
-  var expandedRows  = new Set();
-  var manifest      = [];
-  // dateRaces: keyed by date string -> array of scored race objects
-  var dateRaces     = {};
-  var selectedDate  = null;
-  var CACHE_KEY     = "raceranker_cache_v2";
-  var CONCURRENCY   = 3;
-  var currentPLView = "day";
-  var lastBets      = [];
-
-  // --- Date range setup ---
-  // Dates from 16 Feb 2026 to today
-  function buildDateRange() {
-    var start = new Date("2026-01-01");
-    var today = new Date();
-    today.setHours(0,0,0,0);
-    var dates = [];
-    var d = new Date(start);
-    while (d <= today) {
-      var ds = formatDate(d);
-      dates.push(ds);
-      d.setDate(d.getDate() + 1);
-    }
-    return dates;
-  }
-
-  function formatDate(d) {
-    return d.getFullYear() + "-" +
-      String(d.getMonth() + 1).padStart(2, "0") + "-" +
-      String(d.getDate()).padStart(2, "0");
-  }
-
-  function getToday() {
-    return formatDate(new Date());
-  }
-
-  function friendlyDate(ds) {
-    var d = new Date(ds + "T12:00:00");
-    return d.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short" });
-  }
-
-  function populateDateDropdown() {
-    var dates = buildDateRange();
-    var today = getToday();
-    dateSelect.innerHTML = "";
-
-    var ph = document.createElement("option");
-    ph.value = ""; ph.disabled = true; ph.selected = true;
-    ph.textContent = "Select date";
-    dateSelect.appendChild(ph);
-
-    // Most recent first
-    dates.slice().reverse().forEach(function(ds) {
-      var opt = document.createElement("option");
-      opt.value = ds;
-      var label = friendlyDate(ds);
-      if (ds === today) label += " (Today)";
-      opt.textContent = label;
-      dateSelect.appendChild(opt);
-    });
-  }
+  var plSection      = document.getElementById("pl-section");
+  var todayData      = null;  // { date, generated_at, races }
+  var currentData    = null;
+  var currentSort    = "score";
+  var expandedRows   = new Set();
+  var selectedCourse = null;
+  var selectedRaceId = null;
 
   // --- Init ---
-  populateDateDropdown();
-
-  dateSelect.addEventListener("change", onDateChange);
   courseSelect.addEventListener("change", onCourseChange);
   raceSelect.addEventListener("change", onRaceChange);
-  importBtn.addEventListener("click", startImport);
-  getResultsBtn.addEventListener("click", getResults);
 
   document.querySelectorAll(".sort-btn").forEach(function (btn) {
     btn.addEventListener("click", function () {
@@ -110,254 +33,264 @@
     });
   });
 
-  document.querySelectorAll(".pl-tab").forEach(function(tab) {
-    tab.addEventListener("click", function() {
-      document.querySelectorAll(".pl-tab").forEach(function(t) { t.classList.remove("active"); });
-      tab.classList.add("active");
-      currentPLView = tab.dataset.view;
-      switchPLView(currentPLView);
-    });
-  });
+  loadToday();
 
-  // Auto-select today
-  var today = getToday();
-  dateSelect.value = today;
-  onDateChange();
-
-  // --- Date change ---
-  function onDateChange() {
-    selectedDate = dateSelect.value;
-    if (!selectedDate) return;
-
-    // Reset race dropdowns and results
-    courseSelect.innerHTML = '<option value="" disabled selected>Loading...</option>';
-    courseSelect.disabled = true;
-    raceSelect.innerHTML = '<option value="" disabled selected>Pick a course first</option>';
-    raceSelect.disabled = true;
-    hideResults();
+  // --- Load today's races from function ---
+  async function loadToday() {
+    showLoading(true);
     hideError();
-    importSection.classList.add("hidden");
-    plSection.classList.add("hidden");
-    plContent.classList.add("hidden");
+    hideResults();
+    todayData = null;
+    currentData = null;
 
-    // Check if we already have races for this date in memory
-    if (dateRaces[selectedDate] && dateRaces[selectedDate].length) {
-      populateCourses(dateRaces[selectedDate]);
-      return;
-    }
-
-    // Check cache
-    var cached = loadCacheForDate(selectedDate);
-    if (cached) {
-      dateRaces[selectedDate] = cached;
-      populateCourses(cached);
-      return;
-    }
-
-    // Try manifest for static files
-    loadManifestForDate(selectedDate);
-  }
-
-  // --- Cache ---
-  function loadCacheForDate(date) {
     try {
-      var raw = localStorage.getItem(CACHE_KEY);
-      if (!raw) return null;
-      var store = JSON.parse(raw);
-      if (!store[date] || !store[date].races || !store[date].races.length) return null;
-      return store[date].races;
-    } catch(e) { return null; }
+      // Call the 'today' function endpoint (no cache-busting needed, function handles caching)
+      var resp = await fetch("/.netlify/functions/today");
+      if (!resp.ok) {
+        if (resp.status === 404) throw new Error("No races loaded for today");
+        throw new Error("Could not load today's data (HTTP " + resp.status + ")");
+      }
+      var data = await resp.json();
+
+      // Transform function response to match expected format
+      if (data.races && data.races.length > 0) {
+        data.races = data.races.map(function (race) {
+          var meta = race.meta || {};
+          return {
+            race_id: race.race_id,
+            off_time_local: meta.off_time,
+            course: meta.track,
+            country: meta.country,
+            distance: meta.distance,
+            going: meta.going,
+            race_name: meta.race_name,
+            runners: (race.top_runners || []).map(function (r) {
+              return {
+                runner_name: r.runner_name,
+                total_score: r.total_score,
+                odds_decimal: r.odds_decimal,
+                rank: r.rank,
+                components: r.components || [],
+              };
+            }),
+            picks: race.picks && race.picks.length > 0 ? {
+              top_pick: race.picks.find(function (p) { return p.rank === 1; }),
+              backup_1: race.picks.find(function (p) { return p.rank === 2; }),
+              backup_2: race.picks.find(function (p) { return p.rank === 3; }),
+            } : {},
+            confidence: race.confidence || {},
+          };
+        });
+      }
+
+      var validation = validateTodayData(data);
+      if (!validation.ok) {
+        showValidationError(validation.missing);
+        return;
+      }
+      if (!data.races || !data.races.length) {
+        showNoRacesState(data.date || "today");
+        return;
+      }
+      todayData = data;
+      showHeader(data.date);
+      populateCourses(data.races);
+      renderPicksSummary(data.races);
+      var hint = document.getElementById("selector-hint");
+      if (hint) hint.classList.remove("hidden");
+      resultsEl.classList.add("hidden");
+    } catch (err) {
+      showNoRacesState("today");
+      showError(err.message);
+    } finally {
+      showLoading(false);
+    }
   }
 
-  function saveCacheForDate(date, races) {
-    try {
-      var raw = localStorage.getItem(CACHE_KEY);
-      var store = raw ? JSON.parse(raw) : {};
-      store[date] = { races: races };
-      localStorage.setItem(CACHE_KEY, JSON.stringify(store));
-    } catch(e) { /* quota */ }
+  function validateTodayData(data) {
+    var missing = [];
+    if (!data || typeof data !== "object") {
+      return { ok: false, missing: ["Top-level: data must be an object"] };
+    }
+    if (!data.date) missing.push("Top-level: missing 'date'");
+    if (data.generated_at === undefined) missing.push("Top-level: missing 'generated_at'");
+    if (!Array.isArray(data.races)) missing.push("Top-level: missing or invalid 'races[]' array");
+    if (!data.races || !data.races.length) {
+      return { ok: missing.length === 0, missing: missing };
+    }
+    data.races.forEach(function (race, idx) {
+      if (!race.race_id) missing.push("Race " + (idx + 1) + ": missing 'race_id'");
+      if (race.off_time_local === undefined && race.off_time === undefined) missing.push("Race " + (idx + 1) + ": missing 'off_time_local' (or 'off_time')");
+      if (!race.course) missing.push("Race " + (idx + 1) + ": missing 'course'");
+      if (!race.race_name && !race.title) missing.push("Race " + (idx + 1) + ": missing 'race_name' (or 'title')");
+      if (!Array.isArray(race.runners)) missing.push("Race " + (idx + 1) + ": missing or invalid 'runners[]' array");
+      if (race.runners) {
+        race.runners.forEach(function (r, j) {
+          var name = r.runner_name || r.name;
+          var score = r.total_score !== undefined ? r.total_score : r.score;
+          if (!name) missing.push("Race " + (idx + 1) + " runner " + (j + 1) + ": missing 'runner_name' (or 'name')");
+          if (score === undefined) missing.push("Race " + (idx + 1) + " runner " + (j + 1) + ": missing 'total_score' (or 'score')");
+        });
+      }
+    });
+    return { ok: missing.length === 0, missing: missing };
   }
 
-  // --- Manifest ---
-  async function loadManifestForDate(date) {
-    if (!manifest.length) {
-      try {
-        var resp = await fetch("data/manifest.json?" + Date.now());
-        if (resp.ok) manifest = await resp.json();
-      } catch(e) { manifest = []; }
-    }
-
-    var entries = manifest.filter(function(r) { return r.date === date; });
-    if (!entries.length) {
-      showImportSection(date);
-      return;
-    }
-
-    var races = [];
-    for (var i = 0; i < entries.length; i++) {
-      try {
-        var r = await fetch("data/" + entries[i].file);
-        if (r.ok) races.push(await r.json());
-      } catch(e) {}
-    }
-
-    if (!races.length) {
-      showImportSection(date);
-      return;
-    }
-
-    dateRaces[date] = races;
-    populateCourses(races);
+  function showValidationError(missing) {
+    var el = document.getElementById("error");
+    if (!el) return;
+    el.innerHTML = "<strong>Data validation failed &mdash; missing required fields:</strong><ul>" +
+      missing.map(function (m) { return "<li>" + esc(m) + "</li>"; }).join("") + "</ul>";
+    el.classList.remove("hidden");
+    el.classList.add("error-banner");
+    showNoRacesState("today");
   }
 
-  // --- Import ---
-  function showImportSection(date) {
-    importSection.classList.remove("hidden");
-    var isFuture = date > getToday();
-    if (isFuture) {
-      document.querySelector(".import-msg").textContent = "No races available for this date yet.";
-      importBtn.disabled = true;
-    } else {
-      document.querySelector(".import-msg").textContent = "No races loaded for " + friendlyDate(date) + ".";
-      importBtn.disabled = false;
-    }
-    courseSelect.innerHTML = '<option value="" disabled selected>Import races first</option>';
+  function showNoRacesState(dateStr) {
+    document.getElementById("today-header").textContent = "No races loaded for " + (dateStr === "today" ? "today" : dateStr);
+    document.getElementById("today-date").textContent = "";
+    document.getElementById("refresh-note").classList.remove("hidden");
+    courseSelect.innerHTML = '<option value="" disabled selected>—</option>';
     courseSelect.disabled = true;
     raceSelect.innerHTML = '<option value="" disabled selected>—</option>';
     raceSelect.disabled = true;
+    resultsEl.classList.add("hidden");
   }
 
-  async function startImport() {
-    var date = selectedDate;
-    if (!date) return;
+  function showHeader(dateStr) {
+    document.getElementById("today-header").textContent = "Today's races";
+    document.getElementById("today-date").textContent = dateStr ? " — " + friendlyDate(dateStr) : "";
+    document.getElementById("refresh-note").classList.remove("hidden");
+  }
 
-    importBtn.disabled = true;
-    importBtn.textContent = "Importing...";
-    importProgress.classList.remove("hidden");
-    importBarFill.style.width = "0%";
-    importStatus.textContent = "Discovering meetings...";
-    hideError();
+  function friendlyDate(ds) {
+    var d = new Date(ds + "T12:00:00");
+    return d.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short" });
+  }
 
-    try {
-      var meetResp = await fetch("/.netlify/functions/fetch-meetings?date=" + date);
-      if (!meetResp.ok) {
-        var err = await meetResp.json().catch(function() { return {}; });
-        throw new Error(err.error || "Failed to fetch meetings (HTTP " + meetResp.status + ")");
-      }
-      var meetData = await meetResp.json();
-      var meetings = meetData.meetings || [];
-
-      if (!meetings.length) {
-        throw new Error("No UK/IRE meetings found for " + friendlyDate(date) + ". Racing may not be scheduled.");
-      }
-
-      var tasks = [];
-      meetings.forEach(function(m) {
-        m.races.forEach(function(r) {
-          tasks.push({ url: r.url, track: m.track, date: date, name: r.name });
-        });
-      });
-
-      var totalTasks = tasks.length;
-      importStatus.textContent = "Fetching 0/" + totalTasks + " races...";
-
-      var scored = [];
-      var done = 0;
-      var taskIndex = 0;
-
-      function nextTask() {
-        if (taskIndex >= tasks.length) return Promise.resolve();
-        var task = tasks[taskIndex++];
-        return fetchAndScoreRace(task).then(function(result) {
-          done++;
-          var pct = Math.round((done / totalTasks) * 100);
-          importBarFill.style.width = pct + "%";
-          importStatus.textContent = "Fetching " + done + "/" + totalTasks + " races...";
-          if (result) scored.push(result);
-          return nextTask();
-        });
-      }
-
-      var workers = [];
-      for (var w = 0; w < Math.min(CONCURRENCY, tasks.length); w++) {
-        workers.push(nextTask());
-      }
-      await Promise.all(workers);
-
-      if (!scored.length) {
-        throw new Error("Could not fetch any races. Try again later.");
-      }
-
-      saveCacheForDate(date, scored);
-      dateRaces[date] = scored;
-      importStatus.textContent = "Done! " + scored.length + " races loaded.";
-      importBarFill.style.width = "100%";
-
-      setTimeout(function() {
-        importSection.classList.add("hidden");
-        importProgress.classList.add("hidden");
-        populateCourses(scored);
-      }, 600);
-
-    } catch(err) {
-      showError(err.message);
-      importBtn.disabled = false;
-      importBtn.textContent = "Import Races";
-      importProgress.classList.add("hidden");
+  function getTopPickForRace(race) {
+    var runners = race.runners || [];
+    var pick = (race.picks || {}).top_pick || {};
+    if (pick.runner_name) {
+      var r = runners.find(function (x) { return (x.runner_name || x.name) === pick.runner_name; });
+      if (r) return r;
     }
+    if (!runners.length) return null;
+    var sorted = runners.slice().sort(function (a, b) {
+      var sa = a.total_score != null ? a.total_score : (a.score != null ? a.score : -1);
+      var sb = b.total_score != null ? b.total_score : (b.score != null ? b.score : -1);
+      if (sb !== sa) return sb - sa;
+      var oa = a.odds_decimal != null ? a.odds_decimal : (a.odds != null ? a.odds : 9999);
+      var ob = b.odds_decimal != null ? b.odds_decimal : (b.odds != null ? b.odds : 9999);
+      if (oa !== ob) return oa - ob;
+      return String(a.runner_name || a.name || "").localeCompare(b.runner_name || b.name || "");
+    });
+    return sorted[0];
   }
 
-  async function fetchAndScoreRace(task) {
-    try {
-      var params = "url=" + encodeURIComponent(task.url) +
-                   "&date=" + encodeURIComponent(task.date) +
-                   "&track=" + encodeURIComponent(task.track);
-      var resp = await fetch("/.netlify/functions/fetch-race?" + params);
-      if (!resp.ok) return null;
-      var raw = await resp.json();
-      if (!raw.runners || !raw.runners.length) return null;
-      var scored = window.RaceScorer.scoreRace(raw);
-      scored._source_url = task.url;
-      scored._date = task.date;
-      return scored;
-    } catch(e) { return null; }
+  function formatOffTime(val) {
+    if (!val) return "—";
+    var s = String(val).trim();
+    if (s.length >= 5 && /^\d{1,2}:\d{2}/.test(s)) return s.slice(0, 5);
+    if (s.length === 4 && /^\d{4}$/.test(s)) return s.slice(0, 2) + ":" + s.slice(2);
+    return s || "—";
+  }
+
+  function renderPicksSummary(races) {
+    var el = document.getElementById("picks-summary");
+    var body = document.getElementById("picks-summary-body");
+    if (!el || !body) return;
+    if (!races || !races.length) {
+      el.classList.add("hidden");
+      return;
+    }
+    var sorted = races.slice().sort(function (a, b) {
+      return (a.off_time_local || a.off_time || "").localeCompare(b.off_time_local || b.off_time || "");
+    });
+    body.innerHTML = "";
+    sorted.forEach(function (race) {
+      var topRunner = getTopPickForRace(race);
+      var timeStr = formatOffTime(race.off_time_local || race.off_time);
+      var courseStr = race.course || "";
+      var raceName = (race.race_name || race.title || "").trim();
+      if (raceName.length > 50) raceName = raceName.slice(0, 47) + "…";
+      var pickName = topRunner ? (topRunner.runner_name || topRunner.name) : "No bet";
+      var scoreVal = topRunner && (topRunner.total_score != null || topRunner.score != null)
+        ? (topRunner.total_score != null ? topRunner.total_score : topRunner.score)
+        : null;
+      var scoreStr = scoreVal != null ? scoreVal.toFixed(1) : "No bet";
+      var oddsStr = (topRunner && (topRunner.odds_decimal != null || topRunner.odds != null))
+        ? (topRunner.odds_decimal != null ? topRunner.odds_decimal.toFixed(1) : topRunner.odds.toFixed(1))
+        : "—";
+      var confBand = (race.confidence || {}).band || "—";
+      var confClass = "";
+      if (confBand === "HIGH") confClass = "conf-high";
+      else if (confBand === "MED") confClass = "conf-med";
+      else if (confBand === "LOW") confClass = "conf-low";
+      var tr = document.createElement("tr");
+      tr.innerHTML =
+        "<td>" + esc(timeStr) + "</td>" +
+        "<td>" + esc(courseStr) + "</td>" +
+        "<td>" + esc(raceName) + "</td>" +
+        "<td class=\"pick-name\">" + esc(pickName) + "</td>" +
+        "<td class=\"pick-score\">" + scoreStr + "</td>" +
+        "<td>" + oddsStr + "</td>" +
+        "<td class=\"pick-confidence\"><span class=\"conf-badge " + confClass + "\">" + confBand + "</span></td>";
+      tr.addEventListener("click", function () {
+        courseSelect.value = race.course;
+        onCourseChange();
+        raceSelect.value = race.race_id;
+        onRaceChange();
+        resultsEl.scrollIntoView({ behavior: "smooth" });
+      });
+      tr.classList.add("clickable-row");
+      body.appendChild(tr);
+    });
+    el.classList.remove("hidden");
+  }
+
+  /** Convert today.json race to legacy format for renderAll */
+  function toLegacyRace(race, payloadDate) {
+    return {
+      race_id: race.race_id,
+      meta: {
+        track: race.course,
+        date: payloadDate,
+        off_time: race.off_time_local,
+        distance: race.distance,
+        going: race.going,
+        race_class: "",
+        race_name: race.race_name,
+        runners_count: (race.runners || []).length,
+      },
+      runners: race.runners || [],
+      picks: race.picks || {},
+      confidence: race.confidence || {},
+      disclaimer: "These rankings represent statistical analysis only. They are not predictions or guarantees.",
+    };
   }
 
   // --- Dropdown population ---
   function populateCourses(races) {
     var courses = {};
-    races.forEach(function(race) {
-      var track = race.meta.track;
+    races.forEach(function (race) {
+      var track = race.course;
       if (!courses[track]) courses[track] = [];
       courses[track].push(race);
     });
 
     var courseNames = Object.keys(courses).sort();
-
     courseSelect.innerHTML = "";
     raceSelect.innerHTML = "";
     raceSelect.disabled = true;
 
-    if (!courseNames.length) {
-      showImportSection(selectedDate);
-      plSection.classList.add("hidden");
-      return;
-    }
-
-    importSection.classList.add("hidden");
-
-    var hasUrls = races.some(function(r) { return r._source_url; });
-    if (hasUrls) {
-      plSection.classList.remove("hidden");
-    }
-
     var ph = document.createElement("option");
     ph.value = ""; ph.disabled = true; ph.selected = true;
-    ph.textContent = "Choose course (" + courseNames.length + ")";
+    ph.textContent = "Choose meeting (" + courseNames.length + ")";
     courseSelect.appendChild(ph);
     courseSelect.disabled = false;
 
-    courseNames.forEach(function(name) {
+    courseNames.forEach(function (name) {
       var opt = document.createElement("option");
       opt.value = name;
       opt.textContent = name + " (" + courses[name].length + " races)";
@@ -366,12 +299,19 @@
 
     var ph2 = document.createElement("option");
     ph2.value = ""; ph2.disabled = true; ph2.selected = true;
-    ph2.textContent = "Pick a course first";
+    ph2.textContent = "Pick a meeting first";
     raceSelect.appendChild(ph2);
 
     if (courseNames.length === 1) {
       courseSelect.value = courseNames[0];
       onCourseChange();
+    } else if (courseNames.length > 0) {
+      courseSelect.value = courseNames[0];
+      onCourseChange();
+      if (raceSelect.options.length > 1) {
+        raceSelect.selectedIndex = 1;
+        onRaceChange();
+      }
     }
   }
 
@@ -379,9 +319,9 @@
     var course = courseSelect.value;
     if (!course) return;
 
-    var races = (dateRaces[selectedDate] || [])
-      .filter(function(r) { return r.meta.track === course; })
-      .sort(function(a, b) { return (a.meta.off_time || "").localeCompare(b.meta.off_time || ""); });
+    var races = (todayData.races || [])
+      .filter(function (r) { return r.course === course; })
+      .sort(function (a, b) { return (a.off_time_local || "").localeCompare(b.off_time_local || ""); });
 
     raceSelect.innerHTML = "";
     raceSelect.disabled = false;
@@ -391,70 +331,43 @@
     ph.textContent = "Choose race (" + races.length + ")";
     raceSelect.appendChild(ph);
 
-    races.forEach(function(race, idx) {
+    races.forEach(function (race) {
       var opt = document.createElement("option");
-      opt.value = idx + ":" + race.race_id;
-      var parts = [race.meta.off_time];
-      if (race.meta.race_name) parts.push(race.meta.race_name);
-      if (race.meta.distance) parts.push(race.meta.distance);
-      if (race.meta.runners_count) parts.push(race.meta.runners_count + " rnrs");
-      opt.textContent = parts.join(" \u2013 ");
+      opt.value = race.race_id;
+      var parts = [race.off_time_local];
+      if (race.race_name) parts.push(race.race_name);
+      if (race.distance) parts.push(race.distance);
+      if (race.runners) parts.push(race.runners.length + " rnrs");
+      opt.textContent = parts.join(" – ");
       raceSelect.appendChild(opt);
     });
 
     if (races.length === 1) {
-      raceSelect.selectedIndex = 1;
+      raceSelect.value = races[0].race_id;
       onRaceChange();
     }
   }
 
   function onRaceChange() {
-    var val = raceSelect.value;
-    if (!val) return;
+    var raceId = raceSelect.value;
+    if (!raceId) return;
 
-    var raceId = val.split(":").slice(1).join(":");
-    var course = courseSelect.value;
+    var race = (todayData.races || []).find(function (r) { return r.race_id === raceId; });
+    if (!race) return;
 
-    var race = (dateRaces[selectedDate] || []).find(function(r) {
-      return r.race_id === raceId && r.meta.track === course;
-    });
-
-    if (!race) {
-      var entry = manifest.find(function(m) { return m.race_id === raceId; });
-      if (entry) { loadData("data/" + entry.file); return; }
-    }
-
-    if (race) {
-      currentData = race;
-      expandedRows.clear();
-      hideError();
-      renderAll(race);
-    }
-  }
-
-  async function loadData(url) {
-    showLoading(true);
+    currentData = toLegacyRace(race, todayData.date);
+    expandedRows.clear();
     hideError();
-    hideResults();
-    try {
-      var resp = await fetch(url);
-      if (!resp.ok) throw new Error("Could not load " + url + " (HTTP " + resp.status + ")");
-      var data = await resp.json();
-      currentData = data;
-      expandedRows.clear();
-      renderAll(data);
-    } catch(err) {
-      showError(err.message);
-    } finally {
-      showLoading(false);
-    }
+    renderAll(currentData);
+    resultsEl.classList.remove("hidden");
+    resultsEl.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   // --- Rendering ---
   function renderAll(data) {
     renderMeta(data);
     renderConfidence(data.confidence || {});
-    renderPicks(data.picks || {}, data.runners || []);
+    renderPicks(data.picks || {}, data.runners || [], data.confidence || {});
     renderRunners();
     renderDisclaimer(data.disclaimer || "");
     resultsEl.classList.remove("hidden");
@@ -463,7 +376,7 @@
 
   function renderMeta(data) {
     var m = data.meta || {};
-    var title = [m.race_name, m.track, m.off_time, m.date].filter(Boolean).join(" \u00b7 ");
+    var title = [m.race_name, m.track, m.off_time, m.date].filter(Boolean).join(" · ");
     document.getElementById("race-title").textContent = title || "Race Rankings";
     setText("meta-distance", m.distance ? "Dist: " + m.distance : "");
     setText("meta-going", m.going ? "Going: " + formatGoing(m.going) : "");
@@ -483,42 +396,74 @@
     else levelEl.classList.add("conf-low");
     marginEl.textContent = conf.margin != null ? "(margin: " + conf.margin + " pts)" : "";
     reasonsEl.innerHTML = "";
-    (conf.reasons || []).forEach(function(r) {
+    (conf.reasons || []).forEach(function (r) {
       var li = document.createElement("li");
       li.textContent = r;
       reasonsEl.appendChild(li);
     });
   }
 
-  function renderPicks(picks, runners) {
+  function buildSelectionRationale(picks, runners, confidence) {
+    var top = picks.top_pick || {};
+    if (!top.runner_name) return "";
+    var topRunner = runners.find(function (r) { return r.runner_name === top.runner_name; });
+    if (!topRunner) return "";
+
+    var parts = [];
+    parts.push("We picked " + top.runner_name + " (score " + (top.score != null ? top.score.toFixed(1) : "—") + ") because ");
+
+    var confReasons = (confidence || {}).reasons || [];
+    var compReasons = [];
+    (topRunner.components || []).forEach(function (c) {
+      if (c.reason) compReasons.push(c.name + ": " + c.reason);
+    });
+
+    if (confReasons.length) {
+      parts.push(confReasons.join(". ") + ". ");
+    }
+    if (compReasons.length) {
+      parts.push("Key factors: " + compReasons.slice(0, 4).join("; ") + (compReasons.length > 4 ? "…" : "."));
+    } else if (!confReasons.length) {
+      parts.push("it had the highest combined score among runners with available data.");
+    }
+    return parts.join("");
+  }
+
+  function renderPicks(picks, runners, confidence) {
     var top = picks.top_pick || {};
     var b1  = picks.backup_1 || {};
     var b2  = picks.backup_2 || {};
 
-    // Hero card for top pick
     var heroEl = document.getElementById("top-pick-hero");
     if (top.runner_name) {
       document.getElementById("hero-name").textContent = top.runner_name;
-      document.getElementById("hero-score").textContent = top.score != null ? top.score.toFixed(1) : "\u2014";
+      document.getElementById("hero-score").textContent = top.score != null ? top.score.toFixed(1) : "—";
 
-      // Find runner details for hero meta
-      var topRunner = runners.find(function(r) { return r.runner_name === top.runner_name; });
+      var topRunner = runners.find(function (r) { return r.runner_name === top.runner_name; });
       var metaParts = [];
       if (topRunner) {
         if (topRunner.odds_decimal) metaParts.push("Odds: " + topRunner.odds_decimal.toFixed(1));
         if (topRunner.official_rating) metaParts.push("OR: " + topRunner.official_rating);
         if (topRunner.jockey) metaParts.push("J: " + topRunner.jockey);
       }
-      document.getElementById("hero-meta").textContent = metaParts.join(" \u00b7 ");
+      document.getElementById("hero-meta").textContent = metaParts.join(" · ");
+
+      var rationaleEl = document.getElementById("selection-rationale");
+      if (rationaleEl) {
+        rationaleEl.textContent = buildSelectionRationale(picks, runners, confidence);
+        rationaleEl.classList.toggle("hidden", !rationaleEl.textContent);
+      }
       heroEl.classList.remove("hidden");
     } else {
       heroEl.classList.add("hidden");
+      var re = document.getElementById("selection-rationale");
+      if (re) re.classList.add("hidden");
     }
 
-    setText("pick-b1-name", b1.runner_name || "\u2014");
-    setText("pick-b1-score", b1.score != null ? b1.score.toFixed(1) : "\u2014");
-    setText("pick-b2-name", b2.runner_name || "\u2014");
-    setText("pick-b2-score", b2.score != null ? b2.score.toFixed(1) : "\u2014");
+    setText("pick-b1-name", b1.runner_name || "—");
+    setText("pick-b1-score", b1.score != null ? b1.score.toFixed(1) : "—");
+    setText("pick-b2-name", b2.runner_name || "—");
+    setText("pick-b2-score", b2.score != null ? b2.score.toFixed(1) : "—");
   }
 
   function renderRunners() {
@@ -526,49 +471,46 @@
     var runners = sortRunners([].concat(currentData.runners));
     runnersBody.innerHTML = "";
 
-    runners.forEach(function(r) {
+    runners.forEach(function (r) {
       var tr = document.createElement("tr");
       tr.className = r.rank <= 3 ? "rank-" + r.rank : "";
       tr.innerHTML = buildMainRow(r);
       runnersBody.appendChild(tr);
 
       var expandBtn = tr.querySelector(".expand-btn");
-      expandBtn.addEventListener("click", function() { toggleExpand(r, tr, expandBtn); });
+      expandBtn.addEventListener("click", function () { toggleExpand(r, tr, expandBtn); });
 
       if (expandedRows.has(r.runner_name)) {
         var detailTr = buildDetailRow(r);
         runnersBody.appendChild(detailTr);
         expandBtn.classList.add("open");
-        expandBtn.textContent = "\u2212";
+        expandBtn.textContent = "−";
       }
     });
   }
 
   function buildMainRow(r) {
     var sc = r.total_score >= 70 ? "score-high" : r.total_score >= 45 ? "score-mid" : "score-low";
-    var oddsStr = r.odds_decimal ? r.odds_decimal.toFixed(1) : "\u2014";
+    var oddsStr = r.odds_decimal ? r.odds_decimal.toFixed(1) : "—";
     var formStr = buildFormString(r.recent_form || []);
     var age    = r.age ? r.age + "yo" : "";
     var weight = r.weight || "";
-    var details = [age, weight].filter(Boolean).join(" \u00b7 ");
+    var details = [age, weight].filter(Boolean).join(" · ");
     var lastSpStr = r.last_race_sp != null ? r.last_race_sp.toFixed(2) : "N/A";
 
-    // Rating display: prefer RPR > TS > OR
-    var ratingStr = "\u2014";
+    var ratingStr = "—";
     var ratingLabel = "OR";
     if (r.rpr != null) { ratingStr = String(r.rpr); ratingLabel = "RPR"; }
     else if (r.ts != null) { ratingStr = String(r.ts); ratingLabel = "TS"; }
     else if (r.official_rating != null) { ratingStr = String(r.official_rating); ratingLabel = "OR"; }
 
-    // Days since last run
-    var daysStr = r.days_since_last_run != null ? r.days_since_last_run + "d" : "\u2014";
+    var daysStr = r.days_since_last_run != null ? r.days_since_last_run + "d" : "—";
     var daysCls = "";
     if (r.days_since_last_run != null) {
       var d = r.days_since_last_run;
       daysCls = d >= 14 && d <= 35 ? "days-fresh" : d > 90 ? "days-stale" : "";
     }
 
-    // Badges: FAV, BF, C, D, CD
     var badges = [];
     if (r.cd_winner || (r.course_winner && r.distance_winner)) {
       badges.push('<span class="badge badge-cd" title="Course & Distance winner">CD</span>');
@@ -581,11 +523,10 @@
     if (r.last_race_beaten_fav) badges.push('<span class="badge badge-bf" title="Beaten favourite last race">BF L/R</span>');
     var badgeHtml = badges.length ? '<div class="runner-badges">' + badges.join(" ") + "</div>" : "";
 
-    // Trainer RTF
-    var trainerStr = esc(r.trainer || "\u2014");
+    var trainerStr = esc(r.trainer || "—");
     if (r.trainer_rtf != null) {
       var rtfCls = r.trainer_rtf >= 25 ? "rtf-hot" : r.trainer_rtf >= 15 ? "rtf-warm" : "rtf-cold";
-      trainerStr += ' <span class="rtf-badge ' + rtfCls + '" title="Trainer Runs To Form">' + r.trainer_rtf + '%</span>';
+      trainerStr += ' <span class="rtf-badge ' + rtfCls + '" title="Trainer Runs To Form">' + r.trainer_rtf + "%</span>";
     }
 
     return (
@@ -593,12 +534,12 @@
       '<td class="col-name"><div class="runner-name">' + esc(r.runner_name) + "</div>" +
       (details ? '<div class="runner-details">' + esc(details) + "</div>" : "") +
       badgeHtml + "</td>" +
-      '<td class="col-score"><span class="score-val ' + sc + '">' + r.total_score.toFixed(1) + "</span></td>" +
+      '<td class="col-score"><span class="score-val ' + sc + '">' + (r.total_score != null ? r.total_score.toFixed(1) : "—") + "</span></td>" +
       '<td class="col-odds">' + oddsStr + "</td>" +
       '<td class="col-rating" title="' + ratingLabel + '"><span class="rating-val">' + ratingStr + '</span><span class="rating-type">' + ratingLabel + "</span></td>" +
       '<td class="col-days ' + daysCls + '">' + daysStr + "</td>" +
       '<td class="col-last-sp">' + lastSpStr + "</td>" +
-      '<td class="col-jockey">' + esc(r.jockey || "\u2014") + "</td>" +
+      '<td class="col-jockey">' + esc(r.jockey || "—") + "</td>" +
       '<td class="col-trainer">' + trainerStr + "</td>" +
       '<td class="col-form"><span class="form-string">' + formStr + "</span></td>" +
       '<td class="col-expand"><button class="expand-btn" title="Show breakdown">+</button></td>'
@@ -616,7 +557,7 @@
     } else {
       expandedRows.add(name);
       btn.classList.add("open");
-      btn.textContent = "\u2212";
+      btn.textContent = "−";
       mainTr.after(buildDetailRow(runner));
     }
   }
@@ -629,7 +570,6 @@
     var content = document.createElement("div");
     content.className = "detail-content";
 
-    // Extra stats row for new fields
     var extraParts = [];
     if (runner.rpr != null) extraParts.push('<span class="detail-stat"><span class="detail-stat-label">RPR</span><span class="detail-stat-val">' + runner.rpr + "</span></span>");
     if (runner.ts != null) extraParts.push('<span class="detail-stat"><span class="detail-stat-label">TS</span><span class="detail-stat-val">' + runner.ts + "</span></span>");
@@ -640,7 +580,7 @@
     }
     if (runner.days_since_last_run != null) {
       var d2 = runner.days_since_last_run;
-      var dLabel = d2 >= 14 && d2 <= 35 ? " \u2713" : d2 > 90 ? " \u26A0" : "";
+      var dLabel = d2 >= 14 && d2 <= 35 ? " ✓" : d2 > 90 ? " ⚠" : "";
       extraParts.push('<span class="detail-stat"><span class="detail-stat-label">Days Since Run</span><span class="detail-stat-val">' + d2 + dLabel + "</span></span>");
     }
     var cdBadges = [];
@@ -656,10 +596,9 @@
       content.appendChild(extraDiv);
     }
 
-    // Component grid
     var grid = document.createElement("div");
     grid.className = "component-grid";
-    (runner.components || []).forEach(function(c) {
+    (runner.components || []).forEach(function (c) {
       var card = document.createElement("div");
       card.className = "comp-card";
       var sv = c.score != null ? c.score.toFixed(1) : "N/A";
@@ -670,15 +609,14 @@
         '<div class="comp-header"><span class="comp-name">' + esc(c.name) + "</span>" +
         '<span class="comp-score-val ' + cls + '">' + sv + "</span></div>" +
         '<div class="comp-bar"><div class="comp-bar-fill" style="width:' + bw + '%"></div></div>' +
-        '<div class="comp-reason">' + esc(c.reason || (c.score == null ? "No data \u2014 weight redistributed" : "")) + "</div>" +
-        (c.score != null ? '<div class="comp-weight-tag">Weight: ' + wp + "%" + (c.weighted_score ? " \u2192 " + c.weighted_score.toFixed(1) + " pts" : "") + "</div>" : "");
+        '<div class="comp-reason">' + esc(c.reason || (c.score == null ? "No data — weight redistributed" : "")) + "</div>" +
+        (c.score != null ? '<div class="comp-weight-tag">Weight: ' + wp + "%" + (c.weighted_score ? " → " + c.weighted_score.toFixed(1) + " pts" : "") + "</div>" : "");
       grid.appendChild(card);
     });
     content.appendChild(grid);
 
-    // Form history table
     var form = runner.recent_form || [];
-    if (form.length > 0 && form.some(function(f) { return f.date || f.track; })) {
+    if (form.length > 0 && form.some(function (f) { return f.date || f.track; })) {
       var fh = document.createElement("div");
       fh.className = "form-history";
       fh.innerHTML = "<h4>Recent Form</h4>";
@@ -686,17 +624,17 @@
       tbl.className = "form-table";
       tbl.innerHTML = "<thead><tr><th>Pos</th><th>Date</th><th>Track</th><th>Dist</th><th>Going</th><th>Class</th><th>SP</th></tr></thead>";
       var tbody = document.createElement("tbody");
-      form.forEach(function(f) {
+      form.forEach(function (f) {
         var row = document.createElement("tr");
-        var spStr = f.sp_decimal ? f.sp_decimal.toFixed(2) : (f.sp_string || "\u2014");
+        var spStr = f.sp_decimal ? f.sp_decimal.toFixed(2) : (f.sp_string || "—");
         var posCls = f.position === 1 ? "form-pos-win" : f.position <= 3 ? "form-pos-place" : "";
         row.innerHTML =
-          '<td class="' + posCls + '">' + (f.position != null ? f.position : "\u2014") + "</td>" +
-          "<td>" + esc(f.date || "\u2014") + "</td>" +
-          "<td>" + esc(f.track || "\u2014") + "</td>" +
-          "<td>" + esc(f.distance || "\u2014") + "</td>" +
-          "<td>" + formatGoing(f.going || "\u2014") + "</td>" +
-          "<td>" + esc(f.race_class || "\u2014") + "</td>" +
+          '<td class="' + posCls + '">' + (f.position != null ? f.position : "—") + "</td>" +
+          "<td>" + esc(f.date || "—") + "</td>" +
+          "<td>" + esc(f.track || "—") + "</td>" +
+          "<td>" + esc(f.distance || "—") + "</td>" +
+          "<td>" + formatGoing(f.going || "—") + "</td>" +
+          "<td>" + esc(f.race_class || "—") + "</td>" +
           "<td>" + spStr + "</td>";
         tbody.appendChild(row);
       });
@@ -712,10 +650,10 @@
 
   function sortRunners(runners) {
     var fns = {
-      score: function(a, b) { return b.total_score - a.total_score; },
-      odds:  function(a, b) { return (a.odds_decimal || 999) - (b.odds_decimal || 999); },
-      or:    function(a, b) { return (b.official_rating || 0) - (a.official_rating || 0); },
-      form:  function(a, b) { return avgForm(a.recent_form) - avgForm(b.recent_form); },
+      score: function (a, b) { return (b.total_score || 0) - (a.total_score || 0); },
+      odds:  function (a, b) { return (a.odds_decimal || 999) - (b.odds_decimal || 999); },
+      or:    function (a, b) { return (b.official_rating || 0) - (a.official_rating || 0); },
+      form:  function (a, b) { return avgForm(a.recent_form) - avgForm(b.recent_form); },
     };
     runners.sort(fns[currentSort] || fns.score);
     return runners;
@@ -723,22 +661,21 @@
 
   function avgForm(form) {
     if (!form || !form.length) return 99;
-    var p = form.map(function(f) { return f.position; }).filter(function(v) { return v != null; });
+    var p = form.map(function (f) { return f.position; }).filter(function (v) { return v != null; });
     if (!p.length) return 99;
-    return p.reduce(function(a, b) { return a + b; }, 0) / p.length;
+    return p.reduce(function (a, b) { return a + b; }, 0) / p.length;
   }
 
   function buildFormString(form) {
-    if (!form || !form.length) return "\u2014";
-    return form.map(function(f) { return f.position != null ? f.position : "?"; }).join("-");
+    if (!form || !form.length) return "—";
+    return form.map(function (f) { return f.position != null ? f.position : "?"; }).join("-");
   }
 
   function formatGoing(going) {
-    if (!going || going === "\u2014") return going;
-    return going.replace(/_/g, " ").replace(/\b\w/g, function(c) { return c.toUpperCase(); });
+    if (!going || going === "—") return going;
+    return going.replace(/_/g, " ").replace(/\b\w/g, function (c) { return c.toUpperCase(); });
   }
 
-  // --- Utility ---
   function setText(id, text) {
     var el = document.getElementById(id);
     if (el) el.textContent = text;
@@ -752,318 +689,13 @@
   }
 
   function showLoading(show) { loadingEl.classList.toggle("hidden", !show); }
-  function showError(msg)    { errorEl.textContent = msg; errorEl.classList.remove("hidden"); }
-  function hideError()       { errorEl.classList.add("hidden"); }
-  function hideResults()     { resultsEl.classList.add("hidden"); }
+  function showError(msg) { errorEl.textContent = msg; errorEl.classList.remove("hidden"); }
+  function hideError() { errorEl.classList.add("hidden"); }
+  function hideResults() { resultsEl.classList.add("hidden"); }
 
   function renderDisclaimer(text) {
-    document.getElementById("disclaimer").textContent = text;
-  }
-
-  // =====================================================================
-  // Paper Trading -- Get Results & P/L
-  // =====================================================================
-
-  async function getResults() {
-    getResultsBtn.disabled = true;
-    getResultsBtn.textContent = "Fetching...";
-    plProgress.classList.remove("hidden");
-    plContent.classList.add("hidden");
-    plBarFill.style.width = "0%";
-    plStatusEl.textContent = "Fetching results...";
-    hideError();
-
-    // Use races for selected date
-    var races = dateRaces[selectedDate] || [];
-
-    var bets = [];
-    races.forEach(function(race) {
-      var pick = race.runners.find(function(r) { return r.rank === 1; });
-      if (!pick || !race._source_url) return;
-      bets.push({
-        race: race,
-        selection: pick,
-        sourceUrl: race._source_url,
-        result: null,
-      });
-    });
-
-    if (!bets.length) {
-      showError("No races with source data available for results lookup.");
-      getResultsBtn.disabled = false;
-      getResultsBtn.textContent = "Get Results";
-      plProgress.classList.add("hidden");
-      return;
-    }
-
-    var done = 0;
-    var total = bets.length;
-    var taskIdx = 0;
-
-    function next() {
-      if (taskIdx >= bets.length) return Promise.resolve();
-      var bet = bets[taskIdx++];
-      return fetchResult(bet).then(function() {
-        done++;
-        var pct = Math.round((done / total) * 100);
-        plBarFill.style.width = pct + "%";
-        plStatusEl.textContent = "Fetching " + done + "/" + total + "...";
-        return next();
-      });
-    }
-
-    var workers = [];
-    for (var w = 0; w < Math.min(CONCURRENCY, bets.length); w++) {
-      workers.push(next());
-    }
-    await Promise.all(workers);
-
-    plProgress.classList.add("hidden");
-    getResultsBtn.textContent = "Refresh Results";
-    getResultsBtn.disabled = false;
-
-    lastBets = bets;
-    renderPL(bets);
-  }
-
-  async function fetchResult(bet) {
-    // Use embedded result from backfill if available
-    if (bet.race._result && bet.race._result.status) {
-      bet.result = bet.race._result;
-      return;
-    }
-    try {
-      var resp = await fetch(
-        "/.netlify/functions/fetch-result?url=" + encodeURIComponent(bet.sourceUrl)
-      );
-      if (resp.ok) bet.result = await resp.json();
-    } catch(e) { bet.result = null; }
-  }
-
-  // ---- P/L rendering ----
-
-  function processBets(bets) {
-    var rows = [];
-    bets.forEach(function(bet) {
-      var race = bet.race;
-      var sel = bet.selection;
-      var res = bet.result;
-
-      var row = {
-        track: race.meta.track,
-        time: race.meta.off_time || "?",
-        selection: sel.runner_name,
-        position: null,
-        sp: null,
-        spStr: "",
-        stake: 1,
-        returnAmt: 0,
-        pl: 0,
-        status: "pending",
-      };
-
-      if (!res || res.status !== "complete") {
-        rows.push(row);
-        return;
-      }
-
-      function normName(s) {
-        return (s || "").trim().replace(/\s+/g, " ").toLowerCase();
-      }
-      var selNorm = normName(sel.runner_name);
-      var match = res.runners.find(function(r) {
-        return normName(r.runner_name) === selNorm;
-      });
-
-      if (match && match.is_nr) {
-        row.status = "nr";
-        row.position = "NR";
-        row.returnAmt = 1;
-        row.pl = 0;
-        rows.push(row);
-        return;
-      }
-
-      row.position = match ? match.position : null;
-      row.sp = match ? match.sp_decimal : null;
-      row.spStr = match ? match.sp_string : "";
-
-      if (row.position === 1 && row.sp) {
-        row.returnAmt = row.sp;
-        row.pl = row.sp - 1;
-        row.status = "won";
-      } else {
-        row.returnAmt = 0;
-        row.pl = -1;
-        row.status = row.position != null ? "lost" : "pending";
-      }
-
-      rows.push(row);
-    });
-
-    rows.sort(function(a, b) { return (a.track + a.time).localeCompare(b.track + b.time); });
-    return rows;
-  }
-
-  function summariseRows(rows) {
-    var settled = 0, winners = 0, totalStaked = 0, totalReturns = 0, pending = 0;
-    rows.forEach(function(row) {
-      if (row.status === "pending") { pending++; return; }
-      if (row.status === "nr") { totalReturns += 1; return; }
-      settled++;
-      totalStaked += 1;
-      totalReturns += row.returnAmt;
-      if (row.status === "won") winners++;
-    });
-    var profit = totalReturns - totalStaked;
-    var strike = settled > 0 ? ((winners / settled) * 100).toFixed(0) : "0";
-    var roi = totalStaked > 0 ? ((profit / totalStaked) * 100).toFixed(1) : "0.0";
-    return { settled: settled, winners: winners, strike: strike, totalStaked: totalStaked, totalReturns: totalReturns, profit: profit, roi: roi, pending: pending };
-  }
-
-  function buildSummaryHTML(stats) {
-    var profitCls = stats.profit > 0 ? "pl-positive" : stats.profit < 0 ? "pl-negative" : "";
-    var pendingStr = stats.pending > 0 ? " (" + stats.pending + " pending)" : "";
-    return (
-      '<div class="pl-stat"><span class="pl-stat-label">Settled</span><span class="pl-stat-value">' + stats.settled + pendingStr + "</span></div>" +
-      '<div class="pl-stat"><span class="pl-stat-label">Winners</span><span class="pl-stat-value">' + stats.winners + "</span></div>" +
-      '<div class="pl-stat"><span class="pl-stat-label">Strike Rate</span><span class="pl-stat-value">' + stats.strike + "%</span></div>" +
-      '<div class="pl-stat"><span class="pl-stat-label">Staked</span><span class="pl-stat-value">&pound;' + stats.totalStaked.toFixed(2) + "</span></div>" +
-      '<div class="pl-stat"><span class="pl-stat-label">Returns</span><span class="pl-stat-value">&pound;' + stats.totalReturns.toFixed(2) + "</span></div>" +
-      '<div class="pl-stat pl-stat-profit"><span class="pl-stat-label">P/L</span><span class="pl-stat-value ' + profitCls + '">' + (stats.profit >= 0 ? "+" : "") + "&pound;" + stats.profit.toFixed(2) + "</span></div>" +
-      '<div class="pl-stat"><span class="pl-stat-label">ROI</span><span class="pl-stat-value">' + stats.roi + "%</span></div>"
-    );
-  }
-
-  function buildRaceTableRows(rows) {
-    return rows.map(function(row) {
-      var resultStr = row.status === "pending" ? "Pending" :
-                      row.status === "nr" ? "Void (NR)" :
-                      row.status === "won" ? "Won" : "Lost";
-      var posStr = row.position != null ? String(row.position) : "\u2014";
-      var spStr  = row.sp ? row.sp.toFixed(2) : (row.spStr || "\u2014");
-      var plStr  = row.status === "pending" ? "\u2014" :
-                   row.status === "nr" ? "void" :
-                   (row.pl >= 0 ? "+" : "") + "&pound;" + row.pl.toFixed(2);
-      var retStr = row.status === "pending" ? "\u2014" : "&pound;" + row.returnAmt.toFixed(2);
-      var resultCls = "pl-result-" + (row.status || "pending");
-      return (
-        "<tr class='pl-row-" + row.status + "'>" +
-        "<td>" + esc(row.track) + "</td>" +
-        "<td>" + esc(row.time) + "</td>" +
-        "<td>" + esc(row.selection) + "</td>" +
-        "<td class='" + resultCls + "'>" + resultStr + "</td>" +
-        "<td>" + posStr + "</td>" +
-        "<td>" + spStr + "</td>" +
-        "<td>&pound;1.00</td>" +
-        "<td>" + retStr + "</td>" +
-        "<td class='pl-cell-pl'>" + plStr + "</td>" +
-        "</tr>"
-      );
-    }).join("");
-  }
-
-  function renderPL(bets) {
-    var rows = processBets(bets);
-    var stats = summariseRows(rows);
-
-    // Day view
-    document.getElementById("pl-summary-day").innerHTML = buildSummaryHTML(stats);
-
-    // All races view
-    document.getElementById("pl-summary-all").innerHTML = buildSummaryHTML(stats);
-    plBody.innerHTML = buildRaceTableRows(rows);
-
-    // Meeting view
-    var meetingGroups = {};
-    rows.forEach(function(row) {
-      var key = row.track;
-      if (!meetingGroups[key]) meetingGroups[key] = [];
-      meetingGroups[key].push(row);
-    });
-
-    var container = document.getElementById("pl-meetings-container");
-    container.innerHTML = "";
-    Object.keys(meetingGroups).sort().forEach(function(track) {
-      var mRows = meetingGroups[track];
-      var mStats = summariseRows(mRows);
-      var profitCls = mStats.profit > 0 ? "pl-positive" : mStats.profit < 0 ? "pl-negative" : "";
-
-      var block = document.createElement("div");
-      block.className = "meeting-block";
-      block.innerHTML =
-        '<div class="meeting-header">' +
-          '<span class="meeting-name">' + esc(track) + '</span>' +
-          '<span class="meeting-races">' + mRows.length + " races</span>" +
-          '<span class="meeting-pl ' + profitCls + '">' +
-            (mStats.profit >= 0 ? "+" : "") + "&pound;" + mStats.profit.toFixed(2) +
-          '</span>' +
-          '<span class="meeting-roi">' + mStats.roi + "% ROI</span>" +
-          '<button class="meeting-toggle" data-open="false">&#9660;</button>' +
-        '</div>' +
-        '<div class="meeting-detail hidden">' +
-          '<div class="pl-summary meeting-summary">' + buildSummaryHTML(mStats) + '</div>' +
-          '<div class="table-wrap">' +
-            '<table class="pl-table">' +
-              '<thead><tr><th>Time</th><th>Selection</th><th>Result</th><th>Pos</th><th>SP</th><th>Stake</th><th>Return</th><th>P/L</th></tr></thead>' +
-              '<tbody>' + buildMeetingTableRows(mRows) + '</tbody>' +
-            '</table>' +
-          '</div>' +
-        '</div>';
-
-      var toggleBtn = block.querySelector(".meeting-toggle");
-      var detail = block.querySelector(".meeting-detail");
-      toggleBtn.addEventListener("click", function() {
-        var isOpen = toggleBtn.dataset.open === "true";
-        if (isOpen) {
-          detail.classList.add("hidden");
-          toggleBtn.dataset.open = "false";
-          toggleBtn.innerHTML = "&#9660;";
-        } else {
-          detail.classList.remove("hidden");
-          toggleBtn.dataset.open = "true";
-          toggleBtn.innerHTML = "&#9650;";
-        }
-      });
-
-      container.appendChild(block);
-    });
-
-    plContent.classList.remove("hidden");
-    switchPLView(currentPLView);
-  }
-
-  function buildMeetingTableRows(rows) {
-    return rows.map(function(row) {
-      var resultStr = row.status === "pending" ? "Pending" :
-                      row.status === "nr" ? "Void (NR)" :
-                      row.status === "won" ? "Won" : "Lost";
-      var posStr = row.position != null ? String(row.position) : "\u2014";
-      var spStr  = row.sp ? row.sp.toFixed(2) : (row.spStr || "\u2014");
-      var plStr  = row.status === "pending" ? "\u2014" :
-                   row.status === "nr" ? "void" :
-                   (row.pl >= 0 ? "+" : "") + "&pound;" + row.pl.toFixed(2);
-      var retStr = row.status === "pending" ? "\u2014" : "&pound;" + row.returnAmt.toFixed(2);
-      var resultCls = "pl-result-" + (row.status || "pending");
-      return (
-        "<tr class='pl-row-" + row.status + "'>" +
-        "<td>" + esc(row.time) + "</td>" +
-        "<td>" + esc(row.selection) + "</td>" +
-        "<td class='" + resultCls + "'>" + resultStr + "</td>" +
-        "<td>" + posStr + "</td>" +
-        "<td>" + spStr + "</td>" +
-        "<td>&pound;1.00</td>" +
-        "<td>" + retStr + "</td>" +
-        "<td class='pl-cell-pl'>" + plStr + "</td>" +
-        "</tr>"
-      );
-    }).join("");
-  }
-
-  function switchPLView(view) {
-    document.querySelectorAll(".pl-view").forEach(function(v) { v.classList.add("hidden"); });
-    var el = document.getElementById("view-" + view);
-    if (el) el.classList.remove("hidden");
+    var el = document.getElementById("disclaimer");
+    if (el) el.textContent = text || "";
   }
 
 })();
