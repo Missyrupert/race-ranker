@@ -45,12 +45,17 @@
 
     try {
       // Call the 'today' function endpoint (no cache-busting needed, function handles caching)
+      console.log("[loadToday] Fetching /.netlify/functions/today");
       var resp = await fetch("/.netlify/functions/today");
+      console.log("[loadToday] Response status:", resp.status);
       if (!resp.ok) {
-        if (resp.status === 404) throw new Error("No races loaded for today");
+        var errText = await resp.text();
+        console.error("[loadToday] Error response:", errText);
+        if (resp.status === 404) throw new Error("Endpoint not found (404) - function may not be deployed yet");
         throw new Error("Could not load today's data (HTTP " + resp.status + ")");
       }
       var data = await resp.json();
+      console.log("[loadToday] Got data:", data);
 
       // Transform function response to match expected format
       if (data.races && data.races.length > 0) {
@@ -100,8 +105,9 @@
       if (hint) hint.classList.remove("hidden");
       resultsEl.classList.add("hidden");
     } catch (err) {
+      console.error("[loadToday] Caught error:", err);
       showNoRacesState("today");
-      showError(err.message);
+      showError("Error loading races: " + (err.message || err.toString()));
     } finally {
       showLoading(false);
     }
@@ -116,6 +122,7 @@
     if (data.generated_at === undefined) missing.push("Top-level: missing 'generated_at'");
     if (!Array.isArray(data.races)) missing.push("Top-level: missing or invalid 'races[]' array");
     if (!data.races || !data.races.length) {
+      console.log("[validateTodayData] No races found, returning ok=true");
       return { ok: missing.length === 0, missing: missing };
     }
     data.races.forEach(function (race, idx) {
@@ -133,6 +140,7 @@
         });
       }
     });
+    console.log("[validateTodayData] Validation result:", { ok: missing.length === 0, missing: missing });
     return { ok: missing.length === 0, missing: missing };
   }
 
@@ -272,6 +280,7 @@
 
   // --- Dropdown population ---
   function populateCourses(races) {
+    console.log("[populateCourses] Called with", races.length, "races");
     var courses = {};
     races.forEach(function (race) {
       var track = race.course;
@@ -280,6 +289,7 @@
     });
 
     var courseNames = Object.keys(courses).sort();
+    console.log("[populateCourses] Found courses:", courseNames);
     courseSelect.innerHTML = "";
     raceSelect.innerHTML = "";
     raceSelect.disabled = true;
