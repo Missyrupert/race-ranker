@@ -1,0 +1,30 @@
+{
+  "name": "race-ranker",
+  "version": "1.0.0",
+  "description": "An explainable horse racing analysis tool that scores and ranks runners in today's UK and Ireland races. Data is pulled from Sporting Life racecards and each runner is scored across five weighted components to produce a composite 0-100 ranking.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Missyrupert/race-ranker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Missyrupert/race-ranker/issues"
+  },
+  "homepage": "https://github.com/Missyrupert/race-ranker#readme",
+  "dependencies": {
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "next": "^16.1.7",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "typescript": "^5.9.3"
+  }
+}
