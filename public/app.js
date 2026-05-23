@@ -25,6 +25,15 @@ const weights = {
     wRecency: 15
 };
 
+const betPolicy = {
+    minScore: 60,
+    minScoreGap: 5,
+    minValueRatio: 1.25,
+    minOdds: 2.0,
+    maxOdds: 5.0,
+    scoreTemperature: 12
+};
+
 // DOM Elements
 const elMeetingsList = document.getElementById("meetings-list");
 const elRacesList = document.getElementById("races-list");
@@ -104,6 +113,83 @@ function getRideOddsString(ride) {
         return ride.betting.current_odds;
     }
     return "SP";
+}
+
+function isNonRunner(ride) {
+    return ride.ride_status === "NONRUNNER" || ride.non_runner === true;
+}
+
+function getBestDecimalOdds(ride) {
+    const bookmakerOdds = ride.bookmakerOdds || [];
+    const best = bookmakerOdds
+        .map(o => Number(o.decimalOdds))
+        .filter(o => Number.isFinite(o) && o > 1)
+        .sort((a, b) => b - a)[0];
+
+    return best || getRideOdds(ride);
+}
+
+function getActiveRides(rides) {
+    return rides.filter(ride => !isNonRunner(ride));
+}
+
+function addMarketProbabilities(scoredRunners) {
+    const impliedTotal = scoredRunners.reduce((sum, runner) => {
+        return sum + (1 / getBestDecimalOdds(runner.ride));
+    }, 0);
+
+    return scoredRunners.map(runner => {
+        const decimalOdds = getBestDecimalOdds(runner.ride);
+        const rawMarketProb = 1 / decimalOdds;
+        return {
+            ...runner,
+            decimalOdds,
+            marketProb: impliedTotal > 0 ? rawMarketProb / impliedTotal : rawMarketProb
+        };
+    });
+}
+
+function addModelProbabilities(scoredRunners) {
+    if (scoredRunners.length === 0) return [];
+
+    const averageScore = scoredRunners.reduce((sum, runner) => sum + runner.finalScore, 0) / scoredRunners.length;
+    const withStrength = scoredRunners.map(runner => {
+        const modelStrength = Math.exp((runner.finalScore - averageScore) / betPolicy.scoreTemperature);
+        return { ...runner, modelStrength };
+    });
+    const totalStrength = withStrength.reduce((sum, runner) => sum + runner.modelStrength, 0);
+
+    return withStrength.map(runner => ({
+        ...runner,
+        modelProb: totalStrength > 0 ? runner.modelStrength / totalStrength : (1 / scoredRunners.length),
+        valueRatio: totalStrength > 0 && runner.marketProb > 0 ? (runner.modelStrength / totalStrength) / runner.marketProb : 0
+    }));
+}
+
+function prepareScoredRunners(rides, race, currentDistFurlongs, currentGoing) {
+    const scoredRunners = getActiveRides(rides)
+        .map(ride => scoreRunner(ride, race, currentDistFurlongs, currentGoing))
+        .sort((a, b) => b.finalScore - a.finalScore);
+
+    return addModelProbabilities(addMarketProbabilities(scoredRunners));
+}
+
+function getQualifiedBet(scoredRunners) {
+    if (scoredRunners.length === 0) return null;
+
+    const top = scoredRunners[0];
+    const second = scoredRunners[1];
+    const scoreGap = second ? top.finalScore - second.finalScore : top.finalScore;
+    const oddsInRange = top.decimalOdds >= betPolicy.minOdds && top.decimalOdds <= betPolicy.maxOdds;
+    const hasEnoughScore = top.finalScore >= betPolicy.minScore;
+    const hasEnoughGap = scoreGap >= betPolicy.minScoreGap;
+    const hasValue = top.valueRatio >= betPolicy.minValueRatio;
+
+    if (!oddsInRange || !hasEnoughScore || !hasEnoughGap || !hasValue) {
+        return null;
+    }
+
+    return { ...top, scoreGap };
 }
 
 
@@ -358,6 +444,8 @@ function calculateDailyPerformance() {
     if (!appData || appData.length === 0) return;
     
     const todayBets = [];
+    const settledRaceKeys = new Set();
+    const qualifiedRaceKeys = new Set();
     
     // Clear old outcomes
     dailyPLState.outcomes = {};
@@ -372,31 +460,35 @@ function calculateDailyPerformance() {
             
             const currentDistFurlongs = parseDistanceToFurlongs(race.distance);
             
-            // Score all runners in this race using the model scoring function
-            const scoredRunners = rides.map(ride => scoreRunner(ride, race, currentDistFurlongs, currentGoing));
+            // Score active runners only. Non-runners are never valid bet candidates.
+            const scoredRunners = prepareScoredRunners(rides, race, currentDistFurlongs, currentGoing);
             if (scoredRunners.length === 0) return;
             
-            // Sort runners by predictor score descending to find the top selection (NAP)
-            scoredRunners.sort((a, b) => b.finalScore - a.finalScore);
-            const nap = scoredRunners[0];
-            const napRide = nap.ride;
             const raceId = race.race_summary_reference.id;
+            const raceKey = `${race.date || new Date().toISOString().split('T')[0]}|${race.course_name}|${race.time}`;
             
             // Check if the race is officially finished
             const isFinished = detail.race_summary && detail.race_summary.race_stage === "WEIGHEDIN";
             if (isFinished) {
-                const isNonRunner = napRide.ride_status === "NONRUNNER" || napRide.non_runner === true || napRide.finish_position === 0;
-                const won = !isNonRunner && napRide.finish_position === 1;
+                settledRaceKeys.add(raceKey);
+                const qualifiedBet = getQualifiedBet(scoredRunners);
+
+                if (!qualifiedBet) {
+                    dailyPLState.outcomes[raceId] = {
+                        outcome: "pass",
+                        odds: "-",
+                        horseName: scoredRunners[0].ride.horse.name
+                    };
+                    return;
+                }
+
+                const napRide = qualifiedBet.ride;
+                const won = napRide.finish_position === 1;
                 
-                let outcome = "lost";
+                let outcome = won ? "won" : "lost";
                 let odds = getRideOddsString(napRide);
                 let decOdds = getRideOdds(napRide);
-                
-                if (isNonRunner) {
-                    outcome = "void";
-                } else if (won) {
-                    outcome = "won";
-                }
+                qualifiedRaceKeys.add(raceKey);
                 
                 dailyPLState.outcomes[raceId] = {
                     outcome: outcome,
@@ -434,6 +526,15 @@ function calculateDailyPerformance() {
             }
         }
     });
+
+    const beforeCleanupCount = historicalBets.length;
+    historicalBets = historicalBets.filter(bet => {
+        const key = `${bet.date}|${bet.course}|${bet.time}`;
+        return !settledRaceKeys.has(key) || qualifiedRaceKeys.has(key);
+    });
+    if (historicalBets.length !== beforeCleanupCount) {
+        updatedHistorical = true;
+    }
     
     if (updatedHistorical) {
         try {
@@ -533,6 +634,9 @@ function selectMeeting(meeting) {
         const raceId = r.race_summary_reference.id;
         const outcomeInfo = dailyPLState.outcomes[raceId];
         let badgeHtml = "";
+        if (outcomeInfo && outcomeInfo.outcome === 'pass') {
+            badgeHtml = `<span class="tag tag-pass" style="background-color: rgba(110, 118, 129, 0.12); border: 1px solid #6e7681; color: #8b949e;">Pass</span>`;
+        }
         if (outcomeInfo) {
             if (outcomeInfo.outcome === 'won') {
                 badgeHtml = `<span class="tag tag-won" style="background-color: rgba(46, 160, 67, 0.15); border: 1px solid #3fb950; color: #56d364; font-weight: 600;">✅ Won @ ${outcomeInfo.odds}</span>`;
@@ -817,14 +921,9 @@ function renderRunnersTable(race) {
     const currentDistFurlongs = parseDistanceToFurlongs(race.distance);
     const currentGoing = race.going || selectedMeeting.meeting_summary.going || "";
     
-    // Calculate raw scores for all runners using the extracted scoreRunner engine
-    const scoredRunners = rides.map(ride => scoreRunner(ride, race, currentDistFurlongs, currentGoing));
-    
-    // Sort runners by predictor score descending
-    scoredRunners.sort((a, b) => b.finalScore - a.finalScore);
-    
-    // Calculate total score sum for normalization (to get model probabilities)
-    const sumScores = scoredRunners.reduce((sum, r) => sum + r.finalScore, 0);
+    // Calculate scores and probabilities for active runners only.
+    const scoredRunners = prepareScoredRunners(rides, race, currentDistFurlongs, currentGoing);
+    const qualifiedBet = getQualifiedBet(scoredRunners);
     
     // Update Morning briefing stats with highlights
     if (scoredRunners.length > 0) {
@@ -846,16 +945,13 @@ function renderRunnersTable(race) {
             reasoningText += `<p>⚖️ <strong>Model Edge:</strong> The model has identified a score differential of ${top1.finalScore - top2.finalScore}% between first and second choice. `;
             
             // Odds comparison
-            const odds1 = top1.ride.betting ? top1.ride.betting.current_odds : "";
-            const decOdds1 = parseOdds(odds1);
-            const marketImplied1 = 1 / decOdds1;
-            const modelProb1 = sumScores > 0 ? (top1.finalScore / sumScores) : 0.5;
-            const val1 = modelProb1 / marketImplied1;
+            const odds1 = getRideOddsString(top1.ride);
+            const val1 = top1.valueRatio || 0;
             
-            if (val1 > 1.25) {
-                reasoningText += `With current bookmaker odds of <strong>${odds1}</strong>, ${top1.ride.horse.name} presents a calculated value edge of <strong>${val1.toFixed(2)}x</strong> over the market probability.</p>`;
+            if (qualifiedBet) {
+                reasoningText += `With current bookmaker odds of <strong>${odds1}</strong>, ${top1.ride.horse.name} qualifies as a bet at <strong>${val1.toFixed(2)}x</strong> model value versus the normalized market.</p>`;
             } else {
-                reasoningText += `Under today's weights, the top choice is estimated to be well-placed, but review if current odds offer sufficient value.</p>`;
+                reasoningText += `The top choice is still useful for analysis, but this race is a <strong>pass</strong> under the current bet discipline.</p>`;
             }
         }
         
@@ -876,15 +972,11 @@ function renderRunnersTable(race) {
         
         // Odds analysis
         const currentOddsStr = ride.betting ? ride.betting.current_odds : "";
-        const decimalOdds = parseOdds(currentOddsStr);
-        const marketImpliedProb = 1 / decimalOdds;
-        
-        // Model probability
-        const modelProb = sumScores > 0 ? (scored.finalScore / sumScores) : (1 / scoredRunners.length);
-        
-        // Value Bet Ratio
-        const valueRatio = modelProb / marketImpliedProb;
-        const isValueBet = valueRatio > 1.25 && scored.finalScore > 40; // 25% edge and horse has reasonable rank
+        const decimalOdds = scored.decimalOdds || parseOdds(currentOddsStr);
+        const marketImpliedProb = scored.marketProb || (1 / decimalOdds);
+        const modelProb = scored.modelProb || (1 / scoredRunners.length);
+        const valueRatio = scored.valueRatio || 0;
+        const isValueBet = qualifiedBet && qualifiedBet.ride === ride;
         
         // Generate rows HTML
         const tr = document.createElement("tr");
@@ -972,7 +1064,7 @@ function renderRunnersTable(race) {
                 </div>
             </td>
             <td class="col-value text-center">
-                ${isValueBet ? `<span class="value-badge" title="Value Bet Alert! Model Prob: ${Math.round(modelProb*100)}% vs Market Prob: ${Math.round(marketImpliedProb*100)}%">Value ${valueRatio.toFixed(2)}x</span>` : `<span class="value-ratio-text" style="color: ${valueRatio > 1.0 ? '#2ea043' : '#6e7681'}">${valueRatio.toFixed(2)}x</span>`}
+                ${isValueBet ? `<span class="value-badge" title="Qualified Bet. Model Prob: ${Math.round(modelProb*100)}% vs Market Prob: ${Math.round(marketImpliedProb*100)}%">Bet ${valueRatio.toFixed(2)}x</span>` : `<span class="value-ratio-text" style="color: ${valueRatio > 1.0 ? '#2ea043' : '#6e7681'}">${valueRatio.toFixed(2)}x</span>`}
             </td>
         `;
         

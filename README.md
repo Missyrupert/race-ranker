@@ -5,9 +5,9 @@ A premium, data-driven horse racing predictor focused on UK and Ireland races. T
 ## Features
 * **Zero-Dependency Backend**: Runs on standard Python libraries. Fetches race data directly by parsing Next.js serialized page states (`__NEXT_DATA__`) from Sporting Life.
 * **Intelligent Local Cache**: Writes daily scraped cards to `cache_data.json` to prevent excessive requests and rate-limiting.
-* **Interactive Live-Weighted Model**: Adjust sliders for key variables (Course Wins, Distance, Going, Stable/Jockey Form, Timeform Rating, Recency) to instantly recalculate horse ratings in the browser.
+* **Model Ranking Engine**: Scores each active runner across course, distance, going, stable/jockey form, Timeform rating, recent form, and recency.
 * **Dynamic Reasoning Engine**: Generates selection (NAP) and threat (NB) summaries in real-time as weights are adjusted, highlighting the reasoning behind the scores.
-* **Value Bet Alerts**: Identifies underpriced runners where the model's calculated winning probability exceeds market implied probability by more than 25%.
+* **Qualified Bet Alerts**: Separates top-rated runners from actual bet candidates using score strength, score gap, normalized market probability, value ratio, and odds-range guardrails.
 * **Deep-Dive Profile Modal**: Click any runner to inspect detailed stable insights, career start summaries, and historical form description.
 
 ## Running Locally
