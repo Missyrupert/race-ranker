@@ -419,13 +419,19 @@ function calculateDailyPerformance() {
         });
     });
     
-    // Save today's settled bets to historical storage so they accumulate day-by-day
+    // Save today's settled bets to historical storage so they accumulate day-by-day (updating if selection changes)
     let updatedHistorical = false;
     todayBets.forEach(bet => {
-        const exists = historicalBets.some(h => h.date === bet.date && h.course === bet.course && h.time === bet.time);
-        if (!exists) {
+        const idx = historicalBets.findIndex(h => h.date === bet.date && h.course === bet.course && h.time === bet.time);
+        if (idx === -1) {
             historicalBets.push(bet);
             updatedHistorical = true;
+        } else {
+            const existing = historicalBets[idx];
+            if (existing.horse !== bet.horse || existing.outcome !== bet.outcome || existing.odds !== bet.odds) {
+                historicalBets[idx] = bet;
+                updatedHistorical = true;
+            }
         }
     });
     
@@ -636,6 +642,7 @@ function scoreRunner(ride, race, currentDistFurlongs, currentGoing) {
     let courseWins = 0;
     let coursePlaces = 0;
     previousResults.forEach(res => {
+        if (res.date === race.date) return;
         if (res.course_name && res.course_name.toLowerCase() === race.course_name.toLowerCase()) {
             if (res.position === 1) courseWins++;
             else if (res.position === 2 || res.position === 3) coursePlaces++;
@@ -653,6 +660,7 @@ function scoreRunner(ride, race, currentDistFurlongs, currentGoing) {
     let distWins = 0;
     let distPlaces = 0;
     previousResults.forEach(res => {
+        if (res.date === race.date) return;
         const prevDistF = parseDistanceToFurlongs(res.distance);
         if (isSimilarDistance(currentDistFurlongs, prevDistF)) {
             if (res.position === 1) distWins++;
@@ -670,6 +678,7 @@ function scoreRunner(ride, race, currentDistFurlongs, currentGoing) {
     let goingWins = 0;
     let goingPlaces = 0;
     previousResults.forEach(res => {
+        if (res.date === race.date) return;
         if (isGoingCompatible(currentGoing, res.going)) {
             if (res.position === 1) goingWins++;
             else if (res.position === 2 || res.position === 3) goingPlaces++;
@@ -694,8 +703,8 @@ function scoreRunner(ride, race, currentDistFurlongs, currentGoing) {
     // 6. Official Rating (OR) vs Last Win
     let scoreOR = 5; // default middle score
     if (ride.official_rating) {
-        // Find rating on previous winning runs
-        const winningRuns = previousResults.filter(res => res.position === 1);
+        // Find rating on previous winning runs (excluding today's run)
+        const winningRuns = previousResults.filter(res => res.position === 1 && res.date !== race.date);
         if (winningRuns.length > 0) {
             let classDrops = 0;
             winningRuns.forEach(win => {
