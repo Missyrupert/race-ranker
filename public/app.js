@@ -12,18 +12,53 @@ let appData = null; // Scraped data: array of meetings
 let selectedMeeting = null;
 let selectedRace = null;
 
-// Hardcoded model weights (empirically successful weights)
-const weights = {
-    wCourse: 30,
-    wDistance: 30,
+// Hardcoded model weights profiles (mathematically optimized for each race type)
+const weightsFlatTurf = {
+    wCourse: 20,
+    wDistance: 20,
     wGoing: 25,
-    wTrainer: 20,
-    wJockey: 15,
-    wRating: 25,
-    wStars: 40,
-    wFormString: 35,
-    wRecency: 15
+    wTrainer: 45,
+    wJockey: 50,
+    wRating: 0,
+    wStars: 5,
+    wFormString: 20,
+    wRecency: 5
 };
+const weightsFlatAW = {
+    wCourse: 45,
+    wDistance: 5,
+    wGoing: 40,
+    wTrainer: 20,
+    wJockey: 35,
+    wRating: 0,
+    wStars: 5,
+    wFormString: 5,
+    wRecency: 0
+};
+const weightsJumps = {
+    wCourse: 5,
+    wDistance: 0,
+    wGoing: 5,
+    wTrainer: 15,
+    wJockey: 20,
+    wRating: 25,
+    wStars: 0,
+    wFormString: 5,
+    wRecency: 5
+};
+
+function getRaceType(race) {
+    const name = (race.name || '').toLowerCase();
+    const jumpsKeywords = ['hurdle', 'chase', 'steeplechase', 'nh flat', 'bumper', 'national hunt'];
+    if (jumpsKeywords.some(w => name.includes(w))) {
+        return 'JUMPS';
+    }
+    const surface = race.course_surface ? race.course_surface.surface : null;
+    if (surface === 'ALLWEATHER' || surface === 'POLYTRACK') {
+        return 'FLAT_AW';
+    }
+    return 'FLAT_TURF';
+}
 
 const betPolicy = {
     minScore: 60,
@@ -681,6 +716,28 @@ function selectRace(race) {
     // Update race details inside briefing
     elBriefingTitle.textContent = `${race.course_name} ${formatRaceTime(race.date, race.time)} - ${race.name}`;
     
+    // Update profile badge
+    const raceType = getRaceType(race);
+    const elBriefingProfile = document.getElementById("briefing-profile");
+    if (elBriefingProfile) {
+        if (raceType === 'FLAT_TURF') {
+            elBriefingProfile.textContent = "🟢 Flat Turf Profile";
+            elBriefingProfile.style.backgroundColor = "rgba(46, 160, 67, 0.15)";
+            elBriefingProfile.style.borderColor = "#2ea043";
+            elBriefingProfile.style.color = "#56d364";
+        } else if (raceType === 'FLAT_AW') {
+            elBriefingProfile.textContent = "🔵 Flat AW Profile";
+            elBriefingProfile.style.backgroundColor = "rgba(31, 111, 235, 0.15)";
+            elBriefingProfile.style.borderColor = "#1f6feb";
+            elBriefingProfile.style.color = "#58a6ff";
+        } else {
+            elBriefingProfile.textContent = "🟤 Jumps Profile";
+            elBriefingProfile.style.backgroundColor = "rgba(223, 179, 18, 0.15)";
+            elBriefingProfile.style.borderColor = "#dfb312";
+            elBriefingProfile.style.color = "#ffd33d";
+        }
+    }
+    
     // Recalculate and render runners standings
     renderRunnersTable(race);
 }
@@ -875,20 +932,26 @@ function scoreRunner(ride, race, currentDistFurlongs, currentGoing) {
         else if (days < 10) scoreRecency = 5;
     }
     
+    const raceType = getRaceType(race);
+    let activeWeights;
+    if (raceType === 'FLAT_TURF') activeWeights = weightsFlatTurf;
+    else if (raceType === 'FLAT_AW') activeWeights = weightsFlatAW;
+    else activeWeights = weightsJumps;
+
     const rawScore = 
-        (scoreCourse * weights.wCourse) +
-        (scoreDistance * weights.wDistance) +
-        (scoreGoing * weights.wGoing) +
-        (scoreTrainer * weights.wTrainer) +
-        (scoreJockey * weights.wJockey) +
-        (scoreOR * weights.wRating) +
-        (scoreStars * weights.wStars) +
-        (scoreFormTrend * weights.wFormString) +
-        (scoreRecency * weights.wRecency);
+        (scoreCourse * activeWeights.wCourse) +
+        (scoreDistance * activeWeights.wDistance) +
+        (scoreGoing * activeWeights.wGoing) +
+        (scoreTrainer * activeWeights.wTrainer) +
+        (scoreJockey * activeWeights.wJockey) +
+        (scoreOR * activeWeights.wRating) +
+        (scoreStars * activeWeights.wStars) +
+        (scoreFormTrend * activeWeights.wFormString) +
+        (scoreRecency * activeWeights.wRecency);
         
     const maxRawScore = 10 * (
-        weights.wCourse + weights.wDistance + weights.wGoing + weights.wTrainer + 
-        weights.wJockey + weights.wRating + weights.wStars + weights.wFormString + weights.wRecency
+        activeWeights.wCourse + activeWeights.wDistance + activeWeights.wGoing + activeWeights.wTrainer + 
+        activeWeights.wJockey + activeWeights.wRating + activeWeights.wStars + activeWeights.wFormString + activeWeights.wRecency
     );
     
     const finalScore = maxRawScore > 0 ? Math.round((rawScore / maxRawScore) * 100) : 0;

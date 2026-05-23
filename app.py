@@ -327,7 +327,12 @@ def load_cached_data():
 
 def get_all_historical_bets():
     import glob
-    from backtester import prepare_scored_runners, get_qualified_bet, DEFAULT_WEIGHTS, DEFAULT_BET_POLICY, parse_distance_to_furlongs, get_ride_odds, get_ride_odds_string
+    from backtester import prepare_scored_runners, get_qualified_bet, DEFAULT_WEIGHTS, DEFAULT_BET_POLICY, parse_distance_to_furlongs, get_ride_odds, get_ride_odds_string, get_race_type
+    
+    # Optimized weight profiles
+    WEIGHTS_FLAT_TURF = {'wCourse': 20, 'wDistance': 20, 'wGoing': 25, 'wTrainer': 45, 'wJockey': 50, 'wRating': 0, 'wStars': 5, 'wFormString': 20, 'wRecency': 5}
+    WEIGHTS_FLAT_AW = {'wCourse': 45, 'wDistance': 5, 'wGoing': 40, 'wTrainer': 20, 'wJockey': 35, 'wRating': 0, 'wStars': 5, 'wFormString': 5, 'wRecency': 0}
+    WEIGHTS_JUMPS = {'wCourse': 5, 'wDistance': 0, 'wGoing': 5, 'wTrainer': 15, 'wJockey': 20, 'wRating': 25, 'wStars': 0, 'wFormString': 5, 'wRecency': 5}
     
     history_dir = os.path.join(DIRECTORY, "cache", "history")
     if not os.path.exists(history_dir):
@@ -365,7 +370,17 @@ def get_all_historical_bets():
                     continue
                     
                 dist_f = parse_distance_to_furlongs(r.get('distance'))
-                scored = prepare_scored_runners(rides, r, dist_f, going, DEFAULT_WEIGHTS, DEFAULT_BET_POLICY['scoreTemperature'])
+                
+                # Classify race type to choose optimized weights profile
+                race_type = get_race_type(r)
+                if race_type == 'FLAT_TURF':
+                    active_w = WEIGHTS_FLAT_TURF
+                elif race_type == 'FLAT_AW':
+                    active_w = WEIGHTS_FLAT_AW
+                else:
+                    active_w = WEIGHTS_JUMPS
+                    
+                scored = prepare_scored_runners(rides, r, dist_f, going, active_w, DEFAULT_BET_POLICY['scoreTemperature'])
                 bet_info = get_qualified_bet(scored, DEFAULT_BET_POLICY)
                 
                 if bet_info:

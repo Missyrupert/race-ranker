@@ -7,6 +7,7 @@ import math
 import argparse
 import datetime
 import urllib.request
+import random
 
 # Default model weights
 DEFAULT_WEIGHTS = {
@@ -67,9 +68,7 @@ def scrape_day(date_str):
     cache_path = os.path.join(CACHE_DIR, f"cache_data_{date_str}.json")
     
     if os.path.exists(cache_path):
-        print(f"Loading {date_str} from local cache...")
-        with open(cache_path, 'r', encoding='utf-8') as f:
-            return json.load(f)
+        return json.load(open(cache_path, 'r', encoding='utf-8'))
             
     print(f"\nScraping results for {date_str} from Sporting Life...")
     main_url = f"https://www.sportinglife.com/racing/results/{date_str}"
@@ -270,7 +269,19 @@ def get_best_decimal_odds(ride):
 def is_non_runner(ride):
     return ride.get('ride_status') == "NONRUNNER" or ride.get('non_runner') is True
 
-def score_runner(ride, race, current_dist_furlongs, current_going, w):
+def get_race_type(race):
+    name = race.get('name', '').lower()
+    jumps_keywords = ['hurdle', 'chase', 'steeplechase', 'nh flat', 'bumper', 'national hunt']
+    if any(w in name for w in jumps_keywords):
+        return 'JUMPS'
+        
+    surface = race.get('course_surface', {}).get('surface')
+    if surface in ['ALLWEATHER', 'POLYTRACK']:
+        return 'FLAT_AW'
+        
+    return 'FLAT_TURF'
+
+def get_runner_subscores(ride, race, current_dist_furlongs, current_going):
     horse = ride.get('horse', {})
     previous_results = horse.get('previous_results', [])
     insights = ride.get('insights', [])
@@ -397,6 +408,12 @@ def score_runner(ride, race, current_dist_furlongs, current_going, w):
         elif days < 10:
             score_recency = 5
             
+    return (score_course, score_distance, score_going, score_trainer, score_jockey, score_or, score_stars, score_form_trend, score_recency, is_course_specialist, is_dist_winner, going_wins > 0)
+
+def score_runner(ride, race, current_dist_furlongs, current_going, w):
+    sub = get_runner_subscores(ride, race, current_dist_furlongs, current_going)
+    (score_course, score_distance, score_going, score_trainer, score_jockey, score_or, score_stars, score_form_trend, score_recency, is_course_specialist, is_dist_winner, is_going_suited) = sub
+    
     raw_score = (
         score_course * w['wCourse'] +
         score_distance * w['wDistance'] +
@@ -415,10 +432,10 @@ def score_runner(ride, race, current_dist_furlongs, current_going, w):
     return {
         'ride': ride,
         'finalScore': final_score,
-        'horse_name': horse.get('name'),
+        'horse_name': ride.get('horse', {}).get('name'),
         'isCourseSpecialist': is_course_specialist,
         'isDistWinner': is_dist_winner,
-        'isGoingSuited': going_wins > 0
+        'isGoingSuited': is_going_suited
     }
 
 def prepare_scored_runners(rides, race, current_dist_furlongs, current_going, w, temp):
@@ -474,6 +491,10 @@ def run_simulation(start_date, end_date, w=DEFAULT_WEIGHTS, p=DEFAULT_BET_POLICY
     total_races = 0
     qualified_bets = []
     
+    # Specific weights profiles mapping if w is DEFAULT_WEIGHTS
+    # E.g. we want to allow w to be a dictionary of profiles or a single weights vector
+    has_profiles = isinstance(next(iter(w.values())), dict) if w else False
+    
     while curr <= end:
         date_str = curr.strftime("%Y-%m-%d")
         payload = scrape_day(date_str)
@@ -495,7 +516,14 @@ def run_simulation(start_date, end_date, w=DEFAULT_WEIGHTS, p=DEFAULT_BET_POLICY
                     total_races += 1
                     dist_f = parse_distance_to_furlongs(race.get('distance'))
                     
-                    scored = prepare_scored_runners(rides, race, dist_f, going, w, p['scoreTemperature'])
+                    # Choose weights based on profile if available
+                    if has_profiles:
+                        race_type = get_race_type(race)
+                        active_w = w[race_type]
+                    else:
+                        active_w = w
+                        
+                    scored = prepare_scored_runners(rides, race, dist_f, going, active_w, p['scoreTemperature'])
                     bet_info = get_qualified_bet(scored, p)
                     
                     if bet_info:
@@ -515,7 +543,8 @@ def run_simulation(start_date, end_date, w=DEFAULT_WEIGHTS, p=DEFAULT_BET_POLICY
                             'odds': runner['decimalOdds'],
                             'won': won,
                             'returns': runner['decimalOdds'] if won else 0.0,
-                            'profit': (runner['decimalOdds'] - 1.0) if won else -1.0
+                            'profit': (runner['decimalOdds'] - 1.0) if won else -1.0,
+                            'race_type': get_race_type(race)
                         })
                         
         curr += datetime.timedelta(days=1)
@@ -533,6 +562,7 @@ def print_report(total_races, bets):
         print("No bets qualified under the current rules.")
         return
         
+    # Overall metrics
     wins = sum(1 for b in bets if b['won'])
     strike_rate = (wins / len(bets)) * 100
     total_staked = len(bets)
@@ -546,15 +576,31 @@ def print_report(total_races, bets):
     print(f"Total Returns:               £{total_returned:.2f}")
     print(f"Net Profit/Loss:             £{net_profit:.2f}")
     print(f"Return on Investment (ROI):   {roi:+.1f}%")
+    
+    # Race type breakdown
+    print("-" * 50)
+    print("BREAKDOWN BY RACE PROFILE:")
+    for rt in ['FLAT_TURF', 'FLAT_AW', 'JUMPS']:
+        rt_bets = [b for b in bets if b.get('race_type') == rt]
+        if rt_bets:
+            rt_wins = sum(1 for b in rt_bets if b['won'])
+            rt_sr = (rt_wins / len(rt_bets)) * 100
+            rt_staked = len(rt_bets)
+            rt_returned = sum(b['returns'] for b in rt_bets)
+            rt_profit = rt_returned - rt_staked
+            rt_roi = (rt_profit / rt_staked) * 100
+            print(f"  {rt:<10}: Bets: {len(rt_bets):<3} | Wins: {rt_wins:<2} ({rt_sr:.1f}%) | Profit: {rt_profit:+.2f} | ROI: {rt_roi:+.1f}%")
+        else:
+            print(f"  {rt:<10}: No bets placed")
     print("="*50)
     
     # Display top 15 bets
     print("\nRecent Qualified Bets Detail (Last 15):")
-    print(f"{'Date':<10} | {'Course':<12} | {'Time':<5} | {'Horse':<22} | {'Score':<5} | {'Odds':<6} | {'Res':<4}")
-    print("-"*75)
+    print(f"{'Date':<10} | {'Type':<9} | {'Course':<12} | {'Time':<5} | {'Horse':<22} | {'Score':<5} | {'Odds':<6} | {'Res':<4}")
+    print("-"*85)
     for b in bets[-15:]:
         res = "WON" if b['won'] else "LOSE"
-        print(f"{b['date']:<10} | {b['course']:<12} | {b['time']:<5} | {b['horse']:<22} | {b['score']:<4}% | {b['odds_str']:<6} | {res:<4}")
+        print(f"{b['date']:<10} | {b.get('race_type', 'UNKNOWN'):<9} | {b['course']:<12} | {b['time']:<5} | {b['horse']:<22} | {b['score']:<4}% | {b['odds_str']:<6} | {res:<4}")
 
 def optimize_parameters(start_date, end_date):
     print(f"\nRunning Parameter Optimizer from {start_date} to {end_date}...")
@@ -661,6 +707,237 @@ def optimize_parameters(start_date, end_date):
         print("No optimal combination found.")
     print("="*50)
 
+def tune_weights_for_profiles(start_date, end_date):
+    print(f"\n=======================================================")
+    print(f"     MODEL WEIGHTS OPTIMIZER FOR RACE PROFILES")
+    print(f"=======================================================\n")
+    
+    # Load all races and pre-calculate subscores to make optimization 100x faster
+    curr = datetime.datetime.strptime(start_date, "%Y-%m-%d")
+    end = datetime.datetime.strptime(end_date, "%Y-%m-%d")
+    
+    precalculated_races = []
+    
+    print("Pre-calculating runner sub-scores (resolving date leakage and suitability)...")
+    while curr <= end:
+        date_str = curr.strftime("%Y-%m-%d")
+        payload = scrape_day(date_str)
+        if payload and payload.get('meetings'):
+            for meeting in payload['meetings']:
+                going = meeting.get('meeting_summary', {}).get('going', '')
+                for race in meeting.get('races', []):
+                    detail = race.get('scraped_detail')
+                    if not detail or detail.get('race_summary', {}).get('race_stage') != 'WEIGHEDIN':
+                        continue
+                    
+                    # Exclude non-runners
+                    active_rides = [r for r in detail.get('rides', []) if not is_non_runner(r)]
+                    if len(active_rides) < 2:
+                        continue
+                        
+                    dist_f = parse_distance_to_furlongs(race.get('distance'))
+                    race_type = get_race_type(race)
+                    
+                    # Pre-calculate subscores for each active runner in the race
+                    runners_data = []
+                    for ride in active_rides:
+                        sub = get_runner_subscores(ride, race, dist_f, going)
+                        dec_odds = get_best_decimal_odds(ride)
+                        won = ride.get('finish_position') == 1
+                        runners_data.append({
+                            'subscores': sub,
+                            'decimalOdds': dec_odds,
+                            'won': won,
+                            'horse_name': ride.get('horse', {}).get('name')
+                        })
+                        
+                    # Pre-calculate market probabilities (depends only on odds, not weights!)
+                    implied_total = sum(1.0 / r['decimalOdds'] for r in runners_data)
+                    for r in runners_data:
+                        raw_market_prob = 1.0 / r['decimalOdds']
+                        r['marketProb'] = raw_market_prob / implied_total if implied_total > 0 else raw_market_prob
+                        
+                    precalculated_races.append({
+                        'race_type': race_type,
+                        'runners': runners_data
+                    })
+        curr += datetime.timedelta(days=1)
+        
+    print(f"Pre-calculated {len(precalculated_races)} races successfully.\n")
+    
+    # We will search weights separately for each race type
+    race_types = ['FLAT_TURF', 'FLAT_AW', 'JUMPS']
+    optimized_profiles = {}
+    
+    bet_policy = DEFAULT_BET_POLICY.copy()
+    
+    # Define optimization variables
+    keys = ['wCourse', 'wDistance', 'wGoing', 'wTrainer', 'wJockey', 'wRating', 'wStars', 'wFormString', 'wRecency']
+    
+    # Helper to evaluate ROI for a specific weight vector on a subset of precalculated races
+    def evaluate_weights(weight_dict, target_races):
+        total_bets = 0
+        total_wins = 0
+        total_staked = 0.0
+        total_returned = 0.0
+        
+        sum_w = sum(weight_dict.values())
+        if sum_w == 0:
+            return -100.0, 0, 0
+            
+        for r_data in target_races:
+            scored = []
+            for r in r_data['runners']:
+                (score_course, score_distance, score_going, score_trainer, score_jockey, score_or, score_stars, score_form_trend, score_recency, is_course_specialist, is_dist_winner, is_going_suited) = r['subscores']
+                
+                raw_score = (
+                    score_course * weight_dict['wCourse'] +
+                    score_distance * weight_dict['wDistance'] +
+                    score_going * weight_dict['wGoing'] +
+                    score_trainer * weight_dict['wTrainer'] +
+                    score_jockey * weight_dict['wJockey'] +
+                    score_or * weight_dict['wRating'] +
+                    score_stars * weight_dict['wStars'] +
+                    score_form_trend * weight_dict['wFormString'] +
+                    score_recency * weight_dict['wRecency']
+                )
+                final_score = round((raw_score / (10 * sum_w)) * 100)
+                
+                scored.append({
+                    'finalScore': final_score,
+                    'decimalOdds': r['decimalOdds'],
+                    'marketProb': r['marketProb'],
+                    'won': r['won']
+                })
+                
+            scored.sort(key=lambda x: x['finalScore'], reverse=True)
+            
+            # Model strength & probabilities
+            avg_score = sum(x['finalScore'] for x in scored) / len(scored)
+            for x in scored:
+                x['modelStrength'] = math.exp((x['finalScore'] - avg_score) / bet_policy['scoreTemperature'])
+                
+            total_strength = sum(x['modelStrength'] for x in scored)
+            for x in scored:
+                x['modelProb'] = x['modelStrength'] / total_strength if total_strength > 0 else (1.0 / len(scored))
+                x['valueRatio'] = x['modelProb'] / x['marketProb'] if (total_strength > 0 and x['marketProb'] > 0) else 0.0
+                
+            # Bet selection
+            top = scored[0]
+            second = scored[1] if len(scored) > 1 else None
+            score_gap = top['finalScore'] - second['finalScore'] if second else top['finalScore']
+            
+            odds_in_range = bet_policy['minOdds'] <= top['decimalOdds'] <= bet_policy['maxOdds']
+            has_enough_score = top['finalScore'] >= bet_policy['minScore']
+            has_enough_gap = score_gap >= bet_policy['minScoreGap']
+            has_value = top['valueRatio'] >= bet_policy['minValueRatio']
+            
+            if odds_in_range and has_enough_score and has_enough_gap and has_value:
+                total_bets += 1
+                total_staked += 1.00
+                if top['won']:
+                    total_wins += 1
+                    total_returned += top['decimalOdds']
+                    
+        roi = ((total_returned - total_staked) / total_staked * 100) if total_staked > 0 else -100.0
+        return roi, total_bets, total_wins
+        
+    for rt in race_types:
+        rt_races = [r for r in precalculated_races if r['race_type'] == rt]
+        print(f"Optimizing {rt} ({len(rt_races)} races in sample)...")
+        
+        # 1. Baseline ROI
+        base_roi, base_bets, base_wins = evaluate_weights(DEFAULT_WEIGHTS, rt_races)
+        print(f"  Baseline ROI: {base_roi:+.1f}% ({base_bets} bets, {base_wins} wins)")
+        
+        best_roi = base_roi
+        best_w = DEFAULT_WEIGHTS.copy()
+        best_bets_count = base_bets
+        best_wins_count = base_wins
+        
+        # 2. Stage 1: Randomized Search (3,000 trials)
+        print("  Stage 1: Randomized Search (3,000 combinations)...")
+        weight_values = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
+        
+        for _ in range(3000):
+            candidate_w = {k: random.choice(weight_values) for k in keys}
+            # Exclude all-zeros
+            if sum(candidate_w.values()) == 0:
+                continue
+            roi, b_cnt, w_cnt = evaluate_weights(candidate_w, rt_races)
+            
+            # Require a statistically relevant sample of bets (min 5 for small AW, min 15 for Turf/Jumps)
+            min_bets_req = 6 if rt == 'FLAT_AW' else 15
+            if b_cnt >= min_bets_req:
+                # Prefer higher ROI. If ROI is same, prefer more bets.
+                if roi > best_roi or (abs(roi - best_roi) < 0.1 and b_cnt > best_bets_count):
+                    best_roi = roi
+                    best_w = candidate_w.copy()
+                    best_bets_count = b_cnt
+                    best_wins_count = w_cnt
+                    
+        print(f"  Stage 1 Best ROI: {best_roi:+.1f}% ({best_bets_count} bets)")
+        
+        # 3. Stage 2: Hill-Climbing (Coordinate Descent)
+        print("  Stage 2: Hill-Climbing Refinement...")
+        improved = True
+        iterations = 0
+        
+        while improved and iterations < 10:
+            improved = False
+            iterations += 1
+            for k in keys:
+                current_val = best_w[k]
+                
+                # Try +5
+                if current_val <= 45:
+                    best_w[k] = current_val + 5
+                    roi, b_cnt, w_cnt = evaluate_weights(best_w, rt_races)
+                    min_bets_req = 6 if rt == 'FLAT_AW' else 15
+                    if b_cnt >= min_bets_req and roi > best_roi:
+                        best_roi = roi
+                        best_bets_count = b_cnt
+                        best_wins_count = w_cnt
+                        improved = True
+                        continue
+                    else:
+                        best_w[k] = current_val # revert
+                        
+                # Try -5
+                if current_val >= 5:
+                    best_w[k] = current_val - 5
+                    roi, b_cnt, w_cnt = evaluate_weights(best_w, rt_races)
+                    min_bets_req = 6 if rt == 'FLAT_AW' else 15
+                    if b_cnt >= min_bets_req and roi > best_roi:
+                        best_roi = roi
+                        best_bets_count = b_cnt
+                        best_wins_count = w_cnt
+                        improved = True
+                        continue
+                    else:
+                        best_w[k] = current_val # revert
+                        
+        print(f"  Stage 2 Optimal ROI: {best_roi:+.1f}% ({best_bets_count} bets, {best_wins_count} wins)")
+        print(f"  Optimal Weights: {best_w}")
+        print("-" * 50)
+        
+        optimized_profiles[rt] = {
+            'weights': best_w,
+            'roi': best_roi,
+            'bets': best_bets_count,
+            'wins': best_wins_count
+        }
+        
+    print("\n" + "="*50)
+    print("         OPTIMIZED PROFILE WEIGHTS FOR CODE")
+    print("="*50)
+    for rt in race_types:
+        prof = optimized_profiles[rt]
+        w_str = ", ".join(f"'{k}': {prof['weights'][k]}" for k in keys)
+        print(f"WEIGHTS_{rt} = {{{w_str}}}")
+        print(f"  ROI: {prof['roi']:+.1f}% | Bets: {prof['bets']} | Wins: {prof['wins']}\n")
+    print("="*50)
+
 def main():
     parser = argparse.ArgumentParser(description="Multi-Day Historical Backtester & Parameter Optimizer")
     parser.add_argument("--start", type=str, required=True, help="Start date (YYYY-MM-DD)")
@@ -671,6 +948,7 @@ def main():
     parser.add_argument("--min-odds", type=float, default=DEFAULT_BET_POLICY['minOdds'], help="Minimum decimal odds")
     parser.add_argument("--max-odds", type=float, default=DEFAULT_BET_POLICY['maxOdds'], help="Maximum decimal odds")
     parser.add_argument("--optimize", action="store_true", help="Run hyperparameter search optimizer instead of standard backtest")
+    parser.add_argument("--tune-weights", action="store_true", help="Find optimized model weights profiles for Flat Turf, Flat AW, and Jumps")
     
     args = parser.parse_args()
     
@@ -685,7 +963,9 @@ def main():
         print("Error: Dates must be in YYYY-MM-DD format.")
         sys.exit(1)
         
-    if args.optimize:
+    if args.tune_weights:
+        tune_weights_for_profiles(start_date, end_date)
+    elif args.optimize:
         optimize_parameters(start_date, end_date)
     else:
         policy = {
