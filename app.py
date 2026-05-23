@@ -254,6 +254,27 @@ class MyHTTPHandler(http.server.SimpleHTTPRequestHandler):
             self.wfile.write(json.dumps(status_copy).encode('utf-8'))
             return
             
+        # API Route: Get aggregated historical bets from cached files
+        elif self.path.startswith("/api/history"):
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            
+            try:
+                bets = get_all_historical_bets()
+                payload = {
+                    "status": "success",
+                    "bets": bets
+                }
+            except Exception as e:
+                payload = {
+                    "status": "error",
+                    "message": str(e)
+                }
+            self.wfile.write(json.dumps(payload).encode('utf-8'))
+            return
+            
         # Standard static file request
         super().do_GET()
 
@@ -303,6 +324,71 @@ def load_cached_data():
         except Exception as e:
             print(f"Server: Error loading cache file: {e}")
     return False
+
+def get_all_historical_bets():
+    import glob
+    from backtester import prepare_scored_runners, get_qualified_bet, DEFAULT_WEIGHTS, DEFAULT_BET_POLICY, parse_distance_to_furlongs, get_ride_odds, get_ride_odds_string
+    
+    history_dir = os.path.join(DIRECTORY, "cache", "history")
+    if not os.path.exists(history_dir):
+        return []
+        
+    pattern = os.path.join(history_dir, "cache_data_*.json")
+    files = glob.glob(pattern)
+    files.sort()
+    
+    historical_bets = []
+    
+    for filepath in files:
+        filename = os.path.basename(filepath)
+        date_match = re.search(r'cache_data_(\d{4}-\d{2}-\d{2})\.json', filename)
+        if not date_match:
+            continue
+        date_str = date_match.group(1)
+        
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+        except Exception as e:
+            print(f"Error loading historical cache {filename}: {e}")
+            continue
+            
+        meetings = data.get('meetings', [])
+        for m in meetings:
+            going = m.get('meeting_summary', {}).get('going', '')
+            for r in m.get('races', []):
+                det = r.get('scraped_detail')
+                if not det or det.get('race_summary', {}).get('race_stage') != 'WEIGHEDIN':
+                    continue
+                rides = det.get('rides', [])
+                if not rides:
+                    continue
+                    
+                dist_f = parse_distance_to_furlongs(r.get('distance'))
+                scored = prepare_scored_runners(rides, r, dist_f, going, DEFAULT_WEIGHTS, DEFAULT_BET_POLICY['scoreTemperature'])
+                bet_info = get_qualified_bet(scored, DEFAULT_BET_POLICY)
+                
+                if bet_info:
+                    runner, gap = bet_info
+                    ride = runner['ride']
+                    won = ride.get('finish_position') == 1
+                    outcome = "won" if won else "lost"
+                    dec_odds = runner['decimalOdds']
+                    odds_str = get_ride_odds_string(ride)
+                    
+                    historical_bets.append({
+                        'date': date_str,
+                        'course': r.get('course_name'),
+                        'time': r.get('time'),
+                        'horse': runner['horse_name'],
+                        'odds': odds_str,
+                        'outcome': outcome,
+                        'stake': 1.00,
+                        'returns': dec_odds if won else 0.0,
+                        'profit': (dec_odds - 1.0) if won else -1.0
+                    })
+                    
+    return historical_bets
 
 def main():
     # Make sure public directory exists

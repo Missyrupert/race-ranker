@@ -1162,5 +1162,21 @@ function showHorseModal(horseName) {
     elModal.classList.remove("hidden");
 }
 
-// Kickoff
-checkStatus();
+// Load historical bets from the server API, falling back to localStorage
+async function loadHistoricalBets() {
+    try {
+        const response = await fetch("/api/history");
+        const payload = await response.json();
+        if (payload.status === "success") {
+            historicalBets = payload.bets;
+            localStorage.setItem("antigravity_historical_bets", JSON.stringify(historicalBets));
+            console.log(`Loaded ${historicalBets.length} historical bets from server.`);
+        }
+    } catch (e) {
+        console.error("Failed to load history from server, using localStorage fallback:", e);
+    }
+    // Kickoff status check after loading bets
+    checkStatus();
+}
+
+loadHistoricalBets();
