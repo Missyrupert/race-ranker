@@ -110,31 +110,55 @@
                     <!-- Fictional £1 Bet Tracker -->
                     <div class="tracker-card glass-panel">
                         <div class="tracker-header">
-                            <span class="badge-accent badge-green">📊 Bet Tracker</span>
-                            <h2>Fictional £1 Bet Tracker (NAP)</h2>
+                            <span class="badge-accent badge-green">📊 Performance Balance Sheet</span>
+                            <h2>Fictional £1 Bet Tracker (NAP Selections)</h2>
                         </div>
                         <div class="tracker-body">
-                            <div class="tracker-grid">
-                                <div class="tracker-stat">
-                                    <span class="stat-lbl">Bets Settled</span>
-                                    <span class="stat-val" id="tracker-settled">0 / 0</span>
+                            <div class="periods-grid">
+                                <!-- Today -->
+                                <div class="period-stat-box">
+                                    <span class="period-title">Today</span>
+                                    <span class="period-pl neutral" id="pl-today">£0.00</span>
+                                    <div class="period-details">
+                                        <div class="detail-row"><span>Staked:</span> <strong id="staked-today">£0.00</strong></div>
+                                        <div class="detail-row"><span>Returns:</span> <strong id="ret-today">£0.00</strong></div>
+                                        <div class="detail-row"><span>Bets:</span> <strong id="bets-today">0 (0 win)</strong></div>
+                                        <div class="detail-row"><span>ROI:</span> <strong id="roi-today">0.0%</strong></div>
+                                    </div>
                                 </div>
-                                <div class="tracker-stat">
-                                    <span class="stat-lbl">Winners</span>
-                                    <span class="stat-val" id="tracker-winners">0</span>
+                                <!-- Week to Date -->
+                                <div class="period-stat-box">
+                                    <span class="period-title">Week to Date</span>
+                                    <span class="period-pl neutral" id="pl-wtd">£0.00</span>
+                                    <div class="period-details">
+                                        <div class="detail-row"><span>Staked:</span> <strong id="staked-wtd">£0.00</strong></div>
+                                        <div class="detail-row"><span>Returns:</span> <strong id="ret-wtd">£0.00</strong></div>
+                                        <div class="detail-row"><span>Bets:</span> <strong id="bets-wtd">0 (0 win)</strong></div>
+                                        <div class="detail-row"><span>ROI:</span> <strong id="roi-wtd">0.0%</strong></div>
+                                    </div>
                                 </div>
-                                <div class="tracker-stat">
-                                    <span class="stat-lbl">Strike Rate</span>
-                                    <span class="stat-val text-gold" id="tracker-strike">0%</span>
+                                <!-- Month to Date -->
+                                <div class="period-stat-box">
+                                    <span class="period-title">Month to Date</span>
+                                    <span class="period-pl neutral" id="pl-mtd">£0.00</span>
+                                    <div class="period-details">
+                                        <div class="detail-row"><span>Staked:</span> <strong id="staked-mtd">£0.00</strong></div>
+                                        <div class="detail-row"><span>Returns:</span> <strong id="ret-mtd">£0.00</strong></div>
+                                        <div class="detail-row"><span>Bets:</span> <strong id="bets-mtd">0 (0 win)</strong></div>
+                                        <div class="detail-row"><span>ROI:</span> <strong id="roi-mtd">0.0%</strong></div>
+                                    </div>
                                 </div>
-                                <div class="tracker-stat">
-                                    <span class="stat-lbl">Total Returns</span>
-                                    <span class="stat-val" id="tracker-return">£0.00</span>
+                                <!-- Year to Date -->
+                                <div class="period-stat-box">
+                                    <span class="period-title">Year to Date</span>
+                                    <span class="period-pl neutral" id="pl-ytd">£0.00</span>
+                                    <div class="period-details">
+                                        <div class="detail-row"><span>Staked:</span> <strong id="staked-ytd">£0.00</strong></div>
+                                        <div class="detail-row"><span>Returns:</span> <strong id="ret-ytd">£0.00</strong></div>
+                                        <div class="detail-row"><span>Bets:</span> <strong id="bets-ytd">0 (0 win)</strong></div>
+                                        <div class="detail-row"><span>ROI:</span> <strong id="roi-ytd">0.0%</strong></div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="tracker-pl-container">
-                                <span class="pl-label">NET PROFIT / LOSS</span>
-                                <span class="pl-value" id="tracker-pl">£0.00</span>
                             </div>
                         </div>
                     </div>

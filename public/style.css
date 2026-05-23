@@ -474,8 +474,8 @@ body {
 
 /* Top Summary Panels Grid */
 .top-panels-grid {
-    display: grid;
-    grid-template-columns: 1.25fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 
@@ -507,34 +507,79 @@ body {
     color: var(--accent-green-bright) !important;
 }
 
-.tracker-grid {
+/* Periods Grid for Balance Sheet */
+.periods-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-    margin-bottom: 14px;
+    gap: 14px;
+    margin-top: 4px;
 }
 
-.tracker-stat {
+.period-stat-box {
     display: flex;
     flex-direction: column;
-    padding: 10px 8px;
+    padding: 14px;
     background-color: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     text-align: center;
+    transition: background-color var(--transition-fast), border-color var(--transition-fast);
 }
 
-.tracker-pl-container {
+.period-stat-box:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.period-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.period-pl {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.period-pl.profit {
+    color: var(--accent-green-bright);
+    text-shadow: 0 0 10px rgba(46, 160, 67, 0.2);
+}
+
+.period-pl.loss {
+    color: var(--accent-red);
+    text-shadow: 0 0 10px rgba(218, 54, 55, 0.2);
+}
+
+.period-pl.neutral {
+    color: var(--text-secondary);
+}
+
+.period-details {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 14px;
-    background-color: rgba(255, 255, 255, 0.01);
-    border: 1px dashed var(--border-color);
-    border-radius: 8px;
-    flex: 1;
-    margin-top: 4px;
+    gap: 4px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 8px;
+    text-align: left;
+}
+
+.detail-row {
+    font-size: 11px;
+    color: var(--text-secondary);
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-row strong {
+    color: var(--text-primary);
 }
 
 .pl-label {
