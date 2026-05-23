@@ -8,7 +8,7 @@ import os
 import threading
 import datetime
 
-PORT = int(os.environ.get("PORT", 8000))
+PORT = int(os.environ.get("PORT", 8080))
 DIRECTORY = os.path.dirname(os.path.abspath(__file__))
 PUBLIC_DIR = os.path.join(DIRECTORY, "public")
 CACHE_FILE = os.path.join(DIRECTORY, "cache_data.json")

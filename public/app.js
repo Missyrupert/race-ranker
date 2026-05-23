@@ -1,3 +1,12 @@
+// Unregister any stale service workers from old Next.js PWAs
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(registrations => {
+        for (let registration of registrations) {
+            registration.unregister();
+        }
+    });
+}
+
 // Global state variables
 let appData = null; // Scraped data: array of meetings
 let selectedMeeting = null;
