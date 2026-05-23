@@ -25,3 +25,6 @@ build/
 .next/
 out/
 node_modules/
+
+# Local daily racecard scraper cache
+cache_data.json

@@ -1,6 +1,2 @@
-requests>=2.31.0
-beautifulsoup4>=4.12.0
-lxml>=4.9.0
-pandas>=2.1.0
-playwright>=1.40.0
-curl_cffi>=0.5.0
+# No external python dependencies required.
+# Runs entirely using Python standard libraries (http.server, urllib, threading, json, re).
