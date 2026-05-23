@@ -2,7 +2,9 @@
 let appData = null; // Scraped data: array of meetings
 let selectedMeeting = null;
 let selectedRace = null;
-let weights = {
+
+// Hardcoded model weights (empirically successful weights)
+const weights = {
     wCourse: 30,
     wDistance: 30,
     wGoing: 25,
@@ -33,54 +35,17 @@ const elBriefingBestBet = document.getElementById("briefing-best-bet");
 const elBriefingDroppers = document.getElementById("briefing-droppers");
 const elBriefingVerdict = document.getElementById("briefing-verdict");
 
+// Bet Tracker DOM Elements
+const elTrackerSettled = document.getElementById("tracker-settled");
+const elTrackerWinners = document.getElementById("tracker-winners");
+const elTrackerStrike = document.getElementById("tracker-strike");
+const elTrackerReturn = document.getElementById("tracker-return");
+const elTrackerPl = document.getElementById("tracker-pl");
+
 // Modal Elements
 const elModal = document.getElementById("details-modal");
 const elModalBody = document.getElementById("modal-body-content");
 const elCloseModal = document.querySelector(".close-modal");
-
-// Slider Inputs & Value Outputs
-const sliderIds = ["wCourse", "wDistance", "wGoing", "wTrainer", "wJockey", "wRating", "wStars", "wFormString", "wRecency"];
-const sliderElems = {};
-const sliderValElems = {};
-
-sliderIds.forEach(id => {
-    sliderElems[id] = document.getElementById(id);
-    sliderValElems[id] = document.getElementById("val-" + id);
-});
-
-// Event Listeners for sliders
-sliderIds.forEach(id => {
-    sliderElems[id].addEventListener("input", (e) => {
-        weights[id] = parseInt(e.target.value);
-        sliderValElems[id].textContent = weights[id];
-        // Instantly recalculate scores & update table!
-        if (selectedRace) {
-            renderRunnersTable(selectedRace);
-        }
-    });
-});
-
-document.getElementById("btn-reset-weights").addEventListener("click", () => {
-    const defaults = {
-        wCourse: 30,
-        wDistance: 30,
-        wGoing: 25,
-        wTrainer: 20,
-        wJockey: 15,
-        wRating: 25,
-        wStars: 40,
-        wFormString: 35,
-        wRecency: 15
-    };
-    sliderIds.forEach(id => {
-        weights[id] = defaults[id];
-        sliderElems[id].value = defaults[id];
-        sliderValElems[id].textContent = defaults[id];
-    });
-    if (selectedRace) {
-        renderRunnersTable(selectedRace);
-    }
-});
 
 // Modal close behavior
 elCloseModal.addEventListener("click", () => {
@@ -109,6 +74,29 @@ function parseOdds(oddsStr) {
     const dec = parseFloat(clean);
     return isNaN(dec) ? 4.0 : dec;
 }
+
+// Helper to get decimal odds from a ride
+function getRideOdds(ride) {
+    if (ride.starting_price) {
+        return parseOdds(ride.starting_price);
+    }
+    if (ride.betting && ride.betting.current_odds) {
+        return parseOdds(ride.betting.current_odds);
+    }
+    return 2.0;
+}
+
+// Helper to get fractional/string odds from a ride
+function getRideOddsString(ride) {
+    if (ride.starting_price) {
+        return ride.starting_price;
+    }
+    if (ride.betting && ride.betting.current_odds) {
+        return ride.betting.current_odds;
+    }
+    return "SP";
+}
+
 
 // Localise race time from UTC to client browser's timezone (GMT/BST)
 function formatRaceTime(dateStr, timeStr) {
@@ -217,6 +205,7 @@ async function checkStatus() {
             const timeStr = dateObj.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
             elCacheTime.innerHTML = `<span class="status-dot"></span><span class="status-label">Today's Cards (Scraped: ${timeStr})</span>`;
             
+            calculateDailyPerformance();
             renderMeetingsList();
         } else {
             // Empty state
@@ -250,6 +239,104 @@ elBtnRefresh.addEventListener("click", async () => {
         elBtnRefresh.disabled = false;
     }
 });
+
+// Global outcomes state for the Bet Tracker
+let dailyPLState = {
+    outcomes: {} // key: raceId, value: { outcome: 'won'|'lost'|'void', odds: '...', horseName: '...' }
+};
+
+// Calculate daily model performance & settled P&L for Bet Tracker
+function calculateDailyPerformance() {
+    if (!appData || appData.length === 0) return;
+    
+    let settledCount = 0;
+    let winnersCount = 0;
+    let voidCount = 0;
+    let totalStakes = 0;
+    let totalReturns = 0;
+    
+    // Clear old outcomes
+    dailyPLState.outcomes = {};
+    
+    appData.forEach(meeting => {
+        const currentGoing = meeting.meeting_summary.going || "";
+        
+        meeting.races.forEach(race => {
+            const detail = race.scraped_detail || {};
+            const rides = detail.rides || [];
+            if (rides.length === 0) return;
+            
+            const currentDistFurlongs = parseDistanceToFurlongs(race.distance);
+            
+            // Score all runners in this race using the model scoring function
+            const scoredRunners = rides.map(ride => scoreRunner(ride, race, currentDistFurlongs, currentGoing));
+            if (scoredRunners.length === 0) return;
+            
+            // Sort runners by predictor score descending to find the top selection (NAP)
+            scoredRunners.sort((a, b) => b.finalScore - a.finalScore);
+            const nap = scoredRunners[0];
+            const napRide = nap.ride;
+            const raceId = race.race_summary_reference.id;
+            
+            // Check if the race is officially finished
+            const isFinished = detail.race_stage === "WEIGHEDIN";
+            if (isFinished) {
+                const isNonRunner = napRide.ride_status === "NONRUNNER" || napRide.non_runner === true || napRide.finish_position === 0;
+                const won = !isNonRunner && napRide.finish_position === 1;
+                
+                let outcome = "lost";
+                let odds = getRideOddsString(napRide);
+                let decOdds = getRideOdds(napRide);
+                
+                if (isNonRunner) {
+                    outcome = "void";
+                } else if (won) {
+                    outcome = "won";
+                }
+                
+                dailyPLState.outcomes[raceId] = {
+                    outcome: outcome,
+                    odds: odds,
+                    horseName: napRide.horse.name
+                };
+                
+                // Track stats
+                settledCount++;
+                totalStakes += 1.00;
+                
+                if (outcome === "won") {
+                    winnersCount++;
+                    totalReturns += decOdds;
+                } else if (outcome === "void") {
+                    voidCount++;
+                    totalReturns += 1.00; // Stake returned
+                }
+            }
+        });
+    });
+    
+    const netPL = totalReturns - totalStakes;
+    const activeBets = settledCount - voidCount;
+    const strikeRate = activeBets > 0 ? (winnersCount / activeBets) * 100 : 0.0;
+    
+    // Update DOM widgets
+    if (elTrackerSettled) elTrackerSettled.textContent = `${settledCount}`;
+    if (elTrackerWinners) elTrackerWinners.textContent = `${winnersCount}`;
+    if (elTrackerStrike) elTrackerStrike.textContent = `${strikeRate.toFixed(1)}%`;
+    if (elTrackerReturn) elTrackerReturn.textContent = `£${totalReturns.toFixed(2)}`;
+    
+    if (elTrackerPl) {
+        elTrackerPl.textContent = (netPL >= 0 ? "+" : "") + `£${netPL.toFixed(2)}`;
+        elTrackerPl.className = "pl-value"; // reset
+        if (netPL > 0) {
+            elTrackerPl.classList.add("profit");
+        } else if (netPL < 0) {
+            elTrackerPl.classList.add("loss");
+        } else {
+            elTrackerPl.classList.add("neutral");
+        }
+    }
+}
 
 // Render the left sidebar meetings
 function renderMeetingsList() {
@@ -329,6 +416,20 @@ function selectMeeting(meeting) {
         const isHandicap = r.has_handicap ? `<span class="tag tag-handicap">Hcap</span>` : "";
         const rClass = r.race_class ? `<span class="tag tag-class">Cl ${r.race_class}</span>` : "";
         
+        // Fetch settled outcome for sidebar badge
+        const raceId = r.race_summary_reference.id;
+        const outcomeInfo = dailyPLState.outcomes[raceId];
+        let badgeHtml = "";
+        if (outcomeInfo) {
+            if (outcomeInfo.outcome === 'won') {
+                badgeHtml = `<span class="tag tag-won" style="background-color: rgba(46, 160, 67, 0.15); border: 1px solid #3fb950; color: #56d364; font-weight: 600;">✅ Won @ ${outcomeInfo.odds}</span>`;
+            } else if (outcomeInfo.outcome === 'lost') {
+                badgeHtml = `<span class="tag tag-lost" style="background-color: rgba(248, 81, 73, 0.15); border: 1px solid #f85149; color: #ff7b72;">❌ Lost</span>`;
+            } else if (outcomeInfo.outcome === 'void') {
+                badgeHtml = `<span class="tag tag-void" style="background-color: rgba(110, 118, 129, 0.15); border: 1px solid #8b949e; color: #c9d1d9;">↩️ Void</span>`;
+            }
+        }
+        
         rItem.innerHTML = `
             <div class="race-meta">
                 <span class="race-time">${formatRaceTime(r.date, r.time)}</span>
@@ -338,6 +439,7 @@ function selectMeeting(meeting) {
             <div class="race-tags">
                 ${rClass}
                 ${isHandicap}
+                ${badgeHtml}
             </div>
         `;
         
@@ -417,6 +519,172 @@ function generateModelReasoning(runner, currentGoing) {
     return reasons;
 }
 
+// Reusable runner scoring engine based on hardcoded model weights
+function scoreRunner(ride, race, currentDistFurlongs, currentGoing) {
+    const horse = ride.horse || {};
+    const previousResults = horse.previous_results || [];
+    const insights = ride.insights || [];
+    
+    // 1. Course Wins (C)
+    let courseWins = 0;
+    let coursePlaces = 0;
+    previousResults.forEach(res => {
+        if (res.course_name && res.course_name.toLowerCase() === race.course_name.toLowerCase()) {
+            if (res.position === 1) courseWins++;
+            else if (res.position === 2 || res.position === 3) coursePlaces++;
+        }
+    });
+    let scoreCourse = 0;
+    if (courseWins > 0) scoreCourse = 10;
+    else if (coursePlaces > 0) scoreCourse = 5;
+    
+    // Check for course specialist insights
+    const isCourseSpecialist = insights.some(ins => ins.type === "COURSE_SPECIALIST" || ins.type === "COURSE_WINNER");
+    if (isCourseSpecialist) scoreCourse = 10;
+    
+    // 2. Distance Wins (D)
+    let distWins = 0;
+    let distPlaces = 0;
+    previousResults.forEach(res => {
+        const prevDistF = parseDistanceToFurlongs(res.distance);
+        if (isSimilarDistance(currentDistFurlongs, prevDistF)) {
+            if (res.position === 1) distWins++;
+            else if (res.position === 2 || res.position === 3) distPlaces++;
+        }
+    });
+    let scoreDistance = 0;
+    if (distWins > 0) scoreDistance = 10;
+    else if (distPlaces > 0) scoreDistance = 5;
+    
+    const isDistWinner = insights.some(ins => ins.type === "DISTANCE_WINNER");
+    if (isDistWinner) scoreDistance = 10;
+    
+    // 3. Going Suitability (G)
+    let goingWins = 0;
+    let goingPlaces = 0;
+    previousResults.forEach(res => {
+        if (isGoingCompatible(currentGoing, res.going)) {
+            if (res.position === 1) goingWins++;
+            else if (res.position === 2 || res.position === 3) goingPlaces++;
+        }
+    });
+    let scoreGoing = 0;
+    if (goingWins > 0) scoreGoing = 10;
+    else if (goingPlaces > 0) scoreGoing = 5;
+    
+    // 4. Trainer Form
+    let scoreTrainer = 0;
+    const hasHotTrainer = insights.some(ins => ins.type === "HOT_TRAINER" || ins.type === "HOT_YARD");
+    if (hasHotTrainer) scoreTrainer = 10;
+    else scoreTrainer = 3; // base yard score
+    
+    // 5. Jockey Form
+    let scoreJockey = 0;
+    const hasHotJockey = insights.some(ins => ins.type === "HOT_JOCKEY");
+    if (hasHotJockey) scoreJockey = 10;
+    else scoreJockey = 4; // base jockey score
+    
+    // 6. Official Rating (OR) vs Last Win
+    let scoreOR = 5; // default middle score
+    if (ride.official_rating) {
+        // Find rating on previous winning runs
+        const winningRuns = previousResults.filter(res => res.position === 1);
+        if (winningRuns.length > 0) {
+            let classDrops = 0;
+            winningRuns.forEach(win => {
+                const winClass = parseInt(win.race_class);
+                const currClass = parseInt(race.race_class);
+                if (!isNaN(winClass) && !isNaN(currClass) && currClass > winClass) {
+                    classDrops++;
+                }
+            });
+            if (classDrops > 0) scoreOR = 10; // Major class dropper
+        }
+    }
+    
+    // 7. Timeform Rating (Stars)
+    let scoreStars = 0;
+    if (ride.timeform_stars) {
+        scoreStars = ride.timeform_stars * 2;
+    } else {
+        scoreStars = 4;
+    }
+    if (ride.rating123 === 1) {
+        scoreStars = Math.min(10, scoreStars + 2);
+    }
+    
+    // 8. Recent Form Trend (Positions)
+    let scoreFormTrend = 0;
+    const formFigures = horse.formsummary ? horse.formsummary.display_text : "";
+    if (formFigures) {
+        const cleanForm = formFigures.replace(/[^1-9]/g, '');
+        if (cleanForm.length > 0) {
+            let sumScore = 0;
+            let divisor = 0;
+            
+            const runs = cleanForm.split("").reverse().slice(0, 3);
+            const runWeights = [0.5, 0.3, 0.2];
+            
+            runs.forEach((pos, posIdx) => {
+                const posNum = parseInt(pos);
+                let posScore = 1;
+                if (posNum === 1) posScore = 10;
+                else if (posNum === 2) posScore = 8;
+                else if (posNum === 3) posScore = 6;
+                else if (posNum === 4) posScore = 4;
+                
+                sumScore += posScore * runWeights[posIdx];
+                divisor += runWeights[posIdx];
+            });
+            
+            scoreFormTrend = sumScore / divisor;
+        } else {
+            scoreFormTrend = 4;
+        }
+    } else {
+        scoreFormTrend = 4;
+    }
+    
+    // 9. Days Since Last Run (Fitness)
+    let scoreRecency = 5;
+    const days = horse.last_ran_days;
+    if (days !== undefined && days !== null) {
+        if (days >= 10 && days <= 35) scoreRecency = 10;
+        else if (days > 35 && days <= 60) scoreRecency = 7;
+        else if (days > 60) scoreRecency = 4;
+        else if (days < 10) scoreRecency = 5;
+    }
+    
+    const rawScore = 
+        (scoreCourse * weights.wCourse) +
+        (scoreDistance * weights.wDistance) +
+        (scoreGoing * weights.wGoing) +
+        (scoreTrainer * weights.wTrainer) +
+        (scoreJockey * weights.wJockey) +
+        (scoreOR * weights.wRating) +
+        (scoreStars * weights.wStars) +
+        (scoreFormTrend * weights.wFormString) +
+        (scoreRecency * weights.wRecency);
+        
+    const maxRawScore = 10 * (
+        weights.wCourse + weights.wDistance + weights.wGoing + weights.wTrainer + 
+        weights.wJockey + weights.wRating + weights.wStars + weights.wFormString + weights.wRecency
+    );
+    
+    const finalScore = maxRawScore > 0 ? Math.round((rawScore / maxRawScore) * 100) : 0;
+    
+    return {
+        ride,
+        scoreCourse,
+        scoreDistance,
+        scoreGoing,
+        finalScore,
+        isCourseSpecialist,
+        isDistWinner,
+        isGoingSuited: (goingWins > 0)
+    };
+}
+
 // Calculate the Predictor Scores and render the runners table
 function renderRunnersTable(race) {
     elRunnersTbody.innerHTML = "";
@@ -433,179 +701,8 @@ function renderRunnersTable(race) {
     const currentDistFurlongs = parseDistanceToFurlongs(race.distance);
     const currentGoing = race.going || selectedMeeting.meeting_summary.going || "";
     
-    // Calculate raw scores for all runners
-    const scoredRunners = rides.map(ride => {
-        const horse = ride.horse || {};
-        const previousResults = horse.previous_results || [];
-        const insights = ride.insights || [];
-        
-        // 1. Course Wins (C)
-        let courseWins = 0;
-        let coursePlaces = 0;
-        previousResults.forEach(res => {
-            if (res.course_name && res.course_name.toLowerCase() === race.course_name.toLowerCase()) {
-                if (res.position === 1) courseWins++;
-                else if (res.position === 2 || res.position === 3) coursePlaces++;
-            }
-        });
-        let scoreCourse = 0;
-        if (courseWins > 0) scoreCourse = 10;
-        else if (coursePlaces > 0) scoreCourse = 5;
-        
-        // Check for course specialist insights
-        const isCourseSpecialist = insights.some(ins => ins.type === "COURSE_SPECIALIST" || ins.type === "COURSE_WINNER");
-        if (isCourseSpecialist) scoreCourse = 10;
-        
-        // 2. Distance Wins (D)
-        let distWins = 0;
-        let distPlaces = 0;
-        previousResults.forEach(res => {
-            const prevDistF = parseDistanceToFurlongs(res.distance);
-            if (isSimilarDistance(currentDistFurlongs, prevDistF)) {
-                if (res.position === 1) distWins++;
-                else if (res.position === 2 || res.position === 3) distPlaces++;
-            }
-        });
-        let scoreDistance = 0;
-        if (distWins > 0) scoreDistance = 10;
-        else if (distPlaces > 0) scoreDistance = 5;
-        
-        const isDistWinner = insights.some(ins => ins.type === "DISTANCE_WINNER");
-        if (isDistWinner) scoreDistance = 10;
-        
-        // 3. Going Suitability (G)
-        let goingWins = 0;
-        let goingPlaces = 0;
-        previousResults.forEach(res => {
-            if (isGoingCompatible(currentGoing, res.going)) {
-                if (res.position === 1) goingWins++;
-                else if (res.position === 2 || res.position === 3) goingPlaces++;
-            }
-        });
-        let scoreGoing = 0;
-        if (goingWins > 0) scoreGoing = 10;
-        else if (goingPlaces > 0) scoreGoing = 5;
-        
-        // 4. Trainer Form
-        let scoreTrainer = 0;
-        const hasHotTrainer = insights.some(ins => ins.type === "HOT_TRAINER" || ins.type === "HOT_YARD");
-        if (hasHotTrainer) scoreTrainer = 10;
-        else scoreTrainer = 3; // base yard score
-        
-        // 5. Jockey Form
-        let scoreJockey = 0;
-        const hasHotJockey = insights.some(ins => ins.type === "HOT_JOCKEY");
-        if (hasHotJockey) scoreJockey = 10;
-        else scoreJockey = 4; // base jockey score
-        
-        // 6. Official Rating (OR) vs Last Win
-        let scoreOR = 5; // default middle score
-        if (ride.official_rating) {
-            // Find rating on previous winning runs
-            const winningRuns = previousResults.filter(res => res.position === 1);
-            if (winningRuns.length > 0) {
-                // If we can extract the rating off which they ran previously, but we don't have it explicitly,
-                // we check if they are dropping in class, which is a major positive indicator
-                let classDrops = 0;
-                winningRuns.forEach(win => {
-                    const winClass = parseInt(win.race_class);
-                    const currClass = parseInt(race.race_class);
-                    if (!isNaN(winClass) && !isNaN(currClass) && currClass > winClass) {
-                        // Current class number is higher, which in horse racing means LOWER quality class (e.g. Class 4 vs Class 2)
-                        // Drop in class means they are running in an easier race!
-                        classDrops++;
-                    }
-                });
-                if (classDrops > 0) scoreOR = 10; // Major class dropper
-            }
-        }
-        
-        // 7. Timeform Rating (Stars)
-        let scoreStars = 0;
-        if (ride.timeform_stars) {
-            scoreStars = ride.timeform_stars * 2; // e.g. 5 stars -> 10 pts, 3 stars -> 6 pts
-        } else {
-            scoreStars = 4; // default unrated
-        }
-        if (ride.rating123 === 1) {
-            scoreStars = Math.min(10, scoreStars + 2); // boost if top rated
-        }
-        
-        // 8. Recent Form Trend (Positions)
-        let scoreFormTrend = 0;
-        const formFigures = horse.formsummary ? horse.formsummary.display_text : "";
-        if (formFigures) {
-            // Clean up form string (remove letters like F, U, P, hyphens)
-            const cleanForm = formFigures.replace(/[^1-9]/g, '');
-            if (cleanForm.length > 0) {
-                // Score the last 3 runs: 1st place gets 10 pts, 2nd gets 8 pts, 3rd gets 6, 4th gets 4, others 1
-                let sumScore = 0;
-                let divisor = 0;
-                
-                // Read from right to left (most recent is last char)
-                const runs = cleanForm.split("").reverse().slice(0, 3);
-                const runWeights = [0.5, 0.3, 0.2];
-                
-                runs.forEach((pos, posIdx) => {
-                    const posNum = parseInt(pos);
-                    let posScore = 1;
-                    if (posNum === 1) posScore = 10;
-                    else if (posNum === 2) posScore = 8;
-                    else if (posNum === 3) posScore = 6;
-                    else if (posNum === 4) posScore = 4;
-                    
-                    sumScore += posScore * runWeights[posIdx];
-                    divisor += runWeights[posIdx];
-                });
-                
-                scoreFormTrend = sumScore / divisor;
-            } else {
-                scoreFormTrend = 4; // default basic score
-            }
-        } else {
-            scoreFormTrend = 4;
-        }
-        
-        // 9. Days Since Last Run (Fitness)
-        let scoreRecency = 5;
-        const days = horse.last_ran_days;
-        if (days !== undefined && days !== null) {
-            if (days >= 10 && days <= 35) scoreRecency = 10; // Peak fitness
-            else if (days > 35 && days <= 60) scoreRecency = 7; // Slightly fresh
-            else if (days > 60) scoreRecency = 4; // Layoff query
-            else if (days < 10) scoreRecency = 5; // Quick back-up
-        }
-        
-        // Combine scores using weight sliders
-        const rawScore = 
-            (scoreCourse * weights.wCourse) +
-            (scoreDistance * weights.wDistance) +
-            (scoreGoing * weights.wGoing) +
-            (scoreTrainer * weights.wTrainer) +
-            (scoreJockey * weights.wJockey) +
-            (scoreOR * weights.wRating) +
-            (scoreStars * weights.wStars) +
-            (scoreFormTrend * weights.wFormString) +
-            (scoreRecency * weights.wRecency);
-            
-        const maxRawScore = 10 * (
-            weights.wCourse + weights.wDistance + weights.wGoing + weights.wTrainer + 
-            weights.wJockey + weights.wRating + weights.wStars + weights.wFormString + weights.wRecency
-        );
-        
-        const finalScore = maxRawScore > 0 ? Math.round((rawScore / maxRawScore) * 100) : 0;
-        
-        return {
-            ride,
-            scoreCourse,
-            scoreDistance,
-            scoreGoing,
-            finalScore,
-            isCourseSpecialist,
-            isDistWinner,
-            isGoingSuited: (goingWins > 0)
-        };
-    });
+    // Calculate raw scores for all runners using the extracted scoreRunner engine
+    const scoredRunners = rides.map(ride => scoreRunner(ride, race, currentDistFurlongs, currentGoing));
     
     // Sort runners by predictor score descending
     scoredRunners.sort((a, b) => b.finalScore - a.finalScore);

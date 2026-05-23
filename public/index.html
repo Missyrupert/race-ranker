@@ -74,125 +74,68 @@
 
             <!-- Center/Right Dashboard Workspace -->
             <section class="dashboard-content">
-                <!-- Morning Memo & Briefing (Pro Gambler Routine) -->
-                <div class="briefing-card glass-panel">
-                    <div class="briefing-header">
-                        <span class="badge-accent">🧠 Morning Briefing</span>
-                        <h2 id="briefing-title">Professional Gambler's Morning Report</h2>
+                <!-- Top Summary Grid -->
+                <div class="top-panels-grid">
+                    <!-- Morning Memo & Briefing (Pro Gambler Routine) -->
+                    <div class="briefing-card glass-panel">
+                        <div class="briefing-header">
+                            <span class="badge-accent">🧠 Morning Briefing</span>
+                            <h2 id="briefing-title">Professional Gambler's Morning Report</h2>
+                        </div>
+                        <div class="briefing-body">
+                            <div class="briefing-grid">
+                                <div class="briefing-stat">
+                                    <span class="stat-lbl">Track Conditions</span>
+                                    <span class="stat-val" id="briefing-going">-</span>
+                                </div>
+                                <div class="briefing-stat">
+                                    <span class="stat-lbl">Weather Outlook</span>
+                                    <span class="stat-val" id="briefing-weather">-</span>
+                                </div>
+                                <div class="briefing-stat">
+                                    <span class="stat-lbl">Selection (NAP)</span>
+                                    <span class="stat-val text-gold" id="briefing-best-bet">-</span>
+                                </div>
+                                <div class="briefing-stat">
+                                    <span class="stat-lbl">Next Best (NB)</span>
+                                    <span class="stat-val" id="briefing-droppers">-</span>
+                                </div>
+                            </div>
+                            <div class="briefing-text" id="briefing-verdict">
+                                Select a race card to view the model's top selections, logic, and calculated value.
+                            </div>
+                        </div>
                     </div>
-                    <div class="briefing-body">
-                        <div class="briefing-grid">
-                            <div class="briefing-stat">
-                                <span class="stat-lbl">Track Conditions</span>
-                                <span class="stat-val" id="briefing-going">-</span>
-                            </div>
-                            <div class="briefing-stat">
-                                <span class="stat-lbl">Weather Outlook</span>
-                                <span class="stat-val" id="briefing-weather">-</span>
-                            </div>
-                            <div class="briefing-stat">
-                                <span class="stat-lbl">Selection (NAP)</span>
-                                <span class="stat-val text-gold" id="briefing-best-bet">-</span>
-                            </div>
-                            <div class="briefing-stat">
-                                <span class="stat-lbl">Next Best (NB)</span>
-                                <span class="stat-val" id="briefing-droppers">-</span>
-                            </div>
-                        </div>
-                        <p class="briefing-text" id="briefing-verdict">
-                            Select a race card to view the expert analysis, track details, and run the betting prediction model.
-                        </p>
-                    </div>
-                </div>
 
-                <!-- Model Configuration Sliders (Adjust Weights) -->
-                <div class="model-weights-card glass-panel">
-                    <div class="panel-title-container">
-                        <span class="panel-icon">🎛️</span>
-                        <h2>Mathematical Betting Model Weights</h2>
-                        <button id="btn-reset-weights" class="btn btn-secondary btn-sm">Reset to Default</button>
-                    </div>
-                    
-                    <div class="sliders-grid">
-                        <div class="slider-group">
-                            <div class="slider-info">
-                                <span class="slider-label">Course Wins (C)</span>
-                                <span class="slider-val" id="val-wCourse">30</span>
-                            </div>
-                            <input type="range" id="wCourse" min="0" max="100" value="30">
-                            <p class="slider-desc">Prioritizes course specialists (horses with previous wins/places on today's track).</p>
+                    <!-- Fictional £1 Bet Tracker -->
+                    <div class="tracker-card glass-panel">
+                        <div class="tracker-header">
+                            <span class="badge-accent badge-green">📊 Bet Tracker</span>
+                            <h2>Fictional £1 Bet Tracker (NAP)</h2>
                         </div>
-
-                        <div class="slider-group">
-                            <div class="slider-info">
-                                <span class="slider-label">Distance Wins (D)</span>
-                                <span class="slider-val" id="val-wDistance">30</span>
+                        <div class="tracker-body">
+                            <div class="tracker-grid">
+                                <div class="tracker-stat">
+                                    <span class="stat-lbl">Bets Settled</span>
+                                    <span class="stat-val" id="tracker-settled">0 / 0</span>
+                                </div>
+                                <div class="tracker-stat">
+                                    <span class="stat-lbl">Winners</span>
+                                    <span class="stat-val" id="tracker-winners">0</span>
+                                </div>
+                                <div class="tracker-stat">
+                                    <span class="stat-lbl">Strike Rate</span>
+                                    <span class="stat-val text-gold" id="tracker-strike">0%</span>
+                                </div>
+                                <div class="tracker-stat">
+                                    <span class="stat-lbl">Total Returns</span>
+                                    <span class="stat-val" id="tracker-return">£0.00</span>
+                                </div>
                             </div>
-                            <input type="range" id="wDistance" min="0" max="100" value="30">
-                            <p class="slider-desc">Rewards proven speed/stamina at this specific race distance (+/- 10%).</p>
-                        </div>
-
-                        <div class="slider-group">
-                            <div class="slider-info">
-                                <span class="slider-label">Going Suitability (G)</span>
-                                <span class="slider-val" id="val-wGoing">25</span>
+                            <div class="tracker-pl-container">
+                                <span class="pl-label">NET PROFIT / LOSS</span>
+                                <span class="pl-value" id="tracker-pl">£0.00</span>
                             </div>
-                            <input type="range" id="wGoing" min="0" max="100" value="25">
-                            <p class="slider-desc">Scores horse based on historical performance on matching turf or A/W going.</p>
-                        </div>
-
-                        <div class="slider-group">
-                            <div class="slider-info">
-                                <span class="slider-label">Trainer Form (14-Day)</span>
-                                <span class="slider-val" id="val-wTrainer">20</span>
-                            </div>
-                            <input type="range" id="wTrainer" min="0" max="100" value="20">
-                            <p class="slider-desc">Boosts runners from yards in a hot spell (strike rate and hot stable insights).</p>
-                        </div>
-
-                        <div class="slider-group">
-                            <div class="slider-info">
-                                <span class="slider-label">Jockey Form (14-Day)</span>
-                                <span class="slider-val" id="val-wJockey">15</span>
-                            </div>
-                            <input type="range" id="wJockey" min="0" max="100" value="15">
-                            <p class="slider-desc">Weights jockey's strike rate and hot jockey metrics on current form.</p>
-                        </div>
-
-                        <div class="slider-group">
-                            <div class="slider-info">
-                                <span class="slider-label">Official Rating (Handicap)</span>
-                                <span class="slider-val" id="val-wRating">25</span>
-                            </div>
-                            <input type="range" id="wRating" min="0" max="100" value="25">
-                            <p class="slider-desc">Compares Today's OR with the horse's last winning mark (well-handicapped ratio).</p>
-                        </div>
-
-                        <div class="slider-group">
-                            <div class="slider-info">
-                                <span class="slider-label">Timeform Rating (Stars)</span>
-                                <span class="slider-val" id="val-wStars">40</span>
-                            </div>
-                            <input type="range" id="wStars" min="0" max="100" value="40">
-                            <p class="slider-desc">Weight given to external expert ratings (Timeform 1-5 star ratings).</p>
-                        </div>
-
-                        <div class="slider-group">
-                            <div class="slider-info">
-                                <span class="slider-label">Recent Form Trend</span>
-                                <span class="slider-val" id="val-wFormString">35</span>
-                            </div>
-                            <input type="range" id="wFormString" min="0" max="100" value="35">
-                            <p class="slider-desc">Parses form figures (e.g. 1-2-1) giving higher weights to recent top finishes.</p>
-                        </div>
-
-                        <div class="slider-group">
-                            <div class="slider-info">
-                                <span class="slider-label">Days Since Last Run</span>
-                                <span class="slider-val" id="val-wRecency">15</span>
-                            </div>
-                            <input type="range" id="wRecency" min="0" max="100" value="15">
-                            <p class="slider-desc">Rewards horses in peak fitness (10-35 days) vs. long layoffs or quick back-ups.</p>
                         </div>
                     </div>
                 </div>
