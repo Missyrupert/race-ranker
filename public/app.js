@@ -249,85 +249,29 @@ elBtnRefresh.addEventListener("click", async () => {
     }
 });
 
-// Deterministic seeding function for historical model performance
-function generateSeedHistory() {
-    const historicalBets = [];
-    const startDate = new Date("2026-01-01");
-    // Yesterday's date relative to current local time (May 23, 2026)
-    const endDate = new Date("2026-05-22");
-    
-    let seed = 12345;
-    function random() {
-        let x = Math.sin(seed++) * 10000;
-        return x - Math.floor(x);
-    }
-    
-    const courses = ["Ascot", "Epsom", "Cheltenham", "Newmarket", "York", "Goodwood", "Sandown", "Haydock", "Doncaster", "Chester", "Aintree", "Windsor", "Curragh", "Salisbury"];
-    const horses = ["Red Rum", "Shergar", "Frankel", "Arkle", "Kauto Star", "Desert Orchid", "Brigadier Gerard", "Nijinsky", "Mill Reef", "Golden Miller", "Eclipse", "Sea The Stars", "Galileo", "Dancing Brave", "Spectacular Bid", "Danielle", "Dreamasar", "Friendly Soul", "Reliable Ricki", "Ladies Day", "Magic Wave", "Tellherthename"];
-    
-    for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
-        const dateStr = d.toISOString().split('T')[0];
-        
-        // Seed 3 to 6 bets per day representing daily model NAPs across meetings
-        const numBets = Math.floor(random() * 4) + 3; 
-        for (let i = 0; i < numBets; i++) {
-            const course = courses[Math.floor(random() * courses.length)];
-            const horse = horses[Math.floor(random() * horses.length)] + " " + ["II", "Boy", "Lass", "Star", "Spirit", "Pride", "King", "Queen", "Storm", "Shadow"][Math.floor(random() * 10)];
-            const time = `${String(Math.floor(random() * 6) + 13).padStart(2, '0')}:${String(Math.floor(random() * 4) * 15).padStart(2, '0')}`;
-            
-            const oddsNum = Math.floor(random() * 9) + 1;
-            const oddsDen = Math.floor(random() * 3) + 1;
-            const oddsStr = `${oddsNum}/${oddsDen}`;
-            const decimalOdds = (oddsNum / oddsDen) + 1.0;
-            
-            const r = random();
-            let outcome = "lost";
-            let stake = 1.0;
-            let returns = 0.0;
-            
-            if (r < 0.05) {
-                outcome = "void"; // 5% non-runners
-                returns = 1.0;
-            } else if (r < 0.32) { // 27% strike rate
-                outcome = "won";
-                returns = decimalOdds;
-            }
-            
-            historicalBets.push({
-                date: dateStr,
-                course: course,
-                time: time,
-                horse: horse,
-                odds: oddsStr,
-                outcome: outcome,
-                stake: stake,
-                returns: returns,
-                profit: returns - stake
-            });
-        }
-    }
-    
-    return historicalBets;
-}
-
-// Load or initialize historical bets database in localStorage
+// Load or initialize historical bets database in localStorage (only real data going forward)
 let historicalBets = [];
 try {
     const stored = localStorage.getItem("antigravity_historical_bets");
     if (stored) {
         historicalBets = JSON.parse(stored);
-    } else {
-        historicalBets = generateSeedHistory();
-        localStorage.setItem("antigravity_historical_bets", JSON.stringify(historicalBets));
     }
 } catch (e) {
     console.error("Error loading historical bets:", e);
-    historicalBets = generateSeedHistory();
 }
 
-// Calculate period-based cumulative statistics (Today, WTD, MTD, YTD)
+// Calculate period-based cumulative statistics (Today, WTD, MTD)
 function getPeriodStats(historicalBets, todayBets) {
-    const allBets = [...historicalBets, ...todayBets];
+    // Combine historical logs and today's live bets
+    const allBets = [...historicalBets];
+    
+    // Make sure today's bets are not duplicated if already stored in historicalBets
+    todayBets.forEach(bet => {
+        const exists = allBets.some(h => h.date === bet.date && h.course === bet.course && h.time === bet.time);
+        if (!exists) {
+            allBets.push(bet);
+        }
+    });
     
     const now = new Date();
     const todayStr = now.toISOString().split('T')[0];
@@ -342,35 +286,21 @@ function getPeriodStats(historicalBets, todayBets) {
     // Start of month
     const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
     
-    // Start of year
-    const startOfYear = new Date(now.getFullYear(), 0, 1);
-    
     const stats = {
-        today: { stakes: 0, returns: 0, count: 0, winners: 0, voids: 0 },
         wtd: { stakes: 0, returns: 0, count: 0, winners: 0, voids: 0 },
-        mtd: { stakes: 0, returns: 0, count: 0, winners: 0, voids: 0 },
-        ytd: { stakes: 0, returns: 0, count: 0, winners: 0, voids: 0 }
+        mtd: { stakes: 0, returns: 0, count: 0, winners: 0, voids: 0 }
     };
     
     allBets.forEach(bet => {
         const betDate = new Date(bet.date);
-        const isToday = bet.date === todayStr;
         const isThisWeek = betDate >= startOfWeek;
         const isThisMonth = betDate >= startOfMonth;
-        const isThisYear = betDate >= startOfYear;
         
         const stake = bet.stake;
         const returns = bet.returns;
         const win = bet.outcome === "won";
         const isVoid = bet.outcome === "void";
         
-        if (isToday) {
-            stats.today.stakes += stake;
-            stats.today.returns += returns;
-            stats.today.count++;
-            if (win) stats.today.winners++;
-            if (isVoid) stats.today.voids++;
-        }
         if (isThisWeek) {
             stats.wtd.stakes += stake;
             stats.wtd.returns += returns;
@@ -384,13 +314,6 @@ function getPeriodStats(historicalBets, todayBets) {
             stats.mtd.count++;
             if (win) stats.mtd.winners++;
             if (isVoid) stats.mtd.voids++;
-        }
-        if (isThisYear) {
-            stats.ytd.stakes += stake;
-            stats.ytd.returns += returns;
-            stats.ytd.count++;
-            if (win) stats.ytd.winners++;
-            if (isVoid) stats.ytd.voids++;
         }
     });
     
@@ -496,14 +419,30 @@ function calculateDailyPerformance() {
         });
     });
     
+    // Save today's settled bets to historical storage so they accumulate day-by-day
+    let updatedHistorical = false;
+    todayBets.forEach(bet => {
+        const exists = historicalBets.some(h => h.date === bet.date && h.course === bet.course && h.time === bet.time);
+        if (!exists) {
+            historicalBets.push(bet);
+            updatedHistorical = true;
+        }
+    });
+    
+    if (updatedHistorical) {
+        try {
+            localStorage.setItem("antigravity_historical_bets", JSON.stringify(historicalBets));
+        } catch (e) {
+            console.error("Error saving historical bets:", e);
+        }
+    }
+    
     // Calculate aggregate statistics for periods
     const stats = getPeriodStats(historicalBets, todayBets);
     
     // Update DOM widgets
-    updatePeriodDOM("today", stats.today);
     updatePeriodDOM("wtd", stats.wtd);
     updatePeriodDOM("mtd", stats.mtd);
-    updatePeriodDOM("ytd", stats.ytd);
 }
 
 // Render the left sidebar meetings
