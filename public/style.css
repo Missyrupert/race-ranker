@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* Core Reset and Variables */
 * {
     box-sizing: border-box;
@@ -477,7 +479,7 @@ body {
     gap: 20px;
 }
 
-/* Fictional £1 Bet Tracker Card */
+/* Fictional GBP 1 Bet Tracker Card */
 .tracker-card {
     padding: 20px 24px;
     display: flex;
